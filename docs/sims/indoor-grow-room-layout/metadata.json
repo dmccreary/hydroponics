@@ -1,0 +1,21 @@
+{
+  "title": "Indoor Grow Room Layout",
+  "description": "Indoor Grow Room Layout",
+  "creator": "Dementia Education Project",
+  "date": "2026-05-29",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "indoor-grow-room-layout",
+  "library": "p5.js",
+  "bloomLevel": "Remember (L1)",
+  "bloomVerb": "Identify — students identify each grow room zone and its function",
+  "completion_status": "scaffold",
+  "chapter_number": 1,
+  "chapter_title": "Introduction to Hydroponics",
+  "chapter_dir": "01-introduction"
+}

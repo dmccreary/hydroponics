@@ -1,0 +1,14 @@
+{
+  "sim_id": "micropython-concept-map",
+  "diagram_name": "MicroPython Concept Map",
+  "chapter_number": 12,
+  "chapter_title": "MicroPython Fundamentals",
+  "chapter_dir": "12-micropython-fundamentals",
+  "library": "p5.js",
+  "bloom_level": "Understand (L2) and Remember (L1)",
+  "bloom_verb": "Organize — students see how hardware setup, data types, control flow, functions, and OOP build on each other.",
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-05-29",
+  "specification": "Type: concept-map\n**sim-id:** micropython-concept-map<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nPurpose: Show the relationships between the 25 MicroPython concepts in this chapter, organized as a visual dependency map from hardware (bottom) to language (middle) to OOP (top).\n\nBloom Level: Understand (L2) and Remember (L1)\nBloom Verb: Organize — students see how hardware setup, data types, control flow, functions, and OOP build on each other.\n\nLayout: Canvas 800×520. Four horizontal tiers:\n- Bottom tier (Hardware): Raspberry Pi Pico, Pico W, ESP32, MicroPython Installation, Thonny IDE, REPL\n- Middle tier (Language Fundamentals): Variables, Integer/Float, String, Boolean, None, Lists, Tuples, Dicts\n- Upper-middle tier (Control Flow and Functions): If-Else, For Loops, While Loops, Break/Continue, Functions, Default Parameters, Lambda\n- Top tier (OOP): Classes and Objects, Inheritance\n\nNodes: Rounded rectangles, color-coded by tier (dark blue bottom → teal middle → green upper → gold top). Each node labeled with concept name.\n\nEdges: Arrows from prerequisite to dependent concept. On hover, arrows highlight in orange and a tooltip shows \"concept A enables concept B\".\n\nInteractivity:\n- Clicking a node highlights it and all directly connected nodes (predecessors and successors) in orange; all others dim to 30% opacity.\n- Click background to deselect.\n- Toggle \"Show Code Examples\": hovering a node shows a 1–4 line code snippet popup illustrating that concept.\n\nResponsive: Scales to fit container width."
+}

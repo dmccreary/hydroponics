@@ -1,0 +1,14 @@
+{
+  "sim_id": "biomass-growth-tracker",
+  "diagram_name": "Biomass Growth Tracker",
+  "chapter_number": 3,
+  "chapter_title": "Water Transport, Photosynthesis, and Plant Health",
+  "chapter_dir": "03-water-transport",
+  "library": "Chart.js",
+  "bloom_level": "Apply (L3)",
+  "bloom_verb": "Calculate — students calculate growth rates and weight ratios from entered data",
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-05-29",
+  "specification": "Type: microsim\n**sim-id:** biomass-growth-tracker<br/>\n**Library:** Chart.js<br/>\n**Status:** Specified\n\nPurpose: Give students an interactive tool to enter growth measurements over time, visualize the growth curve, and calculate relative growth rate and fresh-to-dry weight ratio. Reinforces the difference between fresh and dry weight and provides practice with growth rate mathematics.\n\nBloom Level: Apply (L3)\nBloom Verb: Calculate — students calculate growth rates and weight ratios from entered data\n\nCanvas layout:\n- Top section (50%): Line chart (x-axis: days after transplant, y-axis: fresh weight in grams); data points appear as the student enters values\n- Bottom section (50%): Data entry table and calculated results panel side by side\n\nInput fields:\n- Data table with columns: Day, Fresh Weight (g), Dry Weight (g, optional)\n- \"Add Row\" / \"Remove Row\" buttons\n- \"Target Harvest Weight (g)\" input\n\nCalculated results (update in real time):\n- Current fresh/dry weight ratio from latest row with both values\n- Average daily growth rate (g/day fresh weight)\n- Relative Growth Rate (if two dry weight entries are present): displayed with formula and calculated value in g/(g·day)\n- Predicted harvest date based on current growth rate and target harvest weight\n- Progress bar: current weight as % of target harvest weight\n\nInteractive features:\n- Hover any chart data point: shows exact day and weight values\n- Toggle \"Show Trend Line\": adds linear regression line and R² value\n- Pre-loaded example data: lettuce growth curve from transplant to 35-day harvest at ~120g fresh weight with dry weight entries at day 7 and day 35\n\nVisual style: Green data line, teal trend line, gray grid; controls in clean right-panel layout"
+}

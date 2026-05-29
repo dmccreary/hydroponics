@@ -161,7 +161,7 @@ pH is a **logarithmic** scale: a solution at pH 5.0 has ten times more H⁺ ions
 The optimum pH range for hydroponic growing — **5.5 to 6.5** — is the window where all 17 essential nutrients are simultaneously soluble and available in adequate proportions.
 
 #### Diagram: Interactive Mulder's Chart — pH and Nutrient Availability
-<iframe src="../../sims/mulders-chart-interactive/main.html" width="100%" height="540px" scrolling="no"></iframe>
+<iframe src="../../sims/mulders-chart-interactive/main.html" width="100%" height="602" scrolling="no"></iframe>
 <details markdown="1">
 <summary>Interactive Mulder's Chart — pH and Nutrient Availability</summary>
 Type: infographic

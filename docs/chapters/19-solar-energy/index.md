@@ -396,7 +396,7 @@ The **carbon footprint** of electricity-powered indoor growing depends entirely 
 A solar-powered grow room producing that electricity with near-zero carbon intensity (PV manufacturing lifecycle: ~0.02–0.04 kg CO₂/kWh) reduces the per-cycle footprint from 161 kg to approximately 10–14 kg CO₂ — a 90%+ reduction. This is the environmental case for solar-powered hydroponics.
 
 #### Diagram: Solar Power System Designer
-<iframe src="../../sims/solar-power-designer/main.html" width="100%" height="540px" scrolling="no"></iframe>
+<iframe src="../../sims/solar-power-designer/main.html" width="100%" height="722" scrolling="no"></iframe>
 <details markdown="1">
 <summary>Interactive Solar Power System Designer for Hydroponics</summary>
 Type: engineering-calculator

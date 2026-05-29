@@ -1,0 +1,21 @@
+{
+  "title": "Root Exudate pH Drift Simulator",
+  "description": "Root Exudate pH Drift Simulator",
+  "creator": "Dementia Education Project",
+  "date": "2026-05-29",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "root-exudate-ph-drift",
+  "library": "p5.js",
+  "bloomLevel": "Apply (L3)",
+  "bloomVerb": "Demonstrate — students demonstrate how nutrient formula affects pH stability",
+  "completion_status": "scaffold",
+  "chapter_number": 2,
+  "chapter_title": "Root Biology and Nutrient Absorption",
+  "chapter_dir": "02-root-biology"
+}

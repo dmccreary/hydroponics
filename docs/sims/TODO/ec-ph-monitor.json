@@ -1,0 +1,14 @@
+{
+  "sim_id": "ec-ph-monitor",
+  "diagram_name": "EC and pH Monitor Over a Crop Cycle",
+  "chapter_number": 5,
+  "chapter_title": "Nutrient Solution Chemistry and Mixing",
+  "chapter_dir": "05-nutrient-solution-chemistry",
+  "library": "Chart.js",
+  "bloom_level": "Analyze (L4)",
+  "bloom_verb": "Examine — students examine patterns in EC and pH data and identify when and why intervention is needed",
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-05-29",
+  "specification": "Type: microsim\n**sim-id:** ec-ph-monitor<br/>\n**Library:** Chart.js<br/>\n**Status:** Specified\n\nPurpose: Show students how EC and pH typically evolve over a full crop cycle in a recirculating DWC system, and let them simulate the effects of different management decisions (topping up water, adding nutrient, adding pH-Up/Down) on the curves.\n\nBloom Level: Analyze (L4)\nBloom Verb: Examine — students examine patterns in EC and pH data and identify when and why intervention is needed\n\nCanvas layout:\n- Top chart (55%): Dual-axis line chart over 35 simulated days: pH on left y-axis (range 5.0–7.5, optimal zone 5.5–6.5 shaded green), EC on right y-axis (range 0–3.5 mS/cm, target zone shaded light blue)\n- Bottom panel (45%): Event log, day slider, and management action buttons\n\nPre-loaded simulation scenarios (dropdown):\n- \"Typical lettuce cycle — moderate drift\" (pH rises ~0.2/day, EC drops as plants consume nutrients)\n- \"Hard water — buffered\" (pH resistant to decline; bicarbonate causes slow upward drift)\n- \"Warm reservoir — rapid pH swing\" (temperature-accelerated pH instability)\n\nManagement action buttons (apply at current day):\n- \"Add water (1L)\" — decreases EC proportionally, pH unchanged\n- \"Add nutrient (10mL Part A+B)\" — increases EC, slight pH change\n- \"Add pH-Down (5 drops)\" — decreases pH by ~0.3 units\n- \"Add pH-Up (5 drops)\" — increases pH by ~0.3 units\n\nInteractive features:\n- Day slider: Scrub through simulated days; chart updates to show current state\n- Clicking \"Apply Action\": Records an event in the event log and updates the simulation forward\n- Hover any data point: Shows exact pH, EC, and day values\n- Red/orange zone overlays show when pH or EC is out of optimal range\n- \"Run to harvest\" button: Fast-forwards the simulation to day 35 with no intervention — shows what happens without management\n\nEvent log: Text list of actions taken, date, and effect on EC/pH\n\nVisual style: Green shaded band for pH optimal, blue band for EC optimal; red lines when out of range"
+}

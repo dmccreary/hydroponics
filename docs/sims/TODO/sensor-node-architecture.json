@@ -1,0 +1,14 @@
+{
+  "sim_id": "sensor-node-architecture",
+  "diagram_name": "Sensor Node Architecture",
+  "chapter_number": 15,
+  "chapter_title": "Sensors and Electronics Hardware",
+  "chapter_dir": "15-sensors-electronics",
+  "library": "p5.js",
+  "bloom_level": "Analyze (L4) and Apply (L3)",
+  "bloom_verb": "Design — students identify the function of each layer and could replicate the architecture for a new sensor.",
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-05-29",
+  "specification": "Type: architecture-diagram\n**sim-id:** sensor-node-architecture<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nPurpose: Show the complete electronics architecture of a hydroponic sensor node — from sensors and actuators through signal conditioning and the microcontroller to the network layer — with power supply rails shown as colored overlays.\n\nBloom Level: Analyze (L4) and Apply (L3)\nBloom Verb: Design — students identify the function of each layer and could replicate the architecture for a new sensor.\n\nLayout: Canvas 900×520. Organized in four horizontal layers:\n- Bottom layer (Sensors and Actuators): pH electrode → op-amp buffer, DS18B20 → 1-Wire, DHT22 → GPIO, EC probe → analog conditioning, CO₂ NDIR → UART, Float switch → GPIO, Relay → GPIO\n- Second layer (Signal Conditioning): Op-amp buffers, voltage dividers, ADC (MCP3208), 1-Wire interface\n- Third layer (Microcontroller): Pico W block with GPIO pins labeled; ADC channels; I2C bus; UART; Wi-Fi antenna icon\n- Top layer (Network and Outputs): Wi-Fi → MQTT Broker, OLED Display (I2C), LCD (I2C), NeoPixels (GPIO)\n\nPower rails shown as colored horizontal bus lines: 3.3 V (red), 5 V (orange), 12 V (yellow), GND (black). Arrows show power connections from each component to its rail.\n\nInteractivity:\n- Hovering a component shows a tooltip: component name, interface type, supply voltage, accuracy specification.\n- Toggle \"Show Power Rails\" to show/hide the colored voltage bus overlays.\n- Toggle \"Show Signal Path\": animates the data flow from pH electrode → op-amp → ADC → Pico → Wi-Fi with a moving dot.\n- Clicking any component opens a detail panel: component name, datasheet link, typical cost, MicroPython code snippet.\n\nResponsive: Scales to container width; on narrow screens, stack the four layers vertically."
+}

@@ -448,7 +448,7 @@ Electronics operating in or near nutrient solution must be protected from moistu
 - **Conformal coating**: Apply a thin polyurethane or acrylic conformal coat to the PCB to resist moisture, condensation, and salt vapor. Leave connectors and probe calibration points uncoated.
 
 #### Diagram: Sensor Node Architecture
-<iframe src="../../sims/sensor-node-architecture/main.html" width="100%" height="520px" scrolling="no"></iframe>
+<iframe src="../../sims/sensor-node-architecture/main.html" width="100%" height="662" scrolling="no"></iframe>
 <details markdown="1">
 <summary>Hydroponic Sensor Node Electronics Architecture</summary>
 Type: architecture-diagram

@@ -1,0 +1,14 @@
+{
+  "sim_id": "vertical-farm-comparison",
+  "diagram_name": "Commercial Vertical Farm Comparison",
+  "chapter_number": 20,
+  "chapter_title": "Vertical Farming and Commercial Operations",
+  "chapter_dir": "20-vertical-farming",
+  "library": "p5.js",
+  "bloom_level": "Analyze (L4) and Evaluate (L5)",
+  "bloom_verb": "Compare — students evaluate the trade-offs between farming models for a given location, crop, and budget.",
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-05-29",
+  "specification": "Type: comparison-matrix\n**sim-id:** vertical-farm-comparison<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nPurpose: Compare the key design and economic parameters of five vertical farming models — Multi-tier Indoor LED, Greenhouse Hybrid, Container Farm, Rooftop Greenhouse, and Tower Garden — across 10 dimensions.\n\nBloom Level: Analyze (L4) and Evaluate (L5)\nBloom Verb: Compare — students evaluate the trade-offs between farming models for a given location, crop, and budget.\n\nLayout: Canvas 900×520. Radar chart with 10 axes:\n1. Energy Efficiency (kWh/kg)\n2. Yield per floor m² (kg/m²/year)\n3. CapEx ($/m²)\n4. OpEx ($/kg)\n5. Scalability (1=limited, 5=unlimited)\n6. Location Flexibility (1=restricted, 5=anywhere)\n7. Climate Independence (1=weather-dependent, 5=full control)\n8. Labor Requirement (1=high, 5=minimal)\n9. Water Efficiency (1=low, 5=high)\n10. Time to Harvest (faster = higher score)\n\nEach farm model is a different colored polygon on the radar chart. All five models are shown simultaneously by default.\n\nLeft panel: Checkboxes to show/hide each farm model. Selecting a model highlights its polygon.\n\nBelow chart: Data table showing the exact value for each model on each axis, with cells color-coded (green=best, red=worst) for quick comparison.\n\nInteractivity:\n- Clicking any axis label shows a detail panel: what this metric means, how it's measured, and which farm model performs best.\n- \"Scenario Mode\" dropdown: pre-sets the chart for specific decision contexts (Urban Rooftop, Rural Greenhouse, Mobile Container, High-Value Herbs, Commodity Lettuce).\n- Hovering over any polygon vertex shows the exact value with units."
+}

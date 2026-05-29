@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>EC and pH Monitor</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #f8f9fa; color: #212529; padding: 8px; }
+        h1 { font-size: 16px; margin-bottom: 6px; color: #2e7d32; }
+        .row { display: grid; grid-template-columns: 1fr; gap: 8px; }
+        .chart-box { background: white; border: 1px solid #dee2e6; border-radius: 4px; padding: 8px; height: 290px; position: relative; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+        @media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }
+        .panel { background: white; border: 1px solid #dee2e6; border-radius: 4px; padding: 10px; }
+        h2 { font-size: 13px; color: #00796b; margin-bottom: 6px; }
+        .table-wrap { max-height: 240px; overflow-y: auto; border: 1px solid #f1f3f5; border-radius: 3px; }
+        table { width: 100%; border-collapse: collapse; font-size: 12px; }
+        th, td { padding: 4px 6px; border-bottom: 1px solid #e9ecef; text-align: right; }
+        th { background: #f8f9fa; position: sticky; top: 0; z-index: 1; }
+        th:first-child, td:first-child { text-align: left; }
+        input[type="number"] { width: 64px; padding: 2px 4px; border: 1px solid #ced4da; border-radius: 3px; font-size: 12px; text-align: right; }
+        button { background: #2e7d32; color: white; border: none; padding: 4px 10px; border-radius: 3px; cursor: pointer; font-size: 12px; margin-right: 4px; margin-top: 4px; }
+        button.teal { background: #00bcd4; }
+        button.secondary { background: #00796b; }
+        button.warn { background: #d32f2f; }
+        button.amber { background: #f57c00; }
+        button.small { padding: 2px 6px; font-size: 11px; }
+        .legend { display: flex; gap: 10px; font-size: 11px; color: #495057; margin-bottom: 4px; flex-wrap: wrap; }
+        .legend .swatch { display: inline-block; width: 10px; height: 10px; border-radius: 2px; vertical-align: middle; margin-right: 3px; }
+        .status-pill { display: inline-block; padding: 4px 12px; border-radius: 12px; font-size: 12px; font-weight: 600; color: white; margin-bottom: 6px; }
+        .status-green { background: #2e7d32; }
+        .status-yellow { background: #f57c00; }
+        .status-red { background: #d32f2f; }
+        .stat-row { display: flex; justify-content: space-between; font-size: 12px; padding: 3px 0; border-bottom: 1px solid #f1f3f5; }
+        .stat-row b { color: #2e7d32; }
+        .stat-row b.teal { color: #00838f; }
+        .diag { margin-top: 8px; font-size: 12px; line-height: 1.45; color: #343a40; }
+        .diag .alert { background: #fff3cd; border-left: 3px solid #f57c00; padding: 6px 8px; margin-top: 6px; border-radius: 2px; }
+        .diag .alert.bad { background: #f8d7da; border-left-color: #d32f2f; }
+        .diag .alert.ok { background: #d4edda; border-left-color: #2e7d32; }
+        .targets { font-size: 11px; color: #6c757d; margin-top: 6px; }
+    </style>
+</head>
+<body>
+    <h1>EC and pH Monitor Over a Crop Cycle</h1>
+    <div class="row">
+        <div class="chart-box">
+            <div class="legend">
+                <span><span class="swatch" style="background:#2e7d32"></span>EC (mS/cm)</span>
+                <span><span class="swatch" style="background:#00bcd4"></span>pH</span>
+                <span><span class="swatch" style="background:rgba(46,125,50,0.18)"></span>EC target 1.2–2.2</span>
+                <span><span class="swatch" style="background:rgba(0,188,212,0.18)"></span>pH target 5.5–6.5</span>
+            </div>
+            <div style="position:relative; height:255px;"><canvas id="ecphChart"></canvas></div>
+        </div>
+        <div class="grid">
+            <div class="panel">
+                <h2>Measurements</h2>
+                <div class="table-wrap">
+                    <table id="dataTable">
+                        <thead>
+                            <tr><th>Day</th><th>EC (mS/cm)</th><th>pH</th><th></th></tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <div>
+                    <button id="addRow">+ Add Row</button>
+                    <button id="loadHealthy" class="secondary">Healthy Example</button>
+                    <button id="loadDrift" class="amber">Drift Example</button>
+                    <button id="loadCrash" class="warn">Crash Example</button>
+                    <button id="clearData" class="warn">Clear</button>
+                </div>
+                <div class="targets">
+                    Target ranges: EC 1.2–2.2 mS/cm, pH 5.5–6.5
+                </div>
+            </div>
+            <div class="panel">
+                <h2>Status &amp; Alerts</h2>
+                <div id="statusPill" class="status-pill status-green">In target range</div>
+                <div id="results"></div>
+                <div id="diagnostics" class="diag"></div>
+            </div>
+        </div>
+    </div>
+    <script src="ec-ph-monitor.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "title": "Sensor Data Analysis Pipeline",
+  "description": "Sensor Data Analysis Pipeline",
+  "creator": "Dementia Education Project",
+  "date": "2026-05-29",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "sensor-data-pipeline",
+  "library": "p5.js",
+  "bloomLevel": "Apply (L3) and Analyze (L4)",
+  "bloomVerb": "Apply — students apply data analysis operations to a simulated dataset and observe how each step transforms the data.",
+  "completion_status": "scaffold",
+  "chapter_number": 16,
+  "chapter_title": "Data Collection and Analysis",
+  "chapter_dir": "16-data-collection-analysis"
+}

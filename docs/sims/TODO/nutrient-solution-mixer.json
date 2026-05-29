@@ -1,0 +1,14 @@
+{
+  "sim_id": "nutrient-solution-mixer",
+  "diagram_name": "Nutrient Solution Mixing Calculator",
+  "chapter_number": 5,
+  "chapter_title": "Nutrient Solution Chemistry and Mixing",
+  "chapter_dir": "05-nutrient-solution-chemistry",
+  "library": "p5.js",
+  "bloom_level": "Apply (L3)",
+  "bloom_verb": "Calculate — students calculate salt quantities needed to achieve target nutrient concentrations",
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-05-29",
+  "specification": "Type: microsim\n**sim-id:** nutrient-solution-mixer<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nPurpose: Allow students to interactively design a nutrient solution from raw salts by entering target element concentrations and seeing the salt quantities required. Demonstrates the relationship between salt composition and solution chemistry.\n\nBloom Level: Apply (L3)\nBloom Verb: Calculate — students calculate salt quantities needed to achieve target nutrient concentrations\n\nInstructional Rationale: This is a step-through calculator appropriate for Apply-level objectives. Students enter targets and observe quantities, building numeracy around solution formulation before working with real salts.\n\nCanvas layout:\n- Left panel (45%): Target concentration inputs (ppm) for: N (nitrate), N (ammonium), P, K, Ca, Mg, S, Fe\n- Center panel (35%): Calculated salt quantities (g per liter of final solution) for: Calcium nitrate, Magnesium sulfate, Potassium nitrate, Monopotassium phosphate, Chelated iron (DTPA-Fe)\n- Right panel (20%): Solution summary — estimated EC (mS/cm), N:P:K ratio, Ca:Mg ratio, and any warnings (e.g., \"Ca + phosphate conflict\" if concentrations exceed co-precipitation threshold)\n\nPre-loaded presets (dropdown):\n- Lettuce / Leafy Greens (vegetative formula, EC ~1.6)\n- Basil / Herbs (moderate EC ~1.8)\n- Tomato Vegetative (EC ~2.5)\n- Tomato Fruiting (EC ~3.5)\n\nInteractivity:\n- Changing any target ppm input recalculates salt quantities and updates the summary in real time\n- Clicking a salt name in the center panel opens a tooltip with: chemical formula, solubility, pH effect, handling notes\n- Warning icon appears if any combination would cause precipitation (e.g., Ca too high with P too high)\n- \"Show Mixing Order\" button generates a numbered mixing sequence: (1) fill reservoir with water, (2) add calcium nitrate, stir, (3) add magnesium sulfate, stir, (4) add potassium nitrate, stir, (5) add potassium phosphate, stir, (6) add chelated iron, (7) check EC and pH\n\nResponsive: Scales to container width; panels stack vertically on narrow screens"
+}

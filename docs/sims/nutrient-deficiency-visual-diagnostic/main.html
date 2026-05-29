@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>Nutrient Deficiency Diagnostic</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #f8f9fa; color: #212529; padding: 8px; }
+        h1 { font-size: 16px; margin-bottom: 6px; color: #2e7d32; }
+        .grid { display: grid; grid-template-columns: 1.1fr 1.5fr 1fr; gap: 8px; }
+        @media (max-width: 760px) { .grid { grid-template-columns: 1fr; } }
+        .panel { background: white; border: 1px solid #dee2e6; border-radius: 4px; padding: 10px; min-height: 480px; }
+        h2 { font-size: 12px; color: #00796b; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .group { margin-bottom: 10px; }
+        .group label { display: block; font-size: 12px; margin: 3px 0; cursor: pointer; }
+        .group input { margin-right: 6px; }
+        #leafCanvasHost main { display: block; text-align: center; }
+        button { background: #2e7d32; color: white; border: none; padding: 5px 10px; border-radius: 3px; cursor: pointer; font-size: 12px; margin-top: 6px; }
+        button.secondary { background: #00796b; }
+        .diagnosis-item { background: #f1f8e9; border-left: 3px solid #4caf50; padding: 6px 8px; margin: 4px 0; border-radius: 2px; font-size: 12px; cursor: pointer; }
+        .diagnosis-item.low { border-left-color: #fdd835; background: #fffde7; }
+        .diagnosis-item.weak { border-left-color: #bdbdbd; background: #fafafa; }
+        .diagnosis-item.expanded { background: #e8f5e9; }
+        .diagnosis-item h3 { font-size: 12px; color: #2e7d32; margin-bottom: 3px; }
+        .diagnosis-item .meta { font-size: 11px; color: #495057; margin-top: 4px; line-height: 1.5; }
+        .legend { font-size: 11px; color: #6c757d; margin-top: 6px; line-height: 1.4; }
+        .toggle-leaf { font-size: 11px; margin-top: 8px; display: flex; align-items: center; gap: 6px; }
+    </style>
+</head>
+<body>
+    <h1>Nutrient Deficiency Visual Diagnostic</h1>
+    <div class="grid">
+        <div class="panel">
+            <h2>Symptoms observed</h2>
+            <div class="group">
+                <div style="font-size:11px; font-weight:600; color:#495057; margin-bottom:3px">Leaf age affected</div>
+                <label><input type="radio" name="age" value="new"> New / upper leaves first</label>
+                <label><input type="radio" name="age" value="old" checked> Old / lower leaves first</label>
+                <label><input type="radio" name="age" value="both"> Both / whole plant</label>
+            </div>
+            <div class="group">
+                <div style="font-size:11px; font-weight:600; color:#495057; margin-bottom:3px">Pattern type</div>
+                <label><input type="checkbox" data-pattern="interveinal"> Yellowing between veins</label>
+                <label><input type="checkbox" data-pattern="uniform"> Uniform yellowing</label>
+                <label><input type="checkbox" data-pattern="edges"> Browning at edges</label>
+                <label><input type="checkbox" data-pattern="purple"> Purple/red discoloration</label>
+                <label><input type="checkbox" data-pattern="tipBurn"> Browning at growing tip</label>
+                <label><input type="checkbox" data-pattern="twisted"> Twisted / distorted growth</label>
+            </div>
+            <button id="cycleBtn" class="secondary">Show All Patterns →</button>
+            <button id="resetBtn">Reset</button>
+            <div class="toggle-leaf">
+                <input type="checkbox" id="oldLeafToggle">
+                <label for="oldLeafToggle">Show OLD leaf view</label>
+            </div>
+        </div>
+        <div class="panel" id="leafCanvasHost">
+            <h2>Leaf Symptom Visualization</h2>
+            <main></main>
+            <div class="legend" id="hoverTip">Hover over the leaf for region-specific tips. Selected symptoms are overlaid on the leaf shape.</div>
+        </div>
+        <div class="panel">
+            <h2>Probable Deficiencies</h2>
+            <div id="diagnosis"></div>
+            <div class="legend">Click a deficiency above to expand. Likelihood is based on the symptoms you selected — pick more symptoms to narrow the match.</div>
+        </div>
+    </div>
+    <script src="nutrient-deficiency-visual-diagnostic.js"></script>
+</body>
+</html>

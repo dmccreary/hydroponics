@@ -141,7 +141,7 @@ Before examining each salt, note the critical safety rule: **always add salts to
 As discussed in Chapter 4, chelated iron keeps iron soluble across the operational pH range. Pre-dissolved chelated iron is added to the reservoir in small quantities (typically 1–3 mg/L total Fe). DTPA-chelated iron is preferred for systems where pH may drift above 6.5.
 
 #### Diagram: Nutrient Solution Mixing Calculator
-<iframe src="../../sims/nutrient-solution-mixer/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/nutrient-solution-mixer/main.html" width="100%" height="642px" scrolling="no"></iframe>
 <details markdown="1">
 <summary>Nutrient Solution Mixing Calculator MicroSim</summary>
 Type: microsim
@@ -268,7 +268,7 @@ Target solution temperature: **18–22°C (65–72°F)** for most crops. Below 1
 Measure dissolved oxygen with a DO meter if you have one; otherwise, maintain aeration and temperature within the recommended ranges and inspect root color weekly as a proxy.
 
 #### Diagram: EC and pH Monitor Over a Crop Cycle
-<iframe src="../../sims/ec-ph-monitor/main.html" width="100%" height="460px" scrolling="no"></iframe>
+<iframe src="../../sims/ec-ph-monitor/main.html" width="100%" height="722" scrolling="no"></iframe>
 <details markdown="1">
 <summary>EC and pH Monitor Interactive Simulation</summary>
 Type: microsim

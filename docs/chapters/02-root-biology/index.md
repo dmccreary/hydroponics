@@ -62,7 +62,7 @@ To understand nutrient absorption, you need to know five structural zones of a r
 5. **Older root tissue**: Further back from the tip, the epidermis suberizes (becomes waterproofed with suberin) and root hairs die off. Nutrient absorption here is minimal compared to the differentiation zone.
 
 #### Diagram: Root Cross-Section and Absorption Zones
-<iframe src="../../sims/root-anatomy-explorer/main.html" width="100%" height="520px" scrolling="no"></iframe>
+<iframe src="../../sims/root-anatomy-explorer/main.html" width="100%" height="622" scrolling="no"></iframe>
 <details markdown="1">
 <summary>Root Anatomy Interactive Explorer</summary>
 Type: diagram
@@ -143,7 +143,7 @@ Active transport is how plants achieve the internal mineral concentrations they 
 The critical takeaway for growers: active transport requires ATP, ATP requires aerobic respiration, and aerobic respiration requires dissolved oxygen. This is the mechanistic chain that connects **root zone oxygen → nutrient uptake → plant growth rate**. Cut the oxygen supply and you cut nutrient absorption before any visual symptom appears.
 
 #### Diagram: Ion Uptake Mechanisms Comparison
-<iframe src="../../sims/ion-uptake-mechanisms/main.html" width="100%" height="480px" scrolling="no"></iframe>
+<iframe src="../../sims/ion-uptake-mechanisms/main.html" width="100%" height="602" scrolling="no"></iframe>
 <details markdown="1">
 <summary>Passive Diffusion vs. Active Transport Interactive Comparison</summary>
 Type: microsim
@@ -270,7 +270,7 @@ In hydroponics, root exudate release — especially organic acid secretion and p
     Root exudate-driven pH drift is predictable: in a Kratky or DWC system with young plants, pH tends to drift upward as roots pump out OH⁻ when absorbing nitrate. In a fast-growing mature system, pH may drift downward as respiration CO₂ dissolves in solution forming carbonic acid. Measure pH daily for the first two weeks of a new crop cycle to characterize your system's drift pattern. Once you know the pattern, weekly adjustments may suffice.
 
 #### Diagram: Root Exudate pH Drift Simulator
-<iframe src="../../sims/root-exudate-ph-drift/main.html" width="100%" height="460px" scrolling="no"></iframe>
+<iframe src="../../sims/root-exudate-ph-drift/main.html" width="100%" height="582" scrolling="no"></iframe>
 <details markdown="1">
 <summary>Root Exudate pH Drift Simulator</summary>
 Type: microsim

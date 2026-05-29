@@ -185,7 +185,7 @@ The distinction: iron shows new leaves first (immobile), magnesium shows old lea
 - **Scattered necrotic spots**: Often a sign of *Pythium* or bacterial infection rather than nutrient deficiency
 
 #### Diagram: Nutrient Deficiency Visual Diagnostic Tool
-<iframe src="../../sims/nutrient-deficiency-visual-diagnostic/main.html" width="100%" height="520px" scrolling="no"></iframe>
+<iframe src="../../sims/nutrient-deficiency-visual-diagnostic/main.html" width="100%" height="582" scrolling="no"></iframe>
 <details markdown="1">
 <summary>Nutrient Deficiency Visual Diagnostic Interactive Tool</summary>
 Type: infographic
@@ -257,7 +257,7 @@ Where W₁ and W₂ are dry weights at two time points separated by (t₂ − t�
 For school and hobbyist applications, tracking fresh weight at weekly intervals and comparing harvest dates against a baseline is sufficient to evaluate system performance without a laboratory.
 
 #### Diagram: Biomass Growth Tracker
-<iframe src="../../sims/biomass-growth-tracker/main.html" width="100%" height="460px" scrolling="no"></iframe>
+<iframe src="../../sims/biomass-growth-tracker/main.html" width="100%" height="722" scrolling="no"></iframe>
 <details markdown="1">
 <summary>Biomass Growth Tracker and Fresh/Dry Weight Calculator</summary>
 Type: microsim

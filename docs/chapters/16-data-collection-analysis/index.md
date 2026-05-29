@@ -436,7 +436,7 @@ A pH slope of +0.05 pH/day means the solution is slowly becoming more alkaline â
     When you check pH daily, you see the current reading. When you fit a regression line to 30 days of pH data, you see the slope â€” whether the system is drifting, how fast, and whether that rate changed after you modified the nutrient formulation. This is the difference between reactive management and understanding your system. The math is simple; the insight is powerful.
 
 #### Diagram: Sensor Data Analysis Pipeline
-<iframe src="../../sims/sensor-data-pipeline/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/sensor-data-pipeline/main.html" width="100%" height="702" scrolling="no"></iframe>
 <details markdown="1">
 <summary>Hydroponic Sensor Data Analysis Pipeline Interactive Demo</summary>
 Type: interactive-analysis

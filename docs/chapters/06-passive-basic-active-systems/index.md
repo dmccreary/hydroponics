@@ -100,7 +100,7 @@ The **Kratky method**, developed by B.A. Kratky at the University of Hawaii, is 
 **Pump failure risk**: Low to moderate. Unlike NFT, the reservoir contains enough solution to sustain the plant for several hours after pump failure — time to diagnose and repair. However, large plants with full root masses in warm conditions can deplete DO within 2–4 hours.
 
 #### Diagram: Hydroponic Systems Side-by-Side Comparison
-<iframe src="../../sims/hydroponic-systems-comparison/main.html" width="100%" height="540px" scrolling="no"></iframe>
+<iframe src="../../sims/hydroponic-systems-comparison/main.html" width="100%" height="642" scrolling="no"></iframe>
 <details markdown="1">
 <summary>Hydroponic Systems Side-by-Side Comparison Interactive Diagram</summary>
 Type: diagram
@@ -209,7 +209,7 @@ Before Chapter 7 covers maintenance and reliability in depth, here is a practica
 3. **What is your budget and skill level?** Beginner, <$100 → Kratky. Intermediate, $100–500 → DWC or NFT. Advanced, $500+ → ebb-and-flow, aeroponics, or commercial DWC.
 
 #### Diagram: System Selection Decision Tree
-<iframe src="../../sims/system-selection-decision-tree/main.html" width="100%" height="480px" scrolling="no"></iframe>
+<iframe src="../../sims/system-selection-decision-tree/main.html" width="100%" height="642" scrolling="no"></iframe>
 <details markdown="1">
 <summary>Hydroponic System Selection Decision Tree</summary>
 Type: workflow

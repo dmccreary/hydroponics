@@ -516,7 +516,7 @@ wlan = connect_wifi("MyHomeNetwork", "password123")
 Once connected, the microcontroller can use `urequests` (for HTTP) or `umqtt.simple` (for MQTT) to transmit sensor data to a server or cloud platform. Chapter 14 covers both in detail, along with MQTT broker setup, watchdog timers, and over-the-air firmware updates.
 
 #### Diagram: Hardware Interface Architecture
-<iframe src="../../sims/hardware-interface-architecture/main.html" width="100%" height="540px" scrolling="no"></iframe>
+<iframe src="../../sims/hardware-interface-architecture/main.html" width="100%" height="682" scrolling="no"></iframe>
 <details markdown="1">
 <summary>MicroPython Hardware Interface Architecture Diagram</summary>
 Type: architecture-diagram

@@ -1,0 +1,14 @@
+{
+  "sim_id": "sensor-data-pipeline",
+  "diagram_name": "Sensor Data Analysis Pipeline",
+  "chapter_number": 16,
+  "chapter_title": "Data Collection and Analysis",
+  "chapter_dir": "16-data-collection-analysis",
+  "library": "p5.js",
+  "bloom_level": "Apply (L3) and Analyze (L4)",
+  "bloom_verb": "Apply — students apply data analysis operations to a simulated dataset and observe how each step transforms the data.",
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-05-29",
+  "specification": "Type: interactive-analysis\n**sim-id:** sensor-data-pipeline<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nPurpose: Simulate a 35-day crop cycle dataset (synthetic pH, EC, temperature readings at 5-minute intervals) and allow students to apply each analysis step — load, clean, resample, rolling average, correlation, regression — and observe the output update in real-time.\n\nBloom Level: Apply (L3) and Analyze (L4)\nBloom Verb: Apply — students apply data analysis operations to a simulated dataset and observe how each step transforms the data.\n\nLayout: Canvas 900×500. Split into left panel (analysis controls) and right panel (data visualization).\n\nLeft panel — analysis steps (checkboxes and sliders):\n1. \"Add simulated noise\" slider (0–100%) — adds random noise to the synthetic dataset\n2. \"Add missing data gaps\" slider (0–20%) — randomly NaN-ifies readings\n3. \"Apply validation\" checkbox — remove out-of-range values\n4. \"Fill missing data\" dropdown — None / Forward Fill / Interpolate\n5. \"Resample to\" dropdown — 5 min / 15 min / 1 hour / 1 day\n6. \"Rolling window\" slider (1–48 readings)\n7. \"Show regression line\" checkbox\n8. \"Show ±1 std band\" checkbox\n\nRight panel — time series chart showing:\n- Raw data (gray points, can be toggled)\n- Cleaned/interpolated data (blue line)\n- Resampled data (orange line)\n- Rolling average (green line)\n- Regression trend line (red dashed)\n- ±1 std band (shaded green)\n\nBelow chart: stats panel showing real-time values: mean, median, std, min, max, trend slope (pH/day).\n\nInteractivity: All left-panel changes update the chart instantly. Hovering the chart shows a vertical cursor with the exact values at that timestamp. Toggle \"View Mode\" to switch between pH / EC / Temperature."
+}

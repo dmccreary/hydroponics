@@ -141,7 +141,7 @@ Between crop cycles, growing media that will be reused must be sterilized to eli
 **Steam sterilization**: Expose media to steam at 100°C for 30 minutes. Effective against all biological agents including *Pythium* oospores. Practical for small batches using a pressure cooker or steam table. Not practical for large volumes.
 
 #### Diagram: Growing Media Properties Comparison
-<iframe src="../../sims/growing-media-comparison/main.html" width="100%" height="480px" scrolling="no"></iframe>
+<iframe src="../../sims/growing-media-comparison/main.html" width="100%" height="622" scrolling="no"></iframe>
 <details markdown="1">
 <summary>Growing Media Properties Interactive Comparison</summary>
 Type: infographic

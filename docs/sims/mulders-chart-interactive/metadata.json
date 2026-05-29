@@ -1,0 +1,21 @@
+{
+  "title": "Interactive Mulder's Chart — pH and Nutrient Availability",
+  "description": "Interactive Mulder's Chart — pH and Nutrient Availability",
+  "creator": "Dementia Education Project",
+  "date": "2026-05-29",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "mulders-chart-interactive",
+  "library": "p5.js",
+  "bloomLevel": "Analyze (L4)",
+  "bloomVerb": "Examine — students examine relationships between pH and nutrient availability and identify antagonism patterns",
+  "completion_status": "scaffold",
+  "chapter_number": 4,
+  "chapter_title": "Essential Nutrients: Macro and Micro",
+  "chapter_dir": "04-macro-micro-nutrients"
+}

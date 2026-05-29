@@ -1,0 +1,21 @@
+{
+  "title": "Hardware Interface Architecture",
+  "description": "Hardware Interface Architecture",
+  "creator": "Dementia Education Project",
+  "date": "2026-05-29",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "hardware-interface-architecture",
+  "library": "p5.js",
+  "bloomLevel": "Understand (L2) and Analyze (L4)",
+  "bloomVerb": "Classify — students identify which protocol connects each sensor type to the microcontroller.",
+  "completion_status": "scaffold",
+  "chapter_number": 13,
+  "chapter_title": "Hardware Interfaces and Sensor Programming",
+  "chapter_dir": "13-hardware-interfaces"
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>History of Hydroponics Timeline</title>
+    <script src="https://unpkg.com/vis-timeline@7.7.3/standalone/umd/vis-timeline-graph2d.min.js"></script>
+    <link href="https://unpkg.com/vis-timeline@7.7.3/styles/vis-timeline-graph2d.min.css" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f8f9fa; color: #212529; padding: 8px; }
+        h1 { font-size: 18px; margin-bottom: 8px; color: #2e7d32; }
+        #wrap { display: grid; grid-template-columns: 1fr 280px; gap: 8px; }
+        @media (max-width: 720px) { #wrap { grid-template-columns: 1fr; } }
+        #timeline { background: white; border: 1px solid #dee2e6; border-radius: 4px; height: 380px; }
+        #detail { background: white; border: 1px solid #dee2e6; border-radius: 4px; padding: 12px; font-size: 13px; line-height: 1.45; min-height: 380px; }
+        #detail h2 { font-size: 15px; color: #00796b; margin-bottom: 4px; }
+        #detail .year { color: #6c757d; font-size: 12px; margin-bottom: 8px; }
+        #detail .body { color: #343a40; }
+        .legend { font-size: 11px; color: #495057; margin: 6px 0; display: flex; flex-wrap: wrap; gap: 12px; }
+        .legend span { display: inline-flex; align-items: center; gap: 4px; }
+        .legend i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; }
+        .vis-item.era-ancient { background: #8a9a5b; border-color: #6b7d44; color: white; }
+        .vis-item.era-foundation { background: #00796b; border-color: #004d40; color: white; }
+        .vis-item.era-modern { background: #1976d2; border-color: #0d47a1; color: white; }
+        .vis-item.era-industry { background: #2e7d32; border-color: #1b5e20; color: white; }
+        .vis-item.vis-point.era-ancient .vis-dot { border-color: #8a9a5b; background: #8a9a5b; }
+        .vis-item.vis-point.era-foundation .vis-dot { border-color: #00796b; background: #00796b; }
+        .vis-item.vis-point.era-modern .vis-dot { border-color: #1976d2; background: #1976d2; }
+        .vis-item.vis-point.era-industry .vis-dot { border-color: #2e7d32; background: #2e7d32; }
+    </style>
+</head>
+<body>
+    <main>
+    <h1>History of Hydroponics: 1200 CE to 2026</h1>
+    <div class="legend">
+        <span><i style="background:#8a9a5b"></i>Ancient (1200–1800)</span>
+        <span><i style="background:#00796b"></i>Scientific foundations (1800–1930)</span>
+        <span><i style="background:#1976d2"></i>Modern development (1930–2000)</span>
+        <span><i style="background:#2e7d32"></i>Industry scale-up (2000+)</span>
+    </div>
+    <div id="wrap">
+        <div id="timeline"></div>
+        <div id="detail">
+            <h2>Click an event</h2>
+            <div class="year">Hover for a summary; click for details.</div>
+            <div class="body">Use the mouse wheel to zoom into dense areas. Click and drag to pan along the timeline.</div>
+        </div>
+    </div>
+    </main>
+    <script src="hydroponics-history-timeline.js"></script>
+</body>
+</html>

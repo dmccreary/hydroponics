@@ -1,0 +1,14 @@
+{
+  "sim_id": "mulders-chart-interactive",
+  "diagram_name": "Interactive Mulder's Chart — pH and Nutrient Availability",
+  "chapter_number": 4,
+  "chapter_title": "Essential Nutrients: Macro and Micro",
+  "chapter_dir": "04-macro-micro-nutrients",
+  "library": "p5.js",
+  "bloom_level": "Analyze (L4)",
+  "bloom_verb": "Examine — students examine relationships between pH and nutrient availability and identify antagonism patterns",
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-05-29",
+  "specification": "Type: infographic\n**sim-id:** mulders-chart-interactive<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nPurpose: Visualize how each nutrient's availability changes with pH, and how excess of one nutrient causes deficiency of another (Mulder antagonisms). Students drag a pH slider and observe which nutrients become limited.\n\nBloom Level: Analyze (L4)\nBloom Verb: Examine — students examine relationships between pH and nutrient availability and identify antagonism patterns\n\nVisual layout: Two views toggled by tab buttons\n\nView 1 — pH Availability Chart:\n- Horizontal bar chart with all 14 mineral nutrients on y-axis (N, P, K, Ca, Mg, S, Fe, Mn, Zn, Cu, B, Mo, Cl, Ni)\n- Bar length represents availability from 0% (not available) to 100% (fully available) at the current pH\n- Bar fill color: Green when >75% available, Yellow when 25–75%, Red when <25%\n- pH slider: range 4.5 to 8.5, step 0.1, default 6.0\n- Green vertical band marks the 5.5–6.5 optimal range on a secondary mini-chart above the bars\n- Clicking any bar opens a side panel with: nutrient name, function in brief, typical solution concentration (ppm), absorption form, and which pH range causes lockout\n\nView 2 — Antagonism Network:\n- Force-directed network diagram showing nodes for all 14 mineral nutrients\n- Orange arrows = antagonism (excess source → reduced uptake of target)\n- Teal arrows = synergism (promotes uptake of target)\n- Key antagonisms:\n  Excess K → reduced Mg, Ca uptake\n  Excess Ca → reduced Mg, K, Fe uptake\n  Excess Mg → reduced Ca, K uptake\n  Excess Fe → reduced Mn, Zn uptake\n  Excess Mn → reduced Fe, Zn uptake\n  Excess Zn → reduced Fe uptake\n  Excess P → reduced Zn, Fe uptake\n- Nodes sized proportionally to frequency of deficiency reports in hydroponic literature\n- Clicking a nutrient node: highlights all antagonism arrows; shows \"If you have excess [X], watch for deficiency of [Y]\"\n- Toggle \"Show excess\" / \"Show deficiency\" direction filter\n\nTab labels: \"pH Availability\" | \"Nutrient Interactions\"\n\nResponsive: Scales to container width; minimum height 540px\nColor scheme: Green (available), yellow (limited), red (unavailable), orange (antagonism arrows), teal (synergism arrows)"
+}

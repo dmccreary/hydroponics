@@ -420,7 +420,7 @@ A slope of +0.05 pH/hour means the solution is becoming 1.2 pH units more alkali
     A simple alarm setpoint ("alert if pH < 5.5") reacts to current values. A control chart alarm ("alert if pH is trending beyond UCL") reacts to statistical patterns. Control charts catch problems earlier — you'll get the trend alarm when pH is still at 6.2 and drifting, before it reaches 5.5 and the plants are already stressed. Use setpoint alarms as a safety net; use control charts for proactive management.
 
 #### Diagram: SPC Dashboard for Hydroponics
-<iframe src="../../sims/spc-dashboard/main.html" width="100%" height="540px" scrolling="no"></iframe>
+<iframe src="../../sims/spc-dashboard/main.html" width="100%" height="722" scrolling="no"></iframe>
 <details markdown="1">
 <summary>Statistical Process Control Dashboard for Hydroponics</summary>
 Type: interactive-dashboard

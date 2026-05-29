@@ -1,0 +1,14 @@
+{
+  "sim_id": "farm-financial-model",
+  "diagram_name": "Hydroponic Farm Financial Model Builder",
+  "chapter_number": 21,
+  "chapter_title": "Financial Modeling and Hydroponics Economics",
+  "chapter_dir": "21-financial-modeling",
+  "library": "p5.js",
+  "bloom_level": "Apply (L3) and Evaluate (L5)",
+  "bloom_verb": "Evaluate — students construct a financial model for their specific scenario and assess viability.",
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-05-29",
+  "specification": "Type: financial-simulator\n**sim-id:** farm-financial-model<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nPurpose: Allow students to build a complete financial model for a hydroponic operation by entering cost and revenue inputs, then see real-time calculation of break-even, NPV, IRR, payback period, and a 5-year cash flow chart.\n\nBloom Level: Apply (L3) and Evaluate (L5)\nBloom Verb: Evaluate — students construct a financial model for their specific scenario and assess viability.\n\nLayout: Canvas 900×560. Four-column layout:\n\nColumn 1 (CapEx Inputs):\n- Growing system cost ($)\n- Lighting cost ($)\n- HVAC/climate cost ($)\n- Automation/sensors ($)\n- Facility buildout ($)\n- Total CapEx (calculated)\n\nColumn 2 (OpEx Inputs — monthly):\n- Electricity ($/month)\n- Water ($/month)\n- Nutrients ($/month)\n- Seeds/propagation ($/month)\n- Labor (hrs × rate)\n- Packaging ($/month)\n- Loan payment (auto-calculated from CapEx)\n- Total monthly OpEx (calculated)\n\nColumn 3 (Revenue Inputs — monthly):\n- Growing area (m²)\n- Yield per m² per cycle (kg)\n- Cycles per year\n- Selling price ($/kg)\n- Market channel selector: Wholesale / Restaurant / Farmers Market / CSA\n- Monthly revenue (calculated)\n\nColumn 4 (Results):\n- Break-even volume (kg/month)\n- Monthly profit/loss ($)\n- Annual profit ($)\n- NPV at 8% discount, 5 years ($)\n- IRR (%)\n- Payback period (years)\n- ROI 5-year (%)\n\nBottom panel: 5-year stacked bar chart showing Revenue (green bars) and Cost bars (red = OpEx, orange = CapEx depreciation). Cumulative cash flow line overlaid.\n\nInteractivity:\n- All inputs update all results and the chart in real time.\n- \"Compare Solar vs Grid\" button: adds a side-by-side energy cost comparison using the Chapter 19 solar model.\n- \"Run Monte Carlo\": performs 1,000 simulations varying price ±30%, yield ±25%, and electricity ±20%, then shows a histogram of annual profit outcomes with percentile bands.\n- \"Export Business Plan Summary\": downloads a formatted plain-text one-pager with all inputs and outputs.\n\nResponsive: Scales to container width; on narrow screens, columns stack vertically."
+}

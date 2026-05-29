@@ -149,7 +149,7 @@ where T is temperature in °C. Then:
 The VPD "sweet spot" for most commercial leafy green production is 0.8–1.2 kPa — high enough to drive adequate calcium transport to growing tissue, low enough to prevent stomatal closure and moisture stress.
 
 #### Diagram: VPD and Environmental Parameter Dashboard
-<iframe src="../../sims/vpd-environment-dashboard/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/vpd-environment-dashboard/main.html" width="100%" height="642" scrolling="no"></iframe>
 <details markdown="1">
 <summary>VPD and Environmental Parameter Interactive Dashboard</summary>
 Type: microsim

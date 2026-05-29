@@ -1,0 +1,14 @@
+{
+  "sim_id": "vpd-environment-dashboard",
+  "diagram_name": "VPD and Environmental Parameter Dashboard",
+  "chapter_number": 11,
+  "chapter_title": "Environmental Control and CO₂ Management",
+  "chapter_dir": "11-environmental-control",
+  "library": "p5.js",
+  "bloom_level": "Apply (L3)",
+  "bloom_verb": "Calculate — students calculate VPD from temperature and humidity and interpret whether conditions are optimal",
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-05-29",
+  "specification": "Type: microsim\n**sim-id:** vpd-environment-dashboard<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nPurpose: Allow students to interactively set temperature and humidity and see the resulting VPD calculated in real time, along with color-coded feedback on whether the environment is in optimal range for each growth stage.\n\nBloom Level: Apply (L3)\nBloom Verb: Calculate — students calculate VPD from temperature and humidity and interpret whether conditions are optimal\n\nCanvas layout:\n- Left panel (40%): Input controls\n  - Temperature slider: 15–35°C\n  - Humidity slider: 30–95% RH\n  - Growth stage selector (dropdown): Propagation | Vegetative | Fruiting\n- Center panel (40%): Calculated results\n  - Saturated vapor pressure (SVP) at current temperature\n  - VPD (large font display)\n  - VPD gauge: horizontal bar with colored zones (blue=too low, green=optimal, orange=high, red=very high) with marker at current VPD\n  - Interpretation text: \"VPD is in the optimal range for [stage]\" or \"VPD is too high — stomata may close\"\n- Right panel (20%): Consequences panel\n  - Current transpiration rate: Low/Moderate/High (text + colored indicator)\n  - Calcium delivery risk: OK / Warning (if VPD < 0.6 kPa, calcium delivery is limited)\n  - Disease risk: Low / Elevated (if RH > 85%, powdery mildew and Botrytis risk increases)\n  - CO₂ efficiency: Full / Reduced (if stomata are likely closed at high VPD, CO₂ enrichment is less effective)\n\nInteractive features:\n- All sliders update calculations in real time\n- Hover VPD gauge: Shows the formula SVP × (1 − RH/100) with current values substituted\n- \"Common Scenarios\" dropdown pre-loads temperature and humidity combinations: \"Summer afternoon (hot)\", \"Night cycle\", \"Propagation dome\", \"Winter dry heat\"\n- Toggle \"Show VPD Table\": Overlays a 6×6 heatmap showing VPD at combinations of temperature (15–35°C) and humidity (40–90%) with the current point marked\n\nResponsive: Panels stack vertically on narrow screens; VPD display remains large"
+}

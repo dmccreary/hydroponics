@@ -80,7 +80,7 @@ Soilless cultivation is older than the term that describes it. Before exploring 
 **William Frederick Gericke** at the University of California coined the term *hydroponics* in 1937 and demonstrated it at scale: he grew tomato vines 25 feet tall in nutrient solution, generating enormous public interest. Gericke's work transformed what had been a laboratory curiosity into a proposed agricultural technology. During World War II, the U.S. Army used hydroponic systems on Pacific islands to supply fresh vegetables to troops where soil growing was impossible — the first large-scale practical deployment.
 
 #### Diagram: History of Hydroponics Timeline
-<iframe src="../../sims/hydroponics-history-timeline/main.html" width="100%" height="480px" scrolling="no"></iframe>
+<iframe src="../../sims/hydroponics-history-timeline/main.html" width="100%" height="482" scrolling="no"></iframe>
 <details markdown="1">
 <summary>History of Hydroponics Timeline</summary>
 Type: timeline
@@ -176,7 +176,7 @@ Before examining a typical grow room layout interactively below, here are the ke
 - **Monitoring zone**: Sensors for pH, EC, temperature, humidity, and CO₂; data loggers; automated dosing systems (Chapters 12–17)
 
 #### Diagram: Indoor Grow Room Layout
-<iframe src="../../sims/indoor-grow-room-layout/main.html" width="100%" height="520px" scrolling="no"></iframe>
+<iframe src="../../sims/indoor-grow-room-layout/main.html" width="100%" height="622" scrolling="no"></iframe>
 <details markdown="1">
 <summary>Indoor Grow Room Layout Interactive Diagram</summary>
 Type: diagram
@@ -262,7 +262,7 @@ Glucose and oxygen are consumed to produce CO₂, water, and ATP. In roots speci
 This is why dissolved oxygen in the nutrient solution is not optional. It is the direct driver of the energy supply that moves minerals into the plant.
 
 #### Diagram: Photosynthesis and Respiration Cycle
-<iframe src="../../sims/photosynthesis-respiration-cycle/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/photosynthesis-respiration-cycle/main.html" width="100%" height="622" scrolling="no"></iframe>
 <details markdown="1">
 <summary>Photosynthesis and Cellular Respiration Interactive Step-Through</summary>
 Type: microsim
@@ -341,7 +341,7 @@ Harvest timing depends on the crop. Leafy greens (lettuce, spinach, basil) are t
 Post-harvest handling matters for shelf life. Cooling immediately after harvest removes stored heat, high relative humidity during storage prevents wilting, and separation from ripening fruit avoids ethylene-induced senescence in leafy greens.
 
 #### Diagram: Plant Life Cycle Stages Explorer
-<iframe src="../../sims/plant-life-cycle-explorer/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/plant-life-cycle-explorer/main.html" width="100%" height="622" scrolling="no"></iframe>
 <details markdown="1">
 <summary>Plant Life Cycle Stages Interactive Explorer</summary>
 Type: infographic

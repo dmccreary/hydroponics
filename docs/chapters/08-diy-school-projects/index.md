@@ -148,7 +148,7 @@ A storage tote DWC scales the single-bucket design to support multiple plants in
 **DIY EC calibration**: Most consumer EC meters are factory-calibrated and need only verification. Fill a cup with a known-conductivity calibration solution (usually 1,413 µS/cm ≈ 1.413 mS/cm), dip the probe, and verify the reading matches. If it differs by more than 5%, recalibrate using the meter's calibration procedure.
 
 #### Diagram: DIY Build Cost and Complexity Selector
-<iframe src="../../sims/diy-build-selector/main.html" width="100%" height="480px" scrolling="no"></iframe>
+<iframe src="../../sims/diy-build-selector/main.html" width="100%" height="682" scrolling="no"></iframe>
 <details markdown="1">
 <summary>DIY Build Cost and Complexity Interactive Selector</summary>
 Type: infographic

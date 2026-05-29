@@ -602,7 +602,7 @@ This pattern — a base class with a shared interface, subclasses with specific 
     Object-oriented programming can feel abstract at first. Don't try to design a full class hierarchy before writing any code. Start with one sensor, write a simple class for it, and make it work. Once you have a working `PHSensor` class, the pattern for `ECSensor` and `TemperatureSensor` will feel natural. Good OOP design emerges from working code — it isn't designed in advance.
 
 #### Diagram: MicroPython Concept Map
-<iframe src="../../sims/micropython-concept-map/main.html" width="100%" height="520px" scrolling="no"></iframe>
+<iframe src="../../sims/micropython-concept-map/main.html" width="100%" height="642" scrolling="no"></iframe>
 <details markdown="1">
 <summary>MicroPython Fundamentals Interactive Concept Map</summary>
 Type: concept-map

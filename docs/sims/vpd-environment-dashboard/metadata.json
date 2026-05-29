@@ -1,0 +1,21 @@
+{
+  "title": "VPD and Environmental Parameter Dashboard",
+  "description": "VPD and Environmental Parameter Dashboard",
+  "creator": "Dementia Education Project",
+  "date": "2026-05-29",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "vpd-environment-dashboard",
+  "library": "p5.js",
+  "bloomLevel": "Apply (L3)",
+  "bloomVerb": "Calculate — students calculate VPD from temperature and humidity and interpret whether conditions are optimal",
+  "completion_status": "scaffold",
+  "chapter_number": 11,
+  "chapter_title": "Environmental Control and CO₂ Management",
+  "chapter_dir": "11-environmental-control"
+}

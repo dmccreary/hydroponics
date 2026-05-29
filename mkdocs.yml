@@ -8,17 +8,6 @@ site_description: 'An interactive intelligent textbook on hydroponics for advanc
 site_author: 'Dan McCreary'
 site_url: 'https://dmccreary.github.io/hydroponics/'
 
-# Hooks — runs local Python before/after page processing.
-# `plugins/social_override.py` injects og:title, og:description, og:image,
-# og:type, og:url, and twitter:* meta tags on every page using each page's
-# frontmatter `title:` / `description:` / `image:` (falling back to the site-
-# wide values and `img/cover.png`). This is the Cairo-free path to social-
-# media previews — works without `pip install "mkdocs-material[imaging]"`.
-# If the `social` plugin below is ever enabled, the same hook also rewrites
-# its auto-generated `/assets/images/social/...` URLs to point at the
-# declared cover image. Verify the result with `bk-check-social-cover`.
-hooks:
-  - plugins/social_override.py
 
 # Repository
 repo_name: 'GitHub Repo'
@@ -74,8 +63,40 @@ nav:
       # - Taxonomy Distribution: learning-graph/taxonomy-distribution.md
 
   - MicroSims:
-      - List of MicroSims: sims/index.md
-      - Learning Graph Viewer: sims/graph-viewer/index.md
+    - List of MicroSims: sims/index.md
+    - Biomass Growth Tracker: sims/biomass-growth-tracker/index.md
+    - Commercial Vertical Farm Comparison: sims/vertical-farm-comparison/index.md
+    - DIY Build Cost and Complexity Selector: sims/diy-build-selector/index.md
+    - EC and pH Monitor Over a Crop Cycle: sims/ec-ph-monitor/index.md
+    - Failure Mode Analysis Decision Tree: sims/failure-mode-analysis/index.md
+    - Growing Media Properties Comparison: sims/growing-media-comparison/index.md
+    - HACCP Food Safety Risk Matrix: sims/haccp-risk-matrix/index.md
+    - Hardware Interface Architecture: sims/hardware-interface-architecture/index.md
+    - History of Hydroponics Timeline: sims/hydroponics-history-timeline/index.md
+    - Hydroponic Farm Financial Model Builder: sims/farm-financial-model/index.md
+    - Hydroponic Systems Side-by-Side Comparison: sims/hydroponic-systems-comparison/index.md
+    - Indoor Grow Room Layout: sims/indoor-grow-room-layout/index.md
+    - Interactive Mulder's Chart — pH and Nutrient Availability: sims/mulders-chart-interactive/index.md
+    - Ion Uptake Mechanisms Comparison: sims/ion-uptake-mechanisms/index.md
+    - IoT Data Flow Architecture: sims/iot-data-flow/index.md
+    - Learning Graph Viewer: sims/graph-viewer/index.md
+    - MicroPython Concept Map: sims/micropython-concept-map/index.md
+    - Nutrient Deficiency Visual Diagnostic Tool: sims/nutrient-deficiency-visual-diagnostic/index.md
+    - Nutrient Solution Mixing Calculator: sims/nutrient-solution-mixer/index.md
+    - Photosynthesis and Respiration Cycle: sims/photosynthesis-respiration-cycle/index.md
+    - Plant Life Cycle Stages Explorer: sims/plant-life-cycle-explorer/index.md
+    - PPFD and DLI Calculator: sims/ppfd-dli-calculator/index.md
+    - Root Cross-Section and Absorption Zones: sims/root-anatomy-explorer/index.md
+    - Root Exudate pH Drift Simulator: sims/root-exudate-ph-drift/index.md
+    - Sensor Data Analysis Pipeline: sims/sensor-data-pipeline/index.md
+    - Sensor Node Architecture: sims/sensor-node-architecture/index.md
+    - Solar Power System Designer: sims/solar-power-designer/index.md
+    - SPC Dashboard for Hydroponics: sims/spc-dashboard/index.md
+    - System Selection Decision Tree: sims/system-selection-decision-tree/index.md
+    - VPD and Environmental Parameter Dashboard: sims/vpd-environment-dashboard/index.md
+
+
+
 
   - License: license.md
   - Contact: contact.md
@@ -84,8 +105,8 @@ nav:
 theme:
   name: material
   # Once a logo is generated, point this at docs/img/logo.png or a mascot pose:
-  # logo: img/logo.png
-  # favicon: img/favicon.ico
+  logo: img/mascot/neutral.png
+  favicon: img/favicon.ico
   palette:
     primary: 'green'
     accent: 'teal'
@@ -108,21 +129,21 @@ theme:
 plugins:
   - search
   # Uncomment after running `pip install "mkdocs-material[imaging]"`:
-  # - social
+  - social
   # Uncomment after running `pip install mkdocs-glightbox`:
-  # - glightbox:
-  #     touchNavigation: true
-  #     loop: false
-  #     effect: zoom
-  #     slide_effect: slide
-  #     width: 100%
-  #     height: auto
-  #     zoomable: true
-  #     draggable: true
-  #     auto_caption: false
-  #     caption_position: bottom
-  #     skip_classes:
-  #       - mascot-admonition-img   # keep mascot poses out of the lightbox gallery
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      slide_effect: slide
+      width: 100%
+      height: auto
+      zoomable: true
+      draggable: true
+      auto_caption: false
+      caption_position: bottom
+      skip_classes:
+        - mascot-admonition-img   # keep mascot poses out of the lightbox gallery
 
 # Markdown extensions
 markdown_extensions:
@@ -164,6 +185,18 @@ exclude_docs: |
 watch:
   - docs
   - mkdocs.yml
+
+# Hooks — runs local Python before/after page processing.
+# `plugins/social_override.py` injects og:title, og:description, og:image,
+# og:type, og:url, and twitter:* meta tags on every page using each page's
+# frontmatter `title:` / `description:` / `image:` (falling back to the site-
+# wide values and `img/cover.png`). This is the Cairo-free path to social-
+# media previews — works without `pip install "mkdocs-material[imaging]"`.
+# If the `social` plugin below is ever enabled, the same hook also rewrites
+# its auto-generated `/assets/images/social/...` URLs to point at the
+# declared cover image. Verify the result with `bk-check-social-cover`.
+hooks:
+  - plugins/social_override.py
 
 # Extra
 extra:

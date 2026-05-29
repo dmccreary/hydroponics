@@ -1,0 +1,14 @@
+{
+  "sim_id": "iot-data-flow",
+  "diagram_name": "IoT Data Flow Architecture",
+  "chapter_number": 14,
+  "chapter_title": "Networking, IoT, and Advanced MicroPython",
+  "chapter_dir": "14-networking-iot",
+  "library": "p5.js",
+  "bloom_level": "Understand (L2) and Analyze (L4)",
+  "bloom_verb": "Trace — students follow a sensor reading from hardware through each system layer to its final destination.",
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-05-29",
+  "specification": "Type: architecture-diagram\n**sim-id:** iot-data-flow<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nPurpose: Visualize the complete data flow from sensors on a Pico W/ESP32, through Wi-Fi to an MQTT broker, and out to subscribers (dashboard, database, alert service, OTA server), with MQTT topic names shown on each arrow.\n\nBloom Level: Understand (L2) and Analyze (L4)\nBloom Verb: Trace — students follow a sensor reading from hardware through each system layer to its final destination.\n\nLayout: Canvas 900×500. Left column: \"Sensor Node\" block containing icons for Temperature (DS18B20), pH (Atlas), EC (Atlas), Humidity (DHT22), Flow (pulse meter). Center: \"Wi-Fi Router\" icon → \"MQTT Broker (Mosquitto)\" block showing example topics. Right column: four subscriber boxes (Dashboard, InfluxDB, Telegram Alert Bot, OTA Update Server).\n\nMQTT topic labels on arrows:\n- Sensor Node → Broker: `farm/zone1/sensors/raw` (every 60s)\n- Broker → Dashboard: `farm/zone1/sensors/#` (subscribe all)\n- Broker → InfluxDB: `farm/+/sensors/+`\n- Broker → Telegram Bot: `farm/+/alarms/#`\n- OTA Server → Broker: `farm/zone1/ota/firmware`\n\nAnimation: A small \"packet\" dot travels from sensor node → broker → each subscriber in sequence, with a label showing which topic is used for each hop. The animation loops continuously.\n\nToggle \"Show Protocols\": adds HTTP vs MQTT icons above each arrow to show which protocol each hop uses.\nToggle \"Show Watchdog\": highlights the sensor node with a timer countdown, shows \"WDT reset\" flash when it expires.\n\nInteractivity:\n- Clicking any node pauses the animation and shows a detail panel: what software runs on that node, what language/library, and a code snippet for that layer.\n- Click background to resume animation.\n\nResponsive: Scales to container width; on narrow screens, stacks left/center/right vertically."
+}

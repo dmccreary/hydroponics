@@ -168,7 +168,7 @@ A design that works at 10 plants must accommodate the changes needed to reach 10
 **Hybrid system designs** combine elements from different system types. A popular hybrid: NFT channels above a DWC reservoir — roots grow in the NFT film during the light cycle, then the NFT channels are flooded for an extended "deep water" period during the dark cycle. This eliminates NFT's pump-failure risk while maintaining the oxygen advantages of NFT during active growth.
 
 #### Diagram: Failure Mode Analysis Decision Tree
-<iframe src="../../sims/failure-mode-analysis/main.html" width="100%" height="480px" scrolling="no"></iframe>
+<iframe src="../../sims/failure-mode-analysis/main.html" width="100%" height="682" scrolling="no"></iframe>
 <details markdown="1">
 <summary>Hydroponic System Failure Mode Analysis Interactive Tool</summary>
 Type: workflow

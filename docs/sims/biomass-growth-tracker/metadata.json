@@ -1,0 +1,21 @@
+{
+  "title": "Biomass Growth Tracker",
+  "description": "Biomass Growth Tracker",
+  "creator": "Dementia Education Project",
+  "date": "2026-05-29",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "biomass-growth-tracker",
+  "library": "Chart.js",
+  "bloomLevel": "Apply (L3)",
+  "bloomVerb": "Calculate — students calculate growth rates and weight ratios from entered data",
+  "completion_status": "scaffold",
+  "chapter_number": 3,
+  "chapter_title": "Water Transport, Photosynthesis, and Plant Health",
+  "chapter_dir": "03-water-transport"
+}

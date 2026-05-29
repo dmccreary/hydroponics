@@ -223,7 +223,7 @@ A **PPFD map** shows the spatial distribution of photon flux density across a ca
 In a well-designed NFT or DWC array, grow lights are arranged to provide overlapping coverage that minimizes hot spots and under-lit zones. Single-fixture setups often show a bell-shaped PPFD distribution (highest intensity center, declining edges) — acceptable in smaller systems but problematic at scale.
 
 #### Diagram: PPFD and DLI Calculator
-<iframe src="../../sims/ppfd-dli-calculator/main.html" width="100%" height="480px" scrolling="no"></iframe>
+<iframe src="../../sims/ppfd-dli-calculator/main.html" width="100%" height="702" scrolling="no"></iframe>
 <details markdown="1">
 <summary>PPFD and DLI Interactive Calculator</summary>
 Type: microsim

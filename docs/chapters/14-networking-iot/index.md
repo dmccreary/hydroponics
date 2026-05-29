@@ -457,7 +457,7 @@ lcd.putstr("EC: 1.85 mS/cm")
 ```
 
 #### Diagram: IoT Data Flow Architecture
-<iframe src="../../sims/iot-data-flow/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/iot-data-flow/main.html" width="100%" height="622" scrolling="no"></iframe>
 <details markdown="1">
 <summary>Hydroponic IoT Data Flow Interactive Diagram</summary>
 Type: architecture-diagram

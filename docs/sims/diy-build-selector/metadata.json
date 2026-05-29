@@ -1,0 +1,21 @@
+{
+  "title": "DIY Build Cost and Complexity Selector",
+  "description": "DIY Build Cost and Complexity Selector",
+  "creator": "Dementia Education Project",
+  "date": "2026-05-29",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "diy-build-selector",
+  "library": "p5.js",
+  "bloomLevel": "Evaluate (L5)",
+  "bloomVerb": "Recommend — students recommend a build based on constraints and justify the choice",
+  "completion_status": "scaffold",
+  "chapter_number": 8,
+  "chapter_title": "DIY Systems and School Projects",
+  "chapter_dir": "08-diy-school-projects"
+}

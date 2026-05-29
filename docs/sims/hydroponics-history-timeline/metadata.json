@@ -1,0 +1,21 @@
+{
+  "title": "History of Hydroponics Timeline",
+  "description": "History of Hydroponics Timeline",
+  "creator": "Dementia Education Project",
+  "date": "2026-05-29",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "hydroponics-history-timeline",
+  "library": "vis-timeline",
+  "bloomLevel": "Understand (L2)",
+  "bloomVerb": "Explain — students explain why each era advanced the field",
+  "completion_status": "scaffold",
+  "chapter_number": 1,
+  "chapter_title": "Introduction to Hydroponics",
+  "chapter_dir": "01-introduction"
+}

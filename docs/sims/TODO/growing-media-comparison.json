@@ -1,0 +1,14 @@
+{
+  "sim_id": "growing-media-comparison",
+  "diagram_name": "Growing Media Properties Comparison",
+  "chapter_number": 9,
+  "chapter_title": "Growing Media and Crop Management",
+  "chapter_dir": "09-growing-media-crops",
+  "library": "p5.js",
+  "bloom_level": "Analyze (L4)",
+  "bloom_verb": "Compare — students compare media properties and select the most appropriate medium for a given scenario",
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-05-29",
+  "specification": "Type: infographic\n**sim-id:** growing-media-comparison<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nPurpose: Allow students to visually compare all seven major growing media across four key dimensions simultaneously, and to filter media by system type and crop to find the best fit for their situation.\n\nBloom Level: Analyze (L4)\nBloom Verb: Compare — students compare media properties and select the most appropriate medium for a given scenario\n\nLayout: Radar chart with 4 axes (water retention, air porosity, reusability, pH neutrality), one colored polygon per medium overlaid on the same chart; media toggle checkboxes on the right\n\nMedia toggles (checkboxes, each with a different color):\n- Rockwool (red)\n- Expanded clay (orange)\n- Coconut coir (brown)\n- Perlite (white/light blue)\n- Vermiculite (purple)\n- Pumice (gray)\n- Gravel/sand (dark gray)\n\nAxes (each 0–5 scale):\n- Water retention: 0 = drains immediately, 5 = holds water long-term\n- Air porosity: 0 = waterlogged structure, 5 = maximally airy\n- Reusability: 0 = single-use, 5 = indefinite\n- pH neutrality: 0 = strongly alkaline or acidic, 5 = perfectly neutral\n\nInteractive features:\n- Click any medium's checkbox to toggle its polygon on/off\n- Hover any polygon vertex: Shows exact score and what it means (e.g., \"Rockwool water retention: 4.5 — holds 80% of volume as water\")\n- Filter dropdown \"Best for system type\": Selects the top 2 recommended media for that system and highlights them\n- Filter dropdown \"Crop type\": Highlights recommended media for lettuce, herbs, tomato, microgreens\n\nClicking a medium label below the chart: Opens a detail card with full property table, pH preparation steps if needed, sterilization method, and cost estimate per cycle\n\nResponsive: Scales to container; control panel collapses to toggles-only on narrow screens"
+}

@@ -316,7 +316,7 @@ If algae are established: drain and fully clean the system (Chapter 7 protocol);
     Algae that enters a reservoir in a single cell can fill the reservoir in 5–7 days under good growing conditions. Remediation chemicals that kill algae mid-cycle also harm roots. The only practical strategy is prevention: complete light exclusion from all wetted surfaces. If you can see any green growth through tubing or on reservoir walls, light is entering — find the source and block it.
 
 #### Diagram: HACCP Food Safety Risk Matrix
-<iframe src="../../sims/haccp-risk-matrix/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/haccp-risk-matrix/main.html" width="100%" height="662" scrolling="no"></iframe>
 <details markdown="1">
 <summary>HACCP Food Safety Risk Matrix for Hydroponics</summary>
 Type: decision-tool

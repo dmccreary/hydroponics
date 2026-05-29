@@ -1,0 +1,2043 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="PAR, PPFD, DLI, photoperiod, LED vs HID vs fluorescent technology, light recipes, PPFD maps, inverse square law, and energy cost calculations for indoor growing.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/hydroponics/chapters/10-lighting-science/">
+      
+      
+        <link rel="prev" href="../09-growing-media-crops/">
+      
+      
+        <link rel="next" href="../11-environmental-control/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Lighting Science - Hydroponics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../css/mascot.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lighting-science" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Hydroponics" class="md-header__button md-logo" aria-label="Hydroponics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Hydroponics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lighting Science
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/hydroponics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Hydroponics" class="md-nav__button md-logo" aria-label="Hydroponics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Hydroponics
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/hydroponics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-root-biology/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Root Biology
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-water-transport/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Water & Plant Health
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-macro-micro-nutrients/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Macro & Micro Nutrients
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-nutrient-solution-chemistry/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Nutrient Chemistry
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-passive-basic-active-systems/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Basic Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-advanced-systems/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. Advanced Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-diy-school-projects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. DIY & School Projects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-growing-media-crops/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. Growing Media & Crops
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    10. Lighting Science
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    10. Lighting Science
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#light-and-plant-growth-the-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Light and Plant Growth: The Basics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#photosynthetically-active-radiation-par" class="md-nav__link">
+    <span class="md-ellipsis">
+      Photosynthetically Active Radiation (PAR)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ppfd-photosynthetic-photon-flux-density" class="md-nav__link">
+    <span class="md-ellipsis">
+      PPFD: Photosynthetic Photon Flux Density
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#daily-light-integral-dli" class="md-nav__link">
+    <span class="md-ellipsis">
+      Daily Light Integral (DLI)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#photoperiod-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Photoperiod Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grow-light-technologies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grow Light Technologies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Grow Light Technologies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#led-grow-light-technology" class="md-nav__link">
+    <span class="md-ellipsis">
+      LED Grow Light Technology
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hid-lighting-hps-and-mh" class="md-nav__link">
+    <span class="md-ellipsis">
+      HID Lighting (HPS and MH)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluorescent-lighting-t5t8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluorescent Lighting (T5/T8)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#led-vs-hid-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      LED vs. HID Comparison
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-inverse-square-law-for-light" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Inverse Square Law for Light
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#light-uniformity-and-the-ppfd-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      Light Uniformity and the PPFD Map
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Light Uniformity and the PPFD Map">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-ppfd-and-dli-calculator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: PPFD and DLI Calculator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#light-recipes-for-crop-stages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Light Recipes for Crop Stages
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heat-output-and-light-cost" class="md-nav__link">
+    <span class="md-ellipsis">
+      Heat Output and Light Cost
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-environmental-control/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. Environmental Control
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-micropython-fundamentals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. MicroPython Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-hardware-interfaces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. Hardware Interfaces
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-networking-iot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. Networking & IoT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-sensors-electronics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. Sensors & Electronics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16-data-collection-analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. Data Collection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../17-data-visualization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. Data Visualization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18-food-safety/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. Food Safety
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../19-solar-energy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    19. Solar Energy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20-vertical-farming/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20. Vertical Farming
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../21-financial-modeling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    21. Financial Modeling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#light-and-plant-growth-the-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Light and Plant Growth: The Basics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#photosynthetically-active-radiation-par" class="md-nav__link">
+    <span class="md-ellipsis">
+      Photosynthetically Active Radiation (PAR)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ppfd-photosynthetic-photon-flux-density" class="md-nav__link">
+    <span class="md-ellipsis">
+      PPFD: Photosynthetic Photon Flux Density
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#daily-light-integral-dli" class="md-nav__link">
+    <span class="md-ellipsis">
+      Daily Light Integral (DLI)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#photoperiod-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Photoperiod Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grow-light-technologies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grow Light Technologies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Grow Light Technologies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#led-grow-light-technology" class="md-nav__link">
+    <span class="md-ellipsis">
+      LED Grow Light Technology
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hid-lighting-hps-and-mh" class="md-nav__link">
+    <span class="md-ellipsis">
+      HID Lighting (HPS and MH)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluorescent-lighting-t5t8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluorescent Lighting (T5/T8)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#led-vs-hid-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      LED vs. HID Comparison
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-inverse-square-law-for-light" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Inverse Square Law for Light
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#light-uniformity-and-the-ppfd-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      Light Uniformity and the PPFD Map
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Light Uniformity and the PPFD Map">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-ppfd-and-dli-calculator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: PPFD and DLI Calculator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#light-recipes-for-crop-stages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Light Recipes for Crop Stages
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heat-output-and-light-cost" class="md-nav__link">
+    <span class="md-ellipsis">
+      Heat Output and Light Cost
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/hydroponics/blob/main/docs/chapters/10-lighting-science/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="lighting-science">Lighting Science<a class="headerlink" href="#lighting-science" title="Permanent link">&para;</a></h1>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<p>This chapter covers the physics and engineering of plant lighting from first principles: photosynthetically active radiation, photon flux density (PPFD), daily light integral (DLI), photoperiod control, and the comparative efficiency of LED versus HID versus fluorescent technologies. Students learn to read a PPFD map, calculate DLI for a target crop, design a light schedule, write a light recipe for vegetative and flowering stages, and calculate the energy cost per kilogram of yield — the key metric for evaluating any indoor growing operation.</p>
+<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">&para;</a></h2>
+<p>This chapter covers the following 29 concepts from the learning graph:</p>
+<ol>
+<li>Light and Plant Growth</li>
+<li>Photosynthetic Active Radiation</li>
+<li>PAR Wavelength Range</li>
+<li>Red Light Effects on Plants</li>
+<li>Blue Light Effects on Plants</li>
+<li>Far-Red Light Effects</li>
+<li>PPFD: Photon Flux Density</li>
+<li>Daily Light Integral (DLI)</li>
+<li>DLI Calculation</li>
+<li>Photoperiod Requirements</li>
+<li>Long-Day vs Short-Day Plants</li>
+<li>LED Grow Light Technology</li>
+<li>LED Spectrum and Efficiency</li>
+<li>HID Lighting (HPS and MH)</li>
+<li>Fluorescent Lighting (T5/T8)</li>
+<li>LED vs HID Comparison</li>
+<li>Light Intensity and Canopy</li>
+<li>Inverse Square Law for Light</li>
+<li>Grow Light Mounting Height</li>
+<li>Light Uniformity and PPFD Map</li>
+<li>Heat Output From Lighting</li>
+<li>Light Schedules and Photoperiod</li>
+<li>Light Recipes for Crop Stages</li>
+<li>Lumens vs PPFD Distinction</li>
+<li>Light Efficacy µmol/J</li>
+<li>Light Meter and Quantum Sensor</li>
+<li>Photoperiod Control Relay</li>
+<li>Light Cost Per kWh</li>
+<li>Light Energy to Biomass</li>
+</ol>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<p>This chapter builds on concepts from:</p>
+<ul>
+<li><a href="../01-introduction/">Chapter 1: Introduction to Hydroponics</a></li>
+<li><a href="../02-root-biology/">Chapter 2: Root Biology and Nutrient Absorption</a></li>
+</ul>
+<hr />
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Cress shines a light on photosynthesis engineering</p>
+<p><img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Cress waves hello at chapter opening">
+Welcome to Chapter 10! Light is the energy source for every gram of biomass your plants produce. In a controlled indoor environment, you are paying for every photon — so understanding the physics of how plants use light, how to measure it correctly, and how to deliver it efficiently is not optional. This chapter gives you the vocabulary and calculation tools to evaluate any grow light and design a lighting system that maximizes yield per watt of electricity.</p>
+</div>
+<h2 id="light-and-plant-growth-the-basics">Light and Plant Growth: The Basics<a class="headerlink" href="#light-and-plant-growth-the-basics" title="Permanent link">&para;</a></h2>
+<p>Before introducing the measurement vocabulary, recall from Chapters 1 and 2 that photosynthesis converts light energy into chemical energy stored as glucose. The efficiency of this conversion, and therefore the growth rate of the plant, depends on three light parameters that the grower can control:</p>
+<ol>
+<li><strong>Intensity</strong> — how many photons reach the leaf surface per unit time (measured in PPFD)</li>
+<li><strong>Spectrum</strong> — which wavelengths of light are delivered (measured across the PAR range)</li>
+<li><strong>Duration</strong> — how many hours per day the plant receives light (the photoperiod)</li>
+</ol>
+<p>All three interact: a plant receiving the right spectrum but too few hours will be light-limited; a plant receiving many hours at the wrong spectrum will grow slowly; a plant receiving too much intensity can suffer photoinhibition (the photosynthetic machinery becomes overwhelmed and efficiency drops).</p>
+<h2 id="photosynthetically-active-radiation-par">Photosynthetically Active Radiation (PAR)<a class="headerlink" href="#photosynthetically-active-radiation-par" title="Permanent link">&para;</a></h2>
+<p><strong>Photosynthetically active radiation (PAR)</strong> is defined as the range of wavelengths from <strong>400 to 700 nanometers (nm)</strong> — the portion of the electromagnetic spectrum that plant pigments can absorb for photosynthesis. This range corresponds roughly to visible light (violet through red), though human eyes perceive some wavelengths in this range more or less brightly than plants use them.</p>
+<p><strong>PAR wavelength range details:</strong></p>
+<ul>
+<li><strong>Blue light (400–500 nm)</strong>: Absorbed by chlorophyll b and carotenoids; promotes compact vegetative growth, thick dark green leaves, and strong root development. High blue light produces shorter, stockier plants.</li>
+<li><strong>Green light (500–600 nm)</strong>: Partially reflected by chlorophyll (which is why plants appear green), but penetrates the leaf canopy better than red or blue — reaching lower leaves and interior canopy. Not wasted as commonly believed.</li>
+<li><strong>Red light (600–700 nm)</strong>: The most efficient wavelength for photosynthesis per photon — absorbed by chlorophyll a at its peak efficiency (~680 nm). Promotes leaf expansion, elongation, and fast vegetative growth. Too much red without blue produces etiolated (stretched) plants.</li>
+<li><strong>Far-red light (700–750 nm)</strong>: Just outside the PAR range but biologically active. Far-red activates phytochrome Pfr form, which controls flowering time in photoperiod-sensitive plants. Far-red supplementation accelerates flowering initiation in long-day plants and is used commercially to manipulate crop timing.</li>
+</ul>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Why does 'lumens' measure the wrong thing for plants?</p>
+<p><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Cress taps chin thoughtfully">
+Lumens measure light output as perceived by the human eye — with green light weighted most heavily because human eyes are most sensitive to green. Plants, however, use red and blue most efficiently. A lamp can produce many lumens (bright to human eyes) while delivering few photosynthetically active photons. This is why lumen ratings on grow lights are nearly meaningless for plant science. Always evaluate grow lights in PPFD (µmol/m²/s) and efficacy (µmol/J), not lumens or lux.</p>
+</div>
+<h2 id="ppfd-photosynthetic-photon-flux-density">PPFD: Photosynthetic Photon Flux Density<a class="headerlink" href="#ppfd-photosynthetic-photon-flux-density" title="Permanent link">&para;</a></h2>
+<p><strong>PPFD</strong> (Photosynthetic Photon Flux Density) is the measure of how many photons in the PAR range (400–700 nm) fall on a given surface area per second. It is expressed in <strong>micromoles of photons per square meter per second (µmol·m⁻²·s⁻¹)</strong>.</p>
+<p>PPFD is the instantaneous intensity measurement — a snapshot at one moment. It varies across the canopy (higher directly beneath the light, lower at the edges) and changes with mounting height (inverse square law).</p>
+<p><strong>Typical PPFD ranges for common crops:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Crop / Stage</th>
+<th>PPFD Target (µmol·m⁻²·s⁻¹)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Seedlings / propagation</td>
+<td>100–250</td>
+</tr>
+<tr>
+<td>Lettuce, herbs (vegetative)</td>
+<td>200–400</td>
+</tr>
+<tr>
+<td>Leafy greens (high-yield commercial)</td>
+<td>400–600</td>
+</tr>
+<tr>
+<td>Tomatoes, peppers (vegetative)</td>
+<td>400–600</td>
+</tr>
+<tr>
+<td>Tomatoes, peppers (fruiting)</td>
+<td>600–1,000+</td>
+</tr>
+<tr>
+<td>Cannabis / high-demand crops</td>
+<td>800–1,500</td>
+</tr>
+</tbody>
+</table>
+<p>Beyond approximately 800–1,000 µmol·m⁻²·s⁻¹, most crops saturate their photosynthetic capacity (the <strong>light saturation point</strong>) and additional light produces little additional growth while increasing electricity cost. This light saturation point can be raised by increasing CO₂ concentration (covered in Chapter 11).</p>
+<h2 id="daily-light-integral-dli">Daily Light Integral (DLI)<a class="headerlink" href="#daily-light-integral-dli" title="Permanent link">&para;</a></h2>
+<p><strong>Daily light integral (DLI)</strong> is the total cumulative photon dose a plant receives over a full day — the sum of all PPFD measurements across the photoperiod. DLI is expressed in <strong>moles of photons per square meter per day (mol·m⁻²·d⁻¹)</strong>.</p>
+<p>DLI integrates both intensity and duration into a single number, making it the most useful metric for comparing different growing scenarios (e.g., 12h of 500 µmol·m⁻²·s⁻¹ vs. 18h of 350 µmol·m⁻²·s⁻¹).</p>
+<p><strong>DLI calculation:</strong></p>
+<div class="arithmatex">\[ \text{DLI} = \text{PPFD} \times \text{photoperiod (hours)} \times 3600 \div 1{,}000{,}000 \]</div>
+<p>The 3600 converts hours to seconds; dividing by 1,000,000 converts micromoles to moles.</p>
+<p>Example: PPFD = 400 µmol·m⁻²·s⁻¹ for 16 hours:</p>
+<div class="arithmatex">\[ \text{DLI} = 400 \times 16 \times 3600 \div 1{,}000{,}000 = 23.0 \text{ mol·m⁻²·d⁻¹} \]</div>
+<p><strong>Target DLI by crop:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Crop</th>
+<th>Target DLI (mol·m⁻²·d⁻¹)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lettuce, spinach</td>
+<td>12–17</td>
+</tr>
+<tr>
+<td>Basil, herbs</td>
+<td>14–20</td>
+</tr>
+<tr>
+<td>Tomatoes (vegetative)</td>
+<td>20–30</td>
+</tr>
+<tr>
+<td>Tomatoes (fruiting)</td>
+<td>25–40</td>
+</tr>
+<tr>
+<td>Cucumbers</td>
+<td>22–35</td>
+</tr>
+<tr>
+<td>Strawberries</td>
+<td>12–17</td>
+</tr>
+</tbody>
+</table>
+<h2 id="photoperiod-requirements">Photoperiod Requirements<a class="headerlink" href="#photoperiod-requirements" title="Permanent link">&para;</a></h2>
+<p><strong>Photoperiod</strong> is the number of hours of light per day. Different crops respond differently to photoperiod:</p>
+<ul>
+<li><strong>Day-neutral plants</strong>: Growth rate and flowering are not controlled by day length. Lettuce varieties grown for leaf production, most herbs, and most vegetable crops used in hydroponic production are day-neutral. Photoperiod affects DLI (longer days → more total photons) but not flowering time.</li>
+<li><strong>Long-day plants</strong>: Flower when the photoperiod exceeds a critical threshold (typically 14–16 hours). Spinach, strawberries, and some lettuce varieties are long-day plants. They will not bolt (flower prematurely) in short-day conditions.</li>
+<li><strong>Short-day plants</strong>: Flower when the photoperiod falls below a critical threshold (typically 12–14 hours). Chrysanthemums and poinsettias are classic examples. Some cannabis varieties are also short-day.</li>
+</ul>
+<p><strong>Standard photoperiod schedules:</strong></p>
+<ul>
+<li><strong>18h light / 6h dark</strong>: Standard for vegetative growth in most indoor crops. Maximizes DLI without eliminating the dark period needed for respiration and hormonal cycling.</li>
+<li><strong>16h / 8h</strong>: Good for lettuce and herbs; slightly reduced DLI compared to 18h but lower electricity cost.</li>
+<li><strong>12h / 12h</strong>: Standard for triggering flowering in short-day plants.</li>
+<li><strong>24h continuous light</strong>: Used experimentally and for some propagation stages; some crops tolerate it well (lettuce), others suffer (tomatoes need a dark period).</li>
+</ul>
+<p>A <strong>photoperiod control relay</strong> (a simple digital timer connected to the grow light circuit) automates on/off cycling. Solid-state relays rated for the light's amperage avoid the wear of mechanical timers.</p>
+<h2 id="grow-light-technologies">Grow Light Technologies<a class="headerlink" href="#grow-light-technologies" title="Permanent link">&para;</a></h2>
+<h3 id="led-grow-light-technology">LED Grow Light Technology<a class="headerlink" href="#led-grow-light-technology" title="Permanent link">&para;</a></h3>
+<p><strong>LED (light-emitting diode) technology</strong> has transformed indoor growing economics over the past decade. LEDs produce light when current passes through a semiconductor junction; the emitted wavelength depends on the semiconductor materials used.</p>
+<p><strong>LED grow light advantages:</strong></p>
+<ul>
+<li><strong>High efficacy</strong>: Modern LED grow lights achieve 2.5–3.5 µmol/J (micromoles of PAR photons per joule of electricity) — two to four times more efficient than HPS at producing photosynthetically useful light</li>
+<li><strong>Low heat output</strong>: LEDs convert most energy to light rather than heat; radiant heat directed at the canopy is minimal, allowing closer mounting and reducing HVAC load</li>
+<li><strong>Long lifespan</strong>: Typically rated at 50,000–100,000 hours; lamps rarely need replacement during a system's operational life</li>
+<li><strong>Spectrum tunability</strong>: Adjustable-spectrum LEDs allow the grower to shift the blue/red ratio for different growth stages</li>
+</ul>
+<p><strong>LED spectrum and efficacy</strong>: Modern commercial LEDs for plant growth use a mix of deep red (~660 nm), blue (~450 nm), and white phosphor-converted LEDs. The white phosphors provide a broad-spectrum fill that covers green and yellow wavelengths for canopy penetration.</p>
+<h3 id="hid-lighting-hps-and-mh">HID Lighting (HPS and MH)<a class="headerlink" href="#hid-lighting-hps-and-mh" title="Permanent link">&para;</a></h3>
+<p><strong>High-intensity discharge (HID)</strong> lights dominated commercial greenhouse and indoor growing before LED matured. Two types are relevant:</p>
+<ul>
+<li><strong>High-pressure sodium (HPS)</strong>: Produces a warm orange-yellow spectrum peaking around 590–620 nm. Highly efficient for vegetative and fruiting crops, with efficacy of 1.0–1.5 µmol/J. Still used in large commercial greenhouses for its proven track record and lower upfront cost.</li>
+<li><strong>Metal halide (MH)</strong>: Produces a broader, cooler blue-white spectrum. Better for vegetative stages; lower efficacy than HPS (0.8–1.2 µmol/J). Often used in combination with HPS (MH for veg, HPS for flower).</li>
+</ul>
+<p><strong>HID heat output</strong>: A 1,000W HPS fixture produces approximately 3,400 BTU/hr of heat directly into the growing space. This significantly increases HVAC load and requires maintaining greater mounting distances from the canopy (typically 45–90 cm) to avoid heat stress.</p>
+<h3 id="fluorescent-lighting-t5t8">Fluorescent Lighting (T5/T8)<a class="headerlink" href="#fluorescent-lighting-t5t8" title="Permanent link">&para;</a></h3>
+<p><strong>T5 and T8 fluorescent tubes</strong> are low-intensity grow lights appropriate for seedling propagation, microgreens, and low-light crops. They produce relatively low PPFD (50–200 µmol·m⁻²·s⁻¹ at canopy level) and are not suitable for fruiting crops or high-yield leafy green production.</p>
+<p><strong>Advantages</strong>: Low cost, widely available, produce minimal heat, easy to mount very close to seedling trays (15–30 cm above canopy).</p>
+<p><strong>T5 HO (high-output)</strong> fixtures are the preferred fluorescent option for propagation — they deliver approximately 3× the output of standard T8 tubes at similar fixture cost.</p>
+<p>Modern fluorescent is being rapidly replaced by LED bars in propagation and microgreen applications due to LED's higher efficacy and longer lifespan.</p>
+<h3 id="led-vs-hid-comparison">LED vs. HID Comparison<a class="headerlink" href="#led-vs-hid-comparison" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>LED (modern)</th>
+<th>HPS</th>
+<th>MH</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Efficacy (µmol/J)</td>
+<td>2.5–3.5</td>
+<td>1.0–1.5</td>
+<td>0.8–1.2</td>
+</tr>
+<tr>
+<td>Heat to canopy</td>
+<td>Very low</td>
+<td>High</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Lifespan</td>
+<td>50,000–100,000 hr</td>
+<td>10,000–20,000 hr</td>
+<td>8,000–15,000 hr</td>
+</tr>
+<tr>
+<td>Upfront cost</td>
+<td>High</td>
+<td>Low–moderate</td>
+<td>Moderate</td>
+</tr>
+<tr>
+<td>Electricity cost (for equal DLI)</td>
+<td>Lowest</td>
+<td>2–3× LED</td>
+<td>2.5–4× LED</td>
+</tr>
+<tr>
+<td>Spectrum control</td>
+<td>Excellent (tunable)</td>
+<td>Fixed warm spectrum</td>
+<td>Fixed cool spectrum</td>
+</tr>
+<tr>
+<td>Break-even vs. HPS (energy)</td>
+<td>~2–4 years</td>
+<td>Baseline</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h2 id="the-inverse-square-law-for-light">The Inverse Square Law for Light<a class="headerlink" href="#the-inverse-square-law-for-light" title="Permanent link">&para;</a></h2>
+<p>The <strong>inverse square law</strong> describes how light intensity decreases with distance from a point source:</p>
+<div class="arithmatex">\[ \text{Intensity} \propto \frac{1}{d^2} \]</div>
+<p>Doubling the distance between a light source and the canopy reduces intensity to one-quarter of its original value. Halving the distance quadruples intensity.</p>
+<p><strong>Practical consequences for grow light mounting height:</strong></p>
+<ul>
+<li>Moving an LED fixture from 60 cm to 30 cm above the canopy (half the distance) quadruples the PPFD at the canopy — potentially causing light stress if PPFD was already near saturation.</li>
+<li>Adding a second layer of growing racks below an LED (at twice the mounting distance) receives only one-quarter the PPFD delivered to the top layer — significant for multi-tier vertical farming design.</li>
+<li>The inverse square law applies most strictly to point light sources; modern LED panels are area sources and the intensity drop-off is less dramatic than the strict 1/d² relationship at close distances.</li>
+</ul>
+<p><strong>Grow light mounting height</strong> recommendations vary by fixture type:</p>
+<ul>
+<li>Large LED panels (600W+): 45–75 cm above canopy for most crops</li>
+<li>Small LED bars: 20–40 cm above canopy</li>
+<li>T5 fluorescent: 15–30 cm above canopy for seedlings</li>
+<li>HPS/MH 1000W: 60–100 cm above canopy (heat distance)</li>
+</ul>
+<h2 id="light-uniformity-and-the-ppfd-map">Light Uniformity and the PPFD Map<a class="headerlink" href="#light-uniformity-and-the-ppfd-map" title="Permanent link">&para;</a></h2>
+<p>A <strong>PPFD map</strong> shows the spatial distribution of photon flux density across a canopy area, typically measured as a grid of point measurements at canopy height. Commercial grow lights are sold with PPFD maps at multiple mounting heights, showing the intensity distribution at each point on a grid.</p>
+<p><strong>Light uniformity</strong> is expressed as the ratio of minimum to average PPFD across the mapped area. A ratio above 0.75 is considered good uniformity; below 0.5 means significant areas of the canopy are seriously under-lit even if the center is well-supplied.</p>
+<p>In a well-designed NFT or DWC array, grow lights are arranged to provide overlapping coverage that minimizes hot spots and under-lit zones. Single-fixture setups often show a bell-shaped PPFD distribution (highest intensity center, declining edges) — acceptable in smaller systems but problematic at scale.</p>
+<h4 id="diagram-ppfd-and-dli-calculator">Diagram: PPFD and DLI Calculator<a class="headerlink" href="#diagram-ppfd-and-dli-calculator" title="Permanent link">&para;</a></h4>
+<iframe src="../../sims/ppfd-dli-calculator/main.html" width="100%" height="702" scrolling="no"></iframe>
+<details>
+<summary>PPFD and DLI Interactive Calculator</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> ppfd-dli-calculator<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>Purpose: Allow students to interactively calculate DLI from PPFD and photoperiod, compare different lighting scenarios for energy cost, and understand how the inverse square law affects PPFD with mounting height change.</p>
+<p>Bloom Level: Apply (L3)
+Bloom Verb: Calculate — students calculate DLI, energy cost, and mounting height effects using real formulas</p>
+<p>Canvas layout:
+- Left panel (50%): Calculator with three sections:
+  Section 1 "DLI Calculator":
+    Inputs: PPFD (slider 50–1500 µmol·m⁻²·s⁻¹), Photoperiod (slider 8–24 hours)
+    Output: DLI in mol·m⁻²·d⁻¹, displayed numerically and as a horizontal bar against crop target ranges (color-coded: red=too low, green=optimal, orange=high)
+  Section 2 "Energy Cost":
+    Inputs: Light wattage (number input), electricity cost <span class="arithmatex">\(/kWh (number input, default 0.12)
+    Output: Daily energy cost (\)</span>), monthly energy cost (<span class="arithmatex">\(), annual energy cost (\)</span>)
+  Section 3 "Inverse Square Law":
+    Inputs: Current PPFD at known height (number input), current height (cm slider 10–200), new height (cm slider 10–200)
+    Output: New PPFD at the new height, with warning if result exceeds 1200 µmol·m⁻²·s⁻¹ (light stress risk)</p>
+<ul>
+<li>Right panel (50%): Crop target DLI reference chart
+  Horizontal bar chart showing DLI target ranges for: Lettuce, Basil, Tomato veg, Tomato fruit, Cucumber, Strawberry, Seedlings
+  Current calculated DLI shown as a vertical orange line moving across all bars as the calculator updates
+  Each bar is clickable to set DLI calculator inputs to the recommended range midpoint</li>
+</ul>
+<p>Interactivity:
+- All sliders and inputs update output in real time
+- "Compare two scenarios" button: Expands to show a side-by-side comparison of two different PPFD/photoperiod combinations with their DLI and energy cost
+- Hover over any output: Tooltip shows the formula used and what each variable means</p>
+<p>Responsive: Stacks to vertical layout on narrow screens</p>
+</details>
+<h2 id="light-recipes-for-crop-stages">Light Recipes for Crop Stages<a class="headerlink" href="#light-recipes-for-crop-stages" title="Permanent link">&para;</a></h2>
+<p>A <strong>light recipe</strong> specifies the spectrum, intensity, and photoperiod appropriate for each stage of crop development. Commercial controlled-environment agriculture operations have developed stage-specific recipes that optimize growth rate, quality, and yield.</p>
+<p><strong>Typical light recipe for lettuce:</strong>
+- Germination (days 1–5): 100–150 µmol·m⁻²·s⁻¹, 16h photoperiod, broad spectrum
+- Seedling (days 6–14): 150–250 µmol·m⁻²·s⁻¹, 18h photoperiod, 20% blue / 80% red
+- Vegetative (days 15–30): 300–450 µmol·m⁻²·s⁻¹, 18h photoperiod, 15% blue / 85% red
+- Pre-harvest darkening (optional, 24–48h before harvest): Complete darkness — reduces nitrate concentration in leaves</p>
+<p><strong>Spectrum manipulation for quality:</strong>
+- High blue (30–40% of total spectrum): Promotes compact growth, darker green leaves, higher anthocyanin in red varieties — preferred for fresh market quality
+- High red (90%+ of total spectrum): Promotes fast leaf expansion and high DW yield — preferred for maximum production efficiency
+- Far-red supplementation (5–10% of total): Accelerates stem elongation; used in final days before harvest to increase fresh weight by driving leaf expansion</p>
+<h2 id="heat-output-and-light-cost">Heat Output and Light Cost<a class="headerlink" href="#heat-output-and-light-cost" title="Permanent link">&para;</a></h2>
+<p><strong>Heat output from lighting</strong> affects the HVAC requirements of the growing space. While LEDs are much more efficient than HPS, they still convert some input power to heat. A 600W LED fixture operating in a 10m² growing space adds significant heat load:</p>
+<p>Heat load = Wattage × (1 − efficacy as fraction of total input)</p>
+<p>For a grow light with 35% photon conversion efficiency: Heat = 600W × 0.65 = 390W of heat to be removed by HVAC.</p>
+<p><strong>Light cost per kWh</strong> and <strong>light energy to biomass</strong> are the two most important economic metrics for indoor lighting:</p>
+<ul>
+<li><strong>Light cost per kg of lettuce</strong>: With 1 kWh at $0.12 producing approximately 6.25 g of lettuce fresh weight under efficient LED conditions, the energy cost per kg is approximately $0.12 / 0.00625 = $19.20/kg — lighting alone represents a significant portion of operating costs.</li>
+<li>This is why improving light efficacy (µmol/J) and choosing crops with high DLI efficiency is central to the economics of vertical farming (Chapter 21).</li>
+</ul>
+<p><strong>Light meter and quantum sensor</strong>: A quantum sensor (also called PAR meter) measures PPFD directly, using silicon photodiodes weighted to the 400–700 nm range. Consumer-grade quantum sensors (Apogee MQ-500, Li-Cor) provide accurate readings for research and commercial growing. Smartphone-based lux meters with conversion factors are less accurate but usable for educational purposes.</p>
+<h2 id="key-takeaways">Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>PAR (400–700 nm)</strong> is the light range plants use for photosynthesis; lumens measure human perception and are useless for plant science.</li>
+<li><strong>PPFD (µmol·m⁻²·s⁻¹)</strong> is instantaneous intensity at the canopy; <strong>DLI (mol·m⁻²·d⁻¹)</strong> is the cumulative daily photon dose — the more useful planning metric.</li>
+<li><strong>DLI = PPFD × hours × 3600 ÷ 1,000,000</strong>: Memorize or bookmark this formula.</li>
+<li><strong>LED lights</strong> are 2–3× more electrically efficient than HPS for plant growth (measured in µmol/J); the higher upfront cost pays back in electricity savings in 2–4 years.</li>
+<li><strong>The inverse square law</strong>: doubling light distance reduces PPFD to one-quarter; halving distance quadruples PPFD.</li>
+<li><strong>Light recipes</strong> specify spectrum, intensity, and photoperiod for each crop stage; higher blue promotes compact quality; higher red promotes maximum biomass yield.</li>
+<li><strong>Photoperiod control</strong> via relay timers or microcontrollers (Chapter 13) automates light scheduling and enables photoperiod manipulation for flowering crops.</li>
+<li><strong>Energy cost</strong> is the primary economic constraint in indoor lighting — evaluate every grow light purchase in µmol/J and $/kWh, not watts or lumens.</li>
+</ul>
+<details class="question">
+<summary>Check Your Understanding — Click to reveal the answer</summary>
+<p><strong>Question:</strong> A grower is running a 400W LED fixture at 60 cm above a lettuce canopy and measures 450 µmol·m⁻²·s⁻¹ with a quantum sensor. They want to achieve a DLI of 17 mol·m⁻²·d⁻¹. How many hours per day should the lights run?</p>
+<p><strong>Answer:</strong> Rearranging the DLI formula: Hours = DLI × 1,000,000 ÷ (PPFD × 3600) = 17,000,000 ÷ (450 × 3600) = 17,000,000 ÷ 1,620,000 ≈ 10.5 hours. The grower should run lights for approximately 10.5 hours per day to achieve the target DLI of 17 mol·m⁻²·d⁻¹. This is on the lower end of the optimal range for lettuce (12–17 mol·m⁻²·d⁻¹) — increasing to 12.5 hours would reach the middle of the target range.</p>
+</details>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Chapter 10 complete — you can now engineer light for plant growth!</p>
+<p><img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Cress leaps with arms raised">
+You can calculate DLI, evaluate grow lights by their efficacy in µmol/J, design photoperiod schedules, and estimate energy cost per kilogram of yield. Chapter 11 covers the other half of the aerial environment — temperature, humidity, CO₂, and vapor pressure deficit — the variables that interact with light to determine ultimate plant performance. Let's control the whole environment!</p>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../09-growing-media-crops/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 9. Growing Media &amp; Crops">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                9. Growing Media & Crops
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../11-environmental-control/" class="md-footer__link md-footer__link--next" aria-label="Next: 11. Environmental Control">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                11. Environmental Control
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.action.edit", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>

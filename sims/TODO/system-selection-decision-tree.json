@@ -1,0 +1,14 @@
+{
+  "sim_id": "system-selection-decision-tree",
+  "diagram_name": "System Selection Decision Tree",
+  "chapter_number": 6,
+  "chapter_title": "Passive and Basic Active Systems",
+  "chapter_dir": "06-passive-basic-active-systems",
+  "library": "p5.js",
+  "bloom_level": "Evaluate (L5)",
+  "bloom_verb": "Recommend — students recommend a system type and justify the choice using trade-off criteria",
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-05-29",
+  "specification": "Type: workflow\n**sim-id:** system-selection-decision-tree<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nPurpose: Guide students through a series of decision criteria to arrive at a recommended system type for a given growing scenario. Reinforces the trade-off concepts from the chapter and gives students practice with decision-making reasoning.\n\nBloom Level: Evaluate (L5)\nBloom Verb: Recommend — students recommend a system type and justify the choice using trade-off criteria\n\nVisual layout: Top-down flowchart with clickable decision nodes\n\nDecision tree structure:\nRoot: \"What is your primary crop?\" → Leafy greens/herbs | Fruiting crops | Root crops | Propagation\n\nLeafy greens/herbs branch:\n  → \"Do you have reliable electricity?\" → Yes: \"What is your budget?\" → <$50: Kratky | $50-200: DWC | $200+: NFT\n  → No: \"Use Kratky — no electricity required\" (terminal node)\n\nFruiting crops branch:\n  → \"Expected growth duration?\" → Short cycle (<60 days): DWC | Long cycle (>60 days): Ebb-and-Flow or Drip\n\nRoot crops branch:\n  → \"Scale?\" → Small/Home: Ebb-and-Flow | Large/Commercial: Aeroponics\n\nPropagation branch:\n  → \"Speed priority?\" → Max speed: Fogponics | Good enough: DWC clone bucket\n\nEach terminal node (system recommendation) is clickable to open a panel with:\n- System name and one-sentence description\n- Estimated cost range to build\n- Key strength and key weakness\n- \"Learn more\" link pointing to relevant section in this chapter\n\nInteractivity:\n- Each decision diamond is hoverable to see the decision question in full\n- Users can click \"Reset\" to start over from the root\n- Previously-visited paths remain highlighted in a lighter color for comparison\n- Each branch can be selected and re-selected to explore different paths\n\nVisual style: Green for confirmed paths, gray for unexplored branches, teal for terminal recommendation nodes"
+}

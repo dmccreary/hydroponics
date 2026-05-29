@@ -1,0 +1,2702 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Quantitative business skills for any scale hydroponic operation — NPV, IRR, break-even, OpEx/CapEx modeling, revenue channels, Monte Carlo risk simulation, and a complete financial dashboard in Plotly.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/hydroponics/chapters/21-financial-modeling/">
+      
+      
+        <link rel="prev" href="../20-vertical-farming/">
+      
+      
+        <link rel="next" href="../../learning-graph/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Financial Modeling and Hydroponics Economics - Hydroponics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../css/mascot.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#financial-modeling-and-hydroponics-economics" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Hydroponics" class="md-header__button md-logo" aria-label="Hydroponics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Hydroponics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Financial Modeling and Hydroponics Economics
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/hydroponics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Hydroponics" class="md-nav__button md-logo" aria-label="Hydroponics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Hydroponics
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/hydroponics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-root-biology/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Root Biology
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-water-transport/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Water & Plant Health
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-macro-micro-nutrients/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Macro & Micro Nutrients
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-nutrient-solution-chemistry/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Nutrient Chemistry
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-passive-basic-active-systems/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Basic Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-advanced-systems/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. Advanced Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-diy-school-projects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. DIY & School Projects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-growing-media-crops/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. Growing Media & Crops
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-lighting-science/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. Lighting Science
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-environmental-control/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. Environmental Control
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-micropython-fundamentals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. MicroPython Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-hardware-interfaces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. Hardware Interfaces
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-networking-iot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. Networking & IoT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-sensors-electronics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. Sensors & Electronics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16-data-collection-analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. Data Collection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../17-data-visualization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. Data Visualization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18-food-safety/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. Food Safety
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../19-solar-energy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    19. Solar Energy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20-vertical-farming/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20. Vertical Farming
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    21. Financial Modeling
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    21. Financial Modeling
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#capital-budgeting-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Capital Budgeting Basics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Capital Budgeting Basics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fixed-vs-variable-costs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fixed vs. Variable Costs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capex-and-opex" class="md-nav__link">
+    <span class="md-ellipsis">
+      CapEx and OpEx
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#capital-budgeting-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Capital Budgeting Metrics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Capital Budgeting Metrics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#net-present-value-npv" class="md-nav__link">
+    <span class="md-ellipsis">
+      Net Present Value (NPV)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#internal-rate-of-return-irr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Internal Rate of Return (IRR)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#break-even-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Break-Even Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#return-on-investment-roi-and-payback-period" class="md-nav__link">
+    <span class="md-ellipsis">
+      Return on Investment (ROI) and Payback Period
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cost-modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cost Modeling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cost Modeling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#energy-cost-modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Energy Cost Modeling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#water-cost-modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Water Cost Modeling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nutrient-cost-per-cycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nutrient Cost Per Cycle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#labor-cost-estimation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Labor Cost Estimation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#revenue-modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Revenue Modeling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Revenue Modeling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wholesale-vs-retail-pricing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wholesale vs. Retail Pricing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#farmers-market-revenue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Farmers Market Revenue
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restaurant-direct-sales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Restaurant Direct Sales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csa-community-supported-agriculture" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSA Community Supported Agriculture
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funding-and-business-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funding and Business Planning
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Funding and Business Planning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grant-writing-for-school-gardens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grant Writing for School Gardens
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usda-urban-agriculture-grants" class="md-nav__link">
+    <span class="md-ellipsis">
+      USDA Urban Agriculture Grants
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crowdfunding-for-farm-startups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crowdfunding for Farm Startups
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#business-plan-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Business Plan Structure
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sensitivity-analysis-and-risk-modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sensitivity Analysis and Risk Modeling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sensitivity Analysis and Risk Modeling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sensitivity-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sensitivity Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monte-carlo-farm-risk-simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monte Carlo Farm Risk Simulation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solar-energy-roi-in-the-financial-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solar Energy ROI in the Financial Model
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Solar Energy ROI in the Financial Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#energy-projections-with-solar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Energy Projections With Solar
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#financial-dashboard-in-plotly" class="md-nav__link">
+    <span class="md-ellipsis">
+      Financial Dashboard in Plotly
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Financial Dashboard in Plotly">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cash-flow-forecasting-and-scale-up-modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cash Flow Forecasting and Scale-Up Modeling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cash Flow Forecasting and Scale-Up Modeling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-hydroponic-farm-financial-model-builder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Hydroponic Farm Financial Model Builder
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#capital-budgeting-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Capital Budgeting Basics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Capital Budgeting Basics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fixed-vs-variable-costs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fixed vs. Variable Costs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capex-and-opex" class="md-nav__link">
+    <span class="md-ellipsis">
+      CapEx and OpEx
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#capital-budgeting-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Capital Budgeting Metrics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Capital Budgeting Metrics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#net-present-value-npv" class="md-nav__link">
+    <span class="md-ellipsis">
+      Net Present Value (NPV)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#internal-rate-of-return-irr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Internal Rate of Return (IRR)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#break-even-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Break-Even Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#return-on-investment-roi-and-payback-period" class="md-nav__link">
+    <span class="md-ellipsis">
+      Return on Investment (ROI) and Payback Period
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cost-modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cost Modeling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cost Modeling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#energy-cost-modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Energy Cost Modeling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#water-cost-modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Water Cost Modeling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nutrient-cost-per-cycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nutrient Cost Per Cycle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#labor-cost-estimation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Labor Cost Estimation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#revenue-modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Revenue Modeling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Revenue Modeling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wholesale-vs-retail-pricing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wholesale vs. Retail Pricing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#farmers-market-revenue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Farmers Market Revenue
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restaurant-direct-sales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Restaurant Direct Sales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csa-community-supported-agriculture" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSA Community Supported Agriculture
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funding-and-business-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funding and Business Planning
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Funding and Business Planning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grant-writing-for-school-gardens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grant Writing for School Gardens
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usda-urban-agriculture-grants" class="md-nav__link">
+    <span class="md-ellipsis">
+      USDA Urban Agriculture Grants
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crowdfunding-for-farm-startups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crowdfunding for Farm Startups
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#business-plan-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Business Plan Structure
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sensitivity-analysis-and-risk-modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sensitivity Analysis and Risk Modeling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sensitivity Analysis and Risk Modeling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sensitivity-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sensitivity Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monte-carlo-farm-risk-simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monte Carlo Farm Risk Simulation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solar-energy-roi-in-the-financial-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solar Energy ROI in the Financial Model
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Solar Energy ROI in the Financial Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#energy-projections-with-solar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Energy Projections With Solar
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#financial-dashboard-in-plotly" class="md-nav__link">
+    <span class="md-ellipsis">
+      Financial Dashboard in Plotly
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Financial Dashboard in Plotly">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cash-flow-forecasting-and-scale-up-modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cash Flow Forecasting and Scale-Up Modeling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cash Flow Forecasting and Scale-Up Modeling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-hydroponic-farm-financial-model-builder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Hydroponic Farm Financial Model Builder
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/hydroponics/blob/main/docs/chapters/21-financial-modeling/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="financial-modeling-and-hydroponics-economics">Financial Modeling and Hydroponics Economics<a class="headerlink" href="#financial-modeling-and-hydroponics-economics" title="Permanent link">&para;</a></h1>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<p>This chapter provides the quantitative business skills needed to operate a hydroponics enterprise at any scale: capital budgeting fundamentals (NPV, IRR, break-even, ROI, payback period), OpEx/CapEx decomposition, energy and water cost modeling, revenue modeling across multiple market channels (farmers market, restaurant direct sales, CSA subscriptions), grant writing for USDA urban agriculture programs, sensitivity analysis, Monte Carlo simulation for farm risk assessment, and building a complete financial dashboard in Plotly — integrating the solar ROI calculation from Chapter 19 alongside the broader economic picture.</p>
+<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">&para;</a></h2>
+<p>This chapter covers the following 31 concepts from the learning graph:</p>
+<ol>
+<li>Solar ROI Calculation</li>
+<li>Capital Budgeting Basics</li>
+<li>Net Present Value (NPV)</li>
+<li>Internal Rate of Return (IRR)</li>
+<li>Break-Even Analysis</li>
+<li>Return on Investment (ROI)</li>
+<li>Payback Period Calculation</li>
+<li>Fixed vs Variable Costs</li>
+<li>Operating Expense (OpEx)</li>
+<li>Capital Expense (CapEx)</li>
+<li>Energy Cost Modeling</li>
+<li>Water Cost Modeling</li>
+<li>Labor Cost Estimation</li>
+<li>Nutrient Cost Per Cycle</li>
+<li>Revenue Modeling</li>
+<li>Wholesale vs Retail Pricing</li>
+<li>Farmers Market Revenue</li>
+<li>Restaurant Direct Sales</li>
+<li>CSA Community Supported Ag</li>
+<li>Grant Writing School Gardens</li>
+<li>USDA Urban Agriculture Grants</li>
+<li>Crowdfunding for Farm Startups</li>
+<li>Business Plan Structure</li>
+<li>Market Research Local Produce</li>
+<li>Sensitivity Analysis</li>
+<li>Monte Carlo Farm Risk Simulation</li>
+<li>Solar Energy ROI in Hydroponics</li>
+<li>Energy Projections With Solar</li>
+<li>Financial Dashboard in Plotly</li>
+<li>Cash Flow Forecasting</li>
+<li>Scale-Up Financial Modeling</li>
+</ol>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<p>This chapter builds on concepts from:</p>
+<ul>
+<li><a href="../17-data-visualization/">Chapter 17: Data Visualization and Process Control</a></li>
+<li><a href="../19-solar-energy/">Chapter 19: Solar Energy and Power Systems</a></li>
+<li><a href="../20-vertical-farming/">Chapter 20: Vertical Farming and Commercial Operations</a></li>
+</ul>
+<hr />
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Cress opens the spreadsheet</p>
+<p><img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Cress waves hello at chapter opening">
+Welcome to the capstone chapter, growers! You now know the biology, the chemistry, the electronics, the automation, the food safety, and the commercial landscape of hydroponics. This final chapter asks the question that determines whether all of that knowledge becomes a viable enterprise: does it make economic sense? We'll build a complete financial model from scratch — CapEx, OpEx, revenue projections, NPV, break-even, Monte Carlo risk analysis, and a live Plotly dashboard — for any scale of operation from a $500 classroom garden to a $500,000 commercial farm. Let's grow the numbers!</p>
+</div>
+<h2 id="capital-budgeting-basics">Capital Budgeting Basics<a class="headerlink" href="#capital-budgeting-basics" title="Permanent link">&para;</a></h2>
+<p><strong>Capital budgeting</strong> is the process of evaluating whether a long-term investment is financially worthwhile. For a hydroponic operation, this means deciding whether to invest in lighting, grow systems, climate control, and automation — or to allocate that money elsewhere.</p>
+<p>Before we define specific metrics, two foundational concepts:</p>
+<ul>
+<li><strong>Time value of money</strong>: A dollar today is worth more than a dollar in the future, because money today can be invested to earn a return. Financial metrics that account for this use <strong>discounting</strong> — future cash flows are reduced to their present value using a discount rate (also called the cost of capital or required rate of return).</li>
+<li><strong>Cash flow</strong>: The actual inflows (revenue) and outflows (costs) that occur in each period (month, year) of the investment's life.</li>
+</ul>
+<h3 id="fixed-vs-variable-costs">Fixed vs. Variable Costs<a class="headerlink" href="#fixed-vs-variable-costs" title="Permanent link">&para;</a></h3>
+<p><strong>Fixed costs</strong> do not change with production volume. Loan payments, insurance, and facility rent are fixed whether you grow 100 or 1,000 plants per cycle. <strong>Variable costs</strong> scale with production: nutrients, seeds, packaging, and direct labor increase proportionally with plant count.</p>
+<p>Understanding this distinction is essential for break-even analysis and pricing:</p>
+<table>
+<thead>
+<tr>
+<th>Cost Category</th>
+<th>Fixed ($/month)</th>
+<th>Variable ($/plant or $/kg)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equipment loan payment</td>
+<td>$250</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Insurance</td>
+<td>$50</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Facility rent</td>
+<td>$500</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Electricity</td>
+<td>$200 base</td>
+<td>+ $0.15/plant/cycle</td>
+</tr>
+<tr>
+<td>Water</td>
+<td>$30 base</td>
+<td>+ $0.02/plant/cycle</td>
+</tr>
+<tr>
+<td>Nutrients</td>
+<td>—</td>
+<td>$0.08/plant/cycle</td>
+</tr>
+<tr>
+<td>Seeds and propagation</td>
+<td>—</td>
+<td>$0.05/plant/cycle</td>
+</tr>
+<tr>
+<td>Packaging</td>
+<td>—</td>
+<td>$0.20/unit</td>
+</tr>
+<tr>
+<td>Labor (harvesting)</td>
+<td>—</td>
+<td>$0.15/unit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="capex-and-opex">CapEx and OpEx<a class="headerlink" href="#capex-and-opex" title="Permanent link">&para;</a></h3>
+<p><strong>Capital Expenditure (CapEx)</strong> is the upfront cost of purchasing physical assets — grow systems, lighting, climate control equipment, sensors, and the building or container. CapEx is a one-time (or infrequent) expense that creates an asset used over multiple years.</p>
+<p><strong>Operating Expenditure (OpEx)</strong> is the ongoing cost of running the operation — energy, water, nutrients, seeds, packaging, labor, and maintenance. OpEx is paid every production cycle.</p>
+<p>The CapEx/OpEx distinction matters for financial modeling because:
+- CapEx appears as a capital outlay at the start of the model (or as loan principal)
+- OpEx appears as recurring costs in every year's cash flow
+- Tax treatment differs: CapEx is depreciated over multiple years; OpEx is expensed in the year incurred</p>
+<h2 id="capital-budgeting-metrics">Capital Budgeting Metrics<a class="headerlink" href="#capital-budgeting-metrics" title="Permanent link">&para;</a></h2>
+<h3 id="net-present-value-npv">Net Present Value (NPV)<a class="headerlink" href="#net-present-value-npv" title="Permanent link">&para;</a></h3>
+<p><strong>NPV</strong> is the sum of all future net cash flows (revenues minus costs), discounted to present value, minus the initial investment. A positive NPV means the investment creates more value than it costs; a negative NPV means you would do better investing the capital elsewhere at the discount rate.</p>
+<p>The NPV formula for a project generating cash flow <span class="arithmatex">\( C_t \)</span> in each year <span class="arithmatex">\( t \)</span> over <span class="arithmatex">\( n \)</span> years, with initial investment <span class="arithmatex">\( I_0 \)</span> and discount rate <span class="arithmatex">\( r \)</span>:</p>
+<div class="arithmatex">\[
+NPV = -I_0 + \sum_{t=1}^{n} \frac{C_t}{(1 + r)^t}
+\]</div>
+<p>In Python:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">def</span> <span class="nf">npv</span><span class="p">(</span><span class="n">discount_rate</span><span class="p">,</span> <span class="n">cash_flows</span><span class="p">):</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="sd">    cash_flows: list of cash flows [C0, C1, C2, ...] where C0 is negative (investment)</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="sd">    discount_rate: annual discount rate (e.g., 0.08 for 8%)</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">cf</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">discount_rate</span><span class="p">)</span><span class="o">**</span><span class="n">t</span> <span class="k">for</span> <span class="n">t</span><span class="p">,</span> <span class="n">cf</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">cash_flows</span><span class="p">))</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1"># Example: $10,000 investment, $3,000/year net revenue for 5 years, 8% discount rate</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="n">cash_flows</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">10000</span><span class="p">,</span> <span class="mi">3000</span><span class="p">,</span> <span class="mi">3000</span><span class="p">,</span> <span class="mi">3000</span><span class="p">,</span> <span class="mi">3000</span><span class="p">,</span> <span class="mi">3000</span><span class="p">]</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="n">project_npv</span> <span class="o">=</span> <span class="n">npv</span><span class="p">(</span><span class="mf">0.08</span><span class="p">,</span> <span class="n">cash_flows</span><span class="p">)</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;NPV: $</span><span class="si">{</span><span class="n">project_npv</span><span class="si">:</span><span class="s2">,.0f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>   <span class="c1"># NPV: $1,978</span>
+</span></code></pre></div>
+<p>An NPV of $1,978 means this investment creates $1,978 of additional value beyond what an 8% alternative investment would produce.</p>
+<h3 id="internal-rate-of-return-irr">Internal Rate of Return (IRR)<a class="headerlink" href="#internal-rate-of-return-irr" title="Permanent link">&para;</a></h3>
+<p><strong>IRR</strong> is the discount rate at which NPV equals zero — the effective annual return on the investment. If IRR &gt; your required rate of return (hurdle rate), the investment is worthwhile.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">brentq</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">def</span> <span class="nf">irr</span><span class="p">(</span><span class="n">cash_flows</span><span class="p">):</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="k">return</span> <span class="n">brentq</span><span class="p">(</span><span class="k">lambda</span> <span class="n">r</span><span class="p">:</span> <span class="n">npv</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">cash_flows</span><span class="p">),</span> <span class="o">-</span><span class="mf">0.999</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">)</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">project_irr</span> <span class="o">=</span> <span class="n">irr</span><span class="p">(</span><span class="n">cash_flows</span><span class="p">)</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;IRR: </span><span class="si">{</span><span class="n">project_irr</span><span class="si">:</span><span class="s2">.1%</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>   <span class="c1"># IRR: 15.2%</span>
+</span></code></pre></div>
+<p>A 15.2% IRR compares favorably to alternative investments (stock market average ~7–10% real return). IRR above 15–20% is typically required for risky ventures like new farm operations.</p>
+<h3 id="break-even-analysis">Break-Even Analysis<a class="headerlink" href="#break-even-analysis" title="Permanent link">&para;</a></h3>
+<p>The <strong>break-even point</strong> is the production volume at which total revenue equals total costs — below break-even, you operate at a loss; above it, you profit.</p>
+<p>Break-even formula:</p>
+<div class="arithmatex">\[
+Q_{BE} = \frac{\text{Fixed Costs}}{\text{Price per unit} - \text{Variable Cost per unit}}
+\]</div>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">fixed_costs_monthly</span> <span class="o">=</span> <span class="mi">800</span>    <span class="c1"># Rent + insurance + loan payment</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">variable_cost_per_kg</span> <span class="o">=</span> <span class="mf">4.50</span>  <span class="c1"># Nutrients + labor + packaging per kg</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">selling_price_per_kg</span> <span class="o">=</span> <span class="mf">8.00</span>  <span class="c1"># Retail price per kg of lettuce</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">contribution_margin</span> <span class="o">=</span> <span class="n">selling_price_per_kg</span> <span class="o">-</span> <span class="n">variable_cost_per_kg</span>  <span class="c1"># $3.50/kg</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">breakeven_kg</span> <span class="o">=</span> <span class="n">fixed_costs_monthly</span> <span class="o">/</span> <span class="n">contribution_margin</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Break-even: </span><span class="si">{</span><span class="n">breakeven_kg</span><span class="si">:</span><span class="s2">.0f</span><span class="si">}</span><span class="s2"> kg/month (</span><span class="si">{</span><span class="n">breakeven_kg</span><span class="o">/</span><span class="mf">0.15</span><span class="si">:</span><span class="s2">.0f</span><span class="si">}</span><span class="s2"> heads)&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="return-on-investment-roi-and-payback-period">Return on Investment (ROI) and Payback Period<a class="headerlink" href="#return-on-investment-roi-and-payback-period" title="Permanent link">&para;</a></h3>
+<p><strong>ROI</strong> measures total return relative to the original investment:</p>
+<div class="arithmatex">\[
+ROI = \frac{\text{Net Profit}}{\text{Total Investment}} \times 100\%
+\]</div>
+<p><strong>Payback period</strong> is the simpler metric — how many years until cumulative cash flows equal the initial investment:</p>
+<div class="arithmatex">\[
+\text{Payback} = \frac{\text{Initial Investment}}{\text{Annual Net Cash Flow}}
+\]</div>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">initial_investment</span> <span class="o">=</span> <span class="mi">10000</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">annual_net_cashflow</span> <span class="o">=</span> <span class="mi">3000</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">payback_years</span> <span class="o">=</span> <span class="n">initial_investment</span> <span class="o">/</span> <span class="n">annual_net_cashflow</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Payback period: </span><span class="si">{</span><span class="n">payback_years</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> years&quot;</span><span class="p">)</span>   <span class="c1"># 3.3 years</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="n">total_return_5yr</span> <span class="o">=</span> <span class="n">annual_net_cashflow</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">-</span> <span class="n">initial_investment</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="n">roi</span> <span class="o">=</span> <span class="n">total_return_5yr</span> <span class="o">/</span> <span class="n">initial_investment</span> <span class="o">*</span> <span class="mi">100</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;5-year ROI: </span><span class="si">{</span><span class="n">roi</span><span class="si">:</span><span class="s2">.0f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>   <span class="c1"># 50%</span>
+</span></code></pre></div>
+<h2 id="cost-modeling">Cost Modeling<a class="headerlink" href="#cost-modeling" title="Permanent link">&para;</a></h2>
+<h3 id="energy-cost-modeling">Energy Cost Modeling<a class="headerlink" href="#energy-cost-modeling" title="Permanent link">&para;</a></h3>
+<p>Energy is typically the largest operating cost for indoor hydroponic operations. Modeling it accurately requires:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">def</span> <span class="nf">energy_cost_model</span><span class="p">(</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="n">grow_light_watts</span><span class="p">,</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="n">light_hours_per_day</span><span class="p">,</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="n">pump_watts</span><span class="p">,</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="n">fan_watts</span><span class="p">,</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    <span class="n">hvac_watts</span><span class="p">,</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    <span class="n">days_per_cycle</span><span class="p">,</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>    <span class="n">cycles_per_year</span><span class="p">,</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>    <span class="n">electricity_rate_kwh</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="p">):</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    <span class="n">daily_energy</span> <span class="o">=</span> <span class="p">(</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>        <span class="n">grow_light_watts</span> <span class="o">*</span> <span class="n">light_hours_per_day</span> <span class="o">+</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>        <span class="n">pump_watts</span> <span class="o">*</span> <span class="mi">24</span> <span class="o">+</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>        <span class="n">fan_watts</span> <span class="o">*</span> <span class="mi">20</span> <span class="o">+</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>        <span class="n">hvac_watts</span> <span class="o">*</span> <span class="mi">14</span>   <span class="c1"># Assume 14h cooling needed</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>    <span class="p">)</span> <span class="o">/</span> <span class="mi">1000</span>   <span class="c1"># Convert W to kWh</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>    <span class="n">annual_energy</span> <span class="o">=</span> <span class="n">daily_energy</span> <span class="o">*</span> <span class="n">days_per_cycle</span> <span class="o">*</span> <span class="n">cycles_per_year</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>    <span class="n">annual_cost</span> <span class="o">=</span> <span class="n">annual_energy</span> <span class="o">*</span> <span class="n">electricity_rate_kwh</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>    <span class="k">return</span> <span class="p">{</span>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>        <span class="s2">&quot;daily_kwh&quot;</span><span class="p">:</span> <span class="n">daily_energy</span><span class="p">,</span>
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>        <span class="s2">&quot;annual_kwh&quot;</span><span class="p">:</span> <span class="n">annual_energy</span><span class="p">,</span>
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>        <span class="s2">&quot;annual_cost_usd&quot;</span><span class="p">:</span> <span class="n">annual_cost</span><span class="p">,</span>
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>        <span class="s2">&quot;cost_per_cycle&quot;</span><span class="p">:</span> <span class="n">annual_cost</span> <span class="o">/</span> <span class="n">cycles_per_year</span>
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>    <span class="p">}</span>
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>
+</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a><span class="n">energy</span> <span class="o">=</span> <span class="n">energy_cost_model</span><span class="p">(</span>
+</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>    <span class="n">grow_light_watts</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">light_hours_per_day</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span>
+</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>    <span class="n">pump_watts</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">fan_watts</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">hvac_watts</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span>
+</span><span id="__span-4-31"><a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>    <span class="n">days_per_cycle</span><span class="o">=</span><span class="mi">35</span><span class="p">,</span> <span class="n">cycles_per_year</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+</span><span id="__span-4-32"><a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a>    <span class="n">electricity_rate_kwh</span><span class="o">=</span><span class="mf">0.15</span>
+</span><span id="__span-4-33"><a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a><span class="p">)</span>
+</span><span id="__span-4-34"><a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Annual electricity cost: $</span><span class="si">{</span><span class="n">energy</span><span class="p">[</span><span class="s1">&#39;annual_cost_usd&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">,.0f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="water-cost-modeling">Water Cost Modeling<a class="headerlink" href="#water-cost-modeling" title="Permanent link">&para;</a></h3>
+<p>Water costs are typically small relative to energy, but worth modeling in drought-prone regions:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">def</span> <span class="nf">water_cost_model</span><span class="p">(</span><span class="n">plant_count</span><span class="p">,</span> <span class="n">daily_water_ml_per_plant</span><span class="p">,</span> <span class="n">water_recirculation_efficiency</span><span class="p">,</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>                     <span class="n">water_rate_per_liter</span><span class="p">,</span> <span class="n">cycle_days</span><span class="p">):</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="n">daily_consumption_liters</span> <span class="o">=</span> <span class="p">(</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>        <span class="n">plant_count</span> <span class="o">*</span> <span class="n">daily_water_ml_per_plant</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">water_recirculation_efficiency</span><span class="p">)</span> <span class="o">/</span> <span class="mi">1000</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="p">)</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    <span class="n">cycle_cost</span> <span class="o">=</span> <span class="n">daily_consumption_liters</span> <span class="o">*</span> <span class="n">cycle_days</span> <span class="o">*</span> <span class="n">water_rate_per_liter</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    <span class="k">return</span> <span class="n">cycle_cost</span>
+</span></code></pre></div>
+<p>For a 200-plant recirculating NFT system with 90% recirculation efficiency, daily water cost is typically <span class="arithmatex">\(0.50–\)</span>2.00.</p>
+<h3 id="nutrient-cost-per-cycle">Nutrient Cost Per Cycle<a class="headerlink" href="#nutrient-cost-per-cycle" title="Permanent link">&para;</a></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">def</span> <span class="nf">nutrient_cost</span><span class="p">(</span><span class="n">plant_count</span><span class="p">,</span> <span class="n">solution_liters</span><span class="p">,</span> <span class="n">ec_target</span><span class="p">,</span> <span class="n">nutrients_per_ec_per_liter_grams</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>                  <span class="n">nutrient_cost_per_kg</span><span class="o">=</span><span class="mf">15.0</span><span class="p">):</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    <span class="n">nutrients_g</span> <span class="o">=</span> <span class="n">solution_liters</span> <span class="o">*</span> <span class="n">ec_target</span> <span class="o">*</span> <span class="n">nutrients_per_ec_per_liter_grams</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    <span class="n">cost</span> <span class="o">=</span> <span class="p">(</span><span class="n">nutrients_g</span> <span class="o">/</span> <span class="mi">1000</span><span class="p">)</span> <span class="o">*</span> <span class="n">nutrient_cost_per_kg</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    <span class="k">return</span> <span class="n">cost</span>
+</span></code></pre></div>
+<p>A 100-plant DWC system with 400 liters of solution at EC 2.0 uses approximately 560 grams of nutrients per cycle, costing ~$8.40 at $15/kg for a commercial two-part nutrient concentrate.</p>
+<h3 id="labor-cost-estimation">Labor Cost Estimation<a class="headerlink" href="#labor-cost-estimation" title="Permanent link">&para;</a></h3>
+<p>Labor is the most variable and often under-estimated cost for new hydroponic operations. Key labor tasks:</p>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Time per Plant/Cycle (min)</th>
+<th>Frequency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Seeding/propagation</td>
+<td>0.5</td>
+<td>Once per cycle</td>
+</tr>
+<tr>
+<td>Transplanting</td>
+<td>0.3</td>
+<td>Once per cycle</td>
+</tr>
+<tr>
+<td>Daily monitoring</td>
+<td>0.1</td>
+<td>Daily</td>
+</tr>
+<tr>
+<td>Nutrient management</td>
+<td>Variable</td>
+<td>Daily</td>
+</tr>
+<tr>
+<td>Harvesting and packing</td>
+<td>1.5</td>
+<td>Once per cycle</td>
+</tr>
+<tr>
+<td>System cleaning</td>
+<td>2.0</td>
+<td>Between cycles</td>
+</tr>
+</tbody>
+</table>
+<p>At $15/hour labor rate and 100 plants per cycle: 35 days × 100 × 0.1 + 100 × (0.5+0.3+1.5+2.0) minutes = 350 + 430 = 780 minutes = 13 hours per cycle = $195 labor per cycle.</p>
+<h2 id="revenue-modeling">Revenue Modeling<a class="headerlink" href="#revenue-modeling" title="Permanent link">&para;</a></h2>
+<h3 id="wholesale-vs-retail-pricing">Wholesale vs. Retail Pricing<a class="headerlink" href="#wholesale-vs-retail-pricing" title="Permanent link">&para;</a></h3>
+<p>The marketing channel chosen has a dramatic effect on revenue per kilogram produced. Before calculating, two key concepts: <strong>wholesale price</strong> is what a distributor or restaurant pays; <strong>retail price</strong> is what a consumer pays at a farm stand or store. The difference (often called the "spread") typically represents 50–100% markup by the retailer.</p>
+<table>
+<thead>
+<tr>
+<th>Channel</th>
+<th>Typical Price (Lettuce, $/kg)</th>
+<th>Your Margin</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wholesale to distributor</td>
+<td>$2–4</td>
+<td>Low</td>
+<td>High volume, reliable, low admin</td>
+</tr>
+<tr>
+<td>Direct to restaurant</td>
+<td>$5–10</td>
+<td>Medium</td>
+<td>Relationship required, menu flexibility</td>
+</tr>
+<tr>
+<td>Farmers market (retail)</td>
+<td>$8–15</td>
+<td>High</td>
+<td>Time-intensive, seasonal</td>
+</tr>
+<tr>
+<td>CSA subscription</td>
+<td>$10–16</td>
+<td>High</td>
+<td>Predictable revenue, upfront cash</td>
+</tr>
+<tr>
+<td>Online direct-to-consumer</td>
+<td>$12–20</td>
+<td>Highest</td>
+<td>Packaging, delivery logistics required</td>
+</tr>
+</tbody>
+</table>
+<h3 id="farmers-market-revenue">Farmers Market Revenue<a class="headerlink" href="#farmers-market-revenue" title="Permanent link">&para;</a></h3>
+<p><strong>Farmers market</strong> sales offer the highest prices but require significant non-growing time (setup, attendance, marketing). A realistic farmers market revenue model:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">def</span> <span class="nf">farmers_market_revenue</span><span class="p">(</span><span class="n">market_days_per_year</span><span class="p">,</span> <span class="n">avg_sale_per_day</span><span class="p">,</span> <span class="n">booth_cost_per_day</span><span class="p">,</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>                           <span class="n">farmer_hours_per_day</span><span class="p">,</span> <span class="n">hourly_opportunity_cost</span><span class="p">):</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    <span class="n">gross_revenue</span> <span class="o">=</span> <span class="n">market_days_per_year</span> <span class="o">*</span> <span class="n">avg_sale_per_day</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    <span class="n">booth_costs</span> <span class="o">=</span> <span class="n">market_days_per_year</span> <span class="o">*</span> <span class="n">booth_cost_per_day</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    <span class="n">labor_cost</span> <span class="o">=</span> <span class="n">market_days_per_year</span> <span class="o">*</span> <span class="n">farmer_hours_per_day</span> <span class="o">*</span> <span class="n">hourly_opportunity_cost</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>    <span class="n">net_revenue</span> <span class="o">=</span> <span class="n">gross_revenue</span> <span class="o">-</span> <span class="n">booth_costs</span> <span class="o">-</span> <span class="n">labor_cost</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>    <span class="k">return</span> <span class="n">gross_revenue</span><span class="p">,</span> <span class="n">net_revenue</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="n">gross</span><span class="p">,</span> <span class="n">net</span> <span class="o">=</span> <span class="n">farmers_market_revenue</span><span class="p">(</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>    <span class="n">market_days_per_year</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>    <span class="n">avg_sale_per_day</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>    <span class="n">booth_cost_per_day</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>    <span class="n">farmer_hours_per_day</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>    <span class="n">hourly_opportunity_cost</span><span class="o">=</span><span class="mi">15</span>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="p">)</span>
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Farmers market: gross=$</span><span class="si">{</span><span class="n">gross</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">, net after booth+labor=$</span><span class="si">{</span><span class="n">net</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="restaurant-direct-sales">Restaurant Direct Sales<a class="headerlink" href="#restaurant-direct-sales" title="Permanent link">&para;</a></h3>
+<p>Selling directly to restaurants (chef-to-farm relationships) is often the most economically attractive channel for specialty herbs and microgreens. Restaurants value reliability, product quality, and variety — they will pay premium prices for these attributes.</p>
+<p>A typical restaurant account: 2–5 kg per week of mixed herbs and specialty greens at $10–18/kg wholesale, generating <span class="arithmatex">\(1,000–\)</span>4,000/month per restaurant account.</p>
+<h3 id="csa-community-supported-agriculture">CSA Community Supported Agriculture<a class="headerlink" href="#csa-community-supported-agriculture" title="Permanent link">&para;</a></h3>
+<p><strong>CSA (Community Supported Agriculture)</strong> subscribers pay in advance (typically <span class="arithmatex">\(400–\)</span>800 for a 20-week season) and receive weekly shares of produce. For the grower, CSA provides:
+- Upfront cash before the season begins
+- Predictable demand for production planning
+- Risk-sharing with subscribers (they accept variability in what they receive)
+- Higher per-kg prices than wholesale</p>
+<p>CSA subscriptions require communication, a loyal member base, and a diverse crop mix to keep shares interesting week to week.</p>
+<h2 id="funding-and-business-planning">Funding and Business Planning<a class="headerlink" href="#funding-and-business-planning" title="Permanent link">&para;</a></h2>
+<h3 id="grant-writing-for-school-gardens">Grant Writing for School Gardens<a class="headerlink" href="#grant-writing-for-school-gardens" title="Permanent link">&para;</a></h3>
+<p>School and community gardens have access to significant public funding. Key programs:</p>
+<ul>
+<li><strong>USDA Farm to School Grant</strong>: Up to $100,000 for school garden programs that connect students to local agriculture. Requires matching funds (often in-kind labor or existing facilities).</li>
+<li><strong>USDA Community Food Projects</strong>: Up to $400,000 for community food system development, including urban hydroponics.</li>
+<li><strong>National Gardening Association</strong>: Grants of <span class="arithmatex">\(500–\)</span>3,000 for school and community gardens.</li>
+<li><strong>State agriculture department grants</strong>: Many states have dedicated urban agriculture or school garden programs.</li>
+</ul>
+<p>Successful grant applications:
+1. Clearly state the educational or community food access objective (not just "we want to grow lettuce")
+2. Include a detailed budget showing how grant funds will be spent
+3. Provide evidence of community need or educational alignment
+4. Describe measurable outcomes (number of students served, pounds of produce grown, curriculum standards addressed)
+5. Show sustainability plan — how the program continues after the grant ends</p>
+<h3 id="usda-urban-agriculture-grants">USDA Urban Agriculture Grants<a class="headerlink" href="#usda-urban-agriculture-grants" title="Permanent link">&para;</a></h3>
+<p>The <strong>USDA Office of Urban Agriculture and Innovative Production (OUAIP)</strong> administers multiple grant programs specifically for urban and indoor agriculture:</p>
+<ul>
+<li><strong>Competitive Grant Program for Urban Agriculture</strong>: <span class="arithmatex">\(2–\)</span>250,000 for planning and implementation of urban farms</li>
+<li><strong>Cooperative Agreements</strong>: Larger partnerships for research and demonstration projects</li>
+<li><strong>Beginning Farmer and Rancher Development Program</strong>: Training grants for new growers</li>
+</ul>
+<h3 id="crowdfunding-for-farm-startups">Crowdfunding for Farm Startups<a class="headerlink" href="#crowdfunding-for-farm-startups" title="Permanent link">&para;</a></h3>
+<p><strong>Crowdfunding</strong> platforms (Kickstarter, Indiegogo, GoFundMe) provide an alternative to bank loans for farm startup capital, especially for community-oriented projects:</p>
+<ul>
+<li>Pre-sell produce subscriptions to early supporters</li>
+<li>Offer farm tours, workshops, or naming rights at different funding levels</li>
+<li>Build community investment and marketing simultaneously</li>
+<li>Typical successful farm crowdfunds: <span class="arithmatex">\(5,000–\)</span>50,000</li>
+</ul>
+<h3 id="business-plan-structure">Business Plan Structure<a class="headerlink" href="#business-plan-structure" title="Permanent link">&para;</a></h3>
+<p>A standard business plan for a hydroponic operation includes:</p>
+<ol>
+<li><strong>Executive Summary</strong>: 1-page overview of the business model, market opportunity, and financial highlights</li>
+<li><strong>Problem/Opportunity</strong>: Why local, fresh produce has unmet demand in your target market</li>
+<li><strong>Product and Production</strong>: What you grow, how, using which systems, at what yields</li>
+<li><strong>Market Analysis</strong>: Target customers, competition, pricing benchmarks</li>
+<li><strong>Operations Plan</strong>: Facility, equipment, production schedule, staffing</li>
+<li><strong>Financial Projections</strong>: 3-year P&amp;L, cash flow, break-even analysis</li>
+<li><strong>Funding Request</strong>: How much capital, what it will be used for, repayment terms</li>
+</ol>
+<h2 id="sensitivity-analysis-and-risk-modeling">Sensitivity Analysis and Risk Modeling<a class="headerlink" href="#sensitivity-analysis-and-risk-modeling" title="Permanent link">&para;</a></h2>
+<h3 id="sensitivity-analysis">Sensitivity Analysis<a class="headerlink" href="#sensitivity-analysis" title="Permanent link">&para;</a></h3>
+<p>A <strong>sensitivity analysis</strong> tests how the key output (NPV, profit, break-even) changes when a single input variable changes — all other variables held constant. This identifies which assumptions most affect the model's conclusions.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="n">base_case</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>    <span class="s2">&quot;price_per_kg&quot;</span><span class="p">:</span> <span class="mf">8.0</span><span class="p">,</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>    <span class="s2">&quot;yield_kg_per_m2_per_cycle&quot;</span><span class="p">:</span> <span class="mf">3.5</span><span class="p">,</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>    <span class="s2">&quot;cycles_per_year&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>    <span class="s2">&quot;variable_cost_per_kg&quot;</span><span class="p">:</span> <span class="mf">4.5</span><span class="p">,</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>    <span class="s2">&quot;fixed_cost_monthly&quot;</span><span class="p">:</span> <span class="mi">800</span><span class="p">,</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>    <span class="s2">&quot;growing_area_m2&quot;</span><span class="p">:</span> <span class="mi">20</span>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="p">}</span>
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="k">def</span> <span class="nf">annual_profit</span><span class="p">(</span><span class="n">params</span><span class="p">):</span>
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>    <span class="n">annual_revenue</span> <span class="o">=</span> <span class="p">(</span><span class="n">params</span><span class="p">[</span><span class="s2">&quot;price_per_kg&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="n">params</span><span class="p">[</span><span class="s2">&quot;yield_kg_per_m2_per_cycle&quot;</span><span class="p">]</span> <span class="o">*</span>
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>                      <span class="n">params</span><span class="p">[</span><span class="s2">&quot;cycles_per_year&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="n">params</span><span class="p">[</span><span class="s2">&quot;growing_area_m2&quot;</span><span class="p">])</span>
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>    <span class="n">annual_variable_cost</span> <span class="o">=</span> <span class="p">(</span><span class="n">params</span><span class="p">[</span><span class="s2">&quot;variable_cost_per_kg&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="n">params</span><span class="p">[</span><span class="s2">&quot;yield_kg_per_m2_per_cycle&quot;</span><span class="p">]</span> <span class="o">*</span>
+</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>                            <span class="n">params</span><span class="p">[</span><span class="s2">&quot;cycles_per_year&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="n">params</span><span class="p">[</span><span class="s2">&quot;growing_area_m2&quot;</span><span class="p">])</span>
+</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>    <span class="n">annual_fixed_cost</span> <span class="o">=</span> <span class="n">params</span><span class="p">[</span><span class="s2">&quot;fixed_cost_monthly&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">12</span>
+</span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>    <span class="k">return</span> <span class="n">annual_revenue</span> <span class="o">-</span> <span class="n">annual_variable_cost</span> <span class="o">-</span> <span class="n">annual_fixed_cost</span>
+</span><span id="__span-8-20"><a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>
+</span><span id="__span-8-21"><a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a><span class="c1"># Test each variable at ±20% from base case</span>
+</span><span id="__span-8-22"><a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a><span class="n">sensitivity_results</span> <span class="o">=</span> <span class="p">[]</span>
+</span><span id="__span-8-23"><a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a><span class="k">for</span> <span class="n">var</span><span class="p">,</span> <span class="n">base_val</span> <span class="ow">in</span> <span class="n">base_case</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+</span><span id="__span-8-24"><a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a>    <span class="k">for</span> <span class="n">change_pct</span> <span class="ow">in</span> <span class="p">[</span><span class="o">-</span><span class="mi">20</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">+</span><span class="mi">10</span><span class="p">,</span> <span class="o">+</span><span class="mi">20</span><span class="p">]:</span>
+</span><span id="__span-8-25"><a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a>        <span class="n">params</span> <span class="o">=</span> <span class="n">base_case</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</span><span id="__span-8-26"><a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a>        <span class="n">params</span><span class="p">[</span><span class="n">var</span><span class="p">]</span> <span class="o">=</span> <span class="n">base_val</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">change_pct</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span>
+</span><span id="__span-8-27"><a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a>        <span class="n">profit</span> <span class="o">=</span> <span class="n">annual_profit</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
+</span><span id="__span-8-28"><a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a>        <span class="n">sensitivity_results</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+</span><span id="__span-8-29"><a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a>            <span class="s2">&quot;variable&quot;</span><span class="p">:</span> <span class="n">var</span><span class="p">,</span> <span class="s2">&quot;change_%&quot;</span><span class="p">:</span> <span class="n">change_pct</span><span class="p">,</span> <span class="s2">&quot;annual_profit&quot;</span><span class="p">:</span> <span class="n">profit</span>
+</span><span id="__span-8-30"><a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a>        <span class="p">})</span>
+</span><span id="__span-8-31"><a id="__codelineno-8-31" name="__codelineno-8-31" href="#__codelineno-8-31"></a>
+</span><span id="__span-8-32"><a id="__codelineno-8-32" name="__codelineno-8-32" href="#__codelineno-8-32"></a><span class="n">df_sens</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">sensitivity_results</span><span class="p">)</span>
+</span></code></pre></div>
+<p>The output of a sensitivity analysis is often visualized as a <strong>tornado diagram</strong> — variables ranked by the magnitude of their effect on profit, with the most influential at the top.</p>
+<h3 id="monte-carlo-farm-risk-simulation">Monte Carlo Farm Risk Simulation<a class="headerlink" href="#monte-carlo-farm-risk-simulation" title="Permanent link">&para;</a></h3>
+<p>A <strong>Monte Carlo simulation</strong> runs the financial model thousands of times, each time sampling input variables from probability distributions (representing uncertainty) rather than using single point estimates. The result is a distribution of possible outcomes — not just "expected profit" but "90% of scenarios produce profit between $X and $Y."</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="n">n_simulations</span> <span class="o">=</span> <span class="mi">10_000</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="n">results</span> <span class="o">=</span> <span class="p">[]</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_simulations</span><span class="p">):</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>    <span class="c1"># Sample uncertain inputs from distributions</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>    <span class="n">price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mf">8.0</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">)</span>          <span class="c1"># Mean $8/kg, std $1.50</span>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>    <span class="n">yield_kg</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mf">3.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>        <span class="c1"># Mean 3.5 kg/m², std 0.5</span>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>    <span class="n">variable_cost</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mf">4.5</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">)</span>   <span class="c1"># Mean $4.50, std $0.80</span>
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>    <span class="n">cycles</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>             <span class="c1"># 8–11 cycles/year</span>
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>
+</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>    <span class="n">annual_revenue</span> <span class="o">=</span> <span class="n">price</span> <span class="o">*</span> <span class="n">yield_kg</span> <span class="o">*</span> <span class="n">cycles</span> <span class="o">*</span> <span class="mi">20</span>
+</span><span id="__span-9-15"><a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>    <span class="n">annual_variable_cost</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">variable_cost</span><span class="p">)</span> <span class="o">*</span> <span class="n">yield_kg</span> <span class="o">*</span> <span class="n">cycles</span> <span class="o">*</span> <span class="mi">20</span>
+</span><span id="__span-9-16"><a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>    <span class="n">annual_fixed_cost</span> <span class="o">=</span> <span class="mi">9600</span>
+</span><span id="__span-9-17"><a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>
+</span><span id="__span-9-18"><a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a>    <span class="n">profit</span> <span class="o">=</span> <span class="n">annual_revenue</span> <span class="o">-</span> <span class="n">annual_variable_cost</span> <span class="o">-</span> <span class="n">annual_fixed_cost</span>
+</span><span id="__span-9-19"><a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a>    <span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">profit</span><span class="p">)</span>
+</span><span id="__span-9-20"><a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a>
+</span><span id="__span-9-21"><a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a><span class="n">results</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+</span><span id="__span-9-22"><a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a>
+</span><span id="__span-9-23"><a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Median annual profit: $</span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">results</span><span class="p">)</span><span class="si">:</span><span class="s2">,.0f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-9-24"><a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;10th percentile: $</span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">results</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="si">:</span><span class="s2">,.0f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-9-25"><a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;90th percentile: $</span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">results</span><span class="p">,</span><span class="w"> </span><span class="mi">90</span><span class="p">)</span><span class="si">:</span><span class="s2">,.0f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-9-26"><a id="__codelineno-9-26" name="__codelineno-9-26" href="#__codelineno-9-26"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Probability of profit &gt; $0: </span><span class="si">{</span><span class="p">(</span><span class="n">results</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="si">:</span><span class="s2">.1%</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Monte Carlo simulation reveals that a project with a positive expected NPV may still have a 30–40% probability of operating at a loss in any given year due to input uncertainty — critical information for risk management and reserve planning.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Sensitivity and Monte Carlo reveal what the spreadsheet hides</p>
+<p><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Cress holds chin thoughtfully">
+A base-case financial model that shows $15,000 annual profit can be deeply misleading. Sensitivity analysis reveals that a 20% drop in selling price eliminates the profit entirely. Monte Carlo reveals that the probability-weighted expected profit may be negative due to correlated risks (drought, electricity prices, and market prices often move together). These tools don't make the decision for you — they show you what the decision actually is.</p>
+</div>
+<h2 id="solar-energy-roi-in-the-financial-model">Solar Energy ROI in the Financial Model<a class="headerlink" href="#solar-energy-roi-in-the-financial-model" title="Permanent link">&para;</a></h2>
+<p>Integrating the solar energy model from Chapter 19 with the farm financial model creates a more complete picture of total economics. The key additions:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">def</span> <span class="nf">solar_roi_integration</span><span class="p">(</span><span class="n">energy_audit_kwh_per_day</span><span class="p">,</span> <span class="n">solar_lcoe</span><span class="p">,</span> <span class="n">grid_rate</span><span class="p">,</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>                          <span class="n">solar_capex</span><span class="p">,</span> <span class="n">system_life_years</span><span class="o">=</span><span class="mi">25</span><span class="p">):</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>    <span class="n">annual_energy</span> <span class="o">=</span> <span class="n">energy_audit_kwh_per_day</span> <span class="o">*</span> <span class="mi">365</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    <span class="n">annual_savings</span> <span class="o">=</span> <span class="n">annual_energy</span> <span class="o">*</span> <span class="p">(</span><span class="n">grid_rate</span> <span class="o">-</span> <span class="n">solar_lcoe</span><span class="p">)</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    <span class="n">simple_payback</span> <span class="o">=</span> <span class="n">solar_capex</span> <span class="o">/</span> <span class="n">annual_savings</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>    <span class="n">roi_25yr</span> <span class="o">=</span> <span class="p">(</span><span class="n">annual_savings</span> <span class="o">*</span> <span class="n">system_life_years</span> <span class="o">-</span> <span class="n">solar_capex</span><span class="p">)</span> <span class="o">/</span> <span class="n">solar_capex</span> <span class="o">*</span> <span class="mi">100</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>    <span class="k">return</span> <span class="p">{</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>        <span class="s2">&quot;annual_savings_usd&quot;</span><span class="p">:</span> <span class="n">annual_savings</span><span class="p">,</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>        <span class="s2">&quot;simple_payback_years&quot;</span><span class="p">:</span> <span class="n">simple_payback</span><span class="p">,</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>        <span class="s2">&quot;25yr_roi_pct&quot;</span><span class="p">:</span> <span class="n">roi_25yr</span>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>    <span class="p">}</span>
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="n">solar</span> <span class="o">=</span> <span class="n">solar_roi_integration</span><span class="p">(</span>
+</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>    <span class="n">energy_audit_kwh_per_day</span><span class="o">=</span><span class="mf">11.5</span><span class="p">,</span>
+</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>    <span class="n">solar_lcoe</span><span class="o">=</span><span class="mf">0.057</span><span class="p">,</span>
+</span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>    <span class="n">grid_rate</span><span class="o">=</span><span class="mf">0.15</span><span class="p">,</span>
+</span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a>    <span class="n">solar_capex</span><span class="o">=</span><span class="mi">5000</span>
+</span><span id="__span-10-18"><a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="p">)</span>
+</span><span id="__span-10-19"><a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Solar annual savings: $</span><span class="si">{</span><span class="n">solar</span><span class="p">[</span><span class="s1">&#39;annual_savings_usd&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">,.0f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-10-20"><a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Solar payback: </span><span class="si">{</span><span class="n">solar</span><span class="p">[</span><span class="s1">&#39;simple_payback_years&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> years&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="energy-projections-with-solar">Energy Projections With Solar<a class="headerlink" href="#energy-projections-with-solar" title="Permanent link">&para;</a></h3>
+<p>Modelling energy cost with and without solar shows the long-run operating cost advantage:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">years</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">26</span><span class="p">)</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="n">grid_electricity_costs</span> <span class="o">=</span> <span class="mf">11.5</span> <span class="o">*</span> <span class="mi">365</span> <span class="o">*</span> <span class="mf">0.15</span> <span class="o">*</span> <span class="p">(</span><span class="mf">1.03</span><span class="o">**</span><span class="n">years</span><span class="p">)</span>  <span class="c1"># 3% annual rate increase</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="n">solar_electricity_costs</span> <span class="o">=</span> <span class="mf">11.5</span> <span class="o">*</span> <span class="mi">365</span> <span class="o">*</span> <span class="mf">0.057</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">years</span><span class="p">))</span>  <span class="c1"># Fixed LCOE</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="n">cumulative_grid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">grid_electricity_costs</span><span class="p">)</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="n">cumulative_solar</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">solar_electricity_costs</span><span class="p">)</span> <span class="o">+</span> <span class="mi">5000</span>  <span class="c1"># Include CapEx</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Cumulative 25-year grid cost: $</span><span class="si">{</span><span class="n">cumulative_grid</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s2">,.0f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Cumulative 25-year solar cost (incl. CapEx): $</span><span class="si">{</span><span class="n">cumulative_solar</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s2">,.0f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Solar savings over 25 years: $</span><span class="si">{</span><span class="n">cumulative_grid</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">cumulative_solar</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s2">,.0f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<h2 id="financial-dashboard-in-plotly">Financial Dashboard in Plotly<a class="headerlink" href="#financial-dashboard-in-plotly" title="Permanent link">&para;</a></h2>
+<p>Building on Chapter 17, a complete farm financial dashboard integrates all cost, revenue, and cash flow projections:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kn">from</span> <span class="nn">plotly.subplots</span> <span class="kn">import</span> <span class="n">make_subplots</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="kn">import</span> <span class="nn">plotly.graph_objects</span> <span class="k">as</span> <span class="nn">go</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="n">years</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="n">revenue</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">18000</span><span class="p">,</span> <span class="mi">20000</span><span class="p">,</span> <span class="mi">22000</span><span class="p">,</span> <span class="mi">24000</span><span class="p">,</span> <span class="mi">26000</span><span class="p">])</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="n">costs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">10000</span><span class="p">,</span> <span class="mi">14000</span><span class="p">,</span> <span class="mi">14500</span><span class="p">,</span> <span class="mi">14500</span><span class="p">,</span> <span class="mi">15000</span><span class="p">,</span> <span class="mi">15000</span><span class="p">])</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="n">net_cf</span> <span class="o">=</span> <span class="n">revenue</span> <span class="o">-</span> <span class="n">costs</span>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="n">cumulative_cf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">net_cf</span><span class="p">)</span>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="n">fig</span> <span class="o">=</span> <span class="n">make_subplots</span><span class="p">(</span><span class="n">rows</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">cols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>    <span class="n">subplot_titles</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Annual Revenue vs. Costs&quot;</span><span class="p">,</span> <span class="s2">&quot;Cumulative Cash Flow&quot;</span><span class="p">,</span>
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>                    <span class="s2">&quot;Cost Breakdown (Year 3)&quot;</span><span class="p">,</span> <span class="s2">&quot;Sensitivity Tornado&quot;</span><span class="p">])</span>
+</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>
+</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="c1"># Revenue vs Costs</span>
+</span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">years</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">revenue</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Revenue&quot;</span><span class="p">,</span> <span class="n">marker_color</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">),</span> <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</span><span id="__span-12-17"><a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a><span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">years</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">costs</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Total Costs&quot;</span><span class="p">,</span> <span class="n">marker_color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">),</span> <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</span><span id="__span-12-18"><a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a>
+</span><span id="__span-12-19"><a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a><span class="c1"># Cumulative Cash Flow</span>
+</span><span id="__span-12-20"><a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a><span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">years</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">cumulative_cf</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;lines+markers&quot;</span><span class="p">,</span>
+</span><span id="__span-12-21"><a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a>                          <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Cumulative CF&quot;</span><span class="p">,</span> <span class="n">line</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">)),</span> <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</span><span id="__span-12-22"><a id="__codelineno-12-22" name="__codelineno-12-22" href="#__codelineno-12-22"></a><span class="n">fig</span><span class="o">.</span><span class="n">add_hline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">line_dash</span><span class="o">=</span><span class="s2">&quot;dash&quot;</span><span class="p">,</span> <span class="n">line_color</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</span><span id="__span-12-23"><a id="__codelineno-12-23" name="__codelineno-12-23" href="#__codelineno-12-23"></a>
+</span><span id="__span-12-24"><a id="__codelineno-12-24" name="__codelineno-12-24" href="#__codelineno-12-24"></a><span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="mi">700</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Hydroponic Farm Financial Dashboard&quot;</span><span class="p">,</span>
+</span><span id="__span-12-25"><a id="__codelineno-12-25" name="__codelineno-12-25" href="#__codelineno-12-25"></a>                  <span class="n">showlegend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">barmode</span><span class="o">=</span><span class="s2">&quot;group&quot;</span><span class="p">)</span>
+</span><span id="__span-12-26"><a id="__codelineno-12-26" name="__codelineno-12-26" href="#__codelineno-12-26"></a><span class="n">fig</span><span class="o">.</span><span class="n">write_html</span><span class="p">(</span><span class="s2">&quot;farm_dashboard.html&quot;</span><span class="p">)</span>
+</span><span id="__span-12-27"><a id="__codelineno-12-27" name="__codelineno-12-27" href="#__codelineno-12-27"></a><span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></code></pre></div>
+<h3 id="cash-flow-forecasting-and-scale-up-modeling">Cash Flow Forecasting and Scale-Up Modeling<a class="headerlink" href="#cash-flow-forecasting-and-scale-up-modeling" title="Permanent link">&para;</a></h3>
+<p>A complete <strong>cash flow forecast</strong> shows month-by-month inflows and outflows for the first 2–3 years. This is the critical tool for ensuring the business has enough cash to operate through the early period before revenue exceeds costs.</p>
+<p><strong>Scale-up financial modeling</strong> extends the single-unit model to multiple units — what happens to unit economics when you go from 20 m² to 200 m² to 2,000 m²?</p>
+<p>Key scale economies:
+- <strong>Labor</strong>: Staffing has a step function — one part-time worker handles 50–100 m²; a second hire isn't needed until ~200 m².
+- <strong>Marketing</strong>: Sales expenses are partially fixed (market booth fee, website, CSA administration) — they spread over more revenue at scale.
+- <strong>Nutrient purchasing</strong>: Bulk nutrient purchasing reduces per-kg cost by 30–50% at commercial quantities.</p>
+<p>Key scale diseconomies:
+- <strong>Complexity</strong>: Managing 2,000 plants with consistent quality requires more management systems than 200 plants.
+- <strong>Risk concentration</strong>: A single <em>Pythium</em> outbreak or equipment failure at large scale destroys proportionally more revenue.
+- <strong>Regulatory burden</strong>: Operations above certain revenue thresholds trigger additional food safety regulatory requirements.</p>
+<div class="admonition mascot-encourage">
+<p class="admonition-title">The numbers tell you what to optimize</p>
+<p><img src="../../img/mascot/encouraging.png" class="mascot-admonition-img" alt="Cress gives an encouraging nod">
+Financial modeling isn't about predicting the future — it's about understanding which variables matter most. When sensitivity analysis shows that a 20% change in selling price changes profit by more than a 50% change in yield, the model is telling you: spend your energy on marketing and customer relationships, not on squeezing more yield from the same growing area. The spreadsheet doesn't make the decision; it shows you what game you're actually playing.</p>
+</div>
+<h4 id="diagram-hydroponic-farm-financial-model-builder">Diagram: Hydroponic Farm Financial Model Builder<a class="headerlink" href="#diagram-hydroponic-farm-financial-model-builder" title="Permanent link">&para;</a></h4>
+<iframe src="../../sims/farm-financial-model/main.html" width="100%" height="560px" scrolling="no"></iframe>
+<details>
+<summary>Interactive Hydroponic Farm Financial Model Builder</summary>
+<p>Type: financial-simulator
+<strong>sim-id:</strong> farm-financial-model<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>Purpose: Allow students to build a complete financial model for a hydroponic operation by entering cost and revenue inputs, then see real-time calculation of break-even, NPV, IRR, payback period, and a 5-year cash flow chart.</p>
+<p>Bloom Level: Apply (L3) and Evaluate (L5)
+Bloom Verb: Evaluate — students construct a financial model for their specific scenario and assess viability.</p>
+<p>Layout: Canvas 900×560. Four-column layout:</p>
+<p>Column 1 (CapEx Inputs):
+- Growing system cost (<span class="arithmatex">\()
+- Lighting cost (\)</span>)
+- HVAC/climate cost (<span class="arithmatex">\()
+- Automation/sensors (\)</span>)
+- Facility buildout ($)
+- Total CapEx (calculated)</p>
+<p>Column 2 (OpEx Inputs — monthly):
+- Electricity (<span class="arithmatex">\(/month)
+- Water (\)</span>/month)
+- Nutrients (<span class="arithmatex">\(/month)
+- Seeds/propagation (\)</span>/month)
+- Labor (hrs × rate)
+- Packaging ($/month)
+- Loan payment (auto-calculated from CapEx)
+- Total monthly OpEx (calculated)</p>
+<p>Column 3 (Revenue Inputs — monthly):
+- Growing area (m²)
+- Yield per m² per cycle (kg)
+- Cycles per year
+- Selling price ($/kg)
+- Market channel selector: Wholesale / Restaurant / Farmers Market / CSA
+- Monthly revenue (calculated)</p>
+<p>Column 4 (Results):
+- Break-even volume (kg/month)
+- Monthly profit/loss (<span class="arithmatex">\()
+- Annual profit (\)</span>)
+- NPV at 8% discount, 5 years ($)
+- IRR (%)
+- Payback period (years)
+- ROI 5-year (%)</p>
+<p>Bottom panel: 5-year stacked bar chart showing Revenue (green bars) and Cost bars (red = OpEx, orange = CapEx depreciation). Cumulative cash flow line overlaid.</p>
+<p>Interactivity:
+- All inputs update all results and the chart in real time.
+- "Compare Solar vs Grid" button: adds a side-by-side energy cost comparison using the Chapter 19 solar model.
+- "Run Monte Carlo": performs 1,000 simulations varying price ±30%, yield ±25%, and electricity ±20%, then shows a histogram of annual profit outcomes with percentile bands.
+- "Export Business Plan Summary": downloads a formatted plain-text one-pager with all inputs and outputs.</p>
+<p>Responsive: Scales to container width; on narrow screens, columns stack vertically.</p>
+</details>
+<h2 id="key-takeaways">Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>CapEx</strong> (one-time equipment costs) and <strong>OpEx</strong> (ongoing operational costs) must be modeled separately; their tax treatment, financing, and economic impact differ.</li>
+<li><strong>NPV</strong> values future cash flows in today's dollars — a positive NPV means the investment outperforms the discount rate; <strong>IRR</strong> is the break-even discount rate.</li>
+<li><strong>Break-even analysis</strong> identifies the minimum production volume needed to cover fixed costs; <code>break-even = fixed costs / (price - variable cost per unit)</code>.</li>
+<li><strong>Energy is the dominant OpEx</strong> for indoor growing (40–70% of variable costs); accurately modeling energy under different lighting scenarios and electricity rates is essential.</li>
+<li><strong>Revenue channel selection</strong> dramatically affects economics: retail/CSA prices are 2–4× wholesale prices but require proportionally more marketing and logistics effort.</li>
+<li><strong>Grant programs</strong> (USDA OUAIP, Farm to School, state urban agriculture grants) can fund 20–50% of startup CapEx for community-oriented or educational hydroponic projects.</li>
+<li><strong>Sensitivity analysis</strong> identifies which input variables most affect financial outcomes — often selling price and electricity rate, not yield.</li>
+<li><strong>Monte Carlo simulation</strong> replaces false precision (single-point estimates) with probability distributions — a more honest representation of a new farm's financial uncertainty.</li>
+<li><strong>Solar energy integration</strong> reduces OpEx by <span class="arithmatex">\(0.09–\)</span>0.10/kWh and pays back in 5–8 years under typical conditions; the 25-year lifetime savings are substantial for energy-intensive indoor farms.</li>
+<li><strong>Scale-up modeling</strong> reveals where unit economics improve (bulk nutrients, fixed labor absorption) and where new costs emerge (management complexity, regulatory burden).</li>
+</ul>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Course complete — you're a hydroponics engineer!</p>
+<p><img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Cress leaps with arms raised">
+You've done it, growers! From the chemistry of root ion uptake to the IRR of a commercial vertical farm — you now command the full stack of modern controlled-environment agriculture. You can design a system, wire the sensors, write the firmware, analyze the data, ensure the food safety, evaluate the solar economics, and build the financial model that proves whether the whole enterprise makes sense. This is hydroponics from mason jar to vertical farm — and you can grow <em>anything</em> with this foundation. Now go grow something amazing! 🌱</p>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../20-vertical-farming/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 20. Vertical Farming">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                20. Vertical Farming
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../learning-graph/" class="md-footer__link md-footer__link--next" aria-label="Next: Introduction">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Introduction
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.action.edit", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>

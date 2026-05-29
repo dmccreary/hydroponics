@@ -1,0 +1,14 @@
+{
+  "sim_id": "solar-power-designer",
+  "diagram_name": "Solar Power System Designer",
+  "chapter_number": 19,
+  "chapter_title": "Solar Energy and Power Systems",
+  "chapter_dir": "19-solar-energy",
+  "library": "p5.js",
+  "bloom_level": "Apply (L3) and Evaluate (L5)",
+  "bloom_verb": "Design — students iteratively modify system parameters and observe how each decision affects sizing, cost, and LCOE.",
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-05-29",
+  "specification": "Type: engineering-calculator\n**sim-id:** solar-power-designer<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nPurpose: Allow students to design a solar power system for their specific hydroponic operation by entering energy loads, location (peak sun hours), and battery preferences, then see panel count, battery size, estimated cost, and LCOE automatically calculated.\n\nBloom Level: Apply (L3) and Evaluate (L5)\nBloom Verb: Design — students iteratively modify system parameters and observe how each decision affects sizing, cost, and LCOE.\n\nLayout: Canvas 900×540. Three-column layout:\n\nLeft column (Energy Audit):\n- Table with editable rows: Load name | Watts | Hours/Day\n- Pre-populated with: LED Light, Water Pump, Air Pump, Circulation Fan, Sensor Node\n- \"Add Load\" button adds a new row\n- Total daily Wh shown at bottom\n\nCenter column (System Parameters):\n- Location: dropdown (Miami 5.6 PSH, Los Angeles 5.5, Denver 5.1, Minneapolis 4.2, Seattle 3.2, Custom)\n- Battery type: Lead-Acid / LiFePO4 toggle\n- Days of autonomy: slider (1–5)\n- System voltage: radio buttons (12V / 24V / 48V)\n- Panel watt-peak: slider (200–600 Wp)\n\nRight column (Results):\n- Required panel count (integer, rounded up)\n- Required battery capacity (Ah at selected voltage)\n- Estimated system cost (US $)\n- LCOE ($/kWh)\n- Payback period vs. grid at $0.15/kWh (years)\n- Monthly cost savings ($)\n\nBelow all columns: Stacked bar chart showing energy load breakdown by category (lighting, pumping, sensing, climate) in Wh/day.\n\nInteractivity: All inputs update the right column results and chart in real-time. Hovering the stacked bar chart shows the exact Wh and percentage for each category. \"Export Report\" button downloads a plain-text system design summary."
+}

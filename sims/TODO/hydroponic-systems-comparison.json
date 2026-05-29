@@ -1,0 +1,14 @@
+{
+  "sim_id": "hydroponic-systems-comparison",
+  "diagram_name": "Hydroponic Systems Side-by-Side Comparison",
+  "chapter_number": 6,
+  "chapter_title": "Passive and Basic Active Systems",
+  "chapter_dir": "06-passive-basic-active-systems",
+  "library": "p5.js",
+  "bloom_level": "Analyze (L4) and Evaluate (L5)",
+  "bloom_verb": "Compare and judge — students compare architectures and make a justified system selection for a given scenario",
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-05-29",
+  "specification": "Type: diagram\n**sim-id:** hydroponic-systems-comparison<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nPurpose: Let students visually compare all six hydroponic system architectures side by side, click each to see how it works, and explore trade-offs on key dimensions (oxygen, cost, complexity, pump risk, crop suitability).\n\nBloom Level: Analyze (L4) and Evaluate (L5)\nBloom Verb: Compare and judge — students compare architectures and make a justified system selection for a given scenario\n\nLayout: Gallery view showing six small system diagram thumbnails arranged in a 2×3 or 3×2 grid; each thumbnail shows the key structural elements of that system type in a simple cross-sectional illustration\n\nThumbnails (each is a simplified cross-section, click to expand):\n1. Kratky: Mason jar + net pot + root growing into solution + air gap labeled\n2. DWC: Bucket + net pot + roots in solution + air stone + air pump\n3. NFT: Channel at slight angle + thin film on channel floor + roots sitting in film + pump + reservoir\n4. Ebb-and-Flow: Flood table above reservoir + pump + timer + plants in growing medium + overflow drain\n5. Aeroponics: Roots hanging in air chamber + misting nozzles spraying roots + collection trough + high-pressure pump\n6. Fogponics: Ultrasonic fogger in reservoir + fog rising around roots + enclosed chamber\n\nExpanded detail panel (appears when thumbnail is clicked, takes 60% of canvas):\n- System diagram with labeled components\n- Animated flow showing solution/air movement (solution flow arrow, oxygen delivery visualization)\n- Ratings display:\n  - Oxygen Delivery: 1–5 stars\n  - Pump Failure Risk: 1–5 (1=none, 5=immediate death)\n  - Setup Complexity: 1–5\n  - Cost to Build: $ to $$$$$\n  - Best Crops: list of suitable crops\n- One-sentence \"key insight\" about this system\n\nAnimation: Each system shows its characteristic movement — DWC shows bubbles rising, NFT shows film flowing, Aeroponics shows mist spray pulses\n\nReturn button: \"Back to gallery\"\n\nResponsive: Grid wraps to single column on narrow screens; detail panel stacks below thumbnails"
+}

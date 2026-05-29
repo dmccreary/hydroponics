@@ -1,0 +1,14 @@
+{
+  "sim_id": "haccp-risk-matrix",
+  "diagram_name": "HACCP Food Safety Risk Matrix",
+  "chapter_number": 18,
+  "chapter_title": "Food Safety and Pest Management",
+  "chapter_dir": "18-food-safety",
+  "library": "p5.js",
+  "bloom_level": "Analyze (L4) and Evaluate (L5)",
+  "bloom_verb": "Evaluate — students assess the food safety risk profile of their system configuration and identify gaps in their control measures.",
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-05-29",
+  "specification": "Type: decision-tool\n**sim-id:** haccp-risk-matrix<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nPurpose: Guide students through a simplified HACCP hazard analysis for their specific hydroponic setup, identifying Critical Control Points and appropriate corrective actions.\n\nBloom Level: Analyze (L4) and Evaluate (L5)\nBloom Verb: Evaluate — students assess the food safety risk profile of their system configuration and identify gaps in their control measures.\n\nLayout: Canvas 900×500. Three-panel layout:\n\nLeft panel — System Configuration (checkboxes):\n- Crop type: Leafy greens / Herbs / Fruiting crops / Sprouts\n- Water source: Municipal / Well / Rainwater / Reverse osmosis\n- Scale: Home/classroom (<50 plants) / Small commercial (50–500) / Commercial (500+)\n- Consumers: Personal only / Students/Institution / Public sale\n\nCenter panel — Risk Matrix:\nFor each of 8 hazard categories (contaminated water, biofilm, worker hygiene, harvest surface, post-harvest cooling, pest/disease, chemical contamination, physical hazard), shows a 3×3 risk matrix cell: Probability (Low/Med/High) × Severity (Low/Med/High). Cells colored: green (low risk), yellow (medium), red (high). The cell color and rating update automatically based on the left panel selections.\n\nRight panel — CCP Summary:\nLists the top 3 Critical Control Points for the selected configuration with:\n- CCP name\n- Monitoring method\n- Critical limit\n- Corrective action if limit exceeded\n\nInteractivity:\n- Any change to the left panel immediately updates the risk matrix and CCP summary.\n- Clicking any hazard category in the risk matrix expands a detail panel: what this hazard means, what pathogens are associated, and a step-by-step prevention protocol.\n- \"Download HACCP Plan\" button: generates a printable text summary of the full analysis for the selected configuration.\n\nResponsive: Scales to container width; on narrow screens, panels stack vertically."
+}

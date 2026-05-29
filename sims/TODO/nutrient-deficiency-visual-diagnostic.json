@@ -1,0 +1,14 @@
+{
+  "sim_id": "nutrient-deficiency-visual-diagnostic",
+  "diagram_name": "Nutrient Deficiency Visual Diagnostic Tool",
+  "chapter_number": 3,
+  "chapter_title": "Water Transport, Photosynthesis, and Plant Health",
+  "chapter_dir": "03-water-transport",
+  "library": "p5.js",
+  "bloom_level": "Analyze (L4)",
+  "bloom_verb": "Differentiate — students differentiate between deficiency symptoms based on leaf age and visual pattern",
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-05-29",
+  "specification": "Type: infographic\n**sim-id:** nutrient-deficiency-visual-diagnostic<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nPurpose: Allow students to interactively diagnose nutrient deficiencies by selecting observed visual symptoms and identifying the matching deficiency. Reinforces the mobility rule and visual pattern vocabulary from this chapter.\n\nBloom Level: Analyze (L4)\nBloom Verb: Differentiate — students differentiate between deficiency symptoms based on leaf age and visual pattern\n\nLayout: Three-panel interface, full-width responsive\nLeft panel (30%): Symptom selector\n- Radio button: \"Leaf age affected — New/upper leaves first | Old/lower leaves first | Both / Whole plant\"\n- Checkbox list: \"Pattern type — Yellowing between veins | Uniform yellowing | Browning at edges | Purple/red discoloration | Browning at growing tip | Twisted or distorted growth\"\n\nCenter panel (55%): Leaf illustration\n- Generic lettuce leaf outline with colored overlay zones that update based on symptom selections\n- Yellow zones = chlorosis, brown zones = necrosis, purple zones = anthocyanin, distorted lines = curl/twist\n- Leaf toggles between \"Young leaf\" and \"Old leaf\" view to show expected pattern for each\n\nRight panel (15%): Diagnosis results\n- Lists probable deficiencies matching the selected pattern, sorted by likelihood\n- Each deficiency name is clickable to expand detail: nutrient name, mobile/immobile, typical solution ppm, pH range where lockout occurs, corrective action\n\nInteractive features:\n- Symptom selections update the leaf illustration and diagnosis list in real time\n- \"Show All Patterns\" button cycles through all eight major deficiency patterns with illustrations and labels\n- Hover on leaf region: Tooltip showing which deficiency primarily affects that zone\n\nVisual style: Clean botanical illustration style, green/brown/yellow palette matching textbook"
+}

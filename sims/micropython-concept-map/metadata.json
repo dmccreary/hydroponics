@@ -1,0 +1,21 @@
+{
+  "title": "MicroPython Concept Map",
+  "description": "MicroPython Concept Map",
+  "creator": "Dementia Education Project",
+  "date": "2026-05-29",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "micropython-concept-map",
+  "library": "p5.js",
+  "bloomLevel": "Understand (L2) and Remember (L1)",
+  "bloomVerb": "Organize — students see how hardware setup, data types, control flow, functions, and OOP build on each other.",
+  "completion_status": "scaffold",
+  "chapter_number": 12,
+  "chapter_title": "MicroPython Fundamentals",
+  "chapter_dir": "12-micropython-fundamentals"
+}

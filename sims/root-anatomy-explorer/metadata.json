@@ -1,0 +1,21 @@
+{
+  "title": "Root Cross-Section and Absorption Zones",
+  "description": "Root Cross-Section and Absorption Zones",
+  "creator": "Dementia Education Project",
+  "date": "2026-05-29",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "root-anatomy-explorer",
+  "library": "p5.js",
+  "bloomLevel": "Remember (L1) and Understand (L2)",
+  "bloomVerb": "Identify and describe — students identify each root zone/tissue and describe its role",
+  "completion_status": "scaffold",
+  "chapter_number": 2,
+  "chapter_title": "Root Biology and Nutrient Absorption",
+  "chapter_dir": "02-root-biology"
+}

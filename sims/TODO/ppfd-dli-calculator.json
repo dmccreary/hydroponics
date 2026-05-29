@@ -1,0 +1,14 @@
+{
+  "sim_id": "ppfd-dli-calculator",
+  "diagram_name": "PPFD and DLI Calculator",
+  "chapter_number": 10,
+  "chapter_title": "Lighting Science",
+  "chapter_dir": "10-lighting-science",
+  "library": "p5.js",
+  "bloom_level": "Apply (L3)",
+  "bloom_verb": "Calculate — students calculate DLI, energy cost, and mounting height effects using real formulas",
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-05-29",
+  "specification": "Type: microsim\n**sim-id:** ppfd-dli-calculator<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nPurpose: Allow students to interactively calculate DLI from PPFD and photoperiod, compare different lighting scenarios for energy cost, and understand how the inverse square law affects PPFD with mounting height change.\n\nBloom Level: Apply (L3)\nBloom Verb: Calculate — students calculate DLI, energy cost, and mounting height effects using real formulas\n\nCanvas layout:\n- Left panel (50%): Calculator with three sections:\n  Section 1 \"DLI Calculator\":\n    Inputs: PPFD (slider 50–1500 µmol·m⁻²·s⁻¹), Photoperiod (slider 8–24 hours)\n    Output: DLI in mol·m⁻²·d⁻¹, displayed numerically and as a horizontal bar against crop target ranges (color-coded: red=too low, green=optimal, orange=high)\n  Section 2 \"Energy Cost\":\n    Inputs: Light wattage (number input), electricity cost $/kWh (number input, default 0.12)\n    Output: Daily energy cost ($), monthly energy cost ($), annual energy cost ($)\n  Section 3 \"Inverse Square Law\":\n    Inputs: Current PPFD at known height (number input), current height (cm slider 10–200), new height (cm slider 10–200)\n    Output: New PPFD at the new height, with warning if result exceeds 1200 µmol·m⁻²·s⁻¹ (light stress risk)\n\n- Right panel (50%): Crop target DLI reference chart\n  Horizontal bar chart showing DLI target ranges for: Lettuce, Basil, Tomato veg, Tomato fruit, Cucumber, Strawberry, Seedlings\n  Current calculated DLI shown as a vertical orange line moving across all bars as the calculator updates\n  Each bar is clickable to set DLI calculator inputs to the recommended range midpoint\n\nInteractivity:\n- All sliders and inputs update output in real time\n- \"Compare two scenarios\" button: Expands to show a side-by-side comparison of two different PPFD/photoperiod combinations with their DLI and energy cost\n- Hover over any output: Tooltip shows the formula used and what each variable means\n\nResponsive: Stacks to vertical layout on narrow screens"
+}

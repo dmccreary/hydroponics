@@ -1,0 +1,21 @@
+{
+  "title": "System Selection Decision Tree",
+  "description": "System Selection Decision Tree",
+  "creator": "Dementia Education Project",
+  "date": "2026-05-29",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "system-selection-decision-tree",
+  "library": "p5.js",
+  "bloomLevel": "Evaluate (L5)",
+  "bloomVerb": "Recommend — students recommend a system type and justify the choice using trade-off criteria",
+  "completion_status": "scaffold",
+  "chapter_number": 6,
+  "chapter_title": "Passive and Basic Active Systems",
+  "chapter_dir": "06-passive-basic-active-systems"
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HACCP Food Safety Risk Matrix</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f8f9fa;
+            color: #212529;
+        }
+        #container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+        }
+        h1 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #1a3a6c;
+        }
+        .placeholder {
+            border: 2px dashed #adb5bd;
+            border-radius: 8px;
+            padding: 40px 20px;
+            text-align: center;
+            color: #6c757d;
+            margin: 20px 0;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .placeholder .badge {
+            display: inline-block;
+            background: #ffc107;
+            color: #212529;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .placeholder h2 {
+            font-size: 18px;
+            color: #495057;
+            margin-bottom: 8px;
+        }
+        .placeholder p {
+            font-size: 14px;
+            max-width: 480px;
+        }
+        .meta {
+            margin-top: 20px;
+            font-size: 13px;
+            color: #6c757d;
+            border-top: 1px solid #dee2e6;
+            padding-top: 12px;
+        }
+        .meta strong { color: #495057; }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>HACCP Food Safety Risk Matrix</h1>
+        <div class="placeholder">
+            <span class="badge">SCAFFOLD</span>
+            <h2>MicroSim Not Yet Implemented</h2>
+            <p>This MicroSim has been scaffolded from its specification but the
+            interactive content has not been built yet. See the chapter source
+            and the <code>index.md</code> in this directory for the full spec.</p>
+        </div>
+        <div class="meta">
+            <p><strong>Sim ID:</strong> haccp-risk-matrix</p>
+            <p><strong>Library:</strong> p5.js</p>
+            <p><strong>Bloom Level:</strong> Analyze (L4) and Evaluate (L5)</p>
+            <p><strong>Learning Objective:</strong> TBD</p>
+        </div>
+    </div>
+
+    <!--
+    SPECIFICATION (from chapter index.md):
+
+    Type: decision-tool
+    **sim-id:** haccp-risk-matrix<br/>
+    **Library:** p5.js<br/>
+    **Status:** Specified
+    
+    Purpose: Guide students through a simplified HACCP hazard analysis for their specific hydroponic setup, identifying Critical Control Points and appropriate corrective actions.
+    
+    Bloom Level: Analyze (L4) and Evaluate (L5)
+    Bloom Verb: Evaluate — students assess the food safety risk profile of their system configuration and identify gaps in their control measures.
+    
+    Layout: Canvas 900×500. Three-panel layout:
+    
+    Left panel — System Configuration (checkboxes):
+    - Crop type: Leafy greens / Herbs / Fruiting crops / Sprouts
+    - Water source: Municipal / Well / Rainwater / Reverse osmosis
+    - Scale: Home/classroom (<50 plants) / Small commercial (50–500) / Commercial (500+)
+    - Consumers: Personal only / Students/Institution / Public sale
+    
+    Center panel — Risk Matrix:
+    For each of 8 hazard categories (contaminated water, biofilm, worker hygiene, harvest surface, post-harvest cooling, pest/disease, chemical contamination, physical hazard), shows a 3×3 risk matrix cell: Probability (Low/Med/High) × Severity (Low/Med/High). Cells colored: green (low risk), yellow (medium), red (high). The cell color and rating update automatically based on the left panel selections.
+    
+    Right panel — CCP Summary:
+    Lists the top 3 Critical Control Points for the selected configuration with:
+    - CCP name
+    - Monitoring method
+    - Critical limit
+    - Corrective action if limit exceeded
+    
+    Interactivity:
+    - Any change to the left panel immediately updates the risk matrix and CCP summary.
+    - Clicking any hazard category in the risk matrix expands a detail panel: what this hazard means, what pathogens are associated, and a step-by-step prevention protocol.
+    - "Download HACCP Plan" button: generates a printable text summary of the full analysis for the selected configuration.
+    
+    Responsive: Scales to container width; on narrow screens, panels stack vertically.
+    -->
+</body>
+</html>

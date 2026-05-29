@@ -1,0 +1,14 @@
+{
+  "sim_id": "diy-build-selector",
+  "diagram_name": "DIY Build Cost and Complexity Selector",
+  "chapter_number": 8,
+  "chapter_title": "DIY Systems and School Projects",
+  "chapter_dir": "08-diy-school-projects",
+  "library": "p5.js",
+  "bloom_level": "Evaluate (L5)",
+  "bloom_verb": "Recommend — students recommend a build based on constraints and justify the choice",
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-05-29",
+  "specification": "Type: infographic\n**sim-id:** diy-build-selector<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nPurpose: Let students explore all four DIY build options interactively, filtering by budget and complexity to find the most appropriate starting project. Reinforces the cost-tier framework and components needed for each build.\n\nBloom Level: Evaluate (L5)\nBloom Verb: Recommend — students recommend a build based on constraints and justify the choice\n\nLayout: Grid of 4 build cards arranged horizontally (or 2×2 on narrow screens); filter controls above the grid\n\nFilter controls:\n- Slider \"My Budget: $X\" (range $0–$400, step $10)\n- Dropdown \"Experience Level\": Beginner | Intermediate | Advanced\n- Checkbox \"School/Classroom use\" — filters to builds that meet school safety rules\n\nBuild cards (each shows):\n- Build name and photo-style illustration\n- Budget range\n- Plant capacity\n- Complexity rating (1–3 stars)\n- Key advantage (one sentence)\n- Key constraint (one sentence)\n- Estimated build time\n\nCards that don't match the filters are grayed out; matching cards are highlighted\n\nClicking a card: Opens an expanded panel with:\n- Full materials list with estimated costs\n- Assembly steps summary (numbered, 5–7 steps)\n- Photo/illustration of finished build\n- Recommended first crops\n- \"Upgrade pathway\": What to add next to move to Tier 3 or 4\n\nInteractivity:\n- Filter controls update card visibility in real time\n- \"Compare two builds\" mode: Select two build cards and see them side by side with matching attributes highlighted for comparison\n- \"Show classroom-safe only\" toggle: Highlights builds approved for school use based on no sharp tools required, no concentrated chemicals stored unsupervised\n\nResponsive: Cards stack vertically on narrow screens; expanded panel appears below or as modal"
+}

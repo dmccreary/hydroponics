@@ -1,0 +1,21 @@
+{
+  "title": "Hydroponic Farm Financial Model Builder",
+  "description": "Hydroponic Farm Financial Model Builder",
+  "creator": "Dementia Education Project",
+  "date": "2026-05-29",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "farm-financial-model",
+  "library": "p5.js",
+  "bloomLevel": "Apply (L3) and Evaluate (L5)",
+  "bloomVerb": "Evaluate — students construct a financial model for their specific scenario and assess viability.",
+  "completion_status": "scaffold",
+  "chapter_number": 21,
+  "chapter_title": "Financial Modeling and Hydroponics Economics",
+  "chapter_dir": "21-financial-modeling"
+}

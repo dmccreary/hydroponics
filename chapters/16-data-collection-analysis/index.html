@@ -1,0 +1,2342 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="From sensor logs to insight — CSV logging strategies, pandas DataFrames, time-series resampling, missing data handling, NumPy statistics, correlation, and linear regression for hydroponic crop analysis.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/hydroponics/chapters/16-data-collection-analysis/">
+      
+      
+        <link rel="prev" href="../15-sensors-electronics/">
+      
+      
+        <link rel="next" href="../17-data-visualization/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Data Collection and Analysis - Hydroponics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../css/mascot.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#data-collection-and-analysis" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Hydroponics" class="md-header__button md-logo" aria-label="Hydroponics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Hydroponics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Data Collection and Analysis
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/hydroponics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Hydroponics" class="md-nav__button md-logo" aria-label="Hydroponics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Hydroponics
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/hydroponics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-root-biology/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Root Biology
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-water-transport/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Water & Plant Health
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-macro-micro-nutrients/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Macro & Micro Nutrients
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-nutrient-solution-chemistry/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Nutrient Chemistry
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-passive-basic-active-systems/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Basic Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-advanced-systems/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. Advanced Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-diy-school-projects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. DIY & School Projects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-growing-media-crops/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. Growing Media & Crops
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-lighting-science/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. Lighting Science
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-environmental-control/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. Environmental Control
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-micropython-fundamentals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. MicroPython Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-hardware-interfaces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. Hardware Interfaces
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-networking-iot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. Networking & IoT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-sensors-electronics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. Sensors & Electronics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    16. Data Collection
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    16. Data Collection
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-collection-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Collection Strategy
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Collection Strategy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-logging-to-sd-card" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Logging to SD Card
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloud-data-storage-google-sheets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cloud Data Storage: Google Sheets
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-environment-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python Environment Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jupyter-notebook-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jupyter Notebook Basics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pandas-the-data-analysis-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      pandas: The Data Analysis Library
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="pandas: The Data Analysis Library">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dataframe-creation-and-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      DataFrame Creation and Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reading-csv-with-pandas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reading CSV with pandas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#date-time-parsing-with-pandas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Date-Time Parsing with pandas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dataframe-indexing-and-slicing" class="md-nav__link">
+    <span class="md-ellipsis">
+      DataFrame Indexing and Slicing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time-series-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Time-Series Analysis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Time-Series Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resampling-time-series-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resampling Time-Series Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rolling-window-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rolling Window Statistics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-quality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Quality
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Quality">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#missing-data-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Missing Data Handling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-cleaning-and-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Cleaning and Validation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#numpy-numerical-computing" class="md-nav__link">
+    <span class="md-ellipsis">
+      NumPy: Numerical Computing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="NumPy: Numerical Computing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#numpy-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      NumPy Arrays
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#array-operations-and-broadcasting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Array Operations and Broadcasting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#statistical-functions-in-numpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Statistical Functions in NumPy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#correlation-and-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      Correlation and Regression
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Correlation and Regression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#correlation-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Correlation Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linear-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linear Regression
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Linear Regression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-sensor-data-analysis-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Sensor Data Analysis Pipeline
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../17-data-visualization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. Data Visualization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18-food-safety/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. Food Safety
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../19-solar-energy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    19. Solar Energy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20-vertical-farming/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20. Vertical Farming
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../21-financial-modeling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    21. Financial Modeling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-collection-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Collection Strategy
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Collection Strategy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-logging-to-sd-card" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Logging to SD Card
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloud-data-storage-google-sheets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cloud Data Storage: Google Sheets
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-environment-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python Environment Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jupyter-notebook-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jupyter Notebook Basics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pandas-the-data-analysis-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      pandas: The Data Analysis Library
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="pandas: The Data Analysis Library">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dataframe-creation-and-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      DataFrame Creation and Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reading-csv-with-pandas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reading CSV with pandas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#date-time-parsing-with-pandas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Date-Time Parsing with pandas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dataframe-indexing-and-slicing" class="md-nav__link">
+    <span class="md-ellipsis">
+      DataFrame Indexing and Slicing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time-series-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Time-Series Analysis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Time-Series Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resampling-time-series-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resampling Time-Series Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rolling-window-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rolling Window Statistics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-quality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Quality
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Quality">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#missing-data-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Missing Data Handling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-cleaning-and-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Cleaning and Validation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#numpy-numerical-computing" class="md-nav__link">
+    <span class="md-ellipsis">
+      NumPy: Numerical Computing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="NumPy: Numerical Computing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#numpy-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      NumPy Arrays
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#array-operations-and-broadcasting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Array Operations and Broadcasting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#statistical-functions-in-numpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Statistical Functions in NumPy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#correlation-and-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      Correlation and Regression
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Correlation and Regression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#correlation-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Correlation Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linear-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linear Regression
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Linear Regression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-sensor-data-analysis-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Sensor Data Analysis Pipeline
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/hydroponics/blob/main/docs/chapters/16-data-collection-analysis/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="data-collection-and-analysis">Data Collection and Analysis<a class="headerlink" href="#data-collection-and-analysis" title="Permanent link">&para;</a></h1>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<p>This chapter teaches the data science pipeline from sensor to insight: designing a logging strategy, writing CSV data to SD cards and cloud services (Google Sheets), setting up a Python environment with Jupyter notebooks, and working with pandas DataFrames for time-series resampling, rolling window statistics, and missing data handling. The chapter closes with NumPy arrays, statistical functions, correlation analysis, and linear regression — building the analytical vocabulary students need before the visualization chapter.</p>
+<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">&para;</a></h2>
+<p>This chapter covers the following 25 concepts from the learning graph:</p>
+<ol>
+<li>Data Collection Strategy</li>
+<li>Sensor Reading Frequency</li>
+<li>CSV File Format and Structure</li>
+<li>Data Logging to SD Card</li>
+<li>Cloud Data Storage Options</li>
+<li>Google Sheets as Data Logger</li>
+<li>Python Environment Setup</li>
+<li>Jupyter Notebook Basics</li>
+<li>pandas Library Introduction</li>
+<li>DataFrame Creation and Structure</li>
+<li>Reading CSV With pandas</li>
+<li>DataFrame Indexing and Slicing</li>
+<li>Date-Time Parsing With pandas</li>
+<li>Resampling Time-Series Data</li>
+<li>Rolling Window Statistics</li>
+<li>Missing Data Handling</li>
+<li>Data Cleaning and Validation</li>
+<li>NumPy Library Introduction</li>
+<li>NumPy Arrays</li>
+<li>Array Operations Broadcasting</li>
+<li>Statistical Functions in NumPy</li>
+<li>Mean Median Standard Deviation</li>
+<li>Correlation Analysis</li>
+<li>Linear Regression</li>
+<li>Regression in NumPy (polyfit)</li>
+</ol>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<p>This chapter builds on concepts from:</p>
+<ul>
+<li><a href="../13-hardware-interfaces/">Chapter 13: Hardware Interfaces and Sensor Programming</a></li>
+<li><a href="../15-sensors-electronics/">Chapter 15: Sensors and Electronics Hardware</a></li>
+</ul>
+<hr />
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Cress opens the data notebook</p>
+<p><img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Cress waves hello at chapter opening">
+Welcome to Chapter 16, growers! Your sensors are reading, your data is logging — now let's make it useful. This chapter moves from the microcontroller to your laptop: we'll organize weeks of pH, EC, and temperature readings into pandas DataFrames, clean up the gaps, calculate rolling averages and correlations, and fit a regression line to understand trends across a crop cycle. By the end, you'll be able to answer the question every grower wants to ask: "What did my system actually do for the last 30 days?" Let's grow some insight!</p>
+</div>
+<h2 id="data-collection-strategy">Data Collection Strategy<a class="headerlink" href="#data-collection-strategy" title="Permanent link">&para;</a></h2>
+<p>Before writing a single line of analysis code, good data collection requires decisions about <em>what</em> to measure, <em>how often</em>, and <em>where to store it</em>. A thoughtful collection strategy produces clean, analyzable data; a poorly designed strategy produces CSV files full of gaps, inconsistent units, and timestamps that don't align across sensors.</p>
+<p>Key decisions in a data collection strategy:</p>
+<p><strong>What to measure</strong>: At minimum, log pH, EC (or TDS), water temperature, and a timestamp. For comprehensive monitoring also log: air temperature, relative humidity, CO₂ ppm, reservoir level (cm), and the state of each actuator (pump on/off, lights on/off).</p>
+<p><strong>Sensor reading frequency</strong>: How often to sample each sensor depends on how quickly it changes and how much storage you have.</p>
+<table>
+<thead>
+<tr>
+<th>Sensor</th>
+<th>Typical Range</th>
+<th>Recommended Interval</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Water temperature</td>
+<td>Slow drift</td>
+<td>Every 15 minutes</td>
+<td>Slow changes</td>
+</tr>
+<tr>
+<td>pH</td>
+<td>Moderate drift</td>
+<td>Every 5 minutes</td>
+<td>Dosing events cause fast shifts</td>
+</tr>
+<tr>
+<td>EC</td>
+<td>Slow drift</td>
+<td>Every 15 minutes</td>
+<td>Changes over hours</td>
+</tr>
+<tr>
+<td>Air temperature</td>
+<td>Moderate</td>
+<td>Every 5 minutes</td>
+<td>Tracks day/night cycle</td>
+</tr>
+<tr>
+<td>CO₂</td>
+<td>Fast variation</td>
+<td>Every 1 minute</td>
+<td>Responds quickly to ventilation</td>
+</tr>
+<tr>
+<td>Pump/relay state</td>
+<td>Event-driven</td>
+<td>On each change</td>
+<td>Log transitions, not continuous state</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Data volume estimate</strong>: A 6-column CSV row at 5-minute intervals generates approximately 864 rows per day. At ~50 bytes per row, that is 43 KB/day, or 1.5 MB per 35-day lettuce crop cycle — well within the capacity of even a modest SD card or cloud storage plan.</p>
+<h3 id="data-logging-to-sd-card">Data Logging to SD Card<a class="headerlink" href="#data-logging-to-sd-card" title="Permanent link">&para;</a></h3>
+<p>For long deployments where Wi-Fi is unavailable or unreliable, an SD card provides local persistent storage. The MicroPython <code>sdcard</code> driver and <code>uos</code> module allow mounting an SD card as a filesystem:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">machine</span><span class="o">,</span> <span class="nn">uos</span><span class="o">,</span> <span class="nn">sdcard</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">spi</span> <span class="o">=</span> <span class="n">machine</span><span class="o">.</span><span class="n">SPI</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">sck</span><span class="o">=</span><span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="n">mosi</span><span class="o">=</span><span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="mi">11</span><span class="p">),</span> <span class="n">miso</span><span class="o">=</span><span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="mi">12</span><span class="p">))</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">sd</span> <span class="o">=</span> <span class="n">sdcard</span><span class="o">.</span><span class="n">SDCard</span><span class="p">(</span><span class="n">spi</span><span class="p">,</span> <span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="mi">9</span><span class="p">))</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">uos</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="n">sd</span><span class="p">,</span> <span class="s2">&quot;/sd&quot;</span><span class="p">)</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">LOG_FILE</span> <span class="o">=</span> <span class="s2">&quot;/sd/hydro_log.csv&quot;</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="k">def</span> <span class="nf">log_reading</span><span class="p">(</span><span class="n">timestamp</span><span class="p">,</span> <span class="n">temp</span><span class="p">,</span> <span class="n">ph</span><span class="p">,</span> <span class="n">ec</span><span class="p">):</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">LOG_FILE</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">timestamp</span><span class="si">}</span><span class="s2">,</span><span class="si">{</span><span class="n">temp</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">,</span><span class="si">{</span><span class="n">ph</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">,</span><span class="si">{</span><span class="n">ec</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Write a CSV header once at the start of each crop cycle:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">LOG_FILE</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;timestamp_unix,temperature_c,ph,ec_ms_cm</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="cloud-data-storage-google-sheets">Cloud Data Storage: Google Sheets<a class="headerlink" href="#cloud-data-storage-google-sheets" title="Permanent link">&para;</a></h3>
+<p>For systems with reliable Wi-Fi, <strong>Google Sheets</strong> is a surprisingly capable cloud logging destination for small-scale hydroponic operations. The Sheets API accepts HTTP POST requests; the MicroPython <code>urequests</code> library (Chapter 14) can send readings from the Pico W directly to a sheet.</p>
+<p>The workflow: create a Google Sheet → enable the Sheets API → generate an API key → use <code>urequests.post()</code> to append rows via the Sheets REST API. The spreadsheet then acts as a live database accessible from any browser, with built-in charting for quick visual inspection.</p>
+<p>For more robust storage at scale, dedicated IoT time-series databases (InfluxDB, TimescaleDB) provide better query performance than spreadsheets, but Google Sheets is adequate for classroom and home-scale projects.</p>
+<h2 id="python-environment-setup">Python Environment Setup<a class="headerlink" href="#python-environment-setup" title="Permanent link">&para;</a></h2>
+<p>Data analysis in this chapter is done in Python on your laptop — not on the microcontroller. Before we analyze data, we need a working Python environment.</p>
+<p><strong>Installation steps:</strong></p>
+<ol>
+<li>Install Python 3.10+ from <code>python.org</code> or via Anaconda</li>
+<li>Install required packages: <code>pip install pandas numpy matplotlib jupyter</code></li>
+<li>Launch Jupyter: <code>jupyter notebook</code> opens a browser-based notebook interface</li>
+</ol>
+<p>Alternatively, <strong>Google Colab</strong> (colab.research.google.com) provides a free cloud Jupyter environment with all required packages pre-installed — no local installation needed.</p>
+<h2 id="jupyter-notebook-basics">Jupyter Notebook Basics<a class="headerlink" href="#jupyter-notebook-basics" title="Permanent link">&para;</a></h2>
+<p>A <strong>Jupyter notebook</strong> is an interactive document that mixes executable Python code blocks (cells) with Markdown text, equations, and output (tables, charts). Each code cell runs independently; variables from one cell are available in subsequent cells.</p>
+<p>The workflow for hydroponic data analysis:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Cell 1: Imports</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="c1"># Cell 2: Load data</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;hydro_log.csv&quot;</span><span class="p">)</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="c1"># Cell 3: Inspect</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>       <span class="c1"># Show first 5 rows</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>       <span class="c1"># Column types and non-null counts</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>   <span class="c1"># Statistical summary</span>
+</span></code></pre></div>
+<p>Running cells in order, inspecting output at each step, and modifying code based on what you see is the iterative workflow of exploratory data analysis.</p>
+<h2 id="pandas-the-data-analysis-library">pandas: The Data Analysis Library<a class="headerlink" href="#pandas-the-data-analysis-library" title="Permanent link">&para;</a></h2>
+<p><strong>pandas</strong> (Panel Data Analysis) is Python's premier data analysis library. Its core data structure is the <strong>DataFrame</strong> — a two-dimensional table with labeled rows (index) and columns, similar to a spreadsheet but with powerful programmatic manipulation.</p>
+<p>Before we look at specific operations, two key terms: the <strong>index</strong> is the row label (often a timestamp for sensor data), and <strong>columns</strong> are the variable labels (temperature, pH, EC). A <strong>Series</strong> is a single column of a DataFrame — a 1-dimensional labeled array.</p>
+<h3 id="dataframe-creation-and-structure">DataFrame Creation and Structure<a class="headerlink" href="#dataframe-creation-and-structure" title="Permanent link">&para;</a></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="c1"># Create from a dictionary</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="s2">&quot;timestamp&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1717000000</span><span class="p">,</span> <span class="mi">1717000300</span><span class="p">,</span> <span class="mi">1717000600</span><span class="p">],</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="s2">&quot;temperature&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">22.5</span><span class="p">,</span> <span class="mf">22.7</span><span class="p">,</span> <span class="mf">22.6</span><span class="p">],</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    <span class="s2">&quot;ph&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">6.42</span><span class="p">,</span> <span class="mf">6.38</span><span class="p">,</span> <span class="mf">6.40</span><span class="p">],</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    <span class="s2">&quot;ec&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">1.85</span><span class="p">,</span> <span class="mf">1.84</span><span class="p">,</span> <span class="mf">1.86</span><span class="p">]</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="p">}</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">dtypes</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Output:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>timestamp      int64
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>temperature    float64
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>ph             float64
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>ec             float64
+</span></code></pre></div></p>
+<h3 id="reading-csv-with-pandas">Reading CSV with pandas<a class="headerlink" href="#reading-csv-with-pandas" title="Permanent link">&para;</a></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;hydro_log.csv&quot;</span><span class="p">)</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>   <span class="c1"># (rows, columns) — e.g., (8640, 4) for 30 days at 5-min intervals</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</span></code></pre></div>
+<p><code>pd.read_csv()</code> is the entry point for most data analysis projects — it reads a CSV file from disk (or URL) into a DataFrame with type inference.</p>
+<h3 id="date-time-parsing-with-pandas">Date-Time Parsing with pandas<a class="headerlink" href="#date-time-parsing-with-pandas" title="Permanent link">&para;</a></h3>
+<p>Unix timestamps (integers) are hard to work with directly — it's much easier to work with human-readable datetime objects. pandas provides <code>pd.to_datetime()</code> for conversion:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">df</span><span class="p">[</span><span class="s2">&quot;datetime&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;timestamp_unix&quot;</span><span class="p">],</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;s&quot;</span><span class="p">)</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;datetime&quot;</span><span class="p">)</span>   <span class="c1"># Use datetime as the row index</span>
+</span></code></pre></div>
+<p>With a DatetimeIndex, pandas gains powerful time-aware capabilities: slicing by date range, resampling to hourly averages, and aligning multiple datasets by time.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># Slice by date range</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">df_week1</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;2024-05-01&quot;</span><span class="p">:</span><span class="s2">&quot;2024-05-07&quot;</span><span class="p">]</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="c1"># Slice a specific day</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="n">df_day1</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;2024-05-01&quot;</span><span class="p">]</span>
+</span></code></pre></div>
+<h3 id="dataframe-indexing-and-slicing">DataFrame Indexing and Slicing<a class="headerlink" href="#dataframe-indexing-and-slicing" title="Permanent link">&para;</a></h3>
+<p>pandas provides two indexers for accessing DataFrame data:</p>
+<ul>
+<li><strong><code>.loc[]</code></strong> — label-based: <code>df.loc["2024-05-01", "ph"]</code> selects by row label (date) and column name</li>
+<li><strong><code>.iloc[]</code></strong> — position-based: <code>df.iloc[0, 2]</code> selects by integer row and column position</li>
+<li><strong>Boolean indexing</strong>: <code>df[df["ph"] &lt; 5.5]</code> returns all rows where pH is below the target range</li>
+</ul>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># Get all pH readings below 5.5 (out-of-range events)</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">low_ph_events</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;ph&quot;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mf">5.5</span><span class="p">]</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Number of low-pH events: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">low_ph_events</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="c1"># Get temperature readings during daytime (8am–8pm)</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="n">daytime</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">between_time</span><span class="p">(</span><span class="s2">&quot;08:00&quot;</span><span class="p">,</span> <span class="s2">&quot;20:00&quot;</span><span class="p">)</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="n">day_temps</span> <span class="o">=</span> <span class="n">daytime</span><span class="p">[</span><span class="s2">&quot;temperature&quot;</span><span class="p">]</span>
+</span></code></pre></div>
+<h2 id="time-series-analysis">Time-Series Analysis<a class="headerlink" href="#time-series-analysis" title="Permanent link">&para;</a></h2>
+<h3 id="resampling-time-series-data">Resampling Time-Series Data<a class="headerlink" href="#resampling-time-series-data" title="Permanent link">&para;</a></h3>
+<p><strong>Resampling</strong> aggregates time-series data to a different time resolution. Upsampling increases frequency (5-minute to 1-minute, filling gaps); downsampling decreases frequency (5-minute to hourly averages). Downsampling is the most common operation for hydroponic analysis.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># Resample 5-minute readings to hourly averages</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">hourly</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s2">&quot;1H&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="c1"># Resample to daily statistics</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="n">daily</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s2">&quot;1D&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>    <span class="s2">&quot;temperature&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;mean&quot;</span><span class="p">,</span> <span class="s2">&quot;min&quot;</span><span class="p">,</span> <span class="s2">&quot;max&quot;</span><span class="p">],</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>    <span class="s2">&quot;ph&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;mean&quot;</span><span class="p">,</span> <span class="s2">&quot;min&quot;</span><span class="p">,</span> <span class="s2">&quot;max&quot;</span><span class="p">],</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>    <span class="s2">&quot;ec&quot;</span><span class="p">:</span> <span class="s2">&quot;mean&quot;</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="p">})</span>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="nb">print</span><span class="p">(</span><span class="n">daily</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">7</span><span class="p">))</span>   <span class="c1"># First week of daily stats</span>
+</span></code></pre></div>
+<p>Resampling to hourly or daily averages is essential for visualizing trends across a 35-day crop cycle — plotting every 5-minute reading produces unreadable charts.</p>
+<h3 id="rolling-window-statistics">Rolling Window Statistics<a class="headerlink" href="#rolling-window-statistics" title="Permanent link">&para;</a></h3>
+<p>A <strong>rolling window</strong> computes a statistic over a sliding time window. For sensor data, rolling averages smooth short-term noise; rolling standard deviations detect when readings become unusually variable (often an early sign of sensor fouling or system instability).</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1"># 1-hour rolling average (window=12 for 5-minute data)</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="n">df</span><span class="p">[</span><span class="s2">&quot;ph_rolling_avg&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;ph&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">window</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="c1"># 4-hour rolling standard deviation</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="n">df</span><span class="p">[</span><span class="s2">&quot;ph_rolling_std&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;ph&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">window</span><span class="o">=</span><span class="mi">48</span><span class="p">)</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="c1"># Flag points where pH variation is high (potential alarm)</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="n">df</span><span class="p">[</span><span class="s2">&quot;ph_unstable&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;ph_rolling_std&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">0.15</span>
+</span></code></pre></div>
+<p>Rolling statistics are the foundation of <strong>Statistical Process Control</strong> (SPC), covered in Chapter 17.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Rolling averages vs. resampling</p>
+<p><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Cress holds chin thoughtfully">
+Rolling averages and resampling both smooth data, but differently. Resampling produces a new Series at reduced frequency (e.g., one point per hour from 12 five-minute readings). Rolling averages keep the original frequency but replace each point with the mean of the surrounding window — useful for smoothing while preserving the original time resolution. Use resampling for trend visualization across many days; use rolling averages for real-time noise reduction.</p>
+</div>
+<h2 id="data-quality">Data Quality<a class="headerlink" href="#data-quality" title="Permanent link">&para;</a></h2>
+<h3 id="missing-data-handling">Missing Data Handling<a class="headerlink" href="#missing-data-handling" title="Permanent link">&para;</a></h3>
+<p>Real sensor logs have gaps — the Wi-Fi drops, the battery drains, the sensor gives a bad reading. pandas represents missing values as <code>NaN</code> (Not a Number). Before analysis, you need a strategy for handling them.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># Check for missing data</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="c1"># Output:</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="c1"># temperature    12</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="c1"># ph             34</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="c1"># ec              5</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="c1"># Inspect where pH gaps occur</span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;ph&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()]</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="c1"># Option 1: Drop rows with any NaN</span>
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="n">df_clean</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="c1"># Option 2: Forward-fill (use last known value)</span>
+</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="n">df_filled</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s2">&quot;ffill&quot;</span><span class="p">)</span>
+</span><span id="__span-11-16"><a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>
+</span><span id="__span-11-17"><a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="c1"># Option 3: Interpolate (linear interpolation between surrounding values)</span>
+</span><span id="__span-11-18"><a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a><span class="n">df_interp</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s2">&quot;time&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p>For hydroponic analysis, <strong>linear interpolation</strong> is usually appropriate for gaps under 1 hour — pH and EC change slowly enough that linear interpolation is close to the true values. For longer gaps, flag the interpolated period in your analysis to avoid drawing conclusions from reconstructed data.</p>
+<h3 id="data-cleaning-and-validation">Data Cleaning and Validation<a class="headerlink" href="#data-cleaning-and-validation" title="Permanent link">&para;</a></h3>
+<p>Beyond missing data, sensor logs often contain <strong>outliers</strong> — readings that are clearly wrong (pH = 14.7, temperature = 99.9 °C from a sensor that momentarily disconnected). Before analysis, validate the data against physical limits:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">VALID_RANGES</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>    <span class="s2">&quot;ph&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mf">3.0</span><span class="p">,</span> <span class="mf">11.0</span><span class="p">),</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>    <span class="s2">&quot;ec&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">),</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>    <span class="s2">&quot;temperature&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mf">5.0</span><span class="p">,</span> <span class="mf">45.0</span><span class="p">)</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="p">}</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="k">def</span> <span class="nf">validate_range</span><span class="p">(</span><span class="n">series</span><span class="p">,</span> <span class="n">col_name</span><span class="p">):</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>    <span class="n">lo</span><span class="p">,</span> <span class="n">hi</span> <span class="o">=</span> <span class="n">VALID_RANGES</span><span class="p">[</span><span class="n">col_name</span><span class="p">]</span>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>    <span class="n">out_of_range</span> <span class="o">=</span> <span class="p">(</span><span class="n">series</span> <span class="o">&lt;</span> <span class="n">lo</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">series</span> <span class="o">&gt;</span> <span class="n">hi</span><span class="p">)</span>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>    <span class="n">series</span><span class="p">[</span><span class="n">out_of_range</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s2">&quot;nan&quot;</span><span class="p">)</span>   <span class="c1"># Replace with NaN</span>
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>    <span class="k">return</span> <span class="n">series</span>
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="n">df</span><span class="p">[</span><span class="s2">&quot;ph&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">validate_range</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;ph&quot;</span><span class="p">],</span> <span class="s2">&quot;ph&quot;</span><span class="p">)</span>
+</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="n">df</span><span class="p">[</span><span class="s2">&quot;temperature&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">validate_range</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;temperature&quot;</span><span class="p">],</span> <span class="s2">&quot;temperature&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p>After validation and interpolation, your DataFrame is ready for statistical analysis.</p>
+<div class="admonition mascot-warning">
+<p class="admonition-title">Clean data before drawing conclusions</p>
+<p><img src="../../img/mascot/warning.png" class="mascot-admonition-img" alt="Cress raises a cautionary hand">
+A single erroneous reading (pH = 14.7 from a disconnected sensor) will dramatically skew your mean, standard deviation, and correlation calculations. Always validate against physical limits and inspect for obvious outliers before analysis. The <code>df.describe()</code> output shows min and max — check those numbers first.</p>
+</div>
+<h2 id="numpy-numerical-computing">NumPy: Numerical Computing<a class="headerlink" href="#numpy-numerical-computing" title="Permanent link">&para;</a></h2>
+<p><strong>NumPy</strong> (Numerical Python) is the foundational library for numerical computation in Python. pandas is built on top of NumPy, and many scientific Python packages use NumPy arrays as their data format.</p>
+<h3 id="numpy-arrays">NumPy Arrays<a class="headerlink" href="#numpy-arrays" title="Permanent link">&para;</a></h3>
+<p>A <strong>NumPy array</strong> (<code>ndarray</code>) is a homogeneous, typed array — all elements have the same data type (e.g., all float64). NumPy arrays support element-wise operations, which are much faster than Python <code>for</code> loops because they use optimized C code under the hood.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="c1"># Create from a list</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="n">temps</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">22.1</span><span class="p">,</span> <span class="mf">22.5</span><span class="p">,</span> <span class="mf">22.3</span><span class="p">,</span> <span class="mf">22.8</span><span class="p">,</span> <span class="mf">22.0</span><span class="p">])</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="c1"># Element-wise operations</span>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="n">temps_fahrenheit</span> <span class="o">=</span> <span class="n">temps</span> <span class="o">*</span> <span class="mi">9</span><span class="o">/</span><span class="mi">5</span> <span class="o">+</span> <span class="mi">32</span>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="n">temps_centered</span> <span class="o">=</span> <span class="n">temps</span> <span class="o">-</span> <span class="n">temps</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="c1"># Convert a pandas Series to NumPy array</span>
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="n">ph_array</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;ph&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+</span></code></pre></div>
+<h3 id="array-operations-and-broadcasting">Array Operations and Broadcasting<a class="headerlink" href="#array-operations-and-broadcasting" title="Permanent link">&para;</a></h3>
+<p><strong>Broadcasting</strong> is NumPy's rule for performing operations between arrays of different shapes. The most common form: a scalar operation applied to an entire array (as shown in the Celsius-to-Fahrenheit conversion above — Python multiplies each element by 9/5 without an explicit loop).</p>
+<p>More complex broadcasting:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1"># Normalize each column to 0-1 range</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="n">ec_array</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;ec&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="n">ec_normalized</span> <span class="o">=</span> <span class="p">(</span><span class="n">ec_array</span> <span class="o">-</span> <span class="n">ec_array</span><span class="o">.</span><span class="n">min</span><span class="p">())</span> <span class="o">/</span> <span class="p">(</span><span class="n">ec_array</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">-</span> <span class="n">ec_array</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
+</span></code></pre></div>
+<h3 id="statistical-functions-in-numpy">Statistical Functions in NumPy<a class="headerlink" href="#statistical-functions-in-numpy" title="Permanent link">&para;</a></h3>
+<p>NumPy provides optimized implementations of statistical functions that work on arrays:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">ph</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;ph&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="n">mean_ph</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">ph</span><span class="p">)</span>         <span class="c1"># Arithmetic mean</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="n">median_ph</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">ph</span><span class="p">)</span>     <span class="c1"># Median (50th percentile)</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="n">std_ph</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">ph</span><span class="p">)</span>           <span class="c1"># Standard deviation</span>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="n">var_ph</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">ph</span><span class="p">)</span>           <span class="c1"># Variance</span>
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="n">min_ph</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">ph</span><span class="p">)</span>
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="n">max_ph</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">ph</span><span class="p">)</span>
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="n">percentile_25</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">ph</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>   <span class="c1"># 25th percentile</span>
+</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>
+</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;pH stats: mean=</span><span class="si">{</span><span class="n">mean_ph</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">, std=</span><span class="si">{</span><span class="n">std_ph</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">, &quot;</span>
+</span><span id="__span-15-12"><a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>      <span class="sa">f</span><span class="s2">&quot;min=</span><span class="si">{</span><span class="n">min_ph</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">, max=</span><span class="si">{</span><span class="n">max_ph</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p><strong>Mean, median, and standard deviation</strong> are the three most important summary statistics for hydroponic analysis:</p>
+<ul>
+<li><strong>Mean</strong>: Average pH/EC over the crop cycle — was the setpoint maintained?</li>
+<li><strong>Median</strong>: Less sensitive to outliers than mean — better for understanding typical conditions</li>
+<li><strong>Standard deviation</strong>: How much the value varied — low std = stable; high std = unstable system or sensor issues</li>
+</ul>
+<h2 id="correlation-and-regression">Correlation and Regression<a class="headerlink" href="#correlation-and-regression" title="Permanent link">&para;</a></h2>
+<h3 id="correlation-analysis">Correlation Analysis<a class="headerlink" href="#correlation-analysis" title="Permanent link">&para;</a></h3>
+<p><strong>Correlation</strong> measures the linear relationship between two variables. The <strong>Pearson correlation coefficient</strong> ranges from −1 (perfect negative correlation) to +1 (perfect positive correlation), with 0 indicating no linear relationship.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c1"># Correlation between pH and EC (often negatively correlated — as plants</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="c1"># take up nutrients, EC drops and root exudates acidify the solution)</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="n">corr_ph_ec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">corrcoef</span><span class="p">(</span>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;ph&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">(),</span>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;ec&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="p">)[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Correlation between pH and EC: </span><span class="si">{</span><span class="n">corr_ph_ec</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>
+</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="c1"># Full correlation matrix for all sensor columns</span>
+</span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="n">corr_matrix</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s2">&quot;temperature&quot;</span><span class="p">,</span> <span class="s2">&quot;ph&quot;</span><span class="p">,</span> <span class="s2">&quot;ec&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+</span><span id="__span-16-11"><a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="nb">print</span><span class="p">(</span><span class="n">corr_matrix</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Useful correlations to investigate in hydroponic data:</p>
+<ul>
+<li><strong>pH vs. EC</strong>: Usually weakly negative (nutrient uptake acidifies solution)</li>
+<li><strong>Temperature vs. DO</strong>: Strongly negative (warmer water holds less dissolved oxygen)</li>
+<li><strong>CO₂ vs. time of day</strong>: Tracks plant photosynthesis cycles (CO₂ drops during lights-on)</li>
+</ul>
+<h3 id="linear-regression">Linear Regression<a class="headerlink" href="#linear-regression" title="Permanent link">&para;</a></h3>
+<p><strong>Linear regression</strong> fits a straight line to data: <span class="arithmatex">\( y = mx + b \)</span>. In hydroponic analysis, regression reveals trends — is pH drifting upward over the crop cycle? Is EC decreasing faster in week 3 than week 1?</p>
+<p><strong><code>numpy.polyfit()</code></strong> fits a polynomial of specified degree. For linear regression (degree 1), it returns the slope <code>m</code> and intercept <code>b</code>:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="c1"># Days since start as x, pH as y</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="n">days</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">daily_ph</span><span class="p">))</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="n">ph_values</span> <span class="o">=</span> <span class="n">daily_ph</span><span class="o">.</span><span class="n">values</span>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="c1"># Fit linear regression: degree 1</span>
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="n">coefficients</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">days</span><span class="p">,</span> <span class="n">ph_values</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="n">slope</span> <span class="o">=</span> <span class="n">coefficients</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>     <span class="c1"># pH change per day</span>
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="n">intercept</span> <span class="o">=</span> <span class="n">coefficients</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># pH at day 0</span>
+</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>
+</span><span id="__span-17-10"><a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;pH trend: </span><span class="si">{</span><span class="n">slope</span><span class="si">:</span><span class="s2">+.4f</span><span class="si">}</span><span class="s2"> pH units/day&quot;</span><span class="p">)</span>
+</span><span id="__span-17-11"><a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a><span class="c1"># Positive: pH drifting up; negative: drifting down</span>
+</span><span id="__span-17-12"><a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>
+</span><span id="__span-17-13"><a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a><span class="c1"># Generate the fitted line for plotting</span>
+</span><span id="__span-17-14"><a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a><span class="n">ph_fit</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">poly1d</span><span class="p">(</span><span class="n">coefficients</span><span class="p">)</span>
+</span><span id="__span-17-15"><a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a><span class="n">ph_trend_line</span> <span class="o">=</span> <span class="n">ph_fit</span><span class="p">(</span><span class="n">days</span><span class="p">)</span>
+</span></code></pre></div>
+<p>A pH slope of +0.05 pH/day means the solution is slowly becoming more alkaline — a signal to check the potassium buffer capacity of the nutrient solution or increase pH adjustment frequency.</p>
+<div class="admonition mascot-encourage">
+<p class="admonition-title">Regression reveals trends invisible in daily monitoring</p>
+<p><img src="../../img/mascot/encouraging.png" class="mascot-admonition-img" alt="Cress gives an encouraging nod">
+When you check pH daily, you see the current reading. When you fit a regression line to 30 days of pH data, you see the slope — whether the system is drifting, how fast, and whether that rate changed after you modified the nutrient formulation. This is the difference between reactive management and understanding your system. The math is simple; the insight is powerful.</p>
+</div>
+<h4 id="diagram-sensor-data-analysis-pipeline">Diagram: Sensor Data Analysis Pipeline<a class="headerlink" href="#diagram-sensor-data-analysis-pipeline" title="Permanent link">&para;</a></h4>
+<iframe src="../../sims/sensor-data-pipeline/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<details>
+<summary>Hydroponic Sensor Data Analysis Pipeline Interactive Demo</summary>
+<p>Type: interactive-analysis
+<strong>sim-id:</strong> sensor-data-pipeline<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>Purpose: Simulate a 35-day crop cycle dataset (synthetic pH, EC, temperature readings at 5-minute intervals) and allow students to apply each analysis step — load, clean, resample, rolling average, correlation, regression — and observe the output update in real-time.</p>
+<p>Bloom Level: Apply (L3) and Analyze (L4)
+Bloom Verb: Apply — students apply data analysis operations to a simulated dataset and observe how each step transforms the data.</p>
+<p>Layout: Canvas 900×500. Split into left panel (analysis controls) and right panel (data visualization).</p>
+<p>Left panel — analysis steps (checkboxes and sliders):
+1. "Add simulated noise" slider (0–100%) — adds random noise to the synthetic dataset
+2. "Add missing data gaps" slider (0–20%) — randomly NaN-ifies readings
+3. "Apply validation" checkbox — remove out-of-range values
+4. "Fill missing data" dropdown — None / Forward Fill / Interpolate
+5. "Resample to" dropdown — 5 min / 15 min / 1 hour / 1 day
+6. "Rolling window" slider (1–48 readings)
+7. "Show regression line" checkbox
+8. "Show ±1 std band" checkbox</p>
+<p>Right panel — time series chart showing:
+- Raw data (gray points, can be toggled)
+- Cleaned/interpolated data (blue line)
+- Resampled data (orange line)
+- Rolling average (green line)
+- Regression trend line (red dashed)
+- ±1 std band (shaded green)</p>
+<p>Below chart: stats panel showing real-time values: mean, median, std, min, max, trend slope (pH/day).</p>
+<p>Interactivity: All left-panel changes update the chart instantly. Hovering the chart shows a vertical cursor with the exact values at that timestamp. Toggle "View Mode" to switch between pH / EC / Temperature.</p>
+</details>
+<h2 id="key-takeaways">Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Data collection strategy</strong> decisions — what to measure, at what interval, and where to store it — determine whether the logged data can answer your crop performance questions.</li>
+<li><strong>CSV format</strong> with a header row and Unix timestamps is the simplest and most portable logging format; write a header once at cycle start, append rows during operation.</li>
+<li><strong>SD cards</strong> provide local storage without Wi-Fi; <strong>Google Sheets</strong> and cloud databases provide remote access and collaborative analysis.</li>
+<li><strong>Jupyter notebooks</strong> (or Google Colab) provide an interactive code-and-output environment ideal for exploratory data analysis.</li>
+<li><strong>pandas DataFrames</strong> organize sensor data into labeled, indexed tables; <code>pd.read_csv()</code> loads CSV logs; <code>pd.to_datetime()</code> converts Unix timestamps to DatetimeIndex for time-aware operations.</li>
+<li><strong>Resampling</strong> aggregates data to a lower frequency (5-minute → hourly → daily) for trend visualization; <strong>rolling windows</strong> smooth noise while preserving original time resolution.</li>
+<li><strong>Missing data</strong> should be handled by validation (remove physically impossible values), forward-fill (for short gaps), or linear interpolation (for gaps under 1 hour).</li>
+<li><strong>NumPy</strong> provides fast array operations and statistical functions; <code>np.mean()</code>, <code>np.std()</code>, <code>np.percentile()</code> are essential summary statistics for crop performance review.</li>
+<li><strong>Correlation</strong> (<code>np.corrcoef()</code>) quantifies linear relationships between sensor variables; pH vs. EC, temperature vs. dissolved oxygen.</li>
+<li><strong>Linear regression</strong> (<code>np.polyfit()</code>) fits a trend line to time-series data; the slope reveals whether pH or EC is drifting over the crop cycle.</li>
+</ul>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Chapter 16 complete — you're a hydro data scientist!</p>
+<p><img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Cress leaps with arms raised">
+You can now transform a raw CSV log from a 35-day lettuce crop into a clean, analyzed dataset with trend lines, correlation matrices, and statistical summaries. Chapter 17 takes these numbers and makes them visible: Matplotlib and Plotly charts, real-time streaming dashboards, Statistical Process Control charts, and anomaly detection. The data story becomes a data picture — let's draw it!</p>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../15-sensors-electronics/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 15. Sensors &amp; Electronics">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                15. Sensors & Electronics
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../17-data-visualization/" class="md-footer__link md-footer__link--next" aria-label="Next: 17. Data Visualization">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                17. Data Visualization
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.action.edit", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>

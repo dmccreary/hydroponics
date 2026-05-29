@@ -1,0 +1,2431 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Solar-powered hydroponic operations — photovoltaics, MPPT controllers, battery storage, off-grid system design, net metering, INA219 power monitoring, energy audits, and LCOE calculations.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/hydroponics/chapters/19-solar-energy/">
+      
+      
+        <link rel="prev" href="../18-food-safety/">
+      
+      
+        <link rel="next" href="../20-vertical-farming/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Solar Energy and Power Systems - Hydroponics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../css/mascot.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#solar-energy-and-power-systems" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Hydroponics" class="md-header__button md-logo" aria-label="Hydroponics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Hydroponics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Solar Energy and Power Systems
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/hydroponics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Hydroponics" class="md-nav__button md-logo" aria-label="Hydroponics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Hydroponics
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/hydroponics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-root-biology/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Root Biology
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-water-transport/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Water & Plant Health
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-macro-micro-nutrients/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Macro & Micro Nutrients
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-nutrient-solution-chemistry/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Nutrient Chemistry
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-passive-basic-active-systems/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Basic Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-advanced-systems/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. Advanced Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-diy-school-projects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. DIY & School Projects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-growing-media-crops/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. Growing Media & Crops
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-lighting-science/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. Lighting Science
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-environmental-control/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. Environmental Control
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-micropython-fundamentals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. MicroPython Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-hardware-interfaces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. Hardware Interfaces
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-networking-iot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. Networking & IoT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-sensors-electronics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. Sensors & Electronics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16-data-collection-analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. Data Collection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../17-data-visualization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. Data Visualization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18-food-safety/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. Food Safety
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    19. Solar Energy
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    19. Solar Energy
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solar-energy-basics-and-the-photovoltaic-effect" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solar Energy Basics and the Photovoltaic Effect
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solar-cell-types-and-efficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solar Cell Types and Efficiency
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Solar Cell Types and Efficiency">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solar-panel-watt-peak-wp-and-output-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solar Panel Watt-Peak (Wp) and Output Calculation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solar-panel-cost-trends" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solar Panel Cost Trends
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mppt-and-charge-controllers" class="md-nav__link">
+    <span class="md-ellipsis">
+      MPPT and Charge Controllers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MPPT and Charge Controllers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mppt-maximum-power-point-tracking" class="md-nav__link">
+    <span class="md-ellipsis">
+      MPPT: Maximum Power Point Tracking
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#charge-controller-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Charge Controller Comparison
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#battery-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Battery Storage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Battery Storage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#battery-technology-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Battery Technology Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lead-acid-battery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lead-Acid Battery
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lithium-iron-phosphate-lifepo4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lithium Iron Phosphate (LiFePO4)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#battery-state-of-charge-and-sizing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Battery State of Charge and Sizing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grid-connected-and-off-grid-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grid-Connected and Off-Grid Systems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Grid-Connected and Off-Grid Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#off-grid-solar-system-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Off-Grid Solar System Design
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grid-tie-solar-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grid-Tie Solar System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#net-metering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Net Metering
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybrid-grid-and-battery-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hybrid Grid and Battery System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microinverter-technology" class="md-nav__link">
+    <span class="md-ellipsis">
+      Microinverter Technology
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solar-for-hydroponic-loads" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solar for Hydroponic Loads
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Solar for Hydroponic Loads">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solar-for-grow-lights" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solar for Grow Lights
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solar-for-pumps-and-sensors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solar for Pumps and Sensors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power-monitoring-with-ina219" class="md-nav__link">
+    <span class="md-ellipsis">
+      Power Monitoring with INA219
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#energy-audit-for-grow-room" class="md-nav__link">
+    <span class="md-ellipsis">
+      Energy Audit for Grow Room
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Energy Audit for Grow Room">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#levelized-cost-of-energy-lcoe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Levelized Cost of Energy (LCOE)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#energy-dashboard-with-plotly" class="md-nav__link">
+    <span class="md-ellipsis">
+      Energy Dashboard With Plotly
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#carbon-footprint-of-indoor-growing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Carbon Footprint of Indoor Growing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Carbon Footprint of Indoor Growing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-solar-power-system-designer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Solar Power System Designer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20-vertical-farming/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20. Vertical Farming
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../21-financial-modeling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    21. Financial Modeling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solar-energy-basics-and-the-photovoltaic-effect" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solar Energy Basics and the Photovoltaic Effect
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solar-cell-types-and-efficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solar Cell Types and Efficiency
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Solar Cell Types and Efficiency">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solar-panel-watt-peak-wp-and-output-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solar Panel Watt-Peak (Wp) and Output Calculation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solar-panel-cost-trends" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solar Panel Cost Trends
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mppt-and-charge-controllers" class="md-nav__link">
+    <span class="md-ellipsis">
+      MPPT and Charge Controllers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MPPT and Charge Controllers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mppt-maximum-power-point-tracking" class="md-nav__link">
+    <span class="md-ellipsis">
+      MPPT: Maximum Power Point Tracking
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#charge-controller-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Charge Controller Comparison
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#battery-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Battery Storage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Battery Storage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#battery-technology-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Battery Technology Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lead-acid-battery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lead-Acid Battery
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lithium-iron-phosphate-lifepo4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lithium Iron Phosphate (LiFePO4)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#battery-state-of-charge-and-sizing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Battery State of Charge and Sizing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grid-connected-and-off-grid-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grid-Connected and Off-Grid Systems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Grid-Connected and Off-Grid Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#off-grid-solar-system-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Off-Grid Solar System Design
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grid-tie-solar-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grid-Tie Solar System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#net-metering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Net Metering
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybrid-grid-and-battery-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hybrid Grid and Battery System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microinverter-technology" class="md-nav__link">
+    <span class="md-ellipsis">
+      Microinverter Technology
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solar-for-hydroponic-loads" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solar for Hydroponic Loads
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Solar for Hydroponic Loads">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solar-for-grow-lights" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solar for Grow Lights
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solar-for-pumps-and-sensors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solar for Pumps and Sensors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power-monitoring-with-ina219" class="md-nav__link">
+    <span class="md-ellipsis">
+      Power Monitoring with INA219
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#energy-audit-for-grow-room" class="md-nav__link">
+    <span class="md-ellipsis">
+      Energy Audit for Grow Room
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Energy Audit for Grow Room">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#levelized-cost-of-energy-lcoe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Levelized Cost of Energy (LCOE)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#energy-dashboard-with-plotly" class="md-nav__link">
+    <span class="md-ellipsis">
+      Energy Dashboard With Plotly
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#carbon-footprint-of-indoor-growing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Carbon Footprint of Indoor Growing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Carbon Footprint of Indoor Growing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-solar-power-system-designer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Solar Power System Designer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/hydroponics/blob/main/docs/chapters/19-solar-energy/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="solar-energy-and-power-systems">Solar Energy and Power Systems<a class="headerlink" href="#solar-energy-and-power-systems" title="Permanent link">&para;</a></h1>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<p>This chapter covers solar energy as the most economically and environmentally compelling power source for hydroponic operations: the photovoltaic effect, solar cell types and efficiencies, MPPT charge controllers, battery storage technologies (lead-acid vs. LiFePO₄), off-grid and grid-tie system design, net metering, power monitoring with the INA219 sensor, energy audits for grow rooms, real-time energy dashboards with Plotly, and levelized cost of energy calculations — giving students the tools to evaluate whether solar makes economic sense for a specific grow operation.</p>
+<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">&para;</a></h2>
+<p>This chapter covers the following 29 concepts from the learning graph:</p>
+<ol>
+<li>Solar Energy Basics</li>
+<li>Photovoltaic (PV) Effect</li>
+<li>Solar Cell Types</li>
+<li>Solar Panel Efficiency</li>
+<li>Solar Panel Watt-Peak (Wp)</li>
+<li>Solar Irradiance W/m²</li>
+<li>Peak Sun Hours</li>
+<li>Solar Panel Output Calculation</li>
+<li>Solar Panel Cost Trends</li>
+<li>Levelized Cost of Energy (LCOE)</li>
+<li>MPPT Max Power Point Tracking</li>
+<li>Charge Controller PWM vs MPPT</li>
+<li>Battery Storage Basics</li>
+<li>Lead-Acid Battery</li>
+<li>Lithium Iron Phosphate LiFePO4</li>
+<li>Battery State of Charge</li>
+<li>Battery Sizing for Grow Room</li>
+<li>Inverter Selection Off-Grid</li>
+<li>Grid-Tie Solar System</li>
+<li>Net Metering</li>
+<li>Off-Grid Solar System Design</li>
+<li>Hybrid Grid and Battery System</li>
+<li>Solar for Grow Lights</li>
+<li>Solar for Pumps and Sensors</li>
+<li>Power Monitoring With INA219</li>
+<li>Energy Audit for Grow Room</li>
+<li>Energy Dashboard With Plotly</li>
+<li>Carbon Footprint Indoor Growing</li>
+<li>Microinverter Technology</li>
+</ol>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<p>This chapter builds on concepts from:</p>
+<ul>
+<li><a href="../10-lighting-science/">Chapter 10: Lighting Science</a></li>
+<li><a href="../15-sensors-electronics/">Chapter 15: Sensors and Electronics Hardware</a></li>
+<li><a href="../17-data-visualization/">Chapter 17: Data Visualization and Process Control</a></li>
+</ul>
+<hr />
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Cress harnesses the sun</p>
+<p><img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Cress waves hello at chapter opening">
+Welcome to Chapter 19, growers! Energy is the hidden cost of indoor growing — grow lights, pumps, and climate control can make electricity the largest operating expense in a controlled-environment farm. This chapter shows you how to measure your energy use, reduce it, and potentially power your entire operation with sunlight. We'll go from the physics of the photovoltaic effect to the engineering of an off-grid system to the economics of LCOE — and build a real-time energy dashboard along the way. Let's grow something amazing — powered by the sun!</p>
+</div>
+<h2 id="solar-energy-basics-and-the-photovoltaic-effect">Solar Energy Basics and the Photovoltaic Effect<a class="headerlink" href="#solar-energy-basics-and-the-photovoltaic-effect" title="Permanent link">&para;</a></h2>
+<p>The sun delivers energy to Earth's surface at an average rate of approximately 1000 W/m² on a clear day at solar noon — this is called the <strong>solar irradiance</strong> or <strong>insolation</strong> at standard test conditions. A square meter of Earth's surface receives about as much power as a toaster oven.</p>
+<p><strong>Solar energy</strong> in the context of electricity generation refers to converting this radiant energy to electrical energy using the <strong>photovoltaic (PV) effect</strong>: when photons (light particles) with sufficient energy strike a semiconductor material, they knock electrons free from their atomic bonds, creating an electron flow — direct current (DC) electricity.</p>
+<p>The PV effect occurs at the junction between two types of semiconductor material (typically silicon):</p>
+<ul>
+<li><strong>n-type silicon</strong>: doped with phosphorus to create excess electrons</li>
+<li><strong>p-type silicon</strong>: doped with boron to create excess "holes" (electron vacancies)</li>
+</ul>
+<p>At the p-n junction, an electric field forms that drives freed electrons in one direction when photons strike — creating a voltage difference. A single silicon solar cell produces approximately 0.5–0.6 V. Multiple cells connected in series form a <strong>solar panel</strong> (also called a <strong>solar module</strong>) producing useful voltages of 12 V, 24 V, or 48 V.</p>
+<h2 id="solar-cell-types-and-efficiency">Solar Cell Types and Efficiency<a class="headerlink" href="#solar-cell-types-and-efficiency" title="Permanent link">&para;</a></h2>
+<p>Three solar cell technologies dominate the market, each with different efficiency, cost, and manufacturing processes. <strong>Efficiency</strong> is the fraction of incident solar energy converted to electricity. Before comparing them, note that all efficiency values are measured at Standard Test Conditions (STC): 1000 W/m² irradiance, 25 °C cell temperature.</p>
+<table>
+<thead>
+<tr>
+<th>Cell Type</th>
+<th>Efficiency Range</th>
+<th>Cost (2024)</th>
+<th>Advantages</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Monocrystalline silicon</td>
+<td>20–24%</td>
+<td>~$0.25/Wp</td>
+<td>Highest efficiency, longest lifespan</td>
+</tr>
+<tr>
+<td>Polycrystalline silicon</td>
+<td>16–19%</td>
+<td>~$0.20/Wp</td>
+<td>Lower cost, slightly lower efficiency</td>
+</tr>
+<tr>
+<td>Thin-film (CdTe, CIS)</td>
+<td>10–13%</td>
+<td>~$0.18/Wp</td>
+<td>Flexible, lower energy to manufacture, performs better in diffuse light</td>
+</tr>
+</tbody>
+</table>
+<p>For most hydroponic installations, <strong>monocrystalline panels</strong> are the best value — the higher efficiency means fewer panels are needed for the same power output, reducing mounting hardware and space requirements.</p>
+<h3 id="solar-panel-watt-peak-wp-and-output-calculation">Solar Panel Watt-Peak (Wp) and Output Calculation<a class="headerlink" href="#solar-panel-watt-peak-wp-and-output-calculation" title="Permanent link">&para;</a></h3>
+<p><strong>Watt-peak (Wp)</strong> is the rated output power of a solar panel at STC. A "300 Wp panel" produces 300 W under STC. In real-world conditions, output is lower due to:</p>
+<ul>
+<li>Temperature: panels lose ~0.4% efficiency per °C above 25 °C. In summer, a panel at 65 °C produces ~16% less than its STC rating.</li>
+<li>Shading: even partial shading of one cell significantly reduces output (bypass diodes mitigate this in modern panels)</li>
+<li>Dust and soiling: 2–5% loss without periodic cleaning</li>
+<li>Wire losses: typically 2–3%</li>
+</ul>
+<p><strong>Solar panel output calculation</strong>:</p>
+<p>To estimate daily energy production, the key concept is <strong>peak sun hours (PSH)</strong> — the equivalent number of hours per day at 1000 W/m² that represents the actual daily solar irradiance at a location. A location that receives 4 PSH means the total daily irradiance is equivalent to 4 full hours at maximum sun.</p>
+<div class="arithmatex">\[
+E_{daily} \text{(Wh)} = P_{panel} \text{(Wp)} \times PSH \times \eta_{system}
+\]</div>
+<p>Where <span class="arithmatex">\( \eta_{system} \)</span> is total system efficiency (typically 0.75–0.85, accounting for inverter, battery, and wire losses).</p>
+<p><strong>Example</strong>: A 400 Wp panel in Minneapolis (4.2 PSH annual average) with 80% system efficiency:</p>
+<div class="arithmatex">\[
+E_{daily} = 400 \times 4.2 \times 0.80 = 1,344 \text{ Wh/day} = 1.34 \text{ kWh/day}
+\]</div>
+<h3 id="solar-panel-cost-trends">Solar Panel Cost Trends<a class="headerlink" href="#solar-panel-cost-trends" title="Permanent link">&para;</a></h3>
+<p>Solar panel costs have fallen approximately 90% since 2010, from ~<span class="arithmatex">\(2.50/Wp to ~\)</span>0.25/Wp in 2024. This cost trajectory makes solar compelling for new hydroponic installations: the panel cost for a 1 kWp system has dropped from <span class="arithmatex">\(2,500 to ~\)</span>250. The remaining system costs (inverter, mounting, wiring, labor) are now the dominant cost, not the panels themselves.</p>
+<h2 id="mppt-and-charge-controllers">MPPT and Charge Controllers<a class="headerlink" href="#mppt-and-charge-controllers" title="Permanent link">&para;</a></h2>
+<h3 id="mppt-maximum-power-point-tracking">MPPT: Maximum Power Point Tracking<a class="headerlink" href="#mppt-maximum-power-point-tracking" title="Permanent link">&para;</a></h3>
+<p>A solar panel's power output is not constant with changing load — it has a <strong>maximum power point</strong> (MPP) where the product of current × voltage is maximized. An <strong>MPPT controller</strong> continuously adjusts the electrical load seen by the panel to keep it operating at its MPP regardless of changing sunlight, temperature, or battery state.</p>
+<p>Before we compare MPPT to PWM, two terms: <strong>PWM (Pulse Width Modulation) charge controllers</strong> simply switch the panel connection on and off rapidly to control average charging current — they waste the voltage difference between the panel's open-circuit voltage and the battery voltage. <strong>MPPT controllers</strong> convert the panel's higher voltage to a lower voltage at proportionally higher current, extracting 15–30% more energy than PWM controllers.</p>
+<h3 id="charge-controller-comparison">Charge Controller Comparison<a class="headerlink" href="#charge-controller-comparison" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>PWM Controller</th>
+<th>MPPT Controller</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Efficiency</td>
+<td>~70–80%</td>
+<td>~93–99%</td>
+</tr>
+<tr>
+<td>Panel flexibility</td>
+<td>Must match battery voltage</td>
+<td>Panel voltage independent of battery</td>
+</tr>
+<tr>
+<td>Cost</td>
+<td><span class="arithmatex">\(15–\)</span>50</td>
+<td><span class="arithmatex">\(50–\)</span>300+</td>
+</tr>
+<tr>
+<td>Best for</td>
+<td>Small systems (&lt;200 Wp)</td>
+<td>Larger systems or high-voltage panels</td>
+</tr>
+<tr>
+<td>Energy harvest gain</td>
+<td>Baseline</td>
+<td>15–30% more than PWM</td>
+</tr>
+</tbody>
+</table>
+<p>For hydroponic grow room applications — even small ones — an MPPT controller is recommended. The increased energy harvest pays for the additional cost within the first year.</p>
+<h2 id="battery-storage">Battery Storage<a class="headerlink" href="#battery-storage" title="Permanent link">&para;</a></h2>
+<h3 id="battery-technology-overview">Battery Technology Overview<a class="headerlink" href="#battery-technology-overview" title="Permanent link">&para;</a></h3>
+<p>Solar power is intermittent — the sun doesn't shine at night. <strong>Battery storage</strong> is required for any system that must operate continuously (pumps, sensors, climate control). Two battery chemistries dominate for solar storage in hydroponic applications.</p>
+<h3 id="lead-acid-battery">Lead-Acid Battery<a class="headerlink" href="#lead-acid-battery" title="Permanent link">&para;</a></h3>
+<p><strong>Lead-acid</strong> batteries are the oldest rechargeable battery technology (invented 1859) and remain the lowest cost option:</p>
+<ul>
+<li><strong>Energy density</strong>: 30–40 Wh/kg (heavy for their energy content)</li>
+<li><strong>Cycle life</strong>: 300–1000 deep discharge cycles (depending on depth of discharge)</li>
+<li><strong>Depth of discharge (DoD)</strong>: Should not be regularly discharged below 50% — deeper discharge accelerates plate sulfation and reduces lifespan dramatically</li>
+<li><strong>Cost</strong>: ~$100–150/kWh installed</li>
+<li><strong>Self-discharge</strong>: 3–5% per month</li>
+<li><strong>Temperature sensitivity</strong>: Significant capacity loss below 0 °C</li>
+</ul>
+<p>For small-scale hydroponic systems in temperature-controlled environments, <strong>AGM (Absorbent Glass Mat)</strong> sealed lead-acid batteries are practical: maintenance-free, spill-proof, and widely available.</p>
+<h3 id="lithium-iron-phosphate-lifepo4">Lithium Iron Phosphate (LiFePO4)<a class="headerlink" href="#lithium-iron-phosphate-lifepo4" title="Permanent link">&para;</a></h3>
+<p><strong>LiFePO4</strong> (Lithium Iron Phosphate, sometimes written LFP) is the emerging standard for solar storage due to its exceptional cycle life and safety profile:</p>
+<ul>
+<li><strong>Energy density</strong>: 90–120 Wh/kg (significantly lighter than lead-acid)</li>
+<li><strong>Cycle life</strong>: 2000–4000+ cycles at 80% DoD</li>
+<li><strong>Depth of discharge</strong>: Can safely discharge to 90–100% without lifespan damage</li>
+<li><strong>Cost</strong>: ~$250–400/kWh (2024); falling rapidly</li>
+<li><strong>Self-discharge</strong>: &lt;3% per month</li>
+<li><strong>Safety</strong>: No thermal runaway risk (unlike NMC lithium); no toxic hydrogen gas venting like lead-acid</li>
+<li><strong>Temperature sensitivity</strong>: Moderate; must not be charged below 0 °C without heated BMS</li>
+</ul>
+<p>LiFePO4 batteries cost 2–3× more than lead-acid upfront but last 4–10× longer and deliver 90% of rated capacity vs. 50% for lead-acid. <strong>Total cost of ownership over 10 years strongly favors LiFePO4</strong> for any system used regularly.</p>
+<h3 id="battery-state-of-charge-and-sizing">Battery State of Charge and Sizing<a class="headerlink" href="#battery-state-of-charge-and-sizing" title="Permanent link">&para;</a></h3>
+<p><strong>State of Charge (SoC)</strong> is the percentage of battery capacity currently available. Monitoring SoC prevents over-discharge (damaging for lead-acid) and allows the controller to manage loads intelligently.</p>
+<p><strong>Battery sizing for a grow room</strong> requires knowing the daily energy consumption (the energy audit, covered below) and the desired <strong>days of autonomy</strong> — how many cloudy days the system should run without solar input.</p>
+<p>Battery sizing formula:</p>
+<div class="arithmatex">\[
+C_{battery} = \frac{E_{daily} \times D_{autonomy}}{DoD \times V_{system} \times \eta_{battery}}
+\]</div>
+<p>Where:
+- <span class="arithmatex">\( E_{daily} \)</span> = daily energy consumption (Wh)
+- <span class="arithmatex">\( D_{autonomy} \)</span> = desired days of autonomy (typically 1–3 days for a grow room)
+- <span class="arithmatex">\( DoD \)</span> = maximum depth of discharge (0.5 for lead-acid, 0.9 for LiFePO4)
+- <span class="arithmatex">\( V_{system} \)</span> = system voltage (12, 24, or 48 V)
+- <span class="arithmatex">\( \eta_{battery} \)</span> = battery round-trip efficiency (~0.85 for LiFePO4, ~0.80 for lead-acid)</p>
+<p><strong>Example</strong>: A grow room consuming 1,500 Wh/day, with 2 days autonomy, LiFePO4 at 24 V:</p>
+<div class="arithmatex">\[
+C = \frac{1500 \times 2}{0.9 \times 24 \times 0.85} = \frac{3000}{18.36} = 163 \text{ Ah}
+\]</div>
+<p>A 200 Ah 24 V LiFePO4 bank provides adequate margin.</p>
+<h2 id="grid-connected-and-off-grid-systems">Grid-Connected and Off-Grid Systems<a class="headerlink" href="#grid-connected-and-off-grid-systems" title="Permanent link">&para;</a></h2>
+<h3 id="off-grid-solar-system-design">Off-Grid Solar System Design<a class="headerlink" href="#off-grid-solar-system-design" title="Permanent link">&para;</a></h3>
+<p>An <strong>off-grid</strong> system has no utility grid connection — it relies entirely on solar panels and battery storage. This is appropriate for hydroponic operations in rural areas, greenhouses away from grid infrastructure, or systems designed for energy independence.</p>
+<p>Off-grid design checklist:</p>
+<ol>
+<li>Complete energy audit (see below)</li>
+<li>Size battery bank (formula above)</li>
+<li>Size solar array: <span class="arithmatex">\( P_{array} = E_{daily} / (PSH \times \eta_{system}) \)</span></li>
+<li>Select MPPT charge controller rated for array voltage and current</li>
+<li>Select inverter: pure sine wave at 1.5–2× peak load power</li>
+<li>Wire protection: fuses or circuit breakers on all battery connections</li>
+</ol>
+<h3 id="grid-tie-solar-system">Grid-Tie Solar System<a class="headerlink" href="#grid-tie-solar-system" title="Permanent link">&para;</a></h3>
+<p>A <strong>grid-tie</strong> system connects to the utility grid and uses the grid as an "infinite battery" — excess solar production exports to the grid, and the grid supplies power when solar is insufficient. Grid-tie systems do not require battery storage for normal operation.</p>
+<h3 id="net-metering">Net Metering<a class="headerlink" href="#net-metering" title="Permanent link">&para;</a></h3>
+<p><strong>Net metering</strong> is the billing arrangement that allows grid-tie solar customers to "bank" excess production. When your panels produce more than you consume, the excess feeds the grid and runs your electricity meter backwards — you receive credit at the retail electricity rate.</p>
+<p>Net metering economics depend heavily on local utility policy. In states with full retail net metering, payback periods for grid-tie systems are typically 5–8 years. In states that compensate excess production at the much lower wholesale rate, payback periods can be 10–15 years.</p>
+<h3 id="hybrid-grid-and-battery-system">Hybrid Grid and Battery System<a class="headerlink" href="#hybrid-grid-and-battery-system" title="Permanent link">&para;</a></h3>
+<p>A <strong>hybrid</strong> system combines grid connection with battery storage. In normal operation, solar charges the battery and powers loads; when solar is insufficient, grid power supplements. During a grid outage, the battery provides backup power for critical loads (pumps, sensors, lighting). This is the optimal configuration for commercial hydroponic operations that cannot tolerate outages.</p>
+<h3 id="microinverter-technology">Microinverter Technology<a class="headerlink" href="#microinverter-technology" title="Permanent link">&para;</a></h3>
+<p>Traditional string inverters connect all panels in series — if one panel is shaded, the output of the entire string is reduced. <strong>Microinverters</strong> attach to each panel individually, converting that panel's DC output to AC independently. Benefits:</p>
+<ul>
+<li>Each panel operates at its own MPP regardless of shading on other panels</li>
+<li>Per-panel monitoring reveals underperforming panels immediately</li>
+<li>System can expand one panel at a time</li>
+<li>Higher cost per watt but better performance in partially-shaded installations</li>
+</ul>
+<p>For indoor grow room installations with consistent, unshaded lighting, string inverters are adequate. For rooftop arrays with potential shading from chimneys, trees, or other obstructions, microinverters or DC power optimizers are worth the additional cost.</p>
+<h2 id="solar-for-hydroponic-loads">Solar for Hydroponic Loads<a class="headerlink" href="#solar-for-hydroponic-loads" title="Permanent link">&para;</a></h2>
+<h3 id="solar-for-grow-lights">Solar for Grow Lights<a class="headerlink" href="#solar-for-grow-lights" title="Permanent link">&para;</a></h3>
+<p><strong>Grow lights are the dominant electrical load</strong> in most indoor hydroponic operations — typically 40–70% of total energy consumption. A single 600 W LED grow light running 16 hours/day consumes 9.6 kWh/day. At $0.15/kWh (US average retail electricity), this costs $1.44/day or $43/month per light.</p>
+<p>Solar can offset this cost, but the panel area required is substantial. Using our earlier formula:</p>
+<ul>
+<li>To supply 9.6 kWh/day of lighting in Minneapolis (4.2 PSH, 80% efficiency): requires approximately 2,857 Wp of panels — roughly 8–10 standard 300 Wp panels.</li>
+</ul>
+<p>This is the economic case for choosing <strong>efficient LED fixtures</strong> (Chapter 10): a fixture with 50% higher efficiency requires 50% fewer solar panels to offset — a multiplied benefit.</p>
+<h3 id="solar-for-pumps-and-sensors">Solar for Pumps and Sensors<a class="headerlink" href="#solar-for-pumps-and-sensors" title="Permanent link">&para;</a></h3>
+<p>Pumps and sensors are a much smaller load than grow lights. A typical hydroponic pump system (water pump + air pumps + sensor node) might consume 50–100 W continuously, or 1.2–2.4 kWh/day. A single 400 Wp panel in a 4 PSH location can supply this comfortably.</p>
+<p>For off-grid sensor nodes or remote monitoring stations, <strong>low-power design</strong> is critical:
+- Use deep sleep cycles on the microcontroller (Chapter 14)
+- Select efficient water pumps (DC brushless motors draw 10–30 W vs. 40–80 W for AC pumps)
+- Use LED indicator lights, not incandescent</p>
+<h2 id="power-monitoring-with-ina219">Power Monitoring with INA219<a class="headerlink" href="#power-monitoring-with-ina219" title="Permanent link">&para;</a></h2>
+<p>The <strong>INA219</strong> is a high-side DC power monitor — a small I2C-connected chip that measures voltage, current, and power simultaneously. For a solar-powered hydroponic system, the INA219 provides real-time visibility into energy flows: how much power the solar panels are generating, how much the grow lights are consuming, and the battery's charge state.</p>
+<p>The INA219 uses a precision shunt resistor (0.1 Ω typical) in series with the load. It measures the voltage drop across the shunt and computes current: <span class="arithmatex">\( I = V_{shunt} / R_{shunt} \)</span>. The chip then reports current (mA), bus voltage (V), and power (mW) over I2C.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">I2C</span><span class="p">,</span> <span class="n">Pin</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">import</span> <span class="nn">utime</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">class</span> <span class="nc">INA219</span><span class="p">:</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i2c</span><span class="p">,</span> <span class="n">address</span><span class="o">=</span><span class="mh">0x40</span><span class="p">):</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">i2c</span> <span class="o">=</span> <span class="n">i2c</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">addr</span> <span class="o">=</span> <span class="n">address</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_configure</span><span class="p">()</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="k">def</span> <span class="nf">_configure</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        <span class="c1"># Configure for 32V bus, ±2A range, 12-bit resolution</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>        <span class="n">config</span> <span class="o">=</span> <span class="mh">0x3FFF</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">i2c</span><span class="o">.</span><span class="n">writeto_mem</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">addr</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>                             <span class="nb">bytes</span><span class="p">([</span><span class="n">config</span> <span class="o">&gt;&gt;</span> <span class="mi">8</span><span class="p">,</span> <span class="n">config</span> <span class="o">&amp;</span> <span class="mh">0xFF</span><span class="p">]))</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    <span class="k">def</span> <span class="nf">read_voltage</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>        <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">i2c</span><span class="o">.</span><span class="n">readfrom_mem</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">addr</span><span class="p">,</span> <span class="mh">0x02</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>        <span class="n">raw</span> <span class="o">=</span> <span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="mi">8</span> <span class="o">|</span> <span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">&gt;&gt;</span> <span class="mi">3</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>        <span class="k">return</span> <span class="n">raw</span> <span class="o">*</span> <span class="mf">0.004</span>   <span class="c1"># 4 mV per LSB</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>    <span class="k">def</span> <span class="nf">read_current_ma</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>        <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">i2c</span><span class="o">.</span><span class="n">readfrom_mem</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">addr</span><span class="p">,</span> <span class="mh">0x04</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>        <span class="n">raw</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="mi">8</span> <span class="o">|</span> <span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>        <span class="k">if</span> <span class="n">raw</span> <span class="o">&gt;</span> <span class="mi">32767</span><span class="p">:</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>            <span class="n">raw</span> <span class="o">-=</span> <span class="mi">65536</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>        <span class="k">return</span> <span class="n">raw</span> <span class="o">*</span> <span class="mf">0.1</span>    <span class="c1"># 0.1 mA per LSB (with 0.1 Ω shunt)</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>    <span class="k">def</span> <span class="nf">read_power_mw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">read_voltage</span><span class="p">()</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">read_current_ma</span><span class="p">()</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="n">i2c</span> <span class="o">=</span> <span class="n">I2C</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">sda</span><span class="o">=</span><span class="n">Pin</span><span class="p">(</span><span class="mi">4</span><span class="p">),</span> <span class="n">scl</span><span class="o">=</span><span class="n">Pin</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="n">ina</span> <span class="o">=</span> <span class="n">INA219</span><span class="p">(</span><span class="n">i2c</span><span class="p">)</span>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="n">voltage</span> <span class="o">=</span> <span class="n">ina</span><span class="o">.</span><span class="n">read_voltage</span><span class="p">()</span>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="n">current_ma</span> <span class="o">=</span> <span class="n">ina</span><span class="o">.</span><span class="n">read_current_ma</span><span class="p">()</span>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="n">power_mw</span> <span class="o">=</span> <span class="n">ina</span><span class="o">.</span><span class="n">read_power_mw</span><span class="p">()</span>
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Solar input: </span><span class="si">{</span><span class="n">voltage</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">V, </span><span class="si">{</span><span class="n">current_ma</span><span class="si">:</span><span class="s2">.0f</span><span class="si">}</span><span class="s2">mA, </span><span class="si">{</span><span class="n">power_mw</span><span class="o">/</span><span class="mi">1000</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">W&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<h2 id="energy-audit-for-grow-room">Energy Audit for Grow Room<a class="headerlink" href="#energy-audit-for-grow-room" title="Permanent link">&para;</a></h2>
+<p>An <strong>energy audit</strong> inventories every electrical load in the grow room, estimates its operating hours per day, and calculates daily energy consumption. This is the foundation for solar sizing and cost calculations.</p>
+<table>
+<thead>
+<tr>
+<th>Load</th>
+<th>Rated Power (W)</th>
+<th>Hours/Day</th>
+<th>Daily Energy (Wh)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LED grow light (600W)</td>
+<td>600</td>
+<td>16</td>
+<td>9,600</td>
+</tr>
+<tr>
+<td>Water pump (recirculating)</td>
+<td>30</td>
+<td>24</td>
+<td>720</td>
+</tr>
+<tr>
+<td>Air pump (2×)</td>
+<td>10</td>
+<td>24</td>
+<td>240</td>
+</tr>
+<tr>
+<td>Circulation fan</td>
+<td>15</td>
+<td>20</td>
+<td>300</td>
+</tr>
+<tr>
+<td>Exhaust fan</td>
+<td>50</td>
+<td>12</td>
+<td>600</td>
+</tr>
+<tr>
+<td>Sensor node (Pico W)</td>
+<td>2</td>
+<td>24</td>
+<td>48</td>
+</tr>
+<tr>
+<td>OLED display</td>
+<td>0.5</td>
+<td>24</td>
+<td>12</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td></td>
+<td></td>
+<td><strong>11,520 Wh/day</strong></td>
+</tr>
+</tbody>
+</table>
+<p>This audit shows that the grow light dominates at 83% of total energy. Replacing a 600 W LED fixture with a 300 W equivalent (same PPFD, higher efficiency) cuts total energy consumption by approximately 40%.</p>
+<h3 id="levelized-cost-of-energy-lcoe">Levelized Cost of Energy (LCOE)<a class="headerlink" href="#levelized-cost-of-energy-lcoe" title="Permanent link">&para;</a></h3>
+<p><strong>LCOE</strong> (Levelized Cost of Energy) expresses the lifetime cost of a power generation system as a cost per kWh of electricity produced, accounting for capital cost, operating cost, and system lifespan. LCOE allows apples-to-apples comparison between solar and grid electricity.</p>
+<p>Before the formula, key terms: <strong>CapEx</strong> (capital expenditure) is the upfront system cost; <strong>OpEx</strong> (operating expenditure) is the annual maintenance cost; <strong>lifetime</strong> is the system lifespan in years; <strong>annual production</strong> is the yearly energy output.</p>
+<div class="arithmatex">\[
+LCOE = \frac{CapEx + \sum_{t=1}^{n} \frac{OpEx_t}{(1+r)^t}}{\sum_{t=1}^{n} \frac{E_t}{(1+r)^t}}
+\]</div>
+<p>For a simplified estimate (ignoring discount rate):</p>
+<div class="arithmatex">\[
+LCOE \approx \frac{CapEx + OpEx \times n}{E_{annual} \times n}
+\]</div>
+<p><strong>Example</strong>: A 3 kWp solar system for a grow room:
+- CapEx: $3,000 (panels) + $1,000 (inverter/controller/battery) = $4,000
+- Annual OpEx: $50 (minimal maintenance)
+- System lifetime: 25 years
+- Annual production: 3,000 Wp × 4.2 PSH × 0.80 × 365 = 3,679 kWh/year</p>
+<div class="arithmatex">\[
+LCOE = \frac{4000 + 50 \times 25}{3679 \times 25} = \frac{5250}{91,975} = \$0.057/kWh
+\]</div>
+<p>At $0.057/kWh, this solar system produces electricity at less than half the US average retail grid price of $0.15/kWh — a compelling economic case.</p>
+<h3 id="energy-dashboard-with-plotly">Energy Dashboard With Plotly<a class="headerlink" href="#energy-dashboard-with-plotly" title="Permanent link">&para;</a></h3>
+<p>Building on Chapter 17's Dash framework, a real-time energy dashboard displays solar generation, load consumption, battery state, and cumulative energy cost savings:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">dash</span> <span class="kn">import</span> <span class="n">Dash</span><span class="p">,</span> <span class="n">dcc</span><span class="p">,</span> <span class="n">html</span><span class="p">,</span> <span class="n">Input</span><span class="p">,</span> <span class="n">Output</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">import</span> <span class="nn">plotly.graph_objects</span> <span class="k">as</span> <span class="nn">go</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">app</span> <span class="o">=</span> <span class="n">Dash</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">app</span><span class="o">.</span><span class="n">layout</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">Div</span><span class="p">([</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="n">html</span><span class="o">.</span><span class="n">H2</span><span class="p">(</span><span class="s2">&quot;Grow Room Energy Dashboard&quot;</span><span class="p">),</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="n">dcc</span><span class="o">.</span><span class="n">Graph</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;energy-chart&quot;</span><span class="p">),</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    <span class="n">dcc</span><span class="o">.</span><span class="n">Graph</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;power-gauge&quot;</span><span class="p">),</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    <span class="n">dcc</span><span class="o">.</span><span class="n">Interval</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;interval&quot;</span><span class="p">,</span> <span class="n">interval</span><span class="o">=</span><span class="mi">30_000</span><span class="p">)</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="p">])</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="nd">@app</span><span class="o">.</span><span class="n">callback</span><span class="p">(</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>    <span class="n">Output</span><span class="p">(</span><span class="s2">&quot;energy-chart&quot;</span><span class="p">,</span> <span class="s2">&quot;figure&quot;</span><span class="p">),</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>    <span class="n">Input</span><span class="p">(</span><span class="s2">&quot;interval&quot;</span><span class="p">,</span> <span class="s2">&quot;n_intervals&quot;</span><span class="p">)</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="p">)</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="k">def</span> <span class="nf">update_energy</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;energy_log.csv&quot;</span><span class="p">,</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>                     <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;timestamp&quot;</span><span class="p">,</span> <span class="s2">&quot;solar_w&quot;</span><span class="p">,</span> <span class="s2">&quot;load_w&quot;</span><span class="p">,</span> <span class="s2">&quot;battery_v&quot;</span><span class="p">])</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;datetime&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;timestamp&quot;</span><span class="p">],</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;s&quot;</span><span class="p">)</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;net_w&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;solar_w&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;load_w&quot;</span><span class="p">]</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>    <span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>    <span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;datetime&quot;</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;solar_w&quot;</span><span class="p">],</span>
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>                              <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Solar Generation (W)&quot;</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="s2">&quot;tozeroy&quot;</span><span class="p">,</span>
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>                              <span class="n">line</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;orange&quot;</span><span class="p">)))</span>
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>    <span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;datetime&quot;</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;load_w&quot;</span><span class="p">],</span>
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>                              <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Load Consumption (W)&quot;</span><span class="p">,</span>
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>                              <span class="n">line</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;steelblue&quot;</span><span class="p">)))</span>
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>    <span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Real-Time Energy Flow&quot;</span><span class="p">,</span> <span class="n">yaxis_title</span><span class="o">=</span><span class="s2">&quot;Power (W)&quot;</span><span class="p">)</span>
+</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>    <span class="k">return</span> <span class="n">fig</span>
+</span></code></pre></div>
+<h3 id="carbon-footprint-of-indoor-growing">Carbon Footprint of Indoor Growing<a class="headerlink" href="#carbon-footprint-of-indoor-growing" title="Permanent link">&para;</a></h3>
+<p>The <strong>carbon footprint</strong> of electricity-powered indoor growing depends entirely on the carbon intensity of the electrical grid in your region. In the US, the average grid emits approximately 0.4 kg CO₂ per kWh. A grow room consuming 11.5 kWh/day would emit:</p>
+<div class="arithmatex">\[
+11.5 \text{ kWh/day} \times 0.4 \text{ kg CO}_2/\text{kWh} \times 35 \text{ days/cycle} = 161 \text{ kg CO}_2\text{/cycle}
+\]</div>
+<p>A solar-powered grow room producing that electricity with near-zero carbon intensity (PV manufacturing lifecycle: ~0.02–0.04 kg CO₂/kWh) reduces the per-cycle footprint from 161 kg to approximately 10–14 kg CO₂ — a 90%+ reduction. This is the environmental case for solar-powered hydroponics.</p>
+<h4 id="diagram-solar-power-system-designer">Diagram: Solar Power System Designer<a class="headerlink" href="#diagram-solar-power-system-designer" title="Permanent link">&para;</a></h4>
+<iframe src="../../sims/solar-power-designer/main.html" width="100%" height="540px" scrolling="no"></iframe>
+<details>
+<summary>Interactive Solar Power System Designer for Hydroponics</summary>
+<p>Type: engineering-calculator
+<strong>sim-id:</strong> solar-power-designer<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>Purpose: Allow students to design a solar power system for their specific hydroponic operation by entering energy loads, location (peak sun hours), and battery preferences, then see panel count, battery size, estimated cost, and LCOE automatically calculated.</p>
+<p>Bloom Level: Apply (L3) and Evaluate (L5)
+Bloom Verb: Design — students iteratively modify system parameters and observe how each decision affects sizing, cost, and LCOE.</p>
+<p>Layout: Canvas 900×540. Three-column layout:</p>
+<p>Left column (Energy Audit):
+- Table with editable rows: Load name | Watts | Hours/Day
+- Pre-populated with: LED Light, Water Pump, Air Pump, Circulation Fan, Sensor Node
+- "Add Load" button adds a new row
+- Total daily Wh shown at bottom</p>
+<p>Center column (System Parameters):
+- Location: dropdown (Miami 5.6 PSH, Los Angeles 5.5, Denver 5.1, Minneapolis 4.2, Seattle 3.2, Custom)
+- Battery type: Lead-Acid / LiFePO4 toggle
+- Days of autonomy: slider (1–5)
+- System voltage: radio buttons (12V / 24V / 48V)
+- Panel watt-peak: slider (200–600 Wp)</p>
+<p>Right column (Results):
+- Required panel count (integer, rounded up)
+- Required battery capacity (Ah at selected voltage)
+- Estimated system cost (US <span class="arithmatex">\()
+- LCOE (\)</span>/kWh)
+- Payback period vs. grid at <span class="arithmatex">\(0.15/kWh (years)
+- Monthly cost savings (\)</span>)</p>
+<p>Below all columns: Stacked bar chart showing energy load breakdown by category (lighting, pumping, sensing, climate) in Wh/day.</p>
+<p>Interactivity: All inputs update the right column results and chart in real-time. Hovering the stacked bar chart shows the exact Wh and percentage for each category. "Export Report" button downloads a plain-text system design summary.</p>
+</details>
+<h2 id="key-takeaways">Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Solar irradiance</strong> reaches approximately 1000 W/m² at Earth's surface at solar noon; <strong>peak sun hours</strong> (PSH) quantify the daily energy equivalent and vary from 3 (overcast climates) to 6+ (desert climates).</li>
+<li><strong>Monocrystalline silicon</strong> panels (20–24% efficiency) offer the best value for fixed installations; panel costs have fallen 90% since 2010 to ~$0.25/Wp.</li>
+<li><strong>MPPT charge controllers</strong> extract 15–30% more energy from panels than PWM controllers by continuously tracking the maximum power point.</li>
+<li><strong>LiFePO4 batteries</strong> offer 4–10× longer cycle life than lead-acid at comparable or lower total cost of ownership, and can safely discharge to 90% vs. 50% for lead-acid.</li>
+<li><strong>Battery sizing</strong> requires knowing daily energy consumption, desired days of autonomy, maximum depth of discharge, and system voltage.</li>
+<li><strong>Off-grid systems</strong> rely entirely on solar + battery; <strong>grid-tie systems</strong> use the utility as a backup and net metering to bank excess production.</li>
+<li><strong>Microinverters</strong> improve performance in partially shaded arrays; string inverters are adequate for unshaded indoor or rooftop arrays.</li>
+<li><strong>Grow lights dominate</strong> hydroponic energy consumption (40–70%); selecting efficient LED fixtures directly reduces the solar array and battery size required.</li>
+<li><strong>INA219</strong> (I2C, MicroPython) monitors real-time solar generation and load consumption with milliamp accuracy on any DC circuit up to 32 V, 3.2 A.</li>
+<li><strong>LCOE</strong> for a well-designed residential solar system is typically <span class="arithmatex">\(0.05–\)</span>0.08/kWh — significantly lower than retail grid electricity in most US states.</li>
+</ul>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Chapter 19 complete — your grow room runs on sunshine!</p>
+<p><img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Cress leaps with arms raised">
+You've designed, sized, and costed a solar power system for a real hydroponic operation — and built the energy dashboard to monitor it live. Chapter 20 scales everything up: multi-tier vertical farms, robotics, AI crop management, container farms, food mile calculations, and the commercial operations that are reshaping urban food supply chains. The future of food is vertical — let's build it!</p>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../18-food-safety/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 18. Food Safety">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                18. Food Safety
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../20-vertical-farming/" class="md-footer__link md-footer__link--next" aria-label="Next: 20. Vertical Farming">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                20. Vertical Farming
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.action.edit", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>

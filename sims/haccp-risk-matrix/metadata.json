@@ -1,0 +1,21 @@
+{
+  "title": "HACCP Food Safety Risk Matrix",
+  "description": "HACCP Food Safety Risk Matrix",
+  "creator": "Dementia Education Project",
+  "date": "2026-05-29",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "haccp-risk-matrix",
+  "library": "p5.js",
+  "bloomLevel": "Analyze (L4) and Evaluate (L5)",
+  "bloomVerb": "Evaluate — students assess the food safety risk profile of their system configuration and identify gaps in their control measures.",
+  "completion_status": "scaffold",
+  "chapter_number": 18,
+  "chapter_title": "Food Safety and Pest Management",
+  "chapter_dir": "18-food-safety"
+}

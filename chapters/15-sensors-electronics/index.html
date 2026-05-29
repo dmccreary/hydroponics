@@ -1,0 +1,2582 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Physical hardware for hydroponic automation — pH electrodes, EC probes, temperature sensors, relays, pumps, solenoids, breadboard prototyping, signal conditioning, and waterproof enclosure design.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/hydroponics/chapters/15-sensors-electronics/">
+      
+      
+        <link rel="prev" href="../14-networking-iot/">
+      
+      
+        <link rel="next" href="../16-data-collection-analysis/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Sensors and Electronics Hardware - Hydroponics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../css/mascot.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sensors-and-electronics-hardware" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Hydroponics" class="md-header__button md-logo" aria-label="Hydroponics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Hydroponics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Sensors and Electronics Hardware
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/hydroponics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Hydroponics" class="md-nav__button md-logo" aria-label="Hydroponics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Hydroponics
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/hydroponics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-root-biology/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Root Biology
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-water-transport/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Water & Plant Health
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-macro-micro-nutrients/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Macro & Micro Nutrients
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-nutrient-solution-chemistry/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Nutrient Chemistry
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-passive-basic-active-systems/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Basic Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-advanced-systems/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. Advanced Systems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-diy-school-projects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. DIY & School Projects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-growing-media-crops/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. Growing Media & Crops
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-lighting-science/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. Lighting Science
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-environmental-control/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. Environmental Control
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-micropython-fundamentals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. MicroPython Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-hardware-interfaces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. Hardware Interfaces
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-networking-iot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. Networking & IoT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    15. Sensors & Electronics
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    15. Sensors & Electronics
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ph-electrode-the-glass-electrode" class="md-nav__link">
+    <span class="md-ellipsis">
+      pH Electrode: The Glass Electrode
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="pH Electrode: The Glass Electrode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ph-probe-calibration" class="md-nav__link">
+    <span class="md-ellipsis">
+      pH Probe Calibration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ph-calibration-buffers" class="md-nav__link">
+    <span class="md-ellipsis">
+      pH Calibration Buffers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ec-probe-design-and-calibration" class="md-nav__link">
+    <span class="md-ellipsis">
+      EC Probe Design and Calibration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="EC Probe Design and Calibration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ec-probe-calibration" class="md-nav__link">
+    <span class="md-ellipsis">
+      EC Probe Calibration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#temperature-sensors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Temperature Sensors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Temperature Sensors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ds18b20-temperature-probe" class="md-nav__link">
+    <span class="md-ellipsis">
+      DS18B20 Temperature Probe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dht11-vs-dht22-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      DHT11 vs DHT22 Comparison
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#co2-ndir-sensor-technology" class="md-nav__link">
+    <span class="md-ellipsis">
+      CO₂ NDIR Sensor Technology
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#level-and-flow-sensors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Level and Flow Sensors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Level and Flow Sensors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#water-level-sensors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Water Level Sensors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#float-switch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Float Switch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flow-sensor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flow Sensor
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actuators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actuators
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Actuators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relay-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relay Module
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dosing-pump-peristaltic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dosing Pump (Peristaltic)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solenoid-valve" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solenoid Valve
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#electronics-fundamentals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Electronics Fundamentals
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Electronics Fundamentals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#power-supply-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Power Supply Selection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#breadboard-prototyping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breadboard Prototyping
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pcb-design-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      PCB Design Basics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voltage-divider-circuit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voltage Divider Circuit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#op-amp-circuits-and-analog-signal-conditioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Op-Amp Circuits and Analog Signal Conditioning
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#signal-quality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Signal Quality
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Signal Quality">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sensor-noise-and-filtering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sensor Noise and Filtering
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moving-average-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Moving Average Filter
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sensor-drift-and-recalibration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sensor Drift and Recalibration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sensor-node-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sensor Node Design
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sensor Node Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wireless-sensor-node-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wireless Sensor Node Design
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#battery-powered-sensor-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Battery-Powered Sensor Nodes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiplexed-sensor-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiplexed Sensor Reading
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sensor-enclosure-waterproofing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sensor Enclosure Waterproofing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sensor Enclosure Waterproofing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-sensor-node-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Sensor Node Architecture
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16-data-collection-analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. Data Collection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../17-data-visualization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. Data Visualization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18-food-safety/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. Food Safety
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../19-solar-energy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    19. Solar Energy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20-vertical-farming/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20. Vertical Farming
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../21-financial-modeling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    21. Financial Modeling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ph-electrode-the-glass-electrode" class="md-nav__link">
+    <span class="md-ellipsis">
+      pH Electrode: The Glass Electrode
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="pH Electrode: The Glass Electrode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ph-probe-calibration" class="md-nav__link">
+    <span class="md-ellipsis">
+      pH Probe Calibration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ph-calibration-buffers" class="md-nav__link">
+    <span class="md-ellipsis">
+      pH Calibration Buffers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ec-probe-design-and-calibration" class="md-nav__link">
+    <span class="md-ellipsis">
+      EC Probe Design and Calibration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="EC Probe Design and Calibration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ec-probe-calibration" class="md-nav__link">
+    <span class="md-ellipsis">
+      EC Probe Calibration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#temperature-sensors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Temperature Sensors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Temperature Sensors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ds18b20-temperature-probe" class="md-nav__link">
+    <span class="md-ellipsis">
+      DS18B20 Temperature Probe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dht11-vs-dht22-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      DHT11 vs DHT22 Comparison
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#co2-ndir-sensor-technology" class="md-nav__link">
+    <span class="md-ellipsis">
+      CO₂ NDIR Sensor Technology
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#level-and-flow-sensors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Level and Flow Sensors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Level and Flow Sensors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#water-level-sensors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Water Level Sensors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#float-switch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Float Switch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flow-sensor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flow Sensor
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actuators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actuators
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Actuators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relay-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relay Module
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dosing-pump-peristaltic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dosing Pump (Peristaltic)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solenoid-valve" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solenoid Valve
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#electronics-fundamentals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Electronics Fundamentals
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Electronics Fundamentals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#power-supply-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Power Supply Selection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#breadboard-prototyping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breadboard Prototyping
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pcb-design-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      PCB Design Basics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voltage-divider-circuit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voltage Divider Circuit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#op-amp-circuits-and-analog-signal-conditioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Op-Amp Circuits and Analog Signal Conditioning
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#signal-quality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Signal Quality
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Signal Quality">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sensor-noise-and-filtering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sensor Noise and Filtering
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moving-average-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Moving Average Filter
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sensor-drift-and-recalibration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sensor Drift and Recalibration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sensor-node-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sensor Node Design
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sensor Node Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wireless-sensor-node-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wireless Sensor Node Design
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#battery-powered-sensor-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Battery-Powered Sensor Nodes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiplexed-sensor-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiplexed Sensor Reading
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sensor-enclosure-waterproofing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sensor Enclosure Waterproofing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sensor Enclosure Waterproofing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-sensor-node-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Sensor Node Architecture
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/hydroponics/blob/main/docs/chapters/15-sensors-electronics/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="sensors-and-electronics-hardware">Sensors and Electronics Hardware<a class="headerlink" href="#sensors-and-electronics-hardware" title="Permanent link">&para;</a></h1>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<p>This chapter provides hands-on coverage of the physical hardware layer: how pH glass electrodes and EC probes work and how to calibrate them, temperature and humidity sensor specifications, relay modules and dosing pumps, solenoid valves and flow sensors, and electronics fundamentals including breadboard prototyping, PCB design basics, voltage dividers, op-amp signal conditioning, noise filtering, and waterproof enclosure design for sensors operating in wet environments.</p>
+<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">&para;</a></h2>
+<p>This chapter covers the following 30 concepts from the learning graph:</p>
+<ol>
+<li>pH Electrode (Glass Electrode)</li>
+<li>pH Probe Calibration</li>
+<li>pH Calibration Buffers</li>
+<li>EC Probe Design</li>
+<li>EC Probe Calibration</li>
+<li>DS18B20 Temperature Probe</li>
+<li>DHT11 vs DHT22 Comparison</li>
+<li>CO2 NDIR Sensor Technology</li>
+<li>Water Level Sensor</li>
+<li>Ultrasonic Distance Sensor</li>
+<li>Float Switch</li>
+<li>Relay Module</li>
+<li>Dosing Pump (Peristaltic)</li>
+<li>Solenoid Valve</li>
+<li>Flow Sensor</li>
+<li>Power Supply Selection</li>
+<li>Breadboard Prototyping</li>
+<li>PCB Design Basics</li>
+<li>Voltage Divider Circuit</li>
+<li>Op-Amp Circuits</li>
+<li>Sensor Noise and Filtering</li>
+<li>Moving Average Filter</li>
+<li>Analog Signal Conditioning</li>
+<li>Sensor Drift and Recalibration</li>
+<li>Wireless Sensor Node Design</li>
+<li>Battery-Powered Sensor Nodes</li>
+<li>Sensor Data Timestamping</li>
+<li>Multiplexed Sensor Reading</li>
+<li>Atlas Scientific EZO Circuits</li>
+<li>Sensor Enclosure Waterproofing</li>
+</ol>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<p>This chapter builds on concepts from:</p>
+<ul>
+<li><a href="../05-nutrient-solution-chemistry/">Chapter 5: Nutrient Solution Chemistry and Mixing</a></li>
+<li><a href="../08-diy-school-projects/">Chapter 8: DIY Systems and School Projects</a></li>
+<li><a href="../13-hardware-interfaces/">Chapter 13: Hardware Interfaces and Sensor Programming</a></li>
+<li><a href="../14-networking-iot/">Chapter 14: Networking, IoT, and Advanced MicroPython</a></li>
+</ul>
+<hr />
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Cress opens the hardware toolbox</p>
+<p><img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Cress waves hello at chapter opening">
+Welcome to Chapter 15, growers! Chapters 12–14 covered the software stack. Now we go back to the physical hardware — how do pH electrodes actually measure acidity? Why does an EC probe need two platinum rings? How do you condition a noisy millivolt signal before it reaches your microcontroller's ADC? By the end of this chapter, you'll understand the electronics layer well enough to design, prototype, and waterproof your own sensor node from scratch.</p>
+</div>
+<h2 id="ph-electrode-the-glass-electrode">pH Electrode: The Glass Electrode<a class="headerlink" href="#ph-electrode-the-glass-electrode" title="Permanent link">&para;</a></h2>
+<p>The <strong>pH glass electrode</strong> is one of the most chemically elegant sensors in analytical chemistry. Understanding how it works explains why pH probes are fragile, why they need calibration, and why they must be kept moist.</p>
+<p>A glass electrode consists of a thin glass membrane at the tip of the probe. This glass is specially formulated to be permeable only to hydrogen ions (H⁺). When the membrane is immersed in a solution, hydrogen ions exchange between the solution and a layer within the glass, creating a potential difference (voltage) across the membrane.</p>
+<p>The voltage across the membrane follows the Nernst equation. Before we state it, two terms: <strong>E</strong> is the voltage (electromotive force, in millivolts), and <strong>R</strong>, <strong>T</strong>, <strong>F</strong> are the gas constant, absolute temperature, and Faraday constant respectively. At 25 °C, the equation simplifies to:</p>
+<div class="arithmatex">\[
+E = E_0 - 59.16 \times \text{pH}
+\]</div>
+<p>This means a 59.16 mV change in electrode voltage corresponds to exactly one pH unit change at 25 °C. The electrode voltage is measured against a <strong>reference electrode</strong> (usually a silver/silver-chloride junction filled with KCl gel) packed into the same probe body. The output to the microcontroller is typically a millivolt signal in the range of −300 mV (very basic solution) to +300 mV (very acidic solution), with 0 V corresponding approximately to pH 7.</p>
+<h3 id="ph-probe-calibration">pH Probe Calibration<a class="headerlink" href="#ph-probe-calibration" title="Permanent link">&para;</a></h3>
+<p>Because the exact relationship between voltage and pH varies slightly between probes (and changes as probes age), calibration is required. <strong>Two-point calibration</strong> is standard:</p>
+<ol>
+<li>Rinse the probe with deionized water and pat dry</li>
+<li>Immerse in pH 7.0 buffer solution; wait for stabilization; record voltage V₇</li>
+<li>Rinse and immerse in pH 4.0 buffer (or pH 10.0 for alkaline calibration); wait; record voltage V₄</li>
+<li>Compute slope: <code>slope = (7.0 - 4.0) / (V7 - V4)</code> (should be near 59 mV/pH unit at 25 °C)</li>
+<li>Compute offset: <code>offset = 7.0 - slope × V7</code></li>
+</ol>
+<p>Store slope and offset in <code>config.json</code> on the microcontroller. Apply them in every reading:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">def</span> <span class="nf">raw_voltage_to_ph</span><span class="p">(</span><span class="n">voltage_mv</span><span class="p">,</span> <span class="n">slope</span><span class="p">,</span> <span class="n">offset</span><span class="p">):</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="k">return</span> <span class="n">slope</span> <span class="o">*</span> <span class="n">voltage_mv</span> <span class="o">+</span> <span class="n">offset</span>
+</span></code></pre></div>
+<h3 id="ph-calibration-buffers">pH Calibration Buffers<a class="headerlink" href="#ph-calibration-buffers" title="Permanent link">&para;</a></h3>
+<p><strong>Calibration buffers</strong> are solutions with precisely known, stable pH values. Standard pH calibration kits contain buffer solutions at pH 4.00, 7.00, and 10.00. These values are certified accurate to ±0.01 pH at 25 °C.</p>
+<p>Buffer storage and handling:</p>
+<ul>
+<li>Store unopened buffers in a cool, dark location (4–8 °C refrigerator for long-term)</li>
+<li>Discard buffer that has been contaminated by the probe — pour out, never return to stock bottle</li>
+<li>Replace opened buffer sachets after 30 days; buffer pH can drift with CO₂ absorption from air</li>
+<li>Recalibrate pH probes every 1–2 weeks in a working hydroponic system; more often if measuring high-acid or high-alkaline solutions</li>
+</ul>
+<div class="admonition mascot-warning">
+<p class="admonition-title">Never dry-store a glass pH electrode</p>
+<p><img src="../../img/mascot/warning.png" class="mascot-admonition-img" alt="Cress raises a cautionary hand">
+A glass pH electrode must be kept moist. When not in use, store it in the plastic cap filled with pH 7 buffer or 3M KCl storage solution — not deionized water, which pulls electrolyte from the reference junction. A dried-out electrode takes hours to re-hydrate and may never fully recover. This is the most common cause of pH probe death in hobbyist setups.</p>
+</div>
+<h2 id="ec-probe-design-and-calibration">EC Probe Design and Calibration<a class="headerlink" href="#ec-probe-design-and-calibration" title="Permanent link">&para;</a></h2>
+<p>An <strong>EC (electrical conductivity) probe</strong> measures how well a solution conducts electricity — directly proportional to ion concentration (nutrient concentration). A typical EC probe has two (or four) platinum or titanium electrodes that are immersed in the solution.</p>
+<p>The probe works by applying a small AC voltage between the electrodes and measuring the resulting current. AC is used (not DC) to prevent electrolysis and electrolyte buildup on the electrode surfaces. The conductance <span class="arithmatex">\( G = I/V \)</span> (current divided by voltage) is measured, then the conductivity is calculated using the probe's <strong>cell constant</strong> K_cell:</p>
+<div class="arithmatex">\[
+\text{EC} = G \times K_{cell}
+\]</div>
+<p>The cell constant (in cm⁻¹) depends on the electrode geometry — the distance between the electrodes and their surface area. Atlas Scientific EZO-EC circuits have a built-in calibration procedure that determines K_cell from a reference solution.</p>
+<h3 id="ec-probe-calibration">EC Probe Calibration<a class="headerlink" href="#ec-probe-calibration" title="Permanent link">&para;</a></h3>
+<p>EC calibration uses a <strong>calibration solution</strong> with a precisely known conductivity value (commonly 1413 μS/cm, which corresponds approximately to 700 ppm TDS). The calibration procedure:</p>
+<ol>
+<li>Rinse the probe with deionized water</li>
+<li>Immerse in 1413 μS/cm calibration solution at 25 °C</li>
+<li>Send the <code>Cal,1413</code> command to the Atlas EZO-EC circuit (or apply the appropriate scaling factor for DIY ADC-based probes)</li>
+<li>For two-point calibration, repeat with dry calibration (air) as the zero point, then with the calibration solution</li>
+</ol>
+<p>Temperature significantly affects conductivity — water at 30 °C is approximately 2% more conductive than at 25 °C per degree. Always use <strong>temperature-compensated EC</strong> readings by providing the current solution temperature to the EZO-EC circuit or applying the temperature correction factor manually.</p>
+<h2 id="temperature-sensors">Temperature Sensors<a class="headerlink" href="#temperature-sensors" title="Permanent link">&para;</a></h2>
+<h3 id="ds18b20-temperature-probe">DS18B20 Temperature Probe<a class="headerlink" href="#ds18b20-temperature-probe" title="Permanent link">&para;</a></h3>
+<p>The <strong>DS18B20</strong> is a waterproof, stainless-steel encapsulated temperature sensor in a TO-92 package rated for −55 °C to +125 °C with ±0.5 °C accuracy. Its 1-Wire digital protocol means it can be submerged directly in nutrient solution. The stainless steel housing is inert to the solution chemistry used in hydroponics.</p>
+<p>Key specifications:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Operating range</td>
+<td>−55 °C to +125 °C</td>
+</tr>
+<tr>
+<td>Accuracy</td>
+<td>±0.5 °C (−10 to +85 °C)</td>
+</tr>
+<tr>
+<td>Resolution</td>
+<td>9–12 bit selectable (0.5–0.0625 °C)</td>
+</tr>
+<tr>
+<td>Interface</td>
+<td>1-Wire (single data pin)</td>
+</tr>
+<tr>
+<td>Supply voltage</td>
+<td>3.0–5.5 V (or parasite power from data line)</td>
+</tr>
+<tr>
+<td>Conversion time</td>
+<td>94–750 ms (depending on resolution)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dht11-vs-dht22-comparison">DHT11 vs DHT22 Comparison<a class="headerlink" href="#dht11-vs-dht22-comparison" title="Permanent link">&para;</a></h3>
+<p>Both the <strong>DHT11</strong> and <strong>DHT22</strong> measure air temperature and relative humidity using a resistive humidity sensing element and a thermistor. They differ significantly in accuracy:</p>
+<table>
+<thead>
+<tr>
+<th>Specification</th>
+<th>DHT11</th>
+<th>DHT22</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Temperature range</td>
+<td>0–50 °C</td>
+<td>−40–80 °C</td>
+</tr>
+<tr>
+<td>Temperature accuracy</td>
+<td>±2 °C</td>
+<td>±0.5 °C</td>
+</tr>
+<tr>
+<td>Humidity range</td>
+<td>20–90% RH</td>
+<td>0–100% RH</td>
+</tr>
+<tr>
+<td>Humidity accuracy</td>
+<td>±5% RH</td>
+<td>±2–5% RH</td>
+</tr>
+<tr>
+<td>Sample rate</td>
+<td>1 Hz max</td>
+<td>0.5 Hz max</td>
+</tr>
+<tr>
+<td>Cost</td>
+<td>~$2</td>
+<td>~$5</td>
+</tr>
+</tbody>
+</table>
+<p>For hydroponic VPD calculation, the DHT22 is required — the ±2 °C error of the DHT11 produces unacceptably large VPD errors. The DHT22 is recommended for all air quality monitoring in grow rooms.</p>
+<h3 id="co2-ndir-sensor-technology">CO₂ NDIR Sensor Technology<a class="headerlink" href="#co2-ndir-sensor-technology" title="Permanent link">&para;</a></h3>
+<p><strong>NDIR</strong> (Non-Dispersive Infrared) sensors measure CO₂ concentration by detecting how much infrared light at the CO₂ absorption wavelength (4.26 μm) is absorbed by the gas in a measurement cell. NDIR sensors are the most accurate and stable CO₂ sensing technology for grow room monitoring.</p>
+<p>The MH-Z19B and SCD40 are popular NDIR CO₂ sensors for hydroponic automation. The SCD40 (I2C) is more compact and accurate; the MH-Z19B (UART) is less expensive and widely used in hobby systems.</p>
+<p>Ambient CO₂ is approximately 400 ppm. For enhanced plant growth in a sealed grow room, growers supplement CO₂ to 1000–1500 ppm. Monitoring CO₂ levels is essential for systems with CO₂ enrichment to prevent dangerous human exposure (CO₂ becomes hazardous above ~5000 ppm in confined spaces).</p>
+<h2 id="level-and-flow-sensors">Level and Flow Sensors<a class="headerlink" href="#level-and-flow-sensors" title="Permanent link">&para;</a></h2>
+<h3 id="water-level-sensors">Water Level Sensors<a class="headerlink" href="#water-level-sensors" title="Permanent link">&para;</a></h3>
+<p>Knowing the water level in a reservoir allows automatic refill, prevents running the pump dry, and triggers overflow alarms. Several sensor types work for hydroponic reservoirs:</p>
+<p><strong>Float switches</strong>: A mechanical switch inside a buoyant housing. When the float rises above a threshold, it closes (or opens) the circuit. Simple, inexpensive, and zero power consumption when not switching. Limited to detecting a single level threshold — not continuous level measurement.</p>
+<p><strong>Ultrasonic distance sensors</strong> (HC-SR04): Mount above the reservoir, emit an ultrasonic pulse, and measure the time for the echo to return. Distance to the water surface is calculated from the time-of-flight: <span class="arithmatex">\( d = v_{sound} \times t / 2 \)</span>. This provides continuous level measurement in millimeters. Not ideal for nutrient solution (salt vapor can contaminate the sensor) — use a cover with a small hole.</p>
+<h3 id="float-switch">Float Switch<a class="headerlink" href="#float-switch" title="Permanent link">&para;</a></h3>
+<p>As described above, a float switch is the simplest level detection method — a reed switch inside a float that closes when the float is upright (water level is high) and opens when the float tilts (water level is low). Float switches are used in two modes:</p>
+<ul>
+<li><strong>High-level float</strong>: Mounted near the reservoir's maximum fill line; stops the fill valve if triggered</li>
+<li><strong>Low-level float</strong>: Mounted near the reservoir's minimum level; stops the pump if triggered</li>
+</ul>
+<p>Wire float switches to GPIO pins with <code>Pin.PULL_UP</code> (see Chapter 13) — the switch pulls the pin to ground when activated.</p>
+<h3 id="flow-sensor">Flow Sensor<a class="headerlink" href="#flow-sensor" title="Permanent link">&para;</a></h3>
+<p>A <strong>flow sensor</strong> measures the volume of liquid passing through a pipe. Hall-effect flow sensors (e.g., YF-S201) contain a small turbine wheel with a magnet. As liquid flows through, the turbine spins, generating a series of pulses detected by the Hall-effect sensor. The pulse frequency is proportional to flow rate.</p>
+<p>Counting flow pulses with a hardware interrupt (Chapter 13) provides precise volume measurement:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">Pin</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">import</span> <span class="nn">utime</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">PULSES_PER_LITER</span> <span class="o">=</span> <span class="mi">450</span>   <span class="c1"># Calibrate for your specific sensor</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">pulse_count</span> <span class="o">=</span> <span class="mi">0</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="k">def</span> <span class="nf">flow_pulse_handler</span><span class="p">(</span><span class="n">pin</span><span class="p">):</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="k">global</span> <span class="n">pulse_count</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    <span class="n">pulse_count</span> <span class="o">+=</span> <span class="mi">1</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="n">flow_pin</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">IN</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">PULL_UP</span><span class="p">)</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="n">flow_pin</span><span class="o">.</span><span class="n">irq</span><span class="p">(</span><span class="n">trigger</span><span class="o">=</span><span class="n">Pin</span><span class="o">.</span><span class="n">IRQ_FALLING</span><span class="p">,</span> <span class="n">handler</span><span class="o">=</span><span class="n">flow_pulse_handler</span><span class="p">)</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="k">def</span> <span class="nf">get_flow_liters</span><span class="p">():</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>    <span class="k">return</span> <span class="n">pulse_count</span> <span class="o">/</span> <span class="n">PULSES_PER_LITER</span>
+</span></code></pre></div>
+<h2 id="actuators">Actuators<a class="headerlink" href="#actuators" title="Permanent link">&para;</a></h2>
+<h3 id="relay-module">Relay Module<a class="headerlink" href="#relay-module" title="Permanent link">&para;</a></h3>
+<p>A <strong>relay module</strong> (covered in Chapter 14 for software) deserves attention on the hardware side. A relay module typically contains:</p>
+<ul>
+<li>A signal input (connected to GPIO)</li>
+<li>An optocoupler (electrically isolates the microcontroller from the mains-voltage side)</li>
+<li>A coil-driven mechanical relay rated at the intended load (e.g., 10A 250VAC)</li>
+<li>Indicator LED showing relay state</li>
+</ul>
+<p>Safety considerations for relay wiring:</p>
+<ul>
+<li>Use appropriately rated wire for the mains-voltage side (14 AWG minimum for 10A loads)</li>
+<li>Keep mains wiring and low-voltage (3.3 V/5 V) wiring physically separated</li>
+<li>Always fuse the mains supply</li>
+<li>Never work on live mains wiring — de-energize before touching</li>
+</ul>
+<h3 id="dosing-pump-peristaltic">Dosing Pump (Peristaltic)<a class="headerlink" href="#dosing-pump-peristaltic" title="Permanent link">&para;</a></h3>
+<p>A <strong>peristaltic pump</strong> moves fluid by squeezing a flexible tube between rollers and the pump housing. The tube's interior never contacts the pump mechanism — making peristaltic pumps ideal for corrosive or sterile fluids like pH adjustment solutions (hydrochloric acid, potassium hydroxide) and nutrient concentrates.</p>
+<p>Key selection criteria for hydroponic dosing pumps:</p>
+<ul>
+<li><strong>Flow rate</strong>: Typically 0.1–3 mL/s for nutrient dosing applications</li>
+<li><strong>Tubing material</strong>: Silicone (inert to most hydroponic chemicals, flexible, long-lasting)</li>
+<li><strong>Voltage</strong>: Most small dosing pumps run at 5 V or 12 V and are controlled by relay</li>
+</ul>
+<p>Calibration: Time how long the pump takes to deliver exactly 10 mL into a graduated cylinder. Repeat three times and average to find <code>ml_per_second</code>. Store this constant in your config file and update it when tubing is replaced.</p>
+<h3 id="solenoid-valve">Solenoid Valve<a class="headerlink" href="#solenoid-valve" title="Permanent link">&para;</a></h3>
+<p>A <strong>solenoid valve</strong> is an electromagnetically actuated valve — when energized, a plunger lifts to open the flow path; when de-energized, a spring closes it. Solenoid valves control water flow (auto-refill, irrigation cycles) and CO₂ injection.</p>
+<p>Selection criteria:</p>
+<ul>
+<li><strong>Normally closed (NC)</strong> vs <strong>normally open (NO)</strong>: NC valves close when power is lost — the safe default for refill valves (if power fails, you don't want the reservoir to overflow)</li>
+<li><strong>Voltage rating</strong>: 12 VDC or 24 VAC are common; use a relay to switch from 3.3 V GPIO to valve supply voltage</li>
+<li><strong>Pressure rating</strong>: Ensure the valve rating exceeds your supply line pressure</li>
+</ul>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Normally closed valves are the safe default</p>
+<p><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Cress holds chin thoughtfully">
+When a microcontroller loses power, all GPIO pins go to their default state (low). A relay connected to a GPIO-controlled solenoid will de-energize. If you wired a normally-open refill valve, this means the valve opens and your reservoir overfills. If you wired a normally-closed valve, it closes — the safe outcome. Always design for the failure case: what happens to each actuator when power is lost?</p>
+</div>
+<h2 id="electronics-fundamentals">Electronics Fundamentals<a class="headerlink" href="#electronics-fundamentals" title="Permanent link">&para;</a></h2>
+<h3 id="power-supply-selection">Power Supply Selection<a class="headerlink" href="#power-supply-selection" title="Permanent link">&para;</a></h3>
+<p>A hydroponic sensor node typically requires multiple voltage levels: 5 V for relay modules and some sensors, 3.3 V for the microcontroller and I2C sensors, 12 V for dosing pumps and solenoids. Power supply selection criteria:</p>
+<ul>
+<li><strong>Voltage</strong>: Match the highest required voltage; use regulators for lower voltages</li>
+<li><strong>Current capacity</strong>: Sum the maximum current of all loads with a 50% safety margin</li>
+<li><strong>Waterproof rating</strong>: IP65 minimum for grow room environments (dust-tight and water spray resistant)</li>
+<li><strong>Mean time between failures (MTBF)</strong>: Industrial power supplies (Meanwell, COSEL) have 10× higher MTBF than consumer-grade units</li>
+</ul>
+<p>A common approach: a 12 V 5 A switching supply powers the relay coils and dosing pumps directly; a 12V-to-5V USB buck converter (LM2596) provides regulated 5 V for the microcontroller and relay signal inputs.</p>
+<h3 id="breadboard-prototyping">Breadboard Prototyping<a class="headerlink" href="#breadboard-prototyping" title="Permanent link">&para;</a></h3>
+<p>A <strong>breadboard</strong> is a solderless prototyping board with rows of internally-connected holes. Components and jumper wires are inserted into holes; connections are made by the internal copper traces. Breadboards allow circuits to be built and modified without soldering.</p>
+<p>Breadboard conventions:
+- The two outer rails (labeled + and −) are power buses — connect your 3.3 V and GND to these
+- The main grid is split into two halves; each row of 5 holes (a–e, f–j) is internally connected
+- Components should bridge the center gap (component leads in the a–e half, connections in the f–j half)</p>
+<p>Breadboards are not suitable for humid environments — salt vapor from nutrient solution will cause corrosion and intermittent connections. Use breadboards only for development and testing, then transfer to a perfboard or PCB for deployment.</p>
+<h3 id="pcb-design-basics">PCB Design Basics<a class="headerlink" href="#pcb-design-basics" title="Permanent link">&para;</a></h3>
+<p>A <strong>PCB</strong> (Printed Circuit Board) is the step beyond breadboard — copper traces etched or deposited on an insulating substrate replace jumper wires. PCBs are more reliable, compact, and suitable for humid environments than breadboards.</p>
+<p>PCB design tools like <strong>KiCad</strong> (free, open-source) allow you to design a <strong>schematic</strong> (component connections) and a <strong>layout</strong> (physical trace routing). After design, boards are manufactured by PCB fabrication services (PCBWay, JLCPCB, OSH Park) at low cost (10 boards for ~$10–20 for simple designs).</p>
+<p>For hydroponic sensor nodes, a custom PCB brings:
+- Connectors for I2C, UART, analog sensors, relay outputs, and power, all in defined positions
+- Conformal coating protection for humidity resistance
+- Reduced failure points compared to wire-wrapped or soldered perfboard</p>
+<h3 id="voltage-divider-circuit">Voltage Divider Circuit<a class="headerlink" href="#voltage-divider-circuit" title="Permanent link">&para;</a></h3>
+<p>A <strong>voltage divider</strong> is a two-resistor circuit that produces an output voltage that is a fixed fraction of the input voltage. The voltage divider equation relates input voltage <span class="arithmatex">\( V_{in} \)</span> and two resistors <span class="arithmatex">\( R_1 \)</span> (top, from input to output) and <span class="arithmatex">\( R_2 \)</span> (bottom, from output to ground):</p>
+<div class="arithmatex">\[
+V_{out} = V_{in} \times \frac{R_2}{R_1 + R_2}
+\]</div>
+<p>In hydroponic electronics, voltage dividers appear in two contexts:</p>
+<ol>
+<li>
+<p><strong>Level shifting</strong>: Sensors that output 0–5 V (like some pH circuits) must be scaled to 0–3.3 V before connecting to a 3.3 V ADC. A divider with R₁ = 10 kΩ and R₂ = 20 kΩ produces V_out = V_in × 0.667, scaling 5 V to 3.33 V.</p>
+</li>
+<li>
+<p><strong>Resistive sensors</strong>: Thermistors (temperature sensors) and resistive moisture sensors are often used in voltage divider circuits where one resistor is fixed and the other is the sensor — the output voltage varies with the sensor resistance.</p>
+</li>
+</ol>
+<h3 id="op-amp-circuits-and-analog-signal-conditioning">Op-Amp Circuits and Analog Signal Conditioning<a class="headerlink" href="#op-amp-circuits-and-analog-signal-conditioning" title="Permanent link">&para;</a></h3>
+<p>The output of a pH glass electrode is typically a millivolt-level signal (±300 mV) with high source impedance. Connecting this directly to an ADC produces noisy, inaccurate readings because the ADC's input impedance "loads" the electrode and distorts the reading.</p>
+<p>An <strong>operational amplifier</strong> (op-amp) solves this with two common configurations for analog signal conditioning:</p>
+<p><strong>Voltage follower (buffer)</strong>: The output equals the input, but the op-amp's high input impedance (&gt;1 MΩ) prevents loading the sensor, and its low output impedance can drive the ADC cleanly. Used for pH electrode buffering.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>+IN ──┐
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>      └── op-amp output → ADC
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>-IN ──┘ (connected to output = unity gain)
+</span></code></pre></div>
+<p><strong>Inverting amplifier</strong>: Scales and inverts a small input signal:</p>
+<div class="arithmatex">\[
+V_{out} = -\frac{R_f}{R_{in}} \times V_{in}
+\]</div>
+<p>The Atlas Scientific EZO circuits include built-in op-amp signal conditioning. For DIY pH circuits (using a pH electrode and a separate analog-front-end circuit), the INA826 or MCP6002 op-amp are commonly used.</p>
+<h2 id="signal-quality">Signal Quality<a class="headerlink" href="#signal-quality" title="Permanent link">&para;</a></h2>
+<h3 id="sensor-noise-and-filtering">Sensor Noise and Filtering<a class="headerlink" href="#sensor-noise-and-filtering" title="Permanent link">&para;</a></h3>
+<p>Real sensor signals contain <strong>noise</strong> — random fluctuations in the measured voltage caused by electromagnetic interference (EMI), thermal noise in resistors, and power supply ripple. Unfiltered noise can cause pH readings to fluctuate ±0.1 pH even in a stable solution.</p>
+<p>Types of noise in hydroponic sensor systems:</p>
+<ul>
+<li><strong>50/60 Hz mains noise</strong>: Induced by proximity to mains wiring and pump motors. Reduced by shielded cables and physical separation.</li>
+<li><strong>ADC quantization noise</strong>: The inherent error from converting a continuous analog signal to discrete digital steps. Reduced by averaging multiple readings.</li>
+<li><strong>Sensor thermal drift</strong>: Gradual change in sensor output due to temperature changes. Compensated by temperature measurement.</li>
+</ul>
+<h3 id="moving-average-filter">Moving Average Filter<a class="headerlink" href="#moving-average-filter" title="Permanent link">&para;</a></h3>
+<p>The simplest and most effective software noise filter for sensor data is the <strong>moving average</strong>: average the last N readings, where N is chosen to smooth noise without adding too much lag.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">class</span> <span class="nc">MovingAverageFilter</span><span class="p">:</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">window_size</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">window</span> <span class="o">=</span> <span class="p">[]</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="n">window_size</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="p">)</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">:</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>    <span class="k">def</span> <span class="nf">average</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="p">:</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>            <span class="k">return</span> <span class="kc">None</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>        <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="p">)</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="n">ph_filter</span> <span class="o">=</span> <span class="n">MovingAverageFilter</span><span class="p">(</span><span class="n">window_size</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>    <span class="n">raw</span> <span class="o">=</span> <span class="n">ph_adc</span><span class="o">.</span><span class="n">read_u16</span><span class="p">()</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>    <span class="n">voltage</span> <span class="o">=</span> <span class="n">raw</span> <span class="o">*</span> <span class="mf">3.3</span> <span class="o">/</span> <span class="mi">65535</span>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>    <span class="n">ph_filter</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">slope</span> <span class="o">*</span> <span class="n">voltage</span> <span class="o">+</span> <span class="n">offset</span><span class="p">)</span>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>    <span class="n">utime</span><span class="o">.</span><span class="n">sleep_ms</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="n">filtered_ph</span> <span class="o">=</span> <span class="n">ph_filter</span><span class="o">.</span><span class="n">average</span><span class="p">()</span>
+</span></code></pre></div>
+<p>For pH, a window of 3–5 readings sampled at 200 ms intervals provides good noise rejection without significant lag. For EC and temperature, a window of 5–10 is typical.</p>
+<h2 id="sensor-drift-and-recalibration">Sensor Drift and Recalibration<a class="headerlink" href="#sensor-drift-and-recalibration" title="Permanent link">&para;</a></h2>
+<p>All sensors <strong>drift</strong> over time — their output changes slightly even when measuring the same quantity. Drift is caused by:</p>
+<ul>
+<li>Electrode fouling (biofilm, mineral deposits on probe surfaces)</li>
+<li>Electrolyte depletion in the reference junction of pH probes</li>
+<li>Aging of the sensing element</li>
+</ul>
+<p>A practical recalibration schedule for hydroponic sensors:</p>
+<table>
+<thead>
+<tr>
+<th>Sensor</th>
+<th>Recalibration Interval</th>
+<th>Trigger</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pH probe</td>
+<td>Weekly</td>
+<td>If two-point slope deviates &gt;5% from ideal</td>
+</tr>
+<tr>
+<td>EC probe</td>
+<td>Monthly</td>
+<td>After cleaning probe tips</td>
+</tr>
+<tr>
+<td>DS18B20</td>
+<td>Annually</td>
+<td>Compare against calibrated thermometer</td>
+</tr>
+<tr>
+<td>CO₂ sensor</td>
+<td>Monthly</td>
+<td>Fresh air baseline (atmospheric CO₂ ≈ 400 ppm)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sensor data timestamping</strong>: Every logged reading must include a timestamp — either a Unix timestamp from the RTC or an NTP-synchronized clock. Without timestamps, sensor data cannot be correlated with events (dosing, lighting cycles, temperature changes) and is much less useful for analysis.</p>
+<h2 id="sensor-node-design">Sensor Node Design<a class="headerlink" href="#sensor-node-design" title="Permanent link">&para;</a></h2>
+<h3 id="wireless-sensor-node-design">Wireless Sensor Node Design<a class="headerlink" href="#wireless-sensor-node-design" title="Permanent link">&para;</a></h3>
+<p>A <strong>wireless sensor node</strong> is a self-contained unit that reads sensors and transmits data wirelessly. For hydroponics, the design typically includes:</p>
+<ul>
+<li>Microcontroller with Wi-Fi (Pico W or ESP32)</li>
+<li>Sensors on I2C and/or UART buses</li>
+<li>Relay outputs for local control</li>
+<li>Power supply (wall-powered for fixed installations, battery for remote sensors)</li>
+<li>Waterproof enclosure</li>
+</ul>
+<p>The node firmware follows the architecture from Chapter 14: <code>boot.py</code> for Wi-Fi and configuration; <code>main.py</code> with asyncio for concurrent sensor loops, MQTT publishing, and watchdog feeding.</p>
+<h3 id="battery-powered-sensor-nodes">Battery-Powered Sensor Nodes<a class="headerlink" href="#battery-powered-sensor-nodes" title="Permanent link">&para;</a></h3>
+<p>For remote sensors (field hydroponics, greenhouse perimeter sensors), battery power is necessary. Key battery design considerations:</p>
+<ul>
+<li><strong>Deep sleep</strong>: MicroPython's <code>machine.deepsleep(ms)</code> puts the microcontroller into a ~20 μA current draw sleep mode, waking after the specified interval. A sensor node that wakes every 5 minutes, takes a reading in 2 seconds, and sleeps again draws &lt;1 mA average — 4–8 months of operation on a 3000 mAh Li-Ion battery.</li>
+<li><strong>Battery selection</strong>: LiFePO4 (Lithium Iron Phosphate) is preferred for embedded applications — safer chemistry, 2000+ charge cycles, and stable voltage over most of the discharge curve.</li>
+<li><strong>Power budget</strong>: Estimate average current draw: duty cycle × active current + (1-duty cycle) × sleep current.</li>
+</ul>
+<h3 id="multiplexed-sensor-reading">Multiplexed Sensor Reading<a class="headerlink" href="#multiplexed-sensor-reading" title="Permanent link">&para;</a></h3>
+<p>When more sensors are needed than available ADC channels or I2C addresses allow, <strong>multiplexing</strong> selects one sensor at a time from an array. Two common approaches:</p>
+<ul>
+<li><strong>I2C multiplexer (TCA9548A)</strong>: Provides 8 independent I2C buses; allows connecting 8 sensors with the same address (e.g., eight SHT31 sensors on one Pico)</li>
+<li><strong>Analog multiplexer (CD74HC4051)</strong>: Connects one ADC input to any of 8 analog sensors using 3 digital select pins</li>
+</ul>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># TCA9548A I2C multiplexer</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">class</span> <span class="nc">TCA9548A</span><span class="p">:</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i2c</span><span class="p">,</span> <span class="n">address</span><span class="o">=</span><span class="mh">0x70</span><span class="p">):</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">i2c</span> <span class="o">=</span> <span class="n">i2c</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">addr</span> <span class="o">=</span> <span class="n">address</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    <span class="k">def</span> <span class="nf">select_channel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">channel</span><span class="p">):</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">i2c</span><span class="o">.</span><span class="n">writeto</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">addr</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">([</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">channel</span><span class="p">]))</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    <span class="k">def</span> <span class="nf">deselect_all</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">i2c</span><span class="o">.</span><span class="n">writeto</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">addr</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">([</span><span class="mi">0</span><span class="p">]))</span>
+</span></code></pre></div>
+<h3 id="sensor-enclosure-waterproofing">Sensor Enclosure Waterproofing<a class="headerlink" href="#sensor-enclosure-waterproofing" title="Permanent link">&para;</a></h3>
+<p>Electronics operating in or near nutrient solution must be protected from moisture, condensation, and chemical vapor. Key enclosure design principles:</p>
+<ul>
+<li><strong>IP rating</strong>: IP65 is the minimum for grow room electronics (dust-tight, water spray resistant). IP67 is needed for components that may be submerged.</li>
+<li><strong>Enclosure material</strong>: ABS plastic enclosures are chemical-resistant and inexpensive. Fiberglass or stainless steel for harsh chemical environments.</li>
+<li><strong>Cable glands</strong>: Use IP-rated cable glands for all wire penetrations — they compress a rubber seal around the cable to maintain the enclosure IP rating.</li>
+<li><strong>Desiccant</strong>: Place a silica gel desiccant packet inside sealed enclosures to absorb residual moisture and prevent condensation on PCBs.</li>
+<li><strong>Conformal coating</strong>: Apply a thin polyurethane or acrylic conformal coat to the PCB to resist moisture, condensation, and salt vapor. Leave connectors and probe calibration points uncoated.</li>
+</ul>
+<h4 id="diagram-sensor-node-architecture">Diagram: Sensor Node Architecture<a class="headerlink" href="#diagram-sensor-node-architecture" title="Permanent link">&para;</a></h4>
+<iframe src="../../sims/sensor-node-architecture/main.html" width="100%" height="520px" scrolling="no"></iframe>
+<details>
+<summary>Hydroponic Sensor Node Electronics Architecture</summary>
+<p>Type: architecture-diagram
+<strong>sim-id:</strong> sensor-node-architecture<br/>
+<strong>Library:</strong> p5.js<br/>
+<strong>Status:</strong> Specified</p>
+<p>Purpose: Show the complete electronics architecture of a hydroponic sensor node — from sensors and actuators through signal conditioning and the microcontroller to the network layer — with power supply rails shown as colored overlays.</p>
+<p>Bloom Level: Analyze (L4) and Apply (L3)
+Bloom Verb: Design — students identify the function of each layer and could replicate the architecture for a new sensor.</p>
+<p>Layout: Canvas 900×520. Organized in four horizontal layers:
+- Bottom layer (Sensors and Actuators): pH electrode → op-amp buffer, DS18B20 → 1-Wire, DHT22 → GPIO, EC probe → analog conditioning, CO₂ NDIR → UART, Float switch → GPIO, Relay → GPIO
+- Second layer (Signal Conditioning): Op-amp buffers, voltage dividers, ADC (MCP3208), 1-Wire interface
+- Third layer (Microcontroller): Pico W block with GPIO pins labeled; ADC channels; I2C bus; UART; Wi-Fi antenna icon
+- Top layer (Network and Outputs): Wi-Fi → MQTT Broker, OLED Display (I2C), LCD (I2C), NeoPixels (GPIO)</p>
+<p>Power rails shown as colored horizontal bus lines: 3.3 V (red), 5 V (orange), 12 V (yellow), GND (black). Arrows show power connections from each component to its rail.</p>
+<p>Interactivity:
+- Hovering a component shows a tooltip: component name, interface type, supply voltage, accuracy specification.
+- Toggle "Show Power Rails" to show/hide the colored voltage bus overlays.
+- Toggle "Show Signal Path": animates the data flow from pH electrode → op-amp → ADC → Pico → Wi-Fi with a moving dot.
+- Clicking any component opens a detail panel: component name, datasheet link, typical cost, MicroPython code snippet.</p>
+<p>Responsive: Scales to container width; on narrow screens, stack the four layers vertically.</p>
+</details>
+<h2 id="key-takeaways">Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>pH glass electrodes</strong> generate a millivolt signal via hydrogen ion exchange across a thin glass membrane; the Nernst equation relates voltage to pH (approximately 59 mV per pH unit at 25 °C).</li>
+<li><strong>pH calibration</strong> requires two known buffer solutions (pH 4 and pH 7) to determine probe-specific slope and offset constants; probes must be kept moist and recalibrated weekly.</li>
+<li><strong>EC probes</strong> measure solution conductivity using AC voltage to avoid electrolysis; always apply temperature compensation because conductivity changes ~2% per °C.</li>
+<li><strong>DS18B20</strong> (water temperature) and <strong>DHT22</strong> (air temperature/humidity) are the standard sensor pair for hydroponic monitoring; DS18B20 supports multiple sensors on one wire.</li>
+<li><strong>CO₂ NDIR sensors</strong> (MH-Z19B, SCD40) measure CO₂ via infrared absorption and are required for grow rooms with CO₂ enrichment.</li>
+<li><strong>Float switches</strong> detect discrete levels; <strong>ultrasonic sensors</strong> provide continuous level measurement; <strong>flow sensors</strong> count pulse interrupts to measure volume.</li>
+<li><strong>Relay modules</strong> use optocouplers to electrically isolate the microcontroller from mains-voltage loads; always use normally-closed valves so power loss produces the safe (closed) state.</li>
+<li><strong>Voltage dividers</strong> scale sensor voltages to ADC input ranges; <strong>op-amp buffers</strong> prevent electrode loading and improve signal fidelity.</li>
+<li><strong>Moving average filters</strong> (3–10 samples) reduce ADC noise in pH and EC readings; window size balances noise reduction against measurement lag.</li>
+<li><strong>Waterproof enclosures</strong> (IP65+), <strong>cable glands</strong>, <strong>conformal coating</strong>, and <strong>desiccant</strong> are required for any electronics operating in or near nutrient solution.</li>
+</ul>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Chapter 15 complete — you can build the hardware!</p>
+<p><img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Cress leaps with arms raised">
+You now understand every layer of the hydroponic electronics stack — from glass electrodes and peristaltic pumps to op-amp conditioning and waterproof enclosures. Chapter 16 shifts to what happens to sensor data after it's collected: pandas DataFrames, time-series analysis, rolling statistics, and correlation analysis that turn raw pH and EC logs into actionable insights about your crop's health. Let's crunch some numbers!</p>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../14-networking-iot/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 14. Networking &amp; IoT">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                14. Networking & IoT
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../16-data-collection-analysis/" class="md-footer__link md-footer__link--next" aria-label="Next: 16. Data Collection">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                16. Data Collection
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.action.edit", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>

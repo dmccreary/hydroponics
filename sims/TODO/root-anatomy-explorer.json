@@ -1,0 +1,14 @@
+{
+  "sim_id": "root-anatomy-explorer",
+  "diagram_name": "Root Cross-Section and Absorption Zones",
+  "chapter_number": 2,
+  "chapter_title": "Root Biology and Nutrient Absorption",
+  "chapter_dir": "02-root-biology",
+  "library": "p5.js",
+  "bloom_level": "Remember (L1) and Understand (L2)",
+  "bloom_verb": "Identify and describe — students identify each root zone/tissue and describe its role",
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-05-29",
+  "specification": "Type: diagram\n**sim-id:** root-anatomy-explorer<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nPurpose: Give students a visual and interactive reference for root anatomy so they can connect each structural feature to its function in nutrient absorption and understand why root health matters to a hydroponic grower.\n\nBloom Level: Remember (L1) and Understand (L2)\nBloom Verb: Identify and describe — students identify each root zone/tissue and describe its role\n\nVisual layout: Two views side by side:\nLeft view (60% width): Longitudinal section of root tip showing the five zones from tip to mature root tissue:\n- Root cap (gray-brown, rounded tip)\n- Meristematic zone (tightly packed small cells, deep green)\n- Zone of elongation (cells noticeably longer, lighter green)\n- Zone of differentiation: root hair cells visible as fine projections from epidermis (teal), endodermis with Casparian strip visible (orange band), vascular cylinder (dark blue center)\n- Older suberized root (lighter gray-brown, no hairs)\n\nRight view (40% width): Cross-sectional slice through the differentiation zone showing:\n- Epidermis with root hair (outermost layer, teal)\n- Cortex (several layers of loosely packed cells, light green)\n- Endodermis with Casparian strip (orange band, labeled)\n- Pericycle (thin layer just inside endodermis)\n- Xylem vessels (star-shaped, dark blue)\n- Phloem cells (between xylem arms, purple)\n\nInteractivity:\n- Click any labeled tissue in either view to open an infobox with:\n  1. Tissue name and cell types\n  2. Function in nutrient absorption or transport\n  3. What happens to plant growth if this tissue is damaged (e.g., \"If the Casparian strip is damaged, ions bypass the endodermis and the root loses selectivity\")\n- Hover over the Casparian strip in the cross-section to see a tooltip explaining why it forces ions to enter through cell membranes rather than passing between cells\n- Toggle button \"Show Ion Pathway\" — animates a colored dot (representing a nitrate ion) moving from solution → root hair → cortex → endodermis → xylem\n\nColor scheme: Green tones for living tissue, teal for root hairs, orange for Casparian strip, blue for xylem, purple for phloem\nResponsive: Scales to container width; cross-section repositions below longitudinal view on narrow screens"
+}

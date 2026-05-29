@@ -1,0 +1,14 @@
+{
+  "sim_id": "spc-dashboard",
+  "diagram_name": "SPC Dashboard for Hydroponics",
+  "chapter_number": 17,
+  "chapter_title": "Data Visualization and Process Control",
+  "chapter_dir": "17-data-visualization",
+  "library": "p5.js",
+  "bloom_level": "Analyze (L4) and Evaluate (L5)",
+  "bloom_verb": "Evaluate — students assess the system's performance by interpreting control chart patterns, anomaly flags, and trend slopes.",
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-05-29",
+  "specification": "Type: interactive-dashboard\n**sim-id:** spc-dashboard<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nPurpose: Demonstrate a complete SPC dashboard for a 35-day hydroponic crop cycle, allowing students to interactively explore control charts, anomaly detection, and trend analysis for pH, EC, and temperature.\n\nBloom Level: Analyze (L4) and Evaluate (L5)\nBloom Verb: Evaluate — students assess the system's performance by interpreting control chart patterns, anomaly flags, and trend slopes.\n\nLayout: Canvas 900×540. Three sections:\n\nTop section: Sensor selector tabs (pH | EC | Temperature) + time range slider (1 day to 35 days).\n\nMiddle section: Main control chart (60% of height)\n- Line plot of selected sensor over selected time range\n- Center line (green), UCL/LCL (red dashed), UWL/LWL (orange dotted)\n- Rolling mean overlay (blue, thick)\n- Out-of-control points shown as red circles\n- Trend anomaly periods shaded in light red\n\nBottom section: three panels side by side:\n- Stats panel: mean, std, UCL, LCL, % in-control, trend slope\n- Anomaly table: timestamp, value, z-score, anomaly type (Z-score / IQR / Trend)\n- Distribution histogram with CL and control limit lines overlaid\n\nInteractivity:\n- Clicking a point on the chart highlights it in the anomaly table\n- Clicking a table row highlights the point on the chart\n- Toggle \"Show All Methods\": adds IQR fences and moving-average bands to the chart\n- Toggle \"Simulate Dosing Event\": injects a simulated pH spike at day 18 and shows how the anomaly detection methods respond differently\n\nResponsive: Scales to container; on narrow screens, anomaly table moves below the chart."
+}

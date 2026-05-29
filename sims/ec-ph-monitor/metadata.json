@@ -1,0 +1,21 @@
+{
+  "title": "EC and pH Monitor Over a Crop Cycle",
+  "description": "EC and pH Monitor Over a Crop Cycle",
+  "creator": "Dementia Education Project",
+  "date": "2026-05-29",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "ec-ph-monitor",
+  "library": "Chart.js",
+  "bloomLevel": "Analyze (L4)",
+  "bloomVerb": "Examine — students examine patterns in EC and pH data and identify when and why intervention is needed",
+  "completion_status": "scaffold",
+  "chapter_number": 5,
+  "chapter_title": "Nutrient Solution Chemistry and Mixing",
+  "chapter_dir": "05-nutrient-solution-chemistry"
+}

@@ -1,0 +1,21 @@
+{
+  "title": "Plant Life Cycle Stages Explorer",
+  "description": "Plant Life Cycle Stages Explorer",
+  "creator": "Dementia Education Project",
+  "date": "2026-05-29",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "plant-life-cycle-explorer",
+  "library": "p5.js",
+  "bloomLevel": "Remember (L1) and Understand (L2)",
+  "bloomVerb": "Identify and describe — students identify each stage and describe the grower's management priorities",
+  "completion_status": "scaffold",
+  "chapter_number": 1,
+  "chapter_title": "Introduction to Hydroponics",
+  "chapter_dir": "01-introduction"
+}

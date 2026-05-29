@@ -1,0 +1,21 @@
+{
+  "title": "Failure Mode Analysis Decision Tree",
+  "description": "Failure Mode Analysis Decision Tree",
+  "creator": "Dementia Education Project",
+  "date": "2026-05-29",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "failure-mode-analysis",
+  "library": "p5.js",
+  "bloomLevel": "Analyze (L4) and Evaluate (L5)",
+  "bloomVerb": "Assess — students assess the failure risk profile of a system and recommend mitigations",
+  "completion_status": "scaffold",
+  "chapter_number": 7,
+  "chapter_title": "Advanced Hydroponic Systems and Maintenance",
+  "chapter_dir": "07-advanced-systems"
+}

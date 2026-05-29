@@ -1,0 +1,21 @@
+{
+  "title": "Nutrient Deficiency Visual Diagnostic Tool",
+  "description": "Nutrient Deficiency Visual Diagnostic Tool",
+  "creator": "Dementia Education Project",
+  "date": "2026-05-29",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "nutrient-deficiency-visual-diagnostic",
+  "library": "p5.js",
+  "bloomLevel": "Analyze (L4)",
+  "bloomVerb": "Differentiate — students differentiate between deficiency symptoms based on leaf age and visual pattern",
+  "completion_status": "scaffold",
+  "chapter_number": 3,
+  "chapter_title": "Water Transport, Photosynthesis, and Plant Health",
+  "chapter_dir": "03-water-transport"
+}

@@ -1,0 +1,14 @@
+{
+  "sim_id": "root-exudate-ph-drift",
+  "diagram_name": "Root Exudate pH Drift Simulator",
+  "chapter_number": 2,
+  "chapter_title": "Root Biology and Nutrient Absorption",
+  "chapter_dir": "02-root-biology",
+  "library": "p5.js",
+  "bloom_level": "Apply (L3)",
+  "bloom_verb": "Demonstrate — students demonstrate how nutrient formula affects pH stability",
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-05-29",
+  "specification": "Type: microsim\n**sim-id:** root-exudate-ph-drift<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nPurpose: Show students how root exudate release drives pH drift in a hydroponic reservoir over time, and how nitrogen source (nitrate vs. ammonium) changes the direction of drift. Students adjust controls and observe pH over simulated days.\n\nBloom Level: Apply (L3)\nBloom Verb: Demonstrate — students demonstrate how nutrient formula affects pH stability\n\nInstructional Rationale: Parameter exploration is appropriate for Apply-level objectives. Students adjust the N-source ratio and observe the pH outcome, building intuition for managing pH drift before they encounter it in a real system.\n\nCanvas layout:\n- Left panel (55%): Line chart of reservoir pH over 14 simulated days; y-axis 4.0–8.0 with optimal zone (5.5–6.5) shaded green; drift lines for each scenario update in real time as parameters change\n- Right panel (45%): Controls and current-day status display\n\nInteractive controls:\n- Slider \"Nitrate %\": 0–100% (ammonium fills the remainder); label updates to show \"Nitrate/Ammonium ratio X:Y\"\n- Slider \"Plant Biomass\" (proxy for exudate production): Small plant (50g fresh weight) → Large plant (500g fresh weight)\n- Slider \"Reservoir Volume\": 2L → 20L (larger reservoir = more buffering capacity, slower drift)\n- Button \"Simulate 14 Days\" — runs the simulation with current parameters\n- Button \"Reset\"\n- Toggle \"Show Correction Events\": Adds pH-Down dosing events on days where pH exceeds 6.5, showing how the grower would intervene\n\nData displayed:\n- Current pH (day selected by hovering chart line)\n- Days out of optimal range\n- Total pH-Down corrections needed with current parameters\n\nVisual style: Green shaded band for optimal pH range; red line when pH is out of range; teal line when in range; controls in right panel with clear labels and current values shown"
+}

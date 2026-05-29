@@ -1,0 +1,21 @@
+{
+  "title": "IoT Data Flow Architecture",
+  "description": "IoT Data Flow Architecture",
+  "creator": "Dementia Education Project",
+  "date": "2026-05-29",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "iot-data-flow",
+  "library": "p5.js",
+  "bloomLevel": "Understand (L2) and Analyze (L4)",
+  "bloomVerb": "Trace — students follow a sensor reading from hardware through each system layer to its final destination.",
+  "completion_status": "scaffold",
+  "chapter_number": 14,
+  "chapter_title": "Networking, IoT, and Advanced MicroPython",
+  "chapter_dir": "14-networking-iot"
+}

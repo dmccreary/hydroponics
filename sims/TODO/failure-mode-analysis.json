@@ -1,0 +1,14 @@
+{
+  "sim_id": "failure-mode-analysis",
+  "diagram_name": "Failure Mode Analysis Decision Tree",
+  "chapter_number": 7,
+  "chapter_title": "Advanced Hydroponic Systems and Maintenance",
+  "chapter_dir": "07-advanced-systems",
+  "library": "p5.js",
+  "bloom_level": "Analyze (L4) and Evaluate (L5)",
+  "bloom_verb": "Assess — students assess the failure risk profile of a system and recommend mitigations",
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-05-29",
+  "specification": "Type: workflow\n**sim-id:** failure-mode-analysis<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nPurpose: Guide students through a structured failure mode analysis for their chosen system type, identifying the most likely failure modes, estimated time-to-crop-loss for each, and the appropriate redundancy or monitoring response.\n\nBloom Level: Analyze (L4) and Evaluate (L5)\nBloom Verb: Assess — students assess the failure risk profile of a system and recommend mitigations\n\nLayout: Interactive diagram with left panel (system type selector) and main panel (failure mode display)\n\nLeft panel: Radio buttons for system type: Kratky | DWC | NFT | Ebb-and-Flow | Aeroponics | Drip\n\nMain panel: For the selected system, shows a failure mode matrix:\n- Each row = one failure mode (e.g., \"Air pump failure\", \"Water pump failure\", \"Timer failure\", \"Power outage\", \"Root rot outbreak\")\n- Columns: Failure Mode | Time to Crop Loss | Detection Method | Recommended Mitigation\n- Rows are color-coded by severity: Red = crop death in <4 hours, Orange = 4–24 hours, Yellow = 1–7 days, Green = recoverable if caught\n- Clicking any row expands a detail panel with: what causes this failure, early warning signs, step-by-step recovery procedure\n\nInteractivity:\n- Selecting a different system type updates all failure mode rows instantly\n- Toggle \"Show Commercial vs. Hobby\": changes the recommended mitigations based on scale\n- \"Risk Score\" button: calculates a total system risk score based on the selected failure modes and displays a bar chart comparing all six system types\n- Each failure mode row has a \"Mark as Mitigated\" checkbox; when checked, the row turns green and the risk score decreases\n\nResponsive: Scales to container; columns compress gracefully on narrow screens"
+}

@@ -1,0 +1,14 @@
+{
+  "sim_id": "ion-uptake-mechanisms",
+  "diagram_name": "Ion Uptake Mechanisms Comparison",
+  "chapter_number": 2,
+  "chapter_title": "Root Biology and Nutrient Absorption",
+  "chapter_dir": "02-root-biology",
+  "library": "p5.js",
+  "bloom_level": "Understand (L2)",
+  "bloom_verb": "Compare — students compare the two mechanisms and explain when each operates",
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-05-29",
+  "specification": "Type: microsim\n**sim-id:** ion-uptake-mechanisms<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nPurpose: Allow students to directly compare passive diffusion and active transport side-by-side, with explicit data on concentration gradients, ATP consumption, and ion movement direction.\n\nBloom Level: Understand (L2)\nBloom Verb: Compare — students compare the two mechanisms and explain when each operates\n\nInstructional Rationale: Side-by-side step-through with concrete concentration values is appropriate because the Understand/compare objective requires students to see both mechanisms operate simultaneously with real numbers. Continuous animation would prevent students from reading the concentration values that reveal whether the gradient favors inward or outward movement.\n\nCanvas layout: Two panels side by side\nLeft panel (45%): Passive diffusion — cell membrane with two channel proteins; concentration bar graph on each side; ion dots (blue) on solution side\nRight panel (45%): Active transport — cell membrane with pump protein; ATP icon; concentration bar graph on each side; ion dots (orange) starting on solution side\nCenter divider (10%): Shared step counter and buttons\n\nData Visibility Requirements for each panel:\nStep 0 (initial): Solution concentration = 200 units, cell interior = 20 units; gradient arrow visible pointing inward (left panel) and outward (right panel showing high internal K+)\nStep 1 (diffusion): Passive: 3 blue ions move through channel inward; concentration readout updates (197 → 23); ATP consumed: 0\nStep 2 (active transport): Pump protein changes shape; ATP counter decrements by 1; orange ion moves from solution (50 units) into cell (already 500 units — against gradient); concentration updates\nStep 3 (oxygen dependency): Toggle \"Remove O2\" button — passive diffusion continues unchanged; active transport stops (pump grays out); \"No ATP — pump inactive\" message\n\nInteractive controls:\n- Button \"Next Step\" / \"Previous Step\" — advance through comparison steps 0–3\n- Toggle \"Remove O2\" — demonstrates what happens to each mechanism when oxygen is absent\n- Hover any ion dot: Shows ion name, charge, and which nutrients use this pathway primarily\n- Hover concentration bar: Shows units in ppm and mM alongside the bar height\n\nDefault state: Step 0, O2 present\nVisual style: Flat vector, teal for passive pathway, orange for active transport; consistent with textbook palette"
+}

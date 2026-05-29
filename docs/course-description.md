@@ -12,7 +12,7 @@ Hydroponics: From Mason Jar to Vertical Farm
 
 ## Why This Course Matters
 
-Hydroponics — growing plants in nutrient-rich water without soil — is one of
+**Hydroponics** — growing plants in nutrient-rich water without soil — is one of
 the fastest-growing sectors in agriculture. The global vertical farming market
 exceeded $20 billion in 2026. Yet the same science that powers a rooftop
 commercial farm can be explored for as little as $10 with a mason jar, a net
@@ -24,8 +24,7 @@ before scaling up to the economics and automation of commercial vertical farms.
 Hydroponics also sits at the intersection of biology, chemistry, engineering,
 food science, and data science — making it an ideal STEM vehicle for
 project-based learning. A school garden project, an automated pH monitor
-built on an Arduino, or a vertical farm business plan are all natural capstone
-outcomes for this course.
+built on an Raspberry Pi Pico with a ph sensor, or a vertical farm business plan are all natural capstone outcomes for this course.
 
 ## Audience
 
@@ -89,8 +88,7 @@ plant physiology before touching physical hardware.
    HVAC basics for grow rooms, data loggers and alarm setpoints
 
 10. **Automation and IoT** — analog and digital sensors (pH electrode, EC probe,
-    temperature thermistor, humidity/CO₂ sensors), microcontrollers (Arduino Uno,
-    Arduino Mega, ESP32, Raspberry Pi 4), dosing pumps and relay boards,
+    temperature thermistor, humidity/CO₂ sensors), microcontrollers (Raspberry Pi Pico, ESP32, Raspberry Pi 5), dosing pumps and relay boards, MicroPython, MicroPython libraries,
     open-source software platforms (Mycodo, OpenHab, Blynk), data logging and
     dashboard visualization, wireless sensor networks (NRF24L01+, Wi-Fi, MQTT)
 
@@ -176,7 +174,7 @@ By the end of this textbook, the reader will be able to:
   growing media and net pots, and transplant seedlings into it
 - Adjust the pH of a nutrient solution using pH-Up and pH-Down solutions, and
   verify with a calibrated pH meter
-- Write simple Arduino or ESP32 code to read a pH or temperature sensor, display
+- Write simple MicroPython or ESP32 code to read a pH or temperature sensor, display
   the value on an LCD, and log it to a CSV file
 - Select an appropriate hydroponic system type and crop for a given space,
   budget, and experience level, justifying the choice with cost and complexity
@@ -216,9 +214,10 @@ By the end of this textbook, the reader will be able to:
 - Design a complete small-scale hydroponic system — from component selection,
   bill of materials, and nutrient schedule through sensor wiring and
   environmental automation — and predict its weekly yield using MicroSim models
-- Build and program an IoT monitoring dashboard (Arduino/ESP32 + open-source
-  platform) that reads pH, EC, and temperature every 5 minutes, logs data to
-  a spreadsheet, and sends an alert when values drift outside safe bounds
+- Build and program an IoT monitoring dashboard (MicroPython on Raspberry Pi
+  Pico W or ESP32 + open-source platform) that reads pH, EC, and temperature
+  every 5 minutes, logs data to a spreadsheet, and sends an alert when values
+  drift outside safe bounds
 - Develop a capstone school garden project including system design, crop
   rotation plan, nutrient schedule, food safety sanitation protocol, and a
   cost-benefit analysis suitable for a grant application

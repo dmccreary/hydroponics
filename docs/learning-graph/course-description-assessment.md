@@ -32,8 +32,8 @@ three source categories:
 - [Best Hydroponic Systems for Beginners: Kratky, NFT, DWC — Hope Innovation](https://hopeinnovation.com/blogs/hydroponic-tips/best-hydroponic-systems-for-beginners-kratky-nft-and-dwc-explained) —
   Kratky ($10–15), DWC ($50–120), NFT vs. pump-failure risk comparison
 - [DIY Hydroponic Systems on a Budget — Grow It Depot](https://www.growitdepot.com/blogs/news/diy-hydroponic-systems-budget-guide)
-- [Arduino Hydroponics with pH and EC Sensors — Electronic Clinic](https://www.electroniclinic.com/arduino-hydroponics-diy-hydroponics-system-using-ph-sensor-ec-sensor-hydroponic/)
-- [Smart Hydroponics: Arduino and Raspberry Pi — SMART GROW / PMC](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10731670/)
+- [Hydroponics IoT: pH and EC Sensor Interfacing — Electronic Clinic](https://www.electroniclinic.com/arduino-hydroponics-diy-hydroponics-system-using-ph-sensor-ec-sensor-hydroponic/)
+- [Smart Hydroponics: Low-Cost Automated System — SMART GROW / PMC](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10731670/)
 
 **Commercial / vertical farming:**
 - [20 Vertical Farming Companies Operating at Scale — Omdena](https://www.omdena.com/blog/top-companies-in-vertical-farming) —

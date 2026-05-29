@@ -1,0 +1,6088 @@
+{
+  "metadata": {
+    "title": "Hydroponics: From Mason Jar to Vertical Farm",
+    "description": "An interactive intelligent textbook on hydroponics for advanced high-school and college students, featuring MicroSims that bring plant physiology, nutrient science, MicroPython automation, data analysis, solar energy, and vertical farming economics to life.",
+    "creator": "Dan McCreary",
+    "date": "2026-05-28",
+    "version": "1.0",
+    "format": "Learning Graph JSON v1.0",
+    "schema": "https://raw.githubusercontent.com/dmccreary/learning-graphs/refs/heads/main/src/schema/learning-graph-schema.json",
+    "license": "CC BY-NC-SA 4.0 DEED"
+  },
+  "groups": {
+    "FOUND": {
+      "classifierName": "Foundation Concepts",
+      "color": "SteelBlue",
+      "font": {
+        "color": "white"
+      }
+    },
+    "PHYS": {
+      "classifierName": "Plant Physiology",
+      "color": "DarkGreen",
+      "font": {
+        "color": "white"
+      }
+    },
+    "NUTR": {
+      "classifierName": "Nutrients and Chemistry",
+      "color": "Teal",
+      "font": {
+        "color": "white"
+      }
+    },
+    "SYST": {
+      "classifierName": "Hydroponic System Types",
+      "color": "DodgerBlue",
+      "font": {
+        "color": "white"
+      }
+    },
+    "DIY": {
+      "classifierName": "DIY and School Systems",
+      "color": "LimeGreen",
+      "font": {
+        "color": "black"
+      }
+    },
+    "GROW": {
+      "classifierName": "Growing Media and Crops",
+      "color": "OliveDrab",
+      "font": {
+        "color": "white"
+      }
+    },
+    "LITE": {
+      "classifierName": "Lighting Science",
+      "color": "Gold",
+      "font": {
+        "color": "black"
+      }
+    },
+    "ENVC": {
+      "classifierName": "Environmental Control",
+      "color": "DarkGoldenrod",
+      "font": {
+        "color": "white"
+      }
+    },
+    "UPYTH": {
+      "classifierName": "MicroPython Programming",
+      "color": "MediumPurple",
+      "font": {
+        "color": "white"
+      }
+    },
+    "SENS": {
+      "classifierName": "Sensors and Electronics",
+      "color": "DarkSlateBlue",
+      "font": {
+        "color": "white"
+      }
+    },
+    "DATA": {
+      "classifierName": "Data Analysis",
+      "color": "Indigo",
+      "font": {
+        "color": "white"
+      }
+    },
+    "SAFE": {
+      "classifierName": "Food Safety and Sanitation",
+      "color": "Crimson",
+      "font": {
+        "color": "white"
+      }
+    },
+    "SOLAR": {
+      "classifierName": "Solar Energy and Power",
+      "color": "Orange",
+      "font": {
+        "color": "black"
+      }
+    },
+    "VERT": {
+      "classifierName": "Vertical Farming",
+      "color": "DarkOrchid",
+      "font": {
+        "color": "white"
+      }
+    },
+    "FIN": {
+      "classifierName": "Financial Modeling",
+      "color": "SaddleBrown",
+      "font": {
+        "color": "white"
+      }
+    }
+  },
+  "nodes": [
+    {
+      "id": 1,
+      "label": "Hydroponics Definition",
+      "group": "FOUND",
+      "shape": "box"
+    },
+    {
+      "id": 2,
+      "label": "History of Hydroponics",
+      "group": "FOUND"
+    },
+    {
+      "id": 3,
+      "label": "William Frederick Gericke",
+      "group": "FOUND"
+    },
+    {
+      "id": 4,
+      "label": "Soilless Growing Systems",
+      "group": "FOUND"
+    },
+    {
+      "id": 5,
+      "label": "Soil vs Soilless Comparison",
+      "group": "FOUND"
+    },
+    {
+      "id": 6,
+      "label": "Water as Growth Medium",
+      "group": "FOUND"
+    },
+    {
+      "id": 7,
+      "label": "Controlled Environment Ag",
+      "group": "FOUND"
+    },
+    {
+      "id": 8,
+      "label": "Indoor Growing Basics",
+      "group": "FOUND"
+    },
+    {
+      "id": 9,
+      "label": "Plant Growth Fundamentals",
+      "group": "FOUND",
+      "shape": "box"
+    },
+    {
+      "id": 10,
+      "label": "Cell Biology Basics",
+      "group": "FOUND",
+      "shape": "box"
+    },
+    {
+      "id": 11,
+      "label": "Photosynthesis Overview",
+      "group": "FOUND"
+    },
+    {
+      "id": 12,
+      "label": "Cellular Respiration Overview",
+      "group": "FOUND"
+    },
+    {
+      "id": 13,
+      "label": "Plant Life Cycle",
+      "group": "FOUND"
+    },
+    {
+      "id": 14,
+      "label": "Seed Germination",
+      "group": "FOUND"
+    },
+    {
+      "id": 15,
+      "label": "Seedling Development",
+      "group": "FOUND"
+    },
+    {
+      "id": 16,
+      "label": "Vegetative Growth Stage",
+      "group": "FOUND"
+    },
+    {
+      "id": 17,
+      "label": "Flowering and Fruiting Stage",
+      "group": "FOUND"
+    },
+    {
+      "id": 18,
+      "label": "Harvest and Post-Harvest",
+      "group": "FOUND"
+    },
+    {
+      "id": 19,
+      "label": "Crop Rotation Planning",
+      "group": "FOUND"
+    },
+    {
+      "id": 20,
+      "label": "Grow Room Layout",
+      "group": "FOUND"
+    },
+    {
+      "id": 21,
+      "label": "Space Utilization",
+      "group": "FOUND"
+    },
+    {
+      "id": 22,
+      "label": "Year-Round Production",
+      "group": "FOUND"
+    },
+    {
+      "id": 23,
+      "label": "Food Security Context",
+      "group": "FOUND"
+    },
+    {
+      "id": 24,
+      "label": "Urban Agriculture Definition",
+      "group": "FOUND"
+    },
+    {
+      "id": 25,
+      "label": "Hydroponics vs Aquaponics",
+      "group": "FOUND"
+    },
+    {
+      "id": 26,
+      "label": "Root Anatomy",
+      "group": "PHYS"
+    },
+    {
+      "id": 27,
+      "label": "Root Hair Cells",
+      "group": "PHYS"
+    },
+    {
+      "id": 28,
+      "label": "Root Zone Oxygen Requirement",
+      "group": "PHYS"
+    },
+    {
+      "id": 29,
+      "label": "Nutrient Uptake Mechanisms",
+      "group": "PHYS"
+    },
+    {
+      "id": 30,
+      "label": "Passive Diffusion",
+      "group": "PHYS"
+    },
+    {
+      "id": 31,
+      "label": "Active Transport",
+      "group": "PHYS"
+    },
+    {
+      "id": 32,
+      "label": "Osmosis and Water Potential",
+      "group": "PHYS"
+    },
+    {
+      "id": 33,
+      "label": "Transpiration",
+      "group": "PHYS"
+    },
+    {
+      "id": 34,
+      "label": "Xylem Transport",
+      "group": "PHYS"
+    },
+    {
+      "id": 35,
+      "label": "Phloem Transport",
+      "group": "PHYS"
+    },
+    {
+      "id": 36,
+      "label": "Stomata Function",
+      "group": "PHYS"
+    },
+    {
+      "id": 37,
+      "label": "Leaf Structure",
+      "group": "PHYS"
+    },
+    {
+      "id": 38,
+      "label": "Chloroplast Function",
+      "group": "PHYS"
+    },
+    {
+      "id": 39,
+      "label": "Photosynthesis Light Reactions",
+      "group": "PHYS"
+    },
+    {
+      "id": 40,
+      "label": "Calvin Cycle",
+      "group": "PHYS"
+    },
+    {
+      "id": 41,
+      "label": "Chlorophyll and Pigments",
+      "group": "PHYS"
+    },
+    {
+      "id": 42,
+      "label": "Root Exudates",
+      "group": "PHYS"
+    },
+    {
+      "id": 43,
+      "label": "Rhizosphere Chemistry",
+      "group": "PHYS"
+    },
+    {
+      "id": 44,
+      "label": "Cation Exchange at Root Surface",
+      "group": "PHYS"
+    },
+    {
+      "id": 45,
+      "label": "Ion Concentration Gradients",
+      "group": "PHYS"
+    },
+    {
+      "id": 46,
+      "label": "Root Adaptation to Hydroponics",
+      "group": "PHYS"
+    },
+    {
+      "id": 47,
+      "label": "Dissolved Oxygen in Root Zone",
+      "group": "PHYS"
+    },
+    {
+      "id": 48,
+      "label": "Root Rot Physiology",
+      "group": "PHYS"
+    },
+    {
+      "id": 49,
+      "label": "Plant Stress Responses",
+      "group": "PHYS"
+    },
+    {
+      "id": 50,
+      "label": "Ethylene as Stress Hormone",
+      "group": "PHYS"
+    },
+    {
+      "id": 51,
+      "label": "Nutrient Deficiency Physiology",
+      "group": "PHYS"
+    },
+    {
+      "id": 52,
+      "label": "Nutrient Toxicity Effects",
+      "group": "PHYS"
+    },
+    {
+      "id": 53,
+      "label": "Tip Burn in Lettuce",
+      "group": "PHYS"
+    },
+    {
+      "id": 54,
+      "label": "Blossom End Rot",
+      "group": "PHYS"
+    },
+    {
+      "id": 55,
+      "label": "Interveinal Chlorosis",
+      "group": "PHYS"
+    },
+    {
+      "id": 56,
+      "label": "Purple Stem Syndrome",
+      "group": "PHYS"
+    },
+    {
+      "id": 57,
+      "label": "Necrosis Patterns",
+      "group": "PHYS"
+    },
+    {
+      "id": 58,
+      "label": "Growth Rate Measurement",
+      "group": "PHYS"
+    },
+    {
+      "id": 59,
+      "label": "Biomass Accumulation",
+      "group": "PHYS"
+    },
+    {
+      "id": 60,
+      "label": "Fresh Weight vs Dry Weight",
+      "group": "PHYS"
+    },
+    {
+      "id": 61,
+      "label": "Essential Plant Nutrients",
+      "group": "NUTR"
+    },
+    {
+      "id": 62,
+      "label": "Macronutrient Definition",
+      "group": "NUTR"
+    },
+    {
+      "id": 63,
+      "label": "Nitrogen Functions in Plants",
+      "group": "NUTR"
+    },
+    {
+      "id": 64,
+      "label": "Phosphorus Functions in Plants",
+      "group": "NUTR"
+    },
+    {
+      "id": 65,
+      "label": "Potassium Functions in Plants",
+      "group": "NUTR"
+    },
+    {
+      "id": 66,
+      "label": "Calcium Functions in Plants",
+      "group": "NUTR"
+    },
+    {
+      "id": 67,
+      "label": "Magnesium Functions in Plants",
+      "group": "NUTR"
+    },
+    {
+      "id": 68,
+      "label": "Sulfur Functions in Plants",
+      "group": "NUTR"
+    },
+    {
+      "id": 69,
+      "label": "Micronutrient Definition",
+      "group": "NUTR"
+    },
+    {
+      "id": 70,
+      "label": "Iron in Plant Nutrition",
+      "group": "NUTR"
+    },
+    {
+      "id": 71,
+      "label": "Manganese in Plant Nutrition",
+      "group": "NUTR"
+    },
+    {
+      "id": 72,
+      "label": "Zinc in Plant Nutrition",
+      "group": "NUTR"
+    },
+    {
+      "id": 73,
+      "label": "Copper in Plant Nutrition",
+      "group": "NUTR"
+    },
+    {
+      "id": 74,
+      "label": "Boron in Plant Nutrition",
+      "group": "NUTR"
+    },
+    {
+      "id": 75,
+      "label": "Molybdenum in Plant Nutrition",
+      "group": "NUTR"
+    },
+    {
+      "id": 76,
+      "label": "Chlorine in Plant Nutrition",
+      "group": "NUTR"
+    },
+    {
+      "id": 77,
+      "label": "Nickel in Plant Nutrition",
+      "group": "NUTR"
+    },
+    {
+      "id": 78,
+      "label": "pH Scale Definition",
+      "group": "NUTR",
+      "shape": "box"
+    },
+    {
+      "id": 79,
+      "label": "pH and Nutrient Availability",
+      "group": "NUTR"
+    },
+    {
+      "id": 80,
+      "label": "Mulder's Chart",
+      "group": "NUTR"
+    },
+    {
+      "id": 81,
+      "label": "Electrical Conductivity (EC)",
+      "group": "NUTR",
+      "shape": "box"
+    },
+    {
+      "id": 82,
+      "label": "EC as TDS Proxy",
+      "group": "NUTR"
+    },
+    {
+      "id": 83,
+      "label": "Parts Per Million (ppm)",
+      "group": "NUTR",
+      "shape": "box"
+    },
+    {
+      "id": 84,
+      "label": "Nutrient Solution Concentration",
+      "group": "NUTR"
+    },
+    {
+      "id": 85,
+      "label": "Two-Part Nutrient Systems",
+      "group": "NUTR"
+    },
+    {
+      "id": 86,
+      "label": "Three-Part Nutrient Systems",
+      "group": "NUTR"
+    },
+    {
+      "id": 87,
+      "label": "Calcium Nitrate",
+      "group": "NUTR"
+    },
+    {
+      "id": 88,
+      "label": "Magnesium Sulfate (Epsom Salt)",
+      "group": "NUTR"
+    },
+    {
+      "id": 89,
+      "label": "Potassium Nitrate",
+      "group": "NUTR"
+    },
+    {
+      "id": 90,
+      "label": "Potassium Phosphate",
+      "group": "NUTR"
+    },
+    {
+      "id": 91,
+      "label": "Chelated Iron (EDTA/DTPA)",
+      "group": "NUTR"
+    },
+    {
+      "id": 92,
+      "label": "pH-Up and pH-Down",
+      "group": "NUTR"
+    },
+    {
+      "id": 93,
+      "label": "pH Buffer Solutions",
+      "group": "NUTR"
+    },
+    {
+      "id": 94,
+      "label": "Water Hardness",
+      "group": "NUTR"
+    },
+    {
+      "id": 95,
+      "label": "Bicarbonate Buffering",
+      "group": "NUTR"
+    },
+    {
+      "id": 96,
+      "label": "Cation-Anion Balance",
+      "group": "NUTR"
+    },
+    {
+      "id": 97,
+      "label": "Nutrient Solution Mixing Order",
+      "group": "NUTR"
+    },
+    {
+      "id": 98,
+      "label": "Stock Solution Concentrates",
+      "group": "NUTR"
+    },
+    {
+      "id": 99,
+      "label": "Nutrient Solution Temperature",
+      "group": "NUTR"
+    },
+    {
+      "id": 100,
+      "label": "Nutrient Solution Oxygen",
+      "group": "NUTR"
+    },
+    {
+      "id": 101,
+      "label": "Passive vs Active Systems",
+      "group": "SYST"
+    },
+    {
+      "id": 102,
+      "label": "Kratky Method",
+      "group": "SYST"
+    },
+    {
+      "id": 103,
+      "label": "Kratky Air Gap Principle",
+      "group": "SYST"
+    },
+    {
+      "id": 104,
+      "label": "Deep Water Culture (DWC)",
+      "group": "SYST"
+    },
+    {
+      "id": 105,
+      "label": "DWC Air Pump and Air Stone",
+      "group": "SYST"
+    },
+    {
+      "id": 106,
+      "label": "Single-Bucket DWC",
+      "group": "SYST"
+    },
+    {
+      "id": 107,
+      "label": "Multi-Bucket DWC",
+      "group": "SYST"
+    },
+    {
+      "id": 108,
+      "label": "Recirculating DWC (RDWC)",
+      "group": "SYST"
+    },
+    {
+      "id": 109,
+      "label": "Nutrient Film Technique (NFT)",
+      "group": "SYST"
+    },
+    {
+      "id": 110,
+      "label": "NFT Channel Design",
+      "group": "SYST"
+    },
+    {
+      "id": 111,
+      "label": "NFT Flow Rate",
+      "group": "SYST"
+    },
+    {
+      "id": 112,
+      "label": "NFT Pump Failure Risk",
+      "group": "SYST"
+    },
+    {
+      "id": 113,
+      "label": "Ebb-and-Flow System",
+      "group": "SYST"
+    },
+    {
+      "id": 114,
+      "label": "Ebb-and-Flow Timer Programming",
+      "group": "SYST"
+    },
+    {
+      "id": 115,
+      "label": "Flood Table Design",
+      "group": "SYST"
+    },
+    {
+      "id": 116,
+      "label": "Aeroponics Definition",
+      "group": "SYST"
+    },
+    {
+      "id": 117,
+      "label": "High-Pressure Aeroponics",
+      "group": "SYST"
+    },
+    {
+      "id": 118,
+      "label": "Low-Pressure Aeroponics",
+      "group": "SYST"
+    },
+    {
+      "id": 119,
+      "label": "Fogponics (Ultrasonic)",
+      "group": "SYST"
+    },
+    {
+      "id": 120,
+      "label": "Drip Irrigation Hydroponics",
+      "group": "SYST"
+    },
+    {
+      "id": 121,
+      "label": "Wick System",
+      "group": "SYST"
+    },
+    {
+      "id": 122,
+      "label": "System Selection Criteria",
+      "group": "SYST"
+    },
+    {
+      "id": 123,
+      "label": "Pump Selection and Sizing",
+      "group": "SYST"
+    },
+    {
+      "id": 124,
+      "label": "Reservoir Design",
+      "group": "SYST"
+    },
+    {
+      "id": 125,
+      "label": "Net Pots and Baskets",
+      "group": "SYST"
+    },
+    {
+      "id": 126,
+      "label": "Tubing and Fittings",
+      "group": "SYST"
+    },
+    {
+      "id": 127,
+      "label": "System Failure Modes",
+      "group": "SYST"
+    },
+    {
+      "id": 128,
+      "label": "Redundancy in System Design",
+      "group": "SYST"
+    },
+    {
+      "id": 129,
+      "label": "Root Zone Volume",
+      "group": "SYST"
+    },
+    {
+      "id": 130,
+      "label": "Plant Spacing",
+      "group": "SYST"
+    },
+    {
+      "id": 131,
+      "label": "System Scalability",
+      "group": "SYST"
+    },
+    {
+      "id": 132,
+      "label": "Water Recirculation",
+      "group": "SYST"
+    },
+    {
+      "id": 133,
+      "label": "Run-to-Waste Systems",
+      "group": "SYST"
+    },
+    {
+      "id": 134,
+      "label": "Hybrid System Designs",
+      "group": "SYST"
+    },
+    {
+      "id": 135,
+      "label": "System Cleaning Between Cycles",
+      "group": "SYST"
+    },
+    {
+      "id": 136,
+      "label": "Mason Jar Kratky Setup",
+      "group": "DIY"
+    },
+    {
+      "id": 137,
+      "label": "5-Gallon Bucket DWC Build",
+      "group": "DIY"
+    },
+    {
+      "id": 138,
+      "label": "Storage Tote DWC Build",
+      "group": "DIY"
+    },
+    {
+      "id": 139,
+      "label": "PVC Pipe NFT Build",
+      "group": "DIY"
+    },
+    {
+      "id": 140,
+      "label": "Recycled Container Builds",
+      "group": "DIY"
+    },
+    {
+      "id": 141,
+      "label": "Hardware Store Materials List",
+      "group": "DIY"
+    },
+    {
+      "id": 142,
+      "label": "Net Pot Sizing Guide",
+      "group": "DIY"
+    },
+    {
+      "id": 143,
+      "label": "Airline Tubing and Air Stones",
+      "group": "DIY"
+    },
+    {
+      "id": 144,
+      "label": "Aquarium Air Pump Selection",
+      "group": "DIY"
+    },
+    {
+      "id": 145,
+      "label": "Float Valve for Auto-Refill",
+      "group": "DIY"
+    },
+    {
+      "id": 146,
+      "label": "Light-Proofing Reservoir",
+      "group": "DIY"
+    },
+    {
+      "id": 147,
+      "label": "DIY pH Calibration",
+      "group": "DIY"
+    },
+    {
+      "id": 148,
+      "label": "DIY EC Calibration",
+      "group": "DIY"
+    },
+    {
+      "id": 149,
+      "label": "Beginner Crop Selection",
+      "group": "DIY"
+    },
+    {
+      "id": 150,
+      "label": "Lettuce Varieties",
+      "group": "DIY"
+    },
+    {
+      "id": 151,
+      "label": "Herb Selection for Beginners",
+      "group": "DIY"
+    },
+    {
+      "id": 152,
+      "label": "Microgreens Production",
+      "group": "DIY"
+    },
+    {
+      "id": 153,
+      "label": "Seeding and Germination Trays",
+      "group": "DIY"
+    },
+    {
+      "id": 154,
+      "label": "Seedling Transfer Timing",
+      "group": "DIY"
+    },
+    {
+      "id": 155,
+      "label": "School Garden Safety Rules",
+      "group": "DIY"
+    },
+    {
+      "id": 156,
+      "label": "Student Data Protocols",
+      "group": "DIY"
+    },
+    {
+      "id": 157,
+      "label": "Science Fair Project Design",
+      "group": "DIY"
+    },
+    {
+      "id": 158,
+      "label": "Classroom Grow System Layout",
+      "group": "DIY"
+    },
+    {
+      "id": 159,
+      "label": "System Cost Tiers",
+      "group": "DIY"
+    },
+    {
+      "id": 160,
+      "label": "Upgrade Pathways for Beginners",
+      "group": "DIY"
+    },
+    {
+      "id": 161,
+      "label": "Rockwool Properties",
+      "group": "GROW"
+    },
+    {
+      "id": 162,
+      "label": "Rockwool pH Preparation",
+      "group": "GROW"
+    },
+    {
+      "id": 163,
+      "label": "Expanded Clay (Hydroton)",
+      "group": "GROW"
+    },
+    {
+      "id": 164,
+      "label": "Coconut Coir Properties",
+      "group": "GROW"
+    },
+    {
+      "id": 165,
+      "label": "Perlite in Hydroponics",
+      "group": "GROW"
+    },
+    {
+      "id": 166,
+      "label": "Vermiculite Properties",
+      "group": "GROW"
+    },
+    {
+      "id": 167,
+      "label": "Pumice as Growing Media",
+      "group": "GROW"
+    },
+    {
+      "id": 168,
+      "label": "Gravel and Sand Media",
+      "group": "GROW"
+    },
+    {
+      "id": 169,
+      "label": "Reusable vs Single-Use Media",
+      "group": "GROW"
+    },
+    {
+      "id": 170,
+      "label": "Media Sterilization Methods",
+      "group": "GROW"
+    },
+    {
+      "id": 171,
+      "label": "Media Air Porosity",
+      "group": "GROW"
+    },
+    {
+      "id": 172,
+      "label": "Media Water Retention",
+      "group": "GROW"
+    },
+    {
+      "id": 173,
+      "label": "Crop Selection by System Type",
+      "group": "GROW"
+    },
+    {
+      "id": 174,
+      "label": "Lettuce and Leafy Greens",
+      "group": "GROW"
+    },
+    {
+      "id": 175,
+      "label": "Basil and Culinary Herbs",
+      "group": "GROW"
+    },
+    {
+      "id": 176,
+      "label": "Tomatoes in Hydroponics",
+      "group": "GROW"
+    },
+    {
+      "id": 177,
+      "label": "Cucumbers in Hydroponics",
+      "group": "GROW"
+    },
+    {
+      "id": 178,
+      "label": "Strawberries in Hydroponics",
+      "group": "GROW"
+    },
+    {
+      "id": 179,
+      "label": "Microgreens and Sprouts",
+      "group": "GROW"
+    },
+    {
+      "id": 180,
+      "label": "Flowering Plants (Peppers)",
+      "group": "GROW"
+    },
+    {
+      "id": 181,
+      "label": "Plant Density and Spacing",
+      "group": "GROW"
+    },
+    {
+      "id": 182,
+      "label": "Succession Planting",
+      "group": "GROW"
+    },
+    {
+      "id": 183,
+      "label": "Transplanting Techniques",
+      "group": "GROW"
+    },
+    {
+      "id": 184,
+      "label": "Harvest Timing Indicators",
+      "group": "GROW"
+    },
+    {
+      "id": 185,
+      "label": "Post-Harvest Handling",
+      "group": "GROW"
+    },
+    {
+      "id": 186,
+      "label": "Light and Plant Growth",
+      "group": "LITE"
+    },
+    {
+      "id": 187,
+      "label": "Photosynthetic Active Radiation",
+      "group": "LITE"
+    },
+    {
+      "id": 188,
+      "label": "PAR Wavelength Range",
+      "group": "LITE"
+    },
+    {
+      "id": 189,
+      "label": "Red Light Effects on Plants",
+      "group": "LITE"
+    },
+    {
+      "id": 190,
+      "label": "Blue Light Effects on Plants",
+      "group": "LITE"
+    },
+    {
+      "id": 191,
+      "label": "Far-Red Light Effects",
+      "group": "LITE"
+    },
+    {
+      "id": 192,
+      "label": "PPFD: Photon Flux Density",
+      "group": "LITE"
+    },
+    {
+      "id": 193,
+      "label": "Daily Light Integral (DLI)",
+      "group": "LITE"
+    },
+    {
+      "id": 194,
+      "label": "DLI Calculation",
+      "group": "LITE"
+    },
+    {
+      "id": 195,
+      "label": "Photoperiod Requirements",
+      "group": "LITE"
+    },
+    {
+      "id": 196,
+      "label": "Long-Day vs Short-Day Plants",
+      "group": "LITE"
+    },
+    {
+      "id": 197,
+      "label": "LED Grow Light Technology",
+      "group": "LITE"
+    },
+    {
+      "id": 198,
+      "label": "LED Spectrum and Efficiency",
+      "group": "LITE"
+    },
+    {
+      "id": 199,
+      "label": "HID Lighting (HPS and MH)",
+      "group": "LITE"
+    },
+    {
+      "id": 200,
+      "label": "Fluorescent Lighting (T5/T8)",
+      "group": "LITE"
+    },
+    {
+      "id": 201,
+      "label": "LED vs HID Comparison",
+      "group": "LITE"
+    },
+    {
+      "id": 202,
+      "label": "Light Intensity and Canopy",
+      "group": "LITE"
+    },
+    {
+      "id": 203,
+      "label": "Inverse Square Law for Light",
+      "group": "LITE"
+    },
+    {
+      "id": 204,
+      "label": "Grow Light Mounting Height",
+      "group": "LITE"
+    },
+    {
+      "id": 205,
+      "label": "Light Uniformity and PPFD Map",
+      "group": "LITE"
+    },
+    {
+      "id": 206,
+      "label": "Heat Output From Lighting",
+      "group": "LITE"
+    },
+    {
+      "id": 207,
+      "label": "Light Schedules and Photoperiod",
+      "group": "LITE"
+    },
+    {
+      "id": 208,
+      "label": "Light Recipes for Crop Stages",
+      "group": "LITE"
+    },
+    {
+      "id": 209,
+      "label": "Lumens vs PPFD Distinction",
+      "group": "LITE"
+    },
+    {
+      "id": 210,
+      "label": "Light Efficacy \u00b5mol/J",
+      "group": "LITE"
+    },
+    {
+      "id": 211,
+      "label": "Light Meter and Quantum Sensor",
+      "group": "LITE"
+    },
+    {
+      "id": 212,
+      "label": "Photoperiod Control Relay",
+      "group": "LITE"
+    },
+    {
+      "id": 213,
+      "label": "Light Cost Per kWh",
+      "group": "LITE"
+    },
+    {
+      "id": 214,
+      "label": "Light Energy to Biomass",
+      "group": "LITE"
+    },
+    {
+      "id": 215,
+      "label": "CO2 Benefit Under High Light",
+      "group": "LITE"
+    },
+    {
+      "id": 216,
+      "label": "Temperature and Plant Growth",
+      "group": "ENVC"
+    },
+    {
+      "id": 217,
+      "label": "Air Temperature Management",
+      "group": "ENVC"
+    },
+    {
+      "id": 218,
+      "label": "Solution Temperature Control",
+      "group": "ENVC"
+    },
+    {
+      "id": 219,
+      "label": "Root Zone Temperature Optimum",
+      "group": "ENVC"
+    },
+    {
+      "id": 220,
+      "label": "Relative Humidity Definition",
+      "group": "ENVC",
+      "shape": "box"
+    },
+    {
+      "id": 221,
+      "label": "Humidity and Transpiration",
+      "group": "ENVC"
+    },
+    {
+      "id": 222,
+      "label": "High Humidity and Disease Risk",
+      "group": "ENVC"
+    },
+    {
+      "id": 223,
+      "label": "Low Humidity and Tip Burn",
+      "group": "ENVC"
+    },
+    {
+      "id": 224,
+      "label": "CO2 Concentration Effects",
+      "group": "ENVC"
+    },
+    {
+      "id": 225,
+      "label": "CO2 Enrichment Methods",
+      "group": "ENVC"
+    },
+    {
+      "id": 226,
+      "label": "Vapor Pressure Deficit (VPD)",
+      "group": "ENVC"
+    },
+    {
+      "id": 227,
+      "label": "VPD Calculation",
+      "group": "ENVC"
+    },
+    {
+      "id": 228,
+      "label": "VPD Optimal Ranges by Stage",
+      "group": "ENVC"
+    },
+    {
+      "id": 229,
+      "label": "HVAC Basics for Grow Rooms",
+      "group": "ENVC"
+    },
+    {
+      "id": 230,
+      "label": "Exhaust and Intake Fan Sizing",
+      "group": "ENVC"
+    },
+    {
+      "id": 231,
+      "label": "Air Circulation and Fans",
+      "group": "ENVC"
+    },
+    {
+      "id": 232,
+      "label": "Grow Tent Setup",
+      "group": "ENVC"
+    },
+    {
+      "id": 233,
+      "label": "Grow Room Insulation",
+      "group": "ENVC"
+    },
+    {
+      "id": 234,
+      "label": "Data Logger Basics",
+      "group": "ENVC",
+      "shape": "box"
+    },
+    {
+      "id": 235,
+      "label": "Environmental Alarm Setpoints",
+      "group": "ENVC"
+    },
+    {
+      "id": 236,
+      "label": "Thermostat and Humidity Ctrl",
+      "group": "ENVC"
+    },
+    {
+      "id": 237,
+      "label": "CO2 Controller and Regulator",
+      "group": "ENVC"
+    },
+    {
+      "id": 238,
+      "label": "Ballast and Lighting Controller",
+      "group": "ENVC"
+    },
+    {
+      "id": 239,
+      "label": "Grow Room Automation Overview",
+      "group": "ENVC"
+    },
+    {
+      "id": 240,
+      "label": "Heating and Cooling Trade-offs",
+      "group": "ENVC"
+    },
+    {
+      "id": 241,
+      "label": "Dehumidifier Selection",
+      "group": "ENVC"
+    },
+    {
+      "id": 242,
+      "label": "Humidifier Selection",
+      "group": "ENVC"
+    },
+    {
+      "id": 243,
+      "label": "Air Filtration Carbon Filter",
+      "group": "ENVC"
+    },
+    {
+      "id": 244,
+      "label": "Positive vs Negative Pressure",
+      "group": "ENVC"
+    },
+    {
+      "id": 245,
+      "label": "Fire Safety in Indoor Grows",
+      "group": "ENVC"
+    },
+    {
+      "id": 246,
+      "label": "MicroPython vs CPython",
+      "group": "UPYTH",
+      "shape": "box"
+    },
+    {
+      "id": 247,
+      "label": "Raspberry Pi Pico Overview",
+      "group": "UPYTH",
+      "shape": "box"
+    },
+    {
+      "id": 248,
+      "label": "Raspberry Pi Pico W (Wi-Fi)",
+      "group": "UPYTH"
+    },
+    {
+      "id": 249,
+      "label": "ESP32 Microcontroller Overview",
+      "group": "UPYTH",
+      "shape": "box"
+    },
+    {
+      "id": 250,
+      "label": "MicroPython Installation",
+      "group": "UPYTH"
+    },
+    {
+      "id": 251,
+      "label": "Thonny IDE Setup",
+      "group": "UPYTH"
+    },
+    {
+      "id": 252,
+      "label": "REPL (Read-Eval-Print Loop)",
+      "group": "UPYTH"
+    },
+    {
+      "id": 253,
+      "label": "Variables and Data Types",
+      "group": "UPYTH"
+    },
+    {
+      "id": 254,
+      "label": "Integer and Float Types",
+      "group": "UPYTH"
+    },
+    {
+      "id": 255,
+      "label": "String Operations",
+      "group": "UPYTH"
+    },
+    {
+      "id": 256,
+      "label": "Boolean Logic",
+      "group": "UPYTH"
+    },
+    {
+      "id": 257,
+      "label": "None Type and Null Checks",
+      "group": "UPYTH"
+    },
+    {
+      "id": 258,
+      "label": "Lists in MicroPython",
+      "group": "UPYTH"
+    },
+    {
+      "id": 259,
+      "label": "Tuples in MicroPython",
+      "group": "UPYTH"
+    },
+    {
+      "id": 260,
+      "label": "Dictionaries in MicroPython",
+      "group": "UPYTH"
+    },
+    {
+      "id": 261,
+      "label": "If-Else Statements",
+      "group": "UPYTH"
+    },
+    {
+      "id": 262,
+      "label": "For Loops",
+      "group": "UPYTH"
+    },
+    {
+      "id": 263,
+      "label": "While Loops",
+      "group": "UPYTH"
+    },
+    {
+      "id": 264,
+      "label": "Loop Control (Break/Continue)",
+      "group": "UPYTH"
+    },
+    {
+      "id": 265,
+      "label": "Functions and def Keyword",
+      "group": "UPYTH"
+    },
+    {
+      "id": 266,
+      "label": "Function Parameters and Returns",
+      "group": "UPYTH"
+    },
+    {
+      "id": 267,
+      "label": "Default Parameters",
+      "group": "UPYTH"
+    },
+    {
+      "id": 268,
+      "label": "Lambda Functions",
+      "group": "UPYTH"
+    },
+    {
+      "id": 269,
+      "label": "Classes and Objects (OOP)",
+      "group": "UPYTH"
+    },
+    {
+      "id": 270,
+      "label": "Inheritance in MicroPython",
+      "group": "UPYTH"
+    },
+    {
+      "id": 271,
+      "label": "Exception Handling Try/Except",
+      "group": "UPYTH"
+    },
+    {
+      "id": 272,
+      "label": "File I/O in MicroPython",
+      "group": "UPYTH"
+    },
+    {
+      "id": 273,
+      "label": "Reading Files",
+      "group": "UPYTH"
+    },
+    {
+      "id": 274,
+      "label": "Writing and Appending Files",
+      "group": "UPYTH"
+    },
+    {
+      "id": 275,
+      "label": "CSV File Writing in MicroPython",
+      "group": "UPYTH"
+    },
+    {
+      "id": 276,
+      "label": "JSON in MicroPython",
+      "group": "UPYTH"
+    },
+    {
+      "id": 277,
+      "label": "I2C Protocol Basics",
+      "group": "UPYTH",
+      "shape": "box"
+    },
+    {
+      "id": 278,
+      "label": "I2C in MicroPython",
+      "group": "UPYTH"
+    },
+    {
+      "id": 279,
+      "label": "SPI Protocol Basics",
+      "group": "UPYTH",
+      "shape": "box"
+    },
+    {
+      "id": 280,
+      "label": "SPI in MicroPython",
+      "group": "UPYTH"
+    },
+    {
+      "id": 281,
+      "label": "UART Serial Communication",
+      "group": "UPYTH"
+    },
+    {
+      "id": 282,
+      "label": "Analog-to-Digital Converter",
+      "group": "UPYTH",
+      "shape": "box"
+    },
+    {
+      "id": 283,
+      "label": "ADC in MicroPython",
+      "group": "UPYTH"
+    },
+    {
+      "id": 284,
+      "label": "Digital-to-Analog Converter",
+      "group": "UPYTH"
+    },
+    {
+      "id": 285,
+      "label": "PWM: Pulse Width Modulation",
+      "group": "UPYTH",
+      "shape": "box"
+    },
+    {
+      "id": 286,
+      "label": "PWM in MicroPython",
+      "group": "UPYTH"
+    },
+    {
+      "id": 287,
+      "label": "GPIO Pin Modes",
+      "group": "UPYTH"
+    },
+    {
+      "id": 288,
+      "label": "Digital Read and Write",
+      "group": "UPYTH"
+    },
+    {
+      "id": 289,
+      "label": "Pull-Up and Pull-Down Resistors",
+      "group": "UPYTH"
+    },
+    {
+      "id": 290,
+      "label": "Interrupts and IRQ",
+      "group": "UPYTH"
+    },
+    {
+      "id": 291,
+      "label": "Timer and machine.Timer",
+      "group": "UPYTH"
+    },
+    {
+      "id": 292,
+      "label": "utime Module",
+      "group": "UPYTH"
+    },
+    {
+      "id": 293,
+      "label": "Async/Await in MicroPython",
+      "group": "UPYTH"
+    },
+    {
+      "id": 294,
+      "label": "asyncio in MicroPython",
+      "group": "UPYTH"
+    },
+    {
+      "id": 295,
+      "label": "Wi-Fi Connection on ESP32",
+      "group": "UPYTH"
+    },
+    {
+      "id": 296,
+      "label": "Socket Programming",
+      "group": "UPYTH"
+    },
+    {
+      "id": 297,
+      "label": "MQTT Protocol Basics",
+      "group": "UPYTH",
+      "shape": "box"
+    },
+    {
+      "id": 298,
+      "label": "MicroPython MQTT Client",
+      "group": "UPYTH"
+    },
+    {
+      "id": 299,
+      "label": "HTTP Requests From MicroPython",
+      "group": "UPYTH"
+    },
+    {
+      "id": 300,
+      "label": "Memory Management in MicroPython",
+      "group": "UPYTH"
+    },
+    {
+      "id": 301,
+      "label": "Garbage Collection",
+      "group": "UPYTH"
+    },
+    {
+      "id": 302,
+      "label": "Watchdog Timer",
+      "group": "UPYTH"
+    },
+    {
+      "id": 303,
+      "label": "Boot.py and Main.py Execution",
+      "group": "UPYTH"
+    },
+    {
+      "id": 304,
+      "label": "OTA Over-the-Air Updates",
+      "group": "UPYTH"
+    },
+    {
+      "id": 305,
+      "label": "MicroPython Libraries",
+      "group": "UPYTH"
+    },
+    {
+      "id": 306,
+      "label": "DS18B20 Temperature Library",
+      "group": "UPYTH"
+    },
+    {
+      "id": 307,
+      "label": "DHT11/DHT22 Library",
+      "group": "UPYTH"
+    },
+    {
+      "id": 308,
+      "label": "SSD1306 OLED Display Library",
+      "group": "UPYTH"
+    },
+    {
+      "id": 309,
+      "label": "Atlas Scientific pH Library",
+      "group": "UPYTH"
+    },
+    {
+      "id": 310,
+      "label": "Atlas Scientific EC Library",
+      "group": "UPYTH"
+    },
+    {
+      "id": 311,
+      "label": "MCP3208 ADC SPI Library",
+      "group": "UPYTH"
+    },
+    {
+      "id": 312,
+      "label": "Relay Module Control Code",
+      "group": "UPYTH"
+    },
+    {
+      "id": 313,
+      "label": "Peristaltic Pump Relay Logic",
+      "group": "UPYTH"
+    },
+    {
+      "id": 314,
+      "label": "NeoPixel WS2812 Control",
+      "group": "UPYTH"
+    },
+    {
+      "id": 315,
+      "label": "LCD 16x2 I2C Library",
+      "group": "UPYTH"
+    },
+    {
+      "id": 316,
+      "label": "pH Electrode (Glass Electrode)",
+      "group": "SENS"
+    },
+    {
+      "id": 317,
+      "label": "pH Probe Calibration",
+      "group": "SENS"
+    },
+    {
+      "id": 318,
+      "label": "pH Calibration Buffers",
+      "group": "SENS"
+    },
+    {
+      "id": 319,
+      "label": "EC Probe Design",
+      "group": "SENS"
+    },
+    {
+      "id": 320,
+      "label": "EC Probe Calibration",
+      "group": "SENS"
+    },
+    {
+      "id": 321,
+      "label": "DS18B20 Temperature Probe",
+      "group": "SENS"
+    },
+    {
+      "id": 322,
+      "label": "DHT11 vs DHT22 Comparison",
+      "group": "SENS"
+    },
+    {
+      "id": 323,
+      "label": "CO2 NDIR Sensor Technology",
+      "group": "SENS"
+    },
+    {
+      "id": 324,
+      "label": "Water Level Sensor",
+      "group": "SENS"
+    },
+    {
+      "id": 325,
+      "label": "Ultrasonic Distance Sensor",
+      "group": "SENS"
+    },
+    {
+      "id": 326,
+      "label": "Float Switch",
+      "group": "SENS"
+    },
+    {
+      "id": 327,
+      "label": "Relay Module",
+      "group": "SENS"
+    },
+    {
+      "id": 328,
+      "label": "Dosing Pump (Peristaltic)",
+      "group": "SENS"
+    },
+    {
+      "id": 329,
+      "label": "Solenoid Valve",
+      "group": "SENS"
+    },
+    {
+      "id": 330,
+      "label": "Flow Sensor",
+      "group": "SENS"
+    },
+    {
+      "id": 331,
+      "label": "Power Supply Selection",
+      "group": "SENS"
+    },
+    {
+      "id": 332,
+      "label": "Breadboard Prototyping",
+      "group": "SENS"
+    },
+    {
+      "id": 333,
+      "label": "PCB Design Basics",
+      "group": "SENS"
+    },
+    {
+      "id": 334,
+      "label": "Voltage Divider Circuit",
+      "group": "SENS"
+    },
+    {
+      "id": 335,
+      "label": "Op-Amp Circuits",
+      "group": "SENS"
+    },
+    {
+      "id": 336,
+      "label": "Sensor Noise and Filtering",
+      "group": "SENS"
+    },
+    {
+      "id": 337,
+      "label": "Moving Average Filter",
+      "group": "SENS"
+    },
+    {
+      "id": 338,
+      "label": "Analog Signal Conditioning",
+      "group": "SENS"
+    },
+    {
+      "id": 339,
+      "label": "Sensor Drift and Recalibration",
+      "group": "SENS"
+    },
+    {
+      "id": 340,
+      "label": "Wireless Sensor Node Design",
+      "group": "SENS"
+    },
+    {
+      "id": 341,
+      "label": "Battery-Powered Sensor Nodes",
+      "group": "SENS"
+    },
+    {
+      "id": 342,
+      "label": "Sensor Data Timestamping",
+      "group": "SENS"
+    },
+    {
+      "id": 343,
+      "label": "Multiplexed Sensor Reading",
+      "group": "SENS"
+    },
+    {
+      "id": 344,
+      "label": "Atlas Scientific EZO Circuits",
+      "group": "SENS"
+    },
+    {
+      "id": 345,
+      "label": "Sensor Enclosure Waterproofing",
+      "group": "SENS"
+    },
+    {
+      "id": 346,
+      "label": "Data Collection Strategy",
+      "group": "DATA"
+    },
+    {
+      "id": 347,
+      "label": "Sensor Reading Frequency",
+      "group": "DATA"
+    },
+    {
+      "id": 348,
+      "label": "CSV File Format and Structure",
+      "group": "DATA"
+    },
+    {
+      "id": 349,
+      "label": "Data Logging to SD Card",
+      "group": "DATA"
+    },
+    {
+      "id": 350,
+      "label": "Cloud Data Storage Options",
+      "group": "DATA"
+    },
+    {
+      "id": 351,
+      "label": "Google Sheets as Data Logger",
+      "group": "DATA"
+    },
+    {
+      "id": 352,
+      "label": "Python Environment Setup",
+      "group": "DATA",
+      "shape": "box"
+    },
+    {
+      "id": 353,
+      "label": "Jupyter Notebook Basics",
+      "group": "DATA"
+    },
+    {
+      "id": 354,
+      "label": "pandas Library Introduction",
+      "group": "DATA"
+    },
+    {
+      "id": 355,
+      "label": "DataFrame Creation and Structure",
+      "group": "DATA"
+    },
+    {
+      "id": 356,
+      "label": "Reading CSV With pandas",
+      "group": "DATA"
+    },
+    {
+      "id": 357,
+      "label": "DataFrame Indexing and Slicing",
+      "group": "DATA"
+    },
+    {
+      "id": 358,
+      "label": "Date-Time Parsing With pandas",
+      "group": "DATA"
+    },
+    {
+      "id": 359,
+      "label": "Resampling Time-Series Data",
+      "group": "DATA"
+    },
+    {
+      "id": 360,
+      "label": "Rolling Window Statistics",
+      "group": "DATA"
+    },
+    {
+      "id": 361,
+      "label": "Missing Data Handling",
+      "group": "DATA"
+    },
+    {
+      "id": 362,
+      "label": "Data Cleaning and Validation",
+      "group": "DATA"
+    },
+    {
+      "id": 363,
+      "label": "NumPy Library Introduction",
+      "group": "DATA"
+    },
+    {
+      "id": 364,
+      "label": "NumPy Arrays",
+      "group": "DATA"
+    },
+    {
+      "id": 365,
+      "label": "Array Operations Broadcasting",
+      "group": "DATA"
+    },
+    {
+      "id": 366,
+      "label": "Statistical Functions in NumPy",
+      "group": "DATA"
+    },
+    {
+      "id": 367,
+      "label": "Mean Median Standard Deviation",
+      "group": "DATA"
+    },
+    {
+      "id": 368,
+      "label": "Correlation Analysis",
+      "group": "DATA"
+    },
+    {
+      "id": 369,
+      "label": "Linear Regression",
+      "group": "DATA",
+      "shape": "box"
+    },
+    {
+      "id": 370,
+      "label": "Regression in NumPy (polyfit)",
+      "group": "DATA"
+    },
+    {
+      "id": 371,
+      "label": "scikit-learn Linear Regression",
+      "group": "DATA"
+    },
+    {
+      "id": 372,
+      "label": "Matplotlib Basics",
+      "group": "DATA"
+    },
+    {
+      "id": 373,
+      "label": "Line Charts for Sensor Data",
+      "group": "DATA"
+    },
+    {
+      "id": 374,
+      "label": "Scatter Plots",
+      "group": "DATA"
+    },
+    {
+      "id": 375,
+      "label": "Histogram and Distribution",
+      "group": "DATA"
+    },
+    {
+      "id": 376,
+      "label": "Subplots and Figure Layout",
+      "group": "DATA"
+    },
+    {
+      "id": 377,
+      "label": "Plotly Introduction",
+      "group": "DATA"
+    },
+    {
+      "id": 378,
+      "label": "Plotly Express Line Chart",
+      "group": "DATA"
+    },
+    {
+      "id": 379,
+      "label": "Plotly Interactive Dashboard",
+      "group": "DATA"
+    },
+    {
+      "id": 380,
+      "label": "Dash Framework (Plotly Dash)",
+      "group": "DATA"
+    },
+    {
+      "id": 381,
+      "label": "Real-Time Dashboard Updates",
+      "group": "DATA"
+    },
+    {
+      "id": 382,
+      "label": "Time-Series Visualization",
+      "group": "DATA"
+    },
+    {
+      "id": 383,
+      "label": "Statistical Process Control",
+      "group": "DATA"
+    },
+    {
+      "id": 384,
+      "label": "Control Charts (X-bar R-chart)",
+      "group": "DATA"
+    },
+    {
+      "id": 385,
+      "label": "Control Limits Calculation",
+      "group": "DATA"
+    },
+    {
+      "id": 386,
+      "label": "Anomaly Detection Methods",
+      "group": "DATA"
+    },
+    {
+      "id": 387,
+      "label": "Z-Score Anomaly Detection",
+      "group": "DATA"
+    },
+    {
+      "id": 388,
+      "label": "IQR Outlier Detection",
+      "group": "DATA"
+    },
+    {
+      "id": 389,
+      "label": "Moving Average Anomaly Detection",
+      "group": "DATA"
+    },
+    {
+      "id": 390,
+      "label": "Trend Detection in Sensor Data",
+      "group": "DATA"
+    },
+    {
+      "id": 391,
+      "label": "Food Safety in Controlled Envs",
+      "group": "SAFE"
+    },
+    {
+      "id": 392,
+      "label": "Biofilm Definition and Formation",
+      "group": "SAFE"
+    },
+    {
+      "id": 393,
+      "label": "Biofilm in Recirculating Systems",
+      "group": "SAFE"
+    },
+    {
+      "id": 394,
+      "label": "Human Pathogens in Hydroponics",
+      "group": "SAFE"
+    },
+    {
+      "id": 395,
+      "label": "Listeria Monocytogenes Risk",
+      "group": "SAFE"
+    },
+    {
+      "id": 396,
+      "label": "Salmonella in Hydroponic Lettuce",
+      "group": "SAFE"
+    },
+    {
+      "id": 397,
+      "label": "Shiga Toxin E Coli (STEC) Risk",
+      "group": "SAFE"
+    },
+    {
+      "id": 398,
+      "label": "HACCP Principles",
+      "group": "SAFE"
+    },
+    {
+      "id": 399,
+      "label": "Hazard Analysis in Hydroponics",
+      "group": "SAFE"
+    },
+    {
+      "id": 400,
+      "label": "Critical Control Points",
+      "group": "SAFE"
+    },
+    {
+      "id": 401,
+      "label": "Corrective Actions (HACCP)",
+      "group": "SAFE"
+    },
+    {
+      "id": 402,
+      "label": "Water Source Selection",
+      "group": "SAFE"
+    },
+    {
+      "id": 403,
+      "label": "Municipal Water Safety",
+      "group": "SAFE"
+    },
+    {
+      "id": 404,
+      "label": "Well Water Testing",
+      "group": "SAFE"
+    },
+    {
+      "id": 405,
+      "label": "Rainwater Risks for Leafy Greens",
+      "group": "SAFE"
+    },
+    {
+      "id": 406,
+      "label": "Bleach Sanitization Protocol",
+      "group": "SAFE"
+    },
+    {
+      "id": 407,
+      "label": "Hydrogen Peroxide Sanitization",
+      "group": "SAFE"
+    },
+    {
+      "id": 408,
+      "label": "UV Sterilization for Water",
+      "group": "SAFE"
+    },
+    {
+      "id": 409,
+      "label": "Ozone Treatment",
+      "group": "SAFE"
+    },
+    {
+      "id": 410,
+      "label": "Sanitization Schedule",
+      "group": "SAFE"
+    },
+    {
+      "id": 411,
+      "label": "Food-Grade Materials",
+      "group": "SAFE"
+    },
+    {
+      "id": 412,
+      "label": "Worker Hygiene Protocols",
+      "group": "SAFE"
+    },
+    {
+      "id": 413,
+      "label": "Pest and Disease Management",
+      "group": "SAFE"
+    },
+    {
+      "id": 414,
+      "label": "Root Rot (Pythium) Management",
+      "group": "SAFE"
+    },
+    {
+      "id": 415,
+      "label": "Algae Bloom Prevention",
+      "group": "SAFE"
+    },
+    {
+      "id": 416,
+      "label": "Solar Energy Basics",
+      "group": "SOLAR",
+      "shape": "box"
+    },
+    {
+      "id": 417,
+      "label": "Photovoltaic (PV) Effect",
+      "group": "SOLAR"
+    },
+    {
+      "id": 418,
+      "label": "Solar Cell Types",
+      "group": "SOLAR"
+    },
+    {
+      "id": 419,
+      "label": "Solar Panel Efficiency",
+      "group": "SOLAR"
+    },
+    {
+      "id": 420,
+      "label": "Solar Panel Watt-Peak (Wp)",
+      "group": "SOLAR"
+    },
+    {
+      "id": 421,
+      "label": "Solar Irradiance W/m2",
+      "group": "SOLAR"
+    },
+    {
+      "id": 422,
+      "label": "Peak Sun Hours",
+      "group": "SOLAR"
+    },
+    {
+      "id": 423,
+      "label": "Solar Panel Output Calculation",
+      "group": "SOLAR"
+    },
+    {
+      "id": 424,
+      "label": "Solar Panel Cost Trends",
+      "group": "SOLAR"
+    },
+    {
+      "id": 425,
+      "label": "Levelized Cost of Energy (LCOE)",
+      "group": "SOLAR"
+    },
+    {
+      "id": 426,
+      "label": "MPPT Max Power Point Tracking",
+      "group": "SOLAR"
+    },
+    {
+      "id": 427,
+      "label": "Charge Controller PWM vs MPPT",
+      "group": "SOLAR"
+    },
+    {
+      "id": 428,
+      "label": "Battery Storage Basics",
+      "group": "SOLAR",
+      "shape": "box"
+    },
+    {
+      "id": 429,
+      "label": "Lead-Acid Battery",
+      "group": "SOLAR"
+    },
+    {
+      "id": 430,
+      "label": "Lithium Iron Phosphate LiFePO4",
+      "group": "SOLAR"
+    },
+    {
+      "id": 431,
+      "label": "Battery State of Charge",
+      "group": "SOLAR"
+    },
+    {
+      "id": 432,
+      "label": "Battery Sizing for Grow Room",
+      "group": "SOLAR"
+    },
+    {
+      "id": 433,
+      "label": "Inverter Selection Off-Grid",
+      "group": "SOLAR"
+    },
+    {
+      "id": 434,
+      "label": "Grid-Tie Solar System",
+      "group": "SOLAR"
+    },
+    {
+      "id": 435,
+      "label": "Net Metering",
+      "group": "SOLAR"
+    },
+    {
+      "id": 436,
+      "label": "Off-Grid Solar System Design",
+      "group": "SOLAR"
+    },
+    {
+      "id": 437,
+      "label": "Hybrid Grid and Battery System",
+      "group": "SOLAR"
+    },
+    {
+      "id": 438,
+      "label": "Solar for Grow Lights",
+      "group": "SOLAR"
+    },
+    {
+      "id": 439,
+      "label": "Solar for Pumps and Sensors",
+      "group": "SOLAR"
+    },
+    {
+      "id": 440,
+      "label": "Power Monitoring With INA219",
+      "group": "SOLAR"
+    },
+    {
+      "id": 441,
+      "label": "Energy Audit for Grow Room",
+      "group": "SOLAR"
+    },
+    {
+      "id": 442,
+      "label": "Energy Dashboard With Plotly",
+      "group": "SOLAR"
+    },
+    {
+      "id": 443,
+      "label": "Solar ROI Calculation",
+      "group": "SOLAR"
+    },
+    {
+      "id": 444,
+      "label": "Carbon Footprint Indoor Growing",
+      "group": "SOLAR"
+    },
+    {
+      "id": 445,
+      "label": "Microinverter Technology",
+      "group": "SOLAR"
+    },
+    {
+      "id": 446,
+      "label": "Vertical Farming Definition",
+      "group": "VERT"
+    },
+    {
+      "id": 447,
+      "label": "Multi-Tier Growing Racks",
+      "group": "VERT"
+    },
+    {
+      "id": 448,
+      "label": "Tower Garden Systems",
+      "group": "VERT"
+    },
+    {
+      "id": 449,
+      "label": "Commercial NFT at Scale",
+      "group": "VERT"
+    },
+    {
+      "id": 450,
+      "label": "Commercial DWC (Raft Culture)",
+      "group": "VERT"
+    },
+    {
+      "id": 451,
+      "label": "AeroFarms Technology",
+      "group": "VERT"
+    },
+    {
+      "id": 452,
+      "label": "Bowery Farming Overview",
+      "group": "VERT"
+    },
+    {
+      "id": 453,
+      "label": "Gotham Greens Model",
+      "group": "VERT"
+    },
+    {
+      "id": 454,
+      "label": "Container Farm Design",
+      "group": "VERT"
+    },
+    {
+      "id": 455,
+      "label": "Rooftop Farm Design",
+      "group": "VERT"
+    },
+    {
+      "id": 456,
+      "label": "Building-Integrated Agriculture",
+      "group": "VERT"
+    },
+    {
+      "id": 457,
+      "label": "Commercial Crop Selection",
+      "group": "VERT"
+    },
+    {
+      "id": 458,
+      "label": "Yield Per Square Meter",
+      "group": "VERT"
+    },
+    {
+      "id": 459,
+      "label": "Light Uniformity Multi-Tier",
+      "group": "VERT"
+    },
+    {
+      "id": 460,
+      "label": "HVAC for Large Facilities",
+      "group": "VERT"
+    },
+    {
+      "id": 461,
+      "label": "Commercial Water Treatment",
+      "group": "VERT"
+    },
+    {
+      "id": 462,
+      "label": "Automation in Commercial Farms",
+      "group": "VERT"
+    },
+    {
+      "id": 463,
+      "label": "Robotic Harvesting Systems",
+      "group": "VERT"
+    },
+    {
+      "id": 464,
+      "label": "AI Crop Management",
+      "group": "VERT"
+    },
+    {
+      "id": 465,
+      "label": "Food Miles and Distribution",
+      "group": "VERT"
+    },
+    {
+      "id": 466,
+      "label": "Proximity to Consumers",
+      "group": "VERT"
+    },
+    {
+      "id": 467,
+      "label": "Cold Chain Logistics",
+      "group": "VERT"
+    },
+    {
+      "id": 468,
+      "label": "Organic Certification",
+      "group": "VERT"
+    },
+    {
+      "id": 469,
+      "label": "Good Agricultural Practices",
+      "group": "VERT"
+    },
+    {
+      "id": 470,
+      "label": "Commercial Scale Challenges",
+      "group": "VERT"
+    },
+    {
+      "id": 471,
+      "label": "Capital Budgeting Basics",
+      "group": "FIN",
+      "shape": "box"
+    },
+    {
+      "id": 472,
+      "label": "Net Present Value (NPV)",
+      "group": "FIN"
+    },
+    {
+      "id": 473,
+      "label": "Internal Rate of Return (IRR)",
+      "group": "FIN"
+    },
+    {
+      "id": 474,
+      "label": "Break-Even Analysis",
+      "group": "FIN"
+    },
+    {
+      "id": 475,
+      "label": "Return on Investment (ROI)",
+      "group": "FIN"
+    },
+    {
+      "id": 476,
+      "label": "Payback Period Calculation",
+      "group": "FIN"
+    },
+    {
+      "id": 477,
+      "label": "Fixed vs Variable Costs",
+      "group": "FIN"
+    },
+    {
+      "id": 478,
+      "label": "Operating Expense (OpEx)",
+      "group": "FIN"
+    },
+    {
+      "id": 479,
+      "label": "Capital Expense (CapEx)",
+      "group": "FIN"
+    },
+    {
+      "id": 480,
+      "label": "Energy Cost Modeling",
+      "group": "FIN"
+    },
+    {
+      "id": 481,
+      "label": "Water Cost Modeling",
+      "group": "FIN"
+    },
+    {
+      "id": 482,
+      "label": "Labor Cost Estimation",
+      "group": "FIN"
+    },
+    {
+      "id": 483,
+      "label": "Nutrient Cost Per Cycle",
+      "group": "FIN"
+    },
+    {
+      "id": 484,
+      "label": "Revenue Modeling",
+      "group": "FIN"
+    },
+    {
+      "id": 485,
+      "label": "Wholesale vs Retail Pricing",
+      "group": "FIN"
+    },
+    {
+      "id": 486,
+      "label": "Farmers Market Revenue",
+      "group": "FIN"
+    },
+    {
+      "id": 487,
+      "label": "Restaurant Direct Sales",
+      "group": "FIN"
+    },
+    {
+      "id": 488,
+      "label": "CSA Community Supported Ag",
+      "group": "FIN"
+    },
+    {
+      "id": 489,
+      "label": "Grant Writing School Gardens",
+      "group": "FIN"
+    },
+    {
+      "id": 490,
+      "label": "USDA Urban Agriculture Grants",
+      "group": "FIN"
+    },
+    {
+      "id": 491,
+      "label": "Crowdfunding for Farm Startups",
+      "group": "FIN"
+    },
+    {
+      "id": 492,
+      "label": "Business Plan Structure",
+      "group": "FIN"
+    },
+    {
+      "id": 493,
+      "label": "Market Research Local Produce",
+      "group": "FIN"
+    },
+    {
+      "id": 494,
+      "label": "Sensitivity Analysis",
+      "group": "FIN"
+    },
+    {
+      "id": 495,
+      "label": "Monte Carlo Farm Risk Simulation",
+      "group": "FIN"
+    },
+    {
+      "id": 496,
+      "label": "Solar Energy ROI in Hydroponics",
+      "group": "FIN"
+    },
+    {
+      "id": 497,
+      "label": "Energy Projections With Solar",
+      "group": "FIN"
+    },
+    {
+      "id": 498,
+      "label": "Financial Dashboard in Plotly",
+      "group": "FIN"
+    },
+    {
+      "id": 499,
+      "label": "Cash Flow Forecasting",
+      "group": "FIN"
+    },
+    {
+      "id": 500,
+      "label": "Scale-Up Financial Modeling",
+      "group": "FIN"
+    }
+  ],
+  "edges": [
+    {
+      "from": 2,
+      "to": 1
+    },
+    {
+      "from": 3,
+      "to": 2
+    },
+    {
+      "from": 4,
+      "to": 1
+    },
+    {
+      "from": 5,
+      "to": 4
+    },
+    {
+      "from": 6,
+      "to": 4
+    },
+    {
+      "from": 7,
+      "to": 1
+    },
+    {
+      "from": 7,
+      "to": 4
+    },
+    {
+      "from": 8,
+      "to": 7
+    },
+    {
+      "from": 11,
+      "to": 10
+    },
+    {
+      "from": 11,
+      "to": 9
+    },
+    {
+      "from": 12,
+      "to": 10
+    },
+    {
+      "from": 12,
+      "to": 9
+    },
+    {
+      "from": 13,
+      "to": 9
+    },
+    {
+      "from": 14,
+      "to": 13
+    },
+    {
+      "from": 15,
+      "to": 14
+    },
+    {
+      "from": 16,
+      "to": 15
+    },
+    {
+      "from": 17,
+      "to": 16
+    },
+    {
+      "from": 18,
+      "to": 17
+    },
+    {
+      "from": 19,
+      "to": 13
+    },
+    {
+      "from": 19,
+      "to": 4
+    },
+    {
+      "from": 20,
+      "to": 8
+    },
+    {
+      "from": 21,
+      "to": 20
+    },
+    {
+      "from": 22,
+      "to": 7
+    },
+    {
+      "from": 22,
+      "to": 19
+    },
+    {
+      "from": 23,
+      "to": 1
+    },
+    {
+      "from": 23,
+      "to": 22
+    },
+    {
+      "from": 24,
+      "to": 7
+    },
+    {
+      "from": 24,
+      "to": 23
+    },
+    {
+      "from": 25,
+      "to": 1
+    },
+    {
+      "from": 26,
+      "to": 10
+    },
+    {
+      "from": 27,
+      "to": 26
+    },
+    {
+      "from": 28,
+      "to": 26
+    },
+    {
+      "from": 29,
+      "to": 26
+    },
+    {
+      "from": 29,
+      "to": 27
+    },
+    {
+      "from": 30,
+      "to": 29
+    },
+    {
+      "from": 31,
+      "to": 29
+    },
+    {
+      "from": 31,
+      "to": 10
+    },
+    {
+      "from": 32,
+      "to": 10
+    },
+    {
+      "from": 32,
+      "to": 6
+    },
+    {
+      "from": 33,
+      "to": 32
+    },
+    {
+      "from": 33,
+      "to": 26
+    },
+    {
+      "from": 34,
+      "to": 26
+    },
+    {
+      "from": 34,
+      "to": 33
+    },
+    {
+      "from": 35,
+      "to": 26
+    },
+    {
+      "from": 35,
+      "to": 11
+    },
+    {
+      "from": 36,
+      "to": 33
+    },
+    {
+      "from": 36,
+      "to": 11
+    },
+    {
+      "from": 37,
+      "to": 10
+    },
+    {
+      "from": 38,
+      "to": 10
+    },
+    {
+      "from": 38,
+      "to": 11
+    },
+    {
+      "from": 39,
+      "to": 38
+    },
+    {
+      "from": 39,
+      "to": 11
+    },
+    {
+      "from": 40,
+      "to": 39
+    },
+    {
+      "from": 41,
+      "to": 38
+    },
+    {
+      "from": 42,
+      "to": 26
+    },
+    {
+      "from": 42,
+      "to": 29
+    },
+    {
+      "from": 43,
+      "to": 42
+    },
+    {
+      "from": 44,
+      "to": 29
+    },
+    {
+      "from": 44,
+      "to": 30
+    },
+    {
+      "from": 44,
+      "to": 31
+    },
+    {
+      "from": 45,
+      "to": 30
+    },
+    {
+      "from": 45,
+      "to": 31
+    },
+    {
+      "from": 46,
+      "to": 26
+    },
+    {
+      "from": 46,
+      "to": 4
+    },
+    {
+      "from": 47,
+      "to": 28
+    },
+    {
+      "from": 47,
+      "to": 6
+    },
+    {
+      "from": 48,
+      "to": 26
+    },
+    {
+      "from": 48,
+      "to": 28
+    },
+    {
+      "from": 49,
+      "to": 9
+    },
+    {
+      "from": 49,
+      "to": 10
+    },
+    {
+      "from": 50,
+      "to": 49
+    },
+    {
+      "from": 51,
+      "to": 29
+    },
+    {
+      "from": 51,
+      "to": 45
+    },
+    {
+      "from": 52,
+      "to": 29
+    },
+    {
+      "from": 52,
+      "to": 45
+    },
+    {
+      "from": 53,
+      "to": 51
+    },
+    {
+      "from": 54,
+      "to": 51
+    },
+    {
+      "from": 55,
+      "to": 51
+    },
+    {
+      "from": 56,
+      "to": 51
+    },
+    {
+      "from": 57,
+      "to": 51
+    },
+    {
+      "from": 57,
+      "to": 52
+    },
+    {
+      "from": 58,
+      "to": 16
+    },
+    {
+      "from": 58,
+      "to": 9
+    },
+    {
+      "from": 59,
+      "to": 58
+    },
+    {
+      "from": 60,
+      "to": 59
+    },
+    {
+      "from": 61,
+      "to": 29
+    },
+    {
+      "from": 62,
+      "to": 61
+    },
+    {
+      "from": 63,
+      "to": 62
+    },
+    {
+      "from": 64,
+      "to": 62
+    },
+    {
+      "from": 65,
+      "to": 62
+    },
+    {
+      "from": 66,
+      "to": 62
+    },
+    {
+      "from": 67,
+      "to": 62
+    },
+    {
+      "from": 68,
+      "to": 62
+    },
+    {
+      "from": 69,
+      "to": 61
+    },
+    {
+      "from": 70,
+      "to": 69
+    },
+    {
+      "from": 71,
+      "to": 69
+    },
+    {
+      "from": 72,
+      "to": 69
+    },
+    {
+      "from": 73,
+      "to": 69
+    },
+    {
+      "from": 74,
+      "to": 69
+    },
+    {
+      "from": 75,
+      "to": 69
+    },
+    {
+      "from": 76,
+      "to": 69
+    },
+    {
+      "from": 77,
+      "to": 69
+    },
+    {
+      "from": 79,
+      "to": 78
+    },
+    {
+      "from": 79,
+      "to": 61
+    },
+    {
+      "from": 80,
+      "to": 79
+    },
+    {
+      "from": 82,
+      "to": 81
+    },
+    {
+      "from": 84,
+      "to": 83
+    },
+    {
+      "from": 84,
+      "to": 81
+    },
+    {
+      "from": 84,
+      "to": 62
+    },
+    {
+      "from": 85,
+      "to": 84
+    },
+    {
+      "from": 86,
+      "to": 84
+    },
+    {
+      "from": 86,
+      "to": 85
+    },
+    {
+      "from": 87,
+      "to": 63
+    },
+    {
+      "from": 87,
+      "to": 66
+    },
+    {
+      "from": 87,
+      "to": 84
+    },
+    {
+      "from": 88,
+      "to": 67
+    },
+    {
+      "from": 88,
+      "to": 68
+    },
+    {
+      "from": 88,
+      "to": 84
+    },
+    {
+      "from": 89,
+      "to": 63
+    },
+    {
+      "from": 89,
+      "to": 65
+    },
+    {
+      "from": 89,
+      "to": 84
+    },
+    {
+      "from": 90,
+      "to": 64
+    },
+    {
+      "from": 90,
+      "to": 65
+    },
+    {
+      "from": 90,
+      "to": 84
+    },
+    {
+      "from": 91,
+      "to": 70
+    },
+    {
+      "from": 91,
+      "to": 84
+    },
+    {
+      "from": 92,
+      "to": 78
+    },
+    {
+      "from": 92,
+      "to": 79
+    },
+    {
+      "from": 93,
+      "to": 78
+    },
+    {
+      "from": 93,
+      "to": 92
+    },
+    {
+      "from": 94,
+      "to": 6
+    },
+    {
+      "from": 94,
+      "to": 81
+    },
+    {
+      "from": 95,
+      "to": 93
+    },
+    {
+      "from": 95,
+      "to": 94
+    },
+    {
+      "from": 96,
+      "to": 62
+    },
+    {
+      "from": 96,
+      "to": 69
+    },
+    {
+      "from": 96,
+      "to": 84
+    },
+    {
+      "from": 97,
+      "to": 84
+    },
+    {
+      "from": 97,
+      "to": 85
+    },
+    {
+      "from": 97,
+      "to": 86
+    },
+    {
+      "from": 98,
+      "to": 84
+    },
+    {
+      "from": 98,
+      "to": 97
+    },
+    {
+      "from": 99,
+      "to": 84
+    },
+    {
+      "from": 100,
+      "to": 84
+    },
+    {
+      "from": 100,
+      "to": 47
+    },
+    {
+      "from": 101,
+      "to": 4
+    },
+    {
+      "from": 101,
+      "to": 6
+    },
+    {
+      "from": 102,
+      "to": 101
+    },
+    {
+      "from": 103,
+      "to": 102
+    },
+    {
+      "from": 103,
+      "to": 47
+    },
+    {
+      "from": 104,
+      "to": 101
+    },
+    {
+      "from": 105,
+      "to": 104
+    },
+    {
+      "from": 105,
+      "to": 47
+    },
+    {
+      "from": 106,
+      "to": 104
+    },
+    {
+      "from": 106,
+      "to": 105
+    },
+    {
+      "from": 107,
+      "to": 106
+    },
+    {
+      "from": 108,
+      "to": 107
+    },
+    {
+      "from": 109,
+      "to": 101
+    },
+    {
+      "from": 110,
+      "to": 109
+    },
+    {
+      "from": 111,
+      "to": 109
+    },
+    {
+      "from": 111,
+      "to": 110
+    },
+    {
+      "from": 112,
+      "to": 109
+    },
+    {
+      "from": 112,
+      "to": 111
+    },
+    {
+      "from": 113,
+      "to": 101
+    },
+    {
+      "from": 114,
+      "to": 113
+    },
+    {
+      "from": 115,
+      "to": 113
+    },
+    {
+      "from": 115,
+      "to": 114
+    },
+    {
+      "from": 116,
+      "to": 101
+    },
+    {
+      "from": 116,
+      "to": 47
+    },
+    {
+      "from": 117,
+      "to": 116
+    },
+    {
+      "from": 118,
+      "to": 116
+    },
+    {
+      "from": 119,
+      "to": 116
+    },
+    {
+      "from": 120,
+      "to": 101
+    },
+    {
+      "from": 121,
+      "to": 101
+    },
+    {
+      "from": 122,
+      "to": 101
+    },
+    {
+      "from": 122,
+      "to": 102
+    },
+    {
+      "from": 122,
+      "to": 104
+    },
+    {
+      "from": 122,
+      "to": 109
+    },
+    {
+      "from": 122,
+      "to": 113
+    },
+    {
+      "from": 123,
+      "to": 104
+    },
+    {
+      "from": 123,
+      "to": 109
+    },
+    {
+      "from": 123,
+      "to": 113
+    },
+    {
+      "from": 124,
+      "to": 6
+    },
+    {
+      "from": 124,
+      "to": 84
+    },
+    {
+      "from": 125,
+      "to": 4
+    },
+    {
+      "from": 126,
+      "to": 4
+    },
+    {
+      "from": 127,
+      "to": 101
+    },
+    {
+      "from": 127,
+      "to": 112
+    },
+    {
+      "from": 128,
+      "to": 127
+    },
+    {
+      "from": 129,
+      "to": 26
+    },
+    {
+      "from": 129,
+      "to": 124
+    },
+    {
+      "from": 130,
+      "to": 21
+    },
+    {
+      "from": 130,
+      "to": 13
+    },
+    {
+      "from": 131,
+      "to": 101
+    },
+    {
+      "from": 131,
+      "to": 122
+    },
+    {
+      "from": 132,
+      "to": 101
+    },
+    {
+      "from": 132,
+      "to": 6
+    },
+    {
+      "from": 133,
+      "to": 101
+    },
+    {
+      "from": 134,
+      "to": 104
+    },
+    {
+      "from": 134,
+      "to": 109
+    },
+    {
+      "from": 134,
+      "to": 116
+    },
+    {
+      "from": 135,
+      "to": 101
+    },
+    {
+      "from": 136,
+      "to": 102
+    },
+    {
+      "from": 136,
+      "to": 103
+    },
+    {
+      "from": 137,
+      "to": 104
+    },
+    {
+      "from": 137,
+      "to": 105
+    },
+    {
+      "from": 137,
+      "to": 106
+    },
+    {
+      "from": 138,
+      "to": 104
+    },
+    {
+      "from": 138,
+      "to": 105
+    },
+    {
+      "from": 139,
+      "to": 109
+    },
+    {
+      "from": 139,
+      "to": 110
+    },
+    {
+      "from": 140,
+      "to": 101
+    },
+    {
+      "from": 140,
+      "to": 4
+    },
+    {
+      "from": 141,
+      "to": 4
+    },
+    {
+      "from": 142,
+      "to": 125
+    },
+    {
+      "from": 143,
+      "to": 105
+    },
+    {
+      "from": 144,
+      "to": 105
+    },
+    {
+      "from": 144,
+      "to": 123
+    },
+    {
+      "from": 145,
+      "to": 124
+    },
+    {
+      "from": 146,
+      "to": 124
+    },
+    {
+      "from": 147,
+      "to": 78
+    },
+    {
+      "from": 147,
+      "to": 92
+    },
+    {
+      "from": 147,
+      "to": 93
+    },
+    {
+      "from": 148,
+      "to": 81
+    },
+    {
+      "from": 148,
+      "to": 82
+    },
+    {
+      "from": 149,
+      "to": 13
+    },
+    {
+      "from": 149,
+      "to": 122
+    },
+    {
+      "from": 150,
+      "to": 149
+    },
+    {
+      "from": 151,
+      "to": 149
+    },
+    {
+      "from": 152,
+      "to": 14
+    },
+    {
+      "from": 152,
+      "to": 4
+    },
+    {
+      "from": 153,
+      "to": 14
+    },
+    {
+      "from": 153,
+      "to": 15
+    },
+    {
+      "from": 154,
+      "to": 15
+    },
+    {
+      "from": 154,
+      "to": 153
+    },
+    {
+      "from": 155,
+      "to": 4
+    },
+    {
+      "from": 156,
+      "to": 4
+    },
+    {
+      "from": 157,
+      "to": 4
+    },
+    {
+      "from": 157,
+      "to": 156
+    },
+    {
+      "from": 158,
+      "to": 20
+    },
+    {
+      "from": 158,
+      "to": 136
+    },
+    {
+      "from": 158,
+      "to": 137
+    },
+    {
+      "from": 159,
+      "to": 101
+    },
+    {
+      "from": 159,
+      "to": 122
+    },
+    {
+      "from": 160,
+      "to": 159
+    },
+    {
+      "from": 160,
+      "to": 131
+    },
+    {
+      "from": 161,
+      "to": 4
+    },
+    {
+      "from": 162,
+      "to": 161
+    },
+    {
+      "from": 162,
+      "to": 78
+    },
+    {
+      "from": 162,
+      "to": 92
+    },
+    {
+      "from": 163,
+      "to": 4
+    },
+    {
+      "from": 164,
+      "to": 4
+    },
+    {
+      "from": 165,
+      "to": 4
+    },
+    {
+      "from": 166,
+      "to": 4
+    },
+    {
+      "from": 167,
+      "to": 4
+    },
+    {
+      "from": 168,
+      "to": 4
+    },
+    {
+      "from": 169,
+      "to": 161
+    },
+    {
+      "from": 169,
+      "to": 163
+    },
+    {
+      "from": 169,
+      "to": 164
+    },
+    {
+      "from": 169,
+      "to": 165
+    },
+    {
+      "from": 170,
+      "to": 169
+    },
+    {
+      "from": 171,
+      "to": 161
+    },
+    {
+      "from": 171,
+      "to": 163
+    },
+    {
+      "from": 171,
+      "to": 164
+    },
+    {
+      "from": 172,
+      "to": 161
+    },
+    {
+      "from": 172,
+      "to": 164
+    },
+    {
+      "from": 172,
+      "to": 166
+    },
+    {
+      "from": 173,
+      "to": 122
+    },
+    {
+      "from": 173,
+      "to": 149
+    },
+    {
+      "from": 174,
+      "to": 150
+    },
+    {
+      "from": 174,
+      "to": 173
+    },
+    {
+      "from": 175,
+      "to": 151
+    },
+    {
+      "from": 175,
+      "to": 173
+    },
+    {
+      "from": 176,
+      "to": 173
+    },
+    {
+      "from": 176,
+      "to": 16
+    },
+    {
+      "from": 176,
+      "to": 17
+    },
+    {
+      "from": 177,
+      "to": 173
+    },
+    {
+      "from": 177,
+      "to": 16
+    },
+    {
+      "from": 177,
+      "to": 17
+    },
+    {
+      "from": 178,
+      "to": 173
+    },
+    {
+      "from": 178,
+      "to": 16
+    },
+    {
+      "from": 179,
+      "to": 152
+    },
+    {
+      "from": 179,
+      "to": 173
+    },
+    {
+      "from": 180,
+      "to": 173
+    },
+    {
+      "from": 180,
+      "to": 17
+    },
+    {
+      "from": 181,
+      "to": 130
+    },
+    {
+      "from": 181,
+      "to": 173
+    },
+    {
+      "from": 182,
+      "to": 19
+    },
+    {
+      "from": 182,
+      "to": 173
+    },
+    {
+      "from": 183,
+      "to": 154
+    },
+    {
+      "from": 183,
+      "to": 161
+    },
+    {
+      "from": 183,
+      "to": 163
+    },
+    {
+      "from": 184,
+      "to": 58
+    },
+    {
+      "from": 184,
+      "to": 173
+    },
+    {
+      "from": 185,
+      "to": 184
+    },
+    {
+      "from": 186,
+      "to": 11
+    },
+    {
+      "from": 186,
+      "to": 39
+    },
+    {
+      "from": 187,
+      "to": 186
+    },
+    {
+      "from": 188,
+      "to": 187
+    },
+    {
+      "from": 189,
+      "to": 188
+    },
+    {
+      "from": 190,
+      "to": 188
+    },
+    {
+      "from": 191,
+      "to": 188
+    },
+    {
+      "from": 192,
+      "to": 187
+    },
+    {
+      "from": 193,
+      "to": 192
+    },
+    {
+      "from": 194,
+      "to": 193
+    },
+    {
+      "from": 195,
+      "to": 13
+    },
+    {
+      "from": 195,
+      "to": 186
+    },
+    {
+      "from": 196,
+      "to": 195
+    },
+    {
+      "from": 197,
+      "to": 186
+    },
+    {
+      "from": 198,
+      "to": 197
+    },
+    {
+      "from": 198,
+      "to": 188
+    },
+    {
+      "from": 198,
+      "to": 189
+    },
+    {
+      "from": 198,
+      "to": 190
+    },
+    {
+      "from": 199,
+      "to": 186
+    },
+    {
+      "from": 200,
+      "to": 186
+    },
+    {
+      "from": 201,
+      "to": 197
+    },
+    {
+      "from": 201,
+      "to": 199
+    },
+    {
+      "from": 201,
+      "to": 200
+    },
+    {
+      "from": 202,
+      "to": 192
+    },
+    {
+      "from": 203,
+      "to": 202
+    },
+    {
+      "from": 204,
+      "to": 203
+    },
+    {
+      "from": 205,
+      "to": 192
+    },
+    {
+      "from": 205,
+      "to": 204
+    },
+    {
+      "from": 206,
+      "to": 199
+    },
+    {
+      "from": 206,
+      "to": 197
+    },
+    {
+      "from": 207,
+      "to": 195
+    },
+    {
+      "from": 207,
+      "to": 196
+    },
+    {
+      "from": 208,
+      "to": 207
+    },
+    {
+      "from": 208,
+      "to": 189
+    },
+    {
+      "from": 208,
+      "to": 190
+    },
+    {
+      "from": 208,
+      "to": 191
+    },
+    {
+      "from": 209,
+      "to": 187
+    },
+    {
+      "from": 209,
+      "to": 192
+    },
+    {
+      "from": 210,
+      "to": 192
+    },
+    {
+      "from": 210,
+      "to": 197
+    },
+    {
+      "from": 211,
+      "to": 192
+    },
+    {
+      "from": 212,
+      "to": 207
+    },
+    {
+      "from": 213,
+      "to": 193
+    },
+    {
+      "from": 213,
+      "to": 201
+    },
+    {
+      "from": 214,
+      "to": 186
+    },
+    {
+      "from": 214,
+      "to": 59
+    },
+    {
+      "from": 215,
+      "to": 186
+    },
+    {
+      "from": 215,
+      "to": 224
+    },
+    {
+      "from": 216,
+      "to": 9
+    },
+    {
+      "from": 216,
+      "to": 11
+    },
+    {
+      "from": 217,
+      "to": 216
+    },
+    {
+      "from": 218,
+      "to": 99
+    },
+    {
+      "from": 218,
+      "to": 216
+    },
+    {
+      "from": 219,
+      "to": 218
+    },
+    {
+      "from": 219,
+      "to": 26
+    },
+    {
+      "from": 221,
+      "to": 220
+    },
+    {
+      "from": 221,
+      "to": 33
+    },
+    {
+      "from": 222,
+      "to": 221
+    },
+    {
+      "from": 223,
+      "to": 221
+    },
+    {
+      "from": 223,
+      "to": 53
+    },
+    {
+      "from": 224,
+      "to": 11
+    },
+    {
+      "from": 224,
+      "to": 39
+    },
+    {
+      "from": 225,
+      "to": 224
+    },
+    {
+      "from": 226,
+      "to": 220
+    },
+    {
+      "from": 226,
+      "to": 216
+    },
+    {
+      "from": 227,
+      "to": 226
+    },
+    {
+      "from": 228,
+      "to": 227
+    },
+    {
+      "from": 228,
+      "to": 16
+    },
+    {
+      "from": 228,
+      "to": 17
+    },
+    {
+      "from": 229,
+      "to": 8
+    },
+    {
+      "from": 229,
+      "to": 217
+    },
+    {
+      "from": 229,
+      "to": 221
+    },
+    {
+      "from": 230,
+      "to": 229
+    },
+    {
+      "from": 231,
+      "to": 8
+    },
+    {
+      "from": 231,
+      "to": 217
+    },
+    {
+      "from": 232,
+      "to": 8
+    },
+    {
+      "from": 232,
+      "to": 20
+    },
+    {
+      "from": 233,
+      "to": 8
+    },
+    {
+      "from": 233,
+      "to": 229
+    },
+    {
+      "from": 235,
+      "to": 234
+    },
+    {
+      "from": 235,
+      "to": 226
+    },
+    {
+      "from": 235,
+      "to": 216
+    },
+    {
+      "from": 235,
+      "to": 220
+    },
+    {
+      "from": 236,
+      "to": 235
+    },
+    {
+      "from": 236,
+      "to": 217
+    },
+    {
+      "from": 236,
+      "to": 221
+    },
+    {
+      "from": 237,
+      "to": 225
+    },
+    {
+      "from": 237,
+      "to": 235
+    },
+    {
+      "from": 238,
+      "to": 212
+    },
+    {
+      "from": 238,
+      "to": 235
+    },
+    {
+      "from": 239,
+      "to": 236
+    },
+    {
+      "from": 239,
+      "to": 237
+    },
+    {
+      "from": 239,
+      "to": 238
+    },
+    {
+      "from": 240,
+      "to": 229
+    },
+    {
+      "from": 240,
+      "to": 217
+    },
+    {
+      "from": 241,
+      "to": 221
+    },
+    {
+      "from": 241,
+      "to": 229
+    },
+    {
+      "from": 242,
+      "to": 221
+    },
+    {
+      "from": 242,
+      "to": 229
+    },
+    {
+      "from": 243,
+      "to": 229
+    },
+    {
+      "from": 244,
+      "to": 229
+    },
+    {
+      "from": 244,
+      "to": 230
+    },
+    {
+      "from": 245,
+      "to": 8
+    },
+    {
+      "from": 248,
+      "to": 247
+    },
+    {
+      "from": 250,
+      "to": 246
+    },
+    {
+      "from": 250,
+      "to": 247
+    },
+    {
+      "from": 251,
+      "to": 250
+    },
+    {
+      "from": 252,
+      "to": 251
+    },
+    {
+      "from": 253,
+      "to": 252
+    },
+    {
+      "from": 254,
+      "to": 253
+    },
+    {
+      "from": 255,
+      "to": 253
+    },
+    {
+      "from": 256,
+      "to": 253
+    },
+    {
+      "from": 257,
+      "to": 253
+    },
+    {
+      "from": 257,
+      "to": 256
+    },
+    {
+      "from": 258,
+      "to": 253
+    },
+    {
+      "from": 259,
+      "to": 253
+    },
+    {
+      "from": 260,
+      "to": 253
+    },
+    {
+      "from": 261,
+      "to": 256
+    },
+    {
+      "from": 262,
+      "to": 258
+    },
+    {
+      "from": 262,
+      "to": 261
+    },
+    {
+      "from": 263,
+      "to": 261
+    },
+    {
+      "from": 264,
+      "to": 262
+    },
+    {
+      "from": 264,
+      "to": 263
+    },
+    {
+      "from": 265,
+      "to": 253
+    },
+    {
+      "from": 265,
+      "to": 262
+    },
+    {
+      "from": 266,
+      "to": 265
+    },
+    {
+      "from": 267,
+      "to": 266
+    },
+    {
+      "from": 268,
+      "to": 265
+    },
+    {
+      "from": 269,
+      "to": 265
+    },
+    {
+      "from": 269,
+      "to": 266
+    },
+    {
+      "from": 270,
+      "to": 269
+    },
+    {
+      "from": 271,
+      "to": 261
+    },
+    {
+      "from": 271,
+      "to": 265
+    },
+    {
+      "from": 272,
+      "to": 265
+    },
+    {
+      "from": 272,
+      "to": 271
+    },
+    {
+      "from": 273,
+      "to": 272
+    },
+    {
+      "from": 274,
+      "to": 272
+    },
+    {
+      "from": 275,
+      "to": 274
+    },
+    {
+      "from": 275,
+      "to": 258
+    },
+    {
+      "from": 276,
+      "to": 260
+    },
+    {
+      "from": 276,
+      "to": 274
+    },
+    {
+      "from": 278,
+      "to": 277
+    },
+    {
+      "from": 278,
+      "to": 250
+    },
+    {
+      "from": 278,
+      "to": 265
+    },
+    {
+      "from": 280,
+      "to": 279
+    },
+    {
+      "from": 280,
+      "to": 250
+    },
+    {
+      "from": 280,
+      "to": 265
+    },
+    {
+      "from": 281,
+      "to": 247
+    },
+    {
+      "from": 283,
+      "to": 282
+    },
+    {
+      "from": 283,
+      "to": 250
+    },
+    {
+      "from": 283,
+      "to": 265
+    },
+    {
+      "from": 284,
+      "to": 282
+    },
+    {
+      "from": 286,
+      "to": 285
+    },
+    {
+      "from": 286,
+      "to": 250
+    },
+    {
+      "from": 286,
+      "to": 265
+    },
+    {
+      "from": 287,
+      "to": 247
+    },
+    {
+      "from": 287,
+      "to": 249
+    },
+    {
+      "from": 287,
+      "to": 250
+    },
+    {
+      "from": 288,
+      "to": 287
+    },
+    {
+      "from": 288,
+      "to": 265
+    },
+    {
+      "from": 289,
+      "to": 287
+    },
+    {
+      "from": 290,
+      "to": 287
+    },
+    {
+      "from": 290,
+      "to": 265
+    },
+    {
+      "from": 291,
+      "to": 250
+    },
+    {
+      "from": 291,
+      "to": 265
+    },
+    {
+      "from": 292,
+      "to": 250
+    },
+    {
+      "from": 293,
+      "to": 265
+    },
+    {
+      "from": 293,
+      "to": 263
+    },
+    {
+      "from": 294,
+      "to": 293
+    },
+    {
+      "from": 294,
+      "to": 250
+    },
+    {
+      "from": 295,
+      "to": 248
+    },
+    {
+      "from": 295,
+      "to": 249
+    },
+    {
+      "from": 295,
+      "to": 250
+    },
+    {
+      "from": 296,
+      "to": 295
+    },
+    {
+      "from": 296,
+      "to": 265
+    },
+    {
+      "from": 298,
+      "to": 297
+    },
+    {
+      "from": 298,
+      "to": 295
+    },
+    {
+      "from": 298,
+      "to": 265
+    },
+    {
+      "from": 299,
+      "to": 295
+    },
+    {
+      "from": 299,
+      "to": 265
+    },
+    {
+      "from": 300,
+      "to": 246
+    },
+    {
+      "from": 300,
+      "to": 253
+    },
+    {
+      "from": 301,
+      "to": 300
+    },
+    {
+      "from": 302,
+      "to": 291
+    },
+    {
+      "from": 302,
+      "to": 250
+    },
+    {
+      "from": 303,
+      "to": 250
+    },
+    {
+      "from": 303,
+      "to": 272
+    },
+    {
+      "from": 304,
+      "to": 295
+    },
+    {
+      "from": 304,
+      "to": 303
+    },
+    {
+      "from": 305,
+      "to": 250
+    },
+    {
+      "from": 306,
+      "to": 305
+    },
+    {
+      "from": 306,
+      "to": 278
+    },
+    {
+      "from": 307,
+      "to": 305
+    },
+    {
+      "from": 307,
+      "to": 287
+    },
+    {
+      "from": 308,
+      "to": 305
+    },
+    {
+      "from": 308,
+      "to": 278
+    },
+    {
+      "from": 309,
+      "to": 305
+    },
+    {
+      "from": 309,
+      "to": 278
+    },
+    {
+      "from": 310,
+      "to": 305
+    },
+    {
+      "from": 310,
+      "to": 278
+    },
+    {
+      "from": 311,
+      "to": 305
+    },
+    {
+      "from": 311,
+      "to": 280
+    },
+    {
+      "from": 311,
+      "to": 282
+    },
+    {
+      "from": 312,
+      "to": 288
+    },
+    {
+      "from": 312,
+      "to": 265
+    },
+    {
+      "from": 313,
+      "to": 312
+    },
+    {
+      "from": 313,
+      "to": 265
+    },
+    {
+      "from": 314,
+      "to": 286
+    },
+    {
+      "from": 314,
+      "to": 305
+    },
+    {
+      "from": 315,
+      "to": 278
+    },
+    {
+      "from": 315,
+      "to": 305
+    },
+    {
+      "from": 316,
+      "to": 78
+    },
+    {
+      "from": 316,
+      "to": 79
+    },
+    {
+      "from": 317,
+      "to": 316
+    },
+    {
+      "from": 317,
+      "to": 93
+    },
+    {
+      "from": 317,
+      "to": 147
+    },
+    {
+      "from": 318,
+      "to": 93
+    },
+    {
+      "from": 318,
+      "to": 316
+    },
+    {
+      "from": 319,
+      "to": 81
+    },
+    {
+      "from": 320,
+      "to": 319
+    },
+    {
+      "from": 320,
+      "to": 148
+    },
+    {
+      "from": 321,
+      "to": 234
+    },
+    {
+      "from": 322,
+      "to": 220
+    },
+    {
+      "from": 322,
+      "to": 234
+    },
+    {
+      "from": 323,
+      "to": 224
+    },
+    {
+      "from": 323,
+      "to": 234
+    },
+    {
+      "from": 324,
+      "to": 124
+    },
+    {
+      "from": 324,
+      "to": 234
+    },
+    {
+      "from": 325,
+      "to": 234
+    },
+    {
+      "from": 325,
+      "to": 282
+    },
+    {
+      "from": 326,
+      "to": 324
+    },
+    {
+      "from": 327,
+      "to": 287
+    },
+    {
+      "from": 327,
+      "to": 288
+    },
+    {
+      "from": 328,
+      "to": 123
+    },
+    {
+      "from": 328,
+      "to": 327
+    },
+    {
+      "from": 329,
+      "to": 327
+    },
+    {
+      "from": 330,
+      "to": 123
+    },
+    {
+      "from": 330,
+      "to": 234
+    },
+    {
+      "from": 331,
+      "to": 247
+    },
+    {
+      "from": 331,
+      "to": 249
+    },
+    {
+      "from": 332,
+      "to": 247
+    },
+    {
+      "from": 333,
+      "to": 332
+    },
+    {
+      "from": 334,
+      "to": 282
+    },
+    {
+      "from": 334,
+      "to": 289
+    },
+    {
+      "from": 335,
+      "to": 282
+    },
+    {
+      "from": 335,
+      "to": 334
+    },
+    {
+      "from": 336,
+      "to": 282
+    },
+    {
+      "from": 336,
+      "to": 234
+    },
+    {
+      "from": 337,
+      "to": 336
+    },
+    {
+      "from": 337,
+      "to": 265
+    },
+    {
+      "from": 338,
+      "to": 335
+    },
+    {
+      "from": 338,
+      "to": 336
+    },
+    {
+      "from": 339,
+      "to": 316
+    },
+    {
+      "from": 339,
+      "to": 319
+    },
+    {
+      "from": 339,
+      "to": 336
+    },
+    {
+      "from": 340,
+      "to": 295
+    },
+    {
+      "from": 340,
+      "to": 298
+    },
+    {
+      "from": 340,
+      "to": 321
+    },
+    {
+      "from": 340,
+      "to": 316
+    },
+    {
+      "from": 340,
+      "to": 281
+    },
+    {
+      "from": 341,
+      "to": 331
+    },
+    {
+      "from": 341,
+      "to": 340
+    },
+    {
+      "from": 342,
+      "to": 292
+    },
+    {
+      "from": 342,
+      "to": 234
+    },
+    {
+      "from": 342,
+      "to": 275
+    },
+    {
+      "from": 343,
+      "to": 278
+    },
+    {
+      "from": 343,
+      "to": 280
+    },
+    {
+      "from": 343,
+      "to": 282
+    },
+    {
+      "from": 343,
+      "to": 265
+    },
+    {
+      "from": 344,
+      "to": 309
+    },
+    {
+      "from": 344,
+      "to": 310
+    },
+    {
+      "from": 344,
+      "to": 316
+    },
+    {
+      "from": 344,
+      "to": 319
+    },
+    {
+      "from": 345,
+      "to": 333
+    },
+    {
+      "from": 345,
+      "to": 340
+    },
+    {
+      "from": 346,
+      "to": 234
+    },
+    {
+      "from": 346,
+      "to": 342
+    },
+    {
+      "from": 347,
+      "to": 291
+    },
+    {
+      "from": 347,
+      "to": 346
+    },
+    {
+      "from": 348,
+      "to": 275
+    },
+    {
+      "from": 349,
+      "to": 272
+    },
+    {
+      "from": 349,
+      "to": 275
+    },
+    {
+      "from": 349,
+      "to": 342
+    },
+    {
+      "from": 350,
+      "to": 298
+    },
+    {
+      "from": 350,
+      "to": 299
+    },
+    {
+      "from": 351,
+      "to": 299
+    },
+    {
+      "from": 351,
+      "to": 348
+    },
+    {
+      "from": 353,
+      "to": 352
+    },
+    {
+      "from": 354,
+      "to": 352
+    },
+    {
+      "from": 354,
+      "to": 258
+    },
+    {
+      "from": 354,
+      "to": 260
+    },
+    {
+      "from": 355,
+      "to": 354
+    },
+    {
+      "from": 356,
+      "to": 354
+    },
+    {
+      "from": 356,
+      "to": 348
+    },
+    {
+      "from": 357,
+      "to": 355
+    },
+    {
+      "from": 358,
+      "to": 355
+    },
+    {
+      "from": 358,
+      "to": 342
+    },
+    {
+      "from": 359,
+      "to": 358
+    },
+    {
+      "from": 359,
+      "to": 347
+    },
+    {
+      "from": 360,
+      "to": 359
+    },
+    {
+      "from": 360,
+      "to": 266
+    },
+    {
+      "from": 361,
+      "to": 355
+    },
+    {
+      "from": 361,
+      "to": 271
+    },
+    {
+      "from": 362,
+      "to": 361
+    },
+    {
+      "from": 362,
+      "to": 355
+    },
+    {
+      "from": 363,
+      "to": 352
+    },
+    {
+      "from": 364,
+      "to": 363
+    },
+    {
+      "from": 365,
+      "to": 364
+    },
+    {
+      "from": 366,
+      "to": 364
+    },
+    {
+      "from": 366,
+      "to": 265
+    },
+    {
+      "from": 367,
+      "to": 366
+    },
+    {
+      "from": 368,
+      "to": 367
+    },
+    {
+      "from": 368,
+      "to": 355
+    },
+    {
+      "from": 370,
+      "to": 363
+    },
+    {
+      "from": 370,
+      "to": 369
+    },
+    {
+      "from": 370,
+      "to": 366
+    },
+    {
+      "from": 371,
+      "to": 369
+    },
+    {
+      "from": 371,
+      "to": 354
+    },
+    {
+      "from": 372,
+      "to": 352
+    },
+    {
+      "from": 373,
+      "to": 372
+    },
+    {
+      "from": 373,
+      "to": 356
+    },
+    {
+      "from": 374,
+      "to": 372
+    },
+    {
+      "from": 375,
+      "to": 372
+    },
+    {
+      "from": 375,
+      "to": 367
+    },
+    {
+      "from": 376,
+      "to": 372
+    },
+    {
+      "from": 376,
+      "to": 373
+    },
+    {
+      "from": 376,
+      "to": 374
+    },
+    {
+      "from": 377,
+      "to": 352
+    },
+    {
+      "from": 378,
+      "to": 377
+    },
+    {
+      "from": 378,
+      "to": 356
+    },
+    {
+      "from": 379,
+      "to": 377
+    },
+    {
+      "from": 379,
+      "to": 378
+    },
+    {
+      "from": 380,
+      "to": 377
+    },
+    {
+      "from": 380,
+      "to": 379
+    },
+    {
+      "from": 381,
+      "to": 380
+    },
+    {
+      "from": 381,
+      "to": 298
+    },
+    {
+      "from": 382,
+      "to": 358
+    },
+    {
+      "from": 382,
+      "to": 373
+    },
+    {
+      "from": 382,
+      "to": 378
+    },
+    {
+      "from": 383,
+      "to": 367
+    },
+    {
+      "from": 383,
+      "to": 346
+    },
+    {
+      "from": 384,
+      "to": 383
+    },
+    {
+      "from": 384,
+      "to": 367
+    },
+    {
+      "from": 385,
+      "to": 384
+    },
+    {
+      "from": 385,
+      "to": 367
+    },
+    {
+      "from": 386,
+      "to": 367
+    },
+    {
+      "from": 386,
+      "to": 346
+    },
+    {
+      "from": 387,
+      "to": 386
+    },
+    {
+      "from": 387,
+      "to": 367
+    },
+    {
+      "from": 388,
+      "to": 386
+    },
+    {
+      "from": 388,
+      "to": 367
+    },
+    {
+      "from": 389,
+      "to": 386
+    },
+    {
+      "from": 389,
+      "to": 360
+    },
+    {
+      "from": 390,
+      "to": 370
+    },
+    {
+      "from": 390,
+      "to": 359
+    },
+    {
+      "from": 390,
+      "to": 386
+    },
+    {
+      "from": 391,
+      "to": 1
+    },
+    {
+      "from": 391,
+      "to": 7
+    },
+    {
+      "from": 392,
+      "to": 391
+    },
+    {
+      "from": 393,
+      "to": 392
+    },
+    {
+      "from": 393,
+      "to": 132
+    },
+    {
+      "from": 394,
+      "to": 391
+    },
+    {
+      "from": 394,
+      "to": 393
+    },
+    {
+      "from": 395,
+      "to": 394
+    },
+    {
+      "from": 396,
+      "to": 394
+    },
+    {
+      "from": 397,
+      "to": 394
+    },
+    {
+      "from": 398,
+      "to": 391
+    },
+    {
+      "from": 399,
+      "to": 398
+    },
+    {
+      "from": 399,
+      "to": 394
+    },
+    {
+      "from": 400,
+      "to": 398
+    },
+    {
+      "from": 400,
+      "to": 399
+    },
+    {
+      "from": 401,
+      "to": 400
+    },
+    {
+      "from": 402,
+      "to": 6
+    },
+    {
+      "from": 402,
+      "to": 391
+    },
+    {
+      "from": 403,
+      "to": 402
+    },
+    {
+      "from": 404,
+      "to": 402
+    },
+    {
+      "from": 405,
+      "to": 402
+    },
+    {
+      "from": 405,
+      "to": 396
+    },
+    {
+      "from": 406,
+      "to": 135
+    },
+    {
+      "from": 406,
+      "to": 391
+    },
+    {
+      "from": 407,
+      "to": 135
+    },
+    {
+      "from": 407,
+      "to": 391
+    },
+    {
+      "from": 408,
+      "to": 402
+    },
+    {
+      "from": 408,
+      "to": 391
+    },
+    {
+      "from": 409,
+      "to": 402
+    },
+    {
+      "from": 409,
+      "to": 391
+    },
+    {
+      "from": 410,
+      "to": 406
+    },
+    {
+      "from": 410,
+      "to": 407
+    },
+    {
+      "from": 410,
+      "to": 135
+    },
+    {
+      "from": 411,
+      "to": 4
+    },
+    {
+      "from": 411,
+      "to": 391
+    },
+    {
+      "from": 412,
+      "to": 391
+    },
+    {
+      "from": 413,
+      "to": 1
+    },
+    {
+      "from": 413,
+      "to": 4
+    },
+    {
+      "from": 414,
+      "to": 413
+    },
+    {
+      "from": 414,
+      "to": 48
+    },
+    {
+      "from": 414,
+      "to": 47
+    },
+    {
+      "from": 415,
+      "to": 413
+    },
+    {
+      "from": 415,
+      "to": 146
+    },
+    {
+      "from": 417,
+      "to": 416
+    },
+    {
+      "from": 418,
+      "to": 417
+    },
+    {
+      "from": 419,
+      "to": 418
+    },
+    {
+      "from": 419,
+      "to": 417
+    },
+    {
+      "from": 420,
+      "to": 419
+    },
+    {
+      "from": 421,
+      "to": 416
+    },
+    {
+      "from": 422,
+      "to": 421
+    },
+    {
+      "from": 423,
+      "to": 420
+    },
+    {
+      "from": 423,
+      "to": 421
+    },
+    {
+      "from": 423,
+      "to": 422
+    },
+    {
+      "from": 424,
+      "to": 416
+    },
+    {
+      "from": 424,
+      "to": 419
+    },
+    {
+      "from": 425,
+      "to": 423
+    },
+    {
+      "from": 425,
+      "to": 424
+    },
+    {
+      "from": 426,
+      "to": 417
+    },
+    {
+      "from": 426,
+      "to": 419
+    },
+    {
+      "from": 427,
+      "to": 426
+    },
+    {
+      "from": 429,
+      "to": 428
+    },
+    {
+      "from": 430,
+      "to": 428
+    },
+    {
+      "from": 431,
+      "to": 428
+    },
+    {
+      "from": 432,
+      "to": 428
+    },
+    {
+      "from": 432,
+      "to": 423
+    },
+    {
+      "from": 432,
+      "to": 193
+    },
+    {
+      "from": 433,
+      "to": 428
+    },
+    {
+      "from": 433,
+      "to": 427
+    },
+    {
+      "from": 434,
+      "to": 416
+    },
+    {
+      "from": 434,
+      "to": 423
+    },
+    {
+      "from": 435,
+      "to": 434
+    },
+    {
+      "from": 436,
+      "to": 427
+    },
+    {
+      "from": 436,
+      "to": 433
+    },
+    {
+      "from": 436,
+      "to": 432
+    },
+    {
+      "from": 437,
+      "to": 434
+    },
+    {
+      "from": 437,
+      "to": 436
+    },
+    {
+      "from": 438,
+      "to": 416
+    },
+    {
+      "from": 438,
+      "to": 197
+    },
+    {
+      "from": 438,
+      "to": 213
+    },
+    {
+      "from": 439,
+      "to": 416
+    },
+    {
+      "from": 439,
+      "to": 123
+    },
+    {
+      "from": 439,
+      "to": 341
+    },
+    {
+      "from": 440,
+      "to": 278
+    },
+    {
+      "from": 440,
+      "to": 283
+    },
+    {
+      "from": 440,
+      "to": 265
+    },
+    {
+      "from": 441,
+      "to": 193
+    },
+    {
+      "from": 441,
+      "to": 213
+    },
+    {
+      "from": 441,
+      "to": 229
+    },
+    {
+      "from": 442,
+      "to": 379
+    },
+    {
+      "from": 442,
+      "to": 441
+    },
+    {
+      "from": 443,
+      "to": 425
+    },
+    {
+      "from": 443,
+      "to": 471
+    },
+    {
+      "from": 443,
+      "to": 475
+    },
+    {
+      "from": 444,
+      "to": 416
+    },
+    {
+      "from": 444,
+      "to": 441
+    },
+    {
+      "from": 444,
+      "to": 7
+    },
+    {
+      "from": 445,
+      "to": 433
+    },
+    {
+      "from": 445,
+      "to": 434
+    },
+    {
+      "from": 446,
+      "to": 1
+    },
+    {
+      "from": 446,
+      "to": 7
+    },
+    {
+      "from": 446,
+      "to": 21
+    },
+    {
+      "from": 447,
+      "to": 446
+    },
+    {
+      "from": 447,
+      "to": 20
+    },
+    {
+      "from": 448,
+      "to": 446
+    },
+    {
+      "from": 448,
+      "to": 116
+    },
+    {
+      "from": 449,
+      "to": 109
+    },
+    {
+      "from": 449,
+      "to": 446
+    },
+    {
+      "from": 450,
+      "to": 104
+    },
+    {
+      "from": 450,
+      "to": 446
+    },
+    {
+      "from": 451,
+      "to": 117
+    },
+    {
+      "from": 451,
+      "to": 446
+    },
+    {
+      "from": 452,
+      "to": 446
+    },
+    {
+      "from": 453,
+      "to": 446
+    },
+    {
+      "from": 453,
+      "to": 434
+    },
+    {
+      "from": 454,
+      "to": 446
+    },
+    {
+      "from": 454,
+      "to": 8
+    },
+    {
+      "from": 455,
+      "to": 446
+    },
+    {
+      "from": 455,
+      "to": 454
+    },
+    {
+      "from": 456,
+      "to": 446
+    },
+    {
+      "from": 456,
+      "to": 455
+    },
+    {
+      "from": 457,
+      "to": 173
+    },
+    {
+      "from": 457,
+      "to": 446
+    },
+    {
+      "from": 458,
+      "to": 59
+    },
+    {
+      "from": 458,
+      "to": 447
+    },
+    {
+      "from": 458,
+      "to": 181
+    },
+    {
+      "from": 459,
+      "to": 205
+    },
+    {
+      "from": 459,
+      "to": 447
+    },
+    {
+      "from": 460,
+      "to": 229
+    },
+    {
+      "from": 460,
+      "to": 446
+    },
+    {
+      "from": 461,
+      "to": 408
+    },
+    {
+      "from": 461,
+      "to": 409
+    },
+    {
+      "from": 461,
+      "to": 446
+    },
+    {
+      "from": 462,
+      "to": 239
+    },
+    {
+      "from": 462,
+      "to": 446
+    },
+    {
+      "from": 463,
+      "to": 462
+    },
+    {
+      "from": 463,
+      "to": 446
+    },
+    {
+      "from": 464,
+      "to": 462
+    },
+    {
+      "from": 464,
+      "to": 386
+    },
+    {
+      "from": 464,
+      "to": 379
+    },
+    {
+      "from": 465,
+      "to": 446
+    },
+    {
+      "from": 466,
+      "to": 465
+    },
+    {
+      "from": 466,
+      "to": 446
+    },
+    {
+      "from": 467,
+      "to": 185
+    },
+    {
+      "from": 467,
+      "to": 465
+    },
+    {
+      "from": 468,
+      "to": 446
+    },
+    {
+      "from": 468,
+      "to": 398
+    },
+    {
+      "from": 469,
+      "to": 398
+    },
+    {
+      "from": 469,
+      "to": 446
+    },
+    {
+      "from": 470,
+      "to": 446
+    },
+    {
+      "from": 470,
+      "to": 460
+    },
+    {
+      "from": 470,
+      "to": 462
+    },
+    {
+      "from": 470,
+      "to": 441
+    },
+    {
+      "from": 472,
+      "to": 471
+    },
+    {
+      "from": 473,
+      "to": 471
+    },
+    {
+      "from": 473,
+      "to": 472
+    },
+    {
+      "from": 474,
+      "to": 471
+    },
+    {
+      "from": 475,
+      "to": 471
+    },
+    {
+      "from": 476,
+      "to": 475
+    },
+    {
+      "from": 476,
+      "to": 472
+    },
+    {
+      "from": 477,
+      "to": 471
+    },
+    {
+      "from": 478,
+      "to": 477
+    },
+    {
+      "from": 478,
+      "to": 446
+    },
+    {
+      "from": 478,
+      "to": 4
+    },
+    {
+      "from": 479,
+      "to": 477
+    },
+    {
+      "from": 479,
+      "to": 446
+    },
+    {
+      "from": 480,
+      "to": 213
+    },
+    {
+      "from": 480,
+      "to": 441
+    },
+    {
+      "from": 480,
+      "to": 477
+    },
+    {
+      "from": 481,
+      "to": 6
+    },
+    {
+      "from": 481,
+      "to": 477
+    },
+    {
+      "from": 482,
+      "to": 477
+    },
+    {
+      "from": 483,
+      "to": 84
+    },
+    {
+      "from": 483,
+      "to": 477
+    },
+    {
+      "from": 484,
+      "to": 458
+    },
+    {
+      "from": 484,
+      "to": 477
+    },
+    {
+      "from": 485,
+      "to": 484
+    },
+    {
+      "from": 486,
+      "to": 485
+    },
+    {
+      "from": 487,
+      "to": 485
+    },
+    {
+      "from": 488,
+      "to": 485
+    },
+    {
+      "from": 488,
+      "to": 22
+    },
+    {
+      "from": 489,
+      "to": 4
+    },
+    {
+      "from": 489,
+      "to": 471
+    },
+    {
+      "from": 490,
+      "to": 489
+    },
+    {
+      "from": 490,
+      "to": 24
+    },
+    {
+      "from": 491,
+      "to": 471
+    },
+    {
+      "from": 492,
+      "to": 471
+    },
+    {
+      "from": 492,
+      "to": 484
+    },
+    {
+      "from": 493,
+      "to": 484
+    },
+    {
+      "from": 493,
+      "to": 485
+    },
+    {
+      "from": 494,
+      "to": 472
+    },
+    {
+      "from": 494,
+      "to": 475
+    },
+    {
+      "from": 494,
+      "to": 477
+    },
+    {
+      "from": 495,
+      "to": 494
+    },
+    {
+      "from": 495,
+      "to": 366
+    },
+    {
+      "from": 495,
+      "to": 477
+    },
+    {
+      "from": 496,
+      "to": 443
+    },
+    {
+      "from": 496,
+      "to": 480
+    },
+    {
+      "from": 497,
+      "to": 424
+    },
+    {
+      "from": 497,
+      "to": 480
+    },
+    {
+      "from": 497,
+      "to": 496
+    },
+    {
+      "from": 498,
+      "to": 379
+    },
+    {
+      "from": 498,
+      "to": 484
+    },
+    {
+      "from": 498,
+      "to": 480
+    },
+    {
+      "from": 499,
+      "to": 477
+    },
+    {
+      "from": 499,
+      "to": 484
+    },
+    {
+      "from": 499,
+      "to": 472
+    },
+    {
+      "from": 500,
+      "to": 499
+    },
+    {
+      "from": 500,
+      "to": 494
+    },
+    {
+      "from": 500,
+      "to": 458
+    },
+    {
+      "from": 500,
+      "to": 447
+    }
+  ]
+}

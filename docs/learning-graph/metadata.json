@@ -1,0 +1,10 @@
+{
+  "title": "Hydroponics: From Mason Jar to Vertical Farm",
+  "description": "An interactive intelligent textbook on hydroponics for advanced high-school and college students, featuring MicroSims that bring plant physiology, nutrient science, MicroPython automation, data analysis, solar energy, and vertical farming economics to life.",
+  "creator": "Dan McCreary",
+  "date": "2026-05-28",
+  "version": "1.0",
+  "format": "Learning Graph JSON v1.0",
+  "schema": "https://raw.githubusercontent.com/dmccreary/learning-graphs/refs/heads/main/src/schema/learning-graph-schema.json",
+  "license": "CC BY-NC-SA 4.0 DEED"
+}

@@ -1,7 +1,4 @@
-
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
+<!DOCTYPE html><html lang="en" class="no-js"><head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -21,7 +18,7 @@
         <link rel="next" href="../12-micropython-fundamentals/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
     
     
@@ -47,7 +44,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -62,8 +59,44 @@
 
     
     
+      
+        <meta property="og:type" content="website">
+      
+        <meta property="og:title" content="Environmental Control and CO₂ Management - Hydroponics">
+      
+        <meta property="og:description" content="Temperature, humidity, vapor pressure deficit (VPD), CO₂ enrichment, HVAC sizing, exhaust fans, dehumidifiers, data loggers, alarm setpoints, and grow room automation overview.">
+      
+        <meta property="og:image" content="https://dmccreary.github.io/hydroponics/assets/images/social/chapters/11-environmental-control/index.png">
+      
+        <meta property="og:image:type" content="image/png">
+      
+        <meta property="og:image:width" content="1200">
+      
+        <meta property="og:image:height" content="630">
+      
+        <meta property="og:url" content="https://dmccreary.github.io/hydroponics/chapters/11-environmental-control/">
+      
+        <meta name="twitter:card" content="summary_large_image">
+      
+        <meta name="twitter:title" content="Environmental Control and CO₂ Management - Hydroponics">
+      
+        <meta name="twitter:description" content="Temperature, humidity, vapor pressure deficit (VPD), CO₂ enrichment, HVAC sizing, exhaust fans, dehumidifiers, data loggers, alarm setpoints, and grow room automation overview.">
+      
+        <meta name="twitter:image" content="https://dmccreary.github.io/hydroponics/assets/images/social/chapters/11-environmental-control/index.png">
+      
     
-  </head>
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
   
   
     
@@ -98,13 +131,12 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Hydroponics" class="md-header__button md-logo" aria-label="Hydroponics" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../../img/mascot/neutral.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -130,7 +162,7 @@
     
       <label class="md-header__button md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -139,20 +171,20 @@
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
           <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
             
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
           </a>
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
         </button>
       </nav>
       
@@ -177,7 +209,7 @@
         <a href="https://github.com/dmccreary/hydroponics" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
   </div>
   <div class="md-source__repository">
     GitHub Repo
@@ -201,7 +233,7 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -212,8 +244,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Hydroponics" class="md-nav__button md-logo" aria-label="Hydroponics" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../../img/mascot/neutral.png" alt="logo">
 
     </a>
     Hydroponics
@@ -223,7 +254,7 @@
       <a href="https://github.com/dmccreary/hydroponics" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
   </div>
   <div class="md-source__repository">
     GitHub Repo
@@ -485,7 +516,7 @@
         
   
   <span class="md-ellipsis">
-    3. Water & Plant Health
+    3. Water &amp; Plant Health
   </span>
   
 
@@ -506,7 +537,7 @@
         
   
   <span class="md-ellipsis">
-    4. Macro & Micro Nutrients
+    4. Macro &amp; Micro Nutrients
   </span>
   
 
@@ -590,7 +621,7 @@
         
   
   <span class="md-ellipsis">
-    8. DIY & School Projects
+    8. DIY &amp; School Projects
   </span>
   
 
@@ -611,7 +642,7 @@
         
   
   <span class="md-ellipsis">
-    9. Growing Media & Crops
+    9. Growing Media &amp; Crops
   </span>
   
 
@@ -888,7 +919,7 @@
         
   
   <span class="md-ellipsis">
-    14. Networking & IoT
+    14. Networking &amp; IoT
   </span>
   
 
@@ -909,7 +940,7 @@
         
   
   <span class="md-ellipsis">
-    15. Sensors & Electronics
+    15. Sensors &amp; Electronics
   </span>
   
 
@@ -1322,7 +1353,7 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -1489,16 +1520,16 @@
   
     <a href="https://github.com/dmccreary/hydroponics/blob/main/docs/chapters/11-environmental-control/index.md" title="Edit this page" class="md-content__button md-icon">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
     </a>
   
   
 
 
-<h1 id="environmental-control-and-co2-management">Environmental Control and CO₂ Management<a class="headerlink" href="#environmental-control-and-co2-management" title="Permanent link">&para;</a></h1>
-<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<h1 id="environmental-control-and-co2-management">Environmental Control and CO₂ Management<a class="headerlink" href="#environmental-control-and-co2-management" title="Permanent link">¶</a></h1>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
 <p>This chapter addresses precision management of the aerial grow environment: air and solution temperature, relative humidity, vapor pressure deficit (VPD), and CO₂ enrichment — including the interaction between CO₂ concentration and high-light intensity covered in Chapter 10. Students learn to size exhaust fans and dehumidifiers, configure HVAC for a grow room, set up data loggers with alarm setpoints, and understand the automation controllers (thermostats, CO₂ regulators, lighting ballasts) that keep parameters within target ranges around the clock.</p>
-<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">&para;</a></h2>
+<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">¶</a></h2>
 <p>This chapter covers the following 31 concepts from the learning graph:</p>
 <ol>
 <li>CO2 Benefit Under High Light</li>
@@ -1533,19 +1564,19 @@
 <li>Positive vs Negative Pressure</li>
 <li>Fire Safety in Indoor Grows</li>
 </ol>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">¶</a></h2>
 <p>This chapter builds on concepts from:</p>
 <ul>
 <li><a href="../05-nutrient-solution-chemistry/">Chapter 5: Nutrient Solution Chemistry and Mixing</a></li>
 <li><a href="../10-lighting-science/">Chapter 10: Lighting Science</a></li>
 </ul>
-<hr />
+<hr>
 <div class="admonition mascot-welcome">
 <p class="admonition-title">Cress dials in the grow room environment</p>
 <p><img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Cress waves hello at chapter opening">
 Welcome to Chapter 11! Chapter 10 taught you to engineer light for plant growth. This chapter adds the remaining aerial environment variables — temperature, humidity, CO₂, and airflow — that together determine how efficiently plants convert your lighting investment into biomass. When these variables interact well, photosynthesis runs at maximum efficiency. When any one drifts out of range, it becomes the new growth-limiting factor regardless of how perfect everything else is.</p>
 </div>
-<h2 id="temperature-and-plant-growth">Temperature and Plant Growth<a class="headerlink" href="#temperature-and-plant-growth" title="Permanent link">&para;</a></h2>
+<h2 id="temperature-and-plant-growth">Temperature and Plant Growth<a class="headerlink" href="#temperature-and-plant-growth" title="Permanent link">¶</a></h2>
 <p>Temperature affects essentially every biochemical process in the plant. Two temperature environments matter in a hydroponic system — the <strong>air temperature</strong> (affecting transpiration, photosynthesis rate, and cellular enzyme kinetics) and the <strong>solution temperature</strong> (affecting root respiration, dissolved oxygen, and pathogen risk).</p>
 <p><strong>Optimal air temperature ranges by crop:</strong></p>
 <table>
@@ -1590,7 +1621,7 @@ Welcome to Chapter 11! Chapter 10 taught you to engineer light for plant growth.
 - <strong>Heating</strong>: Seedling heat mats (for germination trays), electric space heaters with thermostatic control, or supplemental heating from HID lighting heat load
 - <strong>Heating and cooling trade-offs</strong>: HID fixtures heat the room and reduce heating costs in winter but increase cooling loads in summer. LEDs are more efficient but contribute less waste heat — in cold climates, growing space may require supplemental heating with LEDs.</p>
 <p><strong>Solution temperature control</strong> and <strong>root zone temperature optimum</strong> (18–22°C) were covered in Chapters 2 and 3. Maintaining solution temperature requires: reservoir insulation, water chillers for warm climates, and positioning the reservoir away from heat sources (lighting equipment, south-facing walls).</p>
-<h2 id="relative-humidity-and-transpiration">Relative Humidity and Transpiration<a class="headerlink" href="#relative-humidity-and-transpiration" title="Permanent link">&para;</a></h2>
+<h2 id="relative-humidity-and-transpiration">Relative Humidity and Transpiration<a class="headerlink" href="#relative-humidity-and-transpiration" title="Permanent link">¶</a></h2>
 <p><strong>Relative humidity (RH)</strong> is the amount of water vapor in the air expressed as a percentage of the maximum amount the air can hold at that temperature. At 100% RH, air is saturated and condensation forms; at 0% RH, air is completely dry.</p>
 <p>RH is not the most useful metric for plant management because it is temperature-dependent — the same moisture content registers as higher RH at lower temperatures. This is why <strong>vapor pressure deficit (VPD)</strong> has replaced RH as the preferred environmental metric in modern controlled-environment agriculture.</p>
 <p><strong>Humidity and transpiration</strong>: Transpiration rate is driven by the difference in vapor pressure between the leaf interior (nearly saturated, ~100% RH at leaf temperature) and the surrounding air. Higher air humidity → smaller vapor pressure difference → lower transpiration rate. Lower transpiration means:</p>
@@ -1604,7 +1635,7 @@ Welcome to Chapter 11! Chapter 10 taught you to engineer light for plant growth.
 - <strong>Botrytis</strong> (gray mold) infects flowers, fruit, and leaf tissue
 - Water condensation on leaf surfaces blocks gas exchange and creates direct infection pathways for fungal spores</p>
 <p><strong>Low humidity and tip burn</strong>: Very low humidity (&lt;40% RH) increases transpiration dramatically. Lettuce inner leaves transpire less than outer leaves (they are shielded from airflow) — the rapid water pull combined with calcium's immobility causes calcium starvation at the inner leaf margins (tip burn, covered in Chapter 3).</p>
-<h2 id="co2-concentration-effects-and-benefit-under-high-light">CO₂ Concentration Effects and Benefit Under High Light<a class="headerlink" href="#co2-concentration-effects-and-benefit-under-high-light" title="Permanent link">&para;</a></h2>
+<h2 id="co2-concentration-effects-and-benefit-under-high-light">CO₂ Concentration Effects and Benefit Under High Light<a class="headerlink" href="#co2-concentration-effects-and-benefit-under-high-light" title="Permanent link">¶</a></h2>
 <p><strong>CO₂ concentration effects</strong> on photosynthesis follow a saturation curve. Atmospheric CO₂ is approximately 420 ppm (parts per million). At this concentration, photosynthesis in most C3 plants (including lettuce, tomatoes, and most vegetables) is partially CO₂-limited — the rate of the Calvin cycle is constrained by the availability of CO₂ relative to the enzymatic capacity of RuBisCO.</p>
 <p><strong>CO₂ benefit under high light</strong>: As PPFD increases above ~600 µmol·m⁻²·s⁻¹, many crops reach CO₂ saturation at 420 ppm before they reach light saturation — meaning CO₂ becomes the growth-limiting factor before light does. Elevating CO₂ to 800–1,200 ppm raises the CO₂ saturation point, allowing the plant to use high-intensity light more efficiently. The result: 20–30% additional photosynthesis rate and growth at equivalent light levels.</p>
 <p>This CO₂-light interaction is why commercial vertical farms operating at PPFD &gt;600 µmol·m⁻²·s⁻¹ frequently enrich CO₂. At lower PPFD (&lt;400 µmol·m⁻²·s⁻¹, typical for hobby and school systems), CO₂ enrichment provides minimal benefit because the plant is light-limited rather than CO₂-limited.</p>
@@ -1613,7 +1644,7 @@ Welcome to Chapter 11! Chapter 10 taught you to engineer light for plant growth.
 - <strong>CO₂ generators</strong> (propane or natural gas burners): Burn fossil fuel to produce CO₂. Produces heat and water vapor as by-products — useful in cool climates (heat contribution reduces heating costs) but problematic in warm climates.
 - <strong>Fermentation/composting</strong>: Passive CO₂ release from yeast fermentation or compost — produces modest CO₂ levels (typically 100–200 ppm above ambient), low cost, uncontrolled delivery.</p>
 <p><strong>Important</strong>: CO₂ enrichment only helps when stomata are open (during the light period). Shut down CO₂ delivery during the dark period. Also: CO₂ does not penetrate to the canopy if air is stagnant — adequate circulation (below) is essential.</p>
-<h2 id="vapor-pressure-deficit-vpd">Vapor Pressure Deficit (VPD)<a class="headerlink" href="#vapor-pressure-deficit-vpd" title="Permanent link">&para;</a></h2>
+<h2 id="vapor-pressure-deficit-vpd">Vapor Pressure Deficit (VPD)<a class="headerlink" href="#vapor-pressure-deficit-vpd" title="Permanent link">¶</a></h2>
 <p><strong>Vapor pressure deficit (VPD)</strong> is the difference between the amount of moisture currently in the air and the maximum amount the air can hold at that temperature. It is expressed in kilopascals (kPa).</p>
 <p>VPD is a more useful metric than RH because it directly represents the "drying power" of the air — how strongly the air pulls water vapor from leaf surfaces regardless of air temperature.</p>
 <p><strong>VPD calculation:</strong></p>
@@ -1660,13 +1691,13 @@ Welcome to Chapter 11! Chapter 10 taught you to engineer light for plant growth.
 </tbody>
 </table>
 <p>The VPD "sweet spot" for most commercial leafy green production is 0.8–1.2 kPa — high enough to drive adequate calcium transport to growing tissue, low enough to prevent stomatal closure and moisture stress.</p>
-<h4 id="diagram-vpd-and-environmental-parameter-dashboard">Diagram: VPD and Environmental Parameter Dashboard<a class="headerlink" href="#diagram-vpd-and-environmental-parameter-dashboard" title="Permanent link">&para;</a></h4>
+<h4 id="diagram-vpd-and-environmental-parameter-dashboard">Diagram: VPD and Environmental Parameter Dashboard<a class="headerlink" href="#diagram-vpd-and-environmental-parameter-dashboard" title="Permanent link">¶</a></h4>
 <iframe src="../../sims/vpd-environment-dashboard/main.html" width="100%" height="500px" scrolling="no"></iframe>
 <details>
 <summary>VPD and Environmental Parameter Interactive Dashboard</summary>
 <p>Type: microsim
-<strong>sim-id:</strong> vpd-environment-dashboard<br/>
-<strong>Library:</strong> p5.js<br/>
+<strong>sim-id:</strong> vpd-environment-dashboard<br>
+<strong>Library:</strong> p5.js<br>
 <strong>Status:</strong> Specified</p>
 <p>Purpose: Allow students to interactively set temperature and humidity and see the resulting VPD calculated in real time, along with color-coded feedback on whether the environment is in optimal range for each growth stage.</p>
 <p>Bloom Level: Apply (L3)
@@ -1693,7 +1724,7 @@ Bloom Verb: Calculate — students calculate VPD from temperature and humidity a
 - Toggle "Show VPD Table": Overlays a 6×6 heatmap showing VPD at combinations of temperature (15–35°C) and humidity (40–90%) with the current point marked</p>
 <p>Responsive: Panels stack vertically on narrow screens; VPD display remains large</p>
 </details>
-<h2 id="hvac-basics-for-grow-rooms">HVAC Basics for Grow Rooms<a class="headerlink" href="#hvac-basics-for-grow-rooms" title="Permanent link">&para;</a></h2>
+<h2 id="hvac-basics-for-grow-rooms">HVAC Basics for Grow Rooms<a class="headerlink" href="#hvac-basics-for-grow-rooms" title="Permanent link">¶</a></h2>
 <p><strong>HVAC</strong> (heating, ventilation, and air conditioning) in a grow room has three goals: temperature control, humidity control, and CO₂ replenishment (or enrichment). These goals interact — exhausting air removes heat and humidity but also removes CO₂.</p>
 <p><strong>Exhaust and intake fan sizing</strong>: The primary tool for temperature and humidity control in hobby and small commercial systems is an inline exhaust fan connected to ducting through the grow space roof or wall. Proper sizing ensures the entire air volume of the growing space is exchanged every 1–3 minutes.</p>
 <p>Fan sizing formula: Required fan CFM (cubic feet per minute) = Room Volume (cubic feet) ÷ 3 minutes</p>
@@ -1701,7 +1732,7 @@ Bloom Verb: Calculate — students calculate VPD from temperature and humidity a
 <p><strong>Intake air</strong>: Passive intake (a mesh vent at the bottom of the tent or room) works for small spaces. Active intake fans improve air mixing in larger rooms. The intake should be smaller than the exhaust to maintain <strong>negative pressure</strong> (air is always flowing in and out, preventing stagnant zones).</p>
 <p><strong>Positive vs. negative pressure</strong>: A slightly negative pressure environment (exhaust &gt; intake) is generally preferred for odor control (ensures all air leaves through the carbon filter) and to prevent outside air from pushing in through cracks. Positive pressure (intake &gt; exhaust) is used in clean rooms and some commercial operations where air quality of intake is controlled (HEPA-filtered).</p>
 <p><strong>Air circulation and fans</strong>: Exhaust fans exchange room air; internal circulation fans move that air around the plant canopy. Without circulation fans, CO₂-depleted boundary layers form on leaf surfaces even in a CO₂-enriched room. Oscillating clip fans or horizontal airflow fans provide the gentle, continuous air movement needed to replenish the boundary layer CO₂.</p>
-<h2 id="grow-tent-setup-and-grow-room-insulation">Grow Tent Setup and Grow Room Insulation<a class="headerlink" href="#grow-tent-setup-and-grow-room-insulation" title="Permanent link">&para;</a></h2>
+<h2 id="grow-tent-setup-and-grow-room-insulation">Grow Tent Setup and Grow Room Insulation<a class="headerlink" href="#grow-tent-setup-and-grow-room-insulation" title="Permanent link">¶</a></h2>
 <p><strong>Grow tent setup</strong>: Commercial grow tents (sizes from 2×2 ft to 10×10 ft and larger) provide a contained, light-proof, reflective growing space for hobby and small commercial operations. Key setup elements:</p>
 <ul>
 <li><strong>Mylar reflective interior</strong>: Reflects light back to the canopy — improving light uniformity and reducing edge losses</li>
@@ -1710,7 +1741,7 @@ Bloom Verb: Calculate — students calculate VPD from temperature and humidity a
 <li><strong>CO₂ enrichment</strong>: Sealed tents are ideal for CO₂ enrichment — losses are minimal if ports are sealed</li>
 </ul>
 <p><strong>Grow room insulation</strong>: Proper insulation reduces temperature swings and energy cost. R-value ≥ R-13 in walls and ceiling is a minimum for year-round growing in most climates. Reflective insulation (Reflectix) is sometimes used for its combined insulating and light-reflecting properties, though its R-value alone (R-3 to R-5) is modest.</p>
-<h2 id="data-loggers-and-environmental-alarm-setpoints">Data Loggers and Environmental Alarm Setpoints<a class="headerlink" href="#data-loggers-and-environmental-alarm-setpoints" title="Permanent link">&para;</a></h2>
+<h2 id="data-loggers-and-environmental-alarm-setpoints">Data Loggers and Environmental Alarm Setpoints<a class="headerlink" href="#data-loggers-and-environmental-alarm-setpoints" title="Permanent link">¶</a></h2>
 <p><strong>Data logger basics</strong>: A data logger is a device that records environmental measurements (temperature, humidity, CO₂, light intensity) at regular intervals, storing data for later analysis. Types range from standalone USB data loggers (Govee, SensorPush) to microcontroller-based systems (Chapters 12–16).</p>
 <p><strong>Environmental alarm setpoints</strong> are threshold values that trigger an alert when exceeded:</p>
 <table>
@@ -1750,7 +1781,7 @@ Bloom Verb: Calculate — students calculate VPD from temperature and humidity a
 </tbody>
 </table>
 <p>Exceeding any alarm threshold should trigger a notification — at minimum an audible alarm, ideally an SMS or email alert. Chapters 12–14 cover building automated alert systems with MicroPython.</p>
-<h2 id="controllers-and-automation">Controllers and Automation<a class="headerlink" href="#controllers-and-automation" title="Permanent link">&para;</a></h2>
+<h2 id="controllers-and-automation">Controllers and Automation<a class="headerlink" href="#controllers-and-automation" title="Permanent link">¶</a></h2>
 <p><strong>Thermostat and humidity control</strong>: Standalone plug-in thermostats (Inkbird IBS-TH2, Ranco controllers) accept a temperature probe and switch a heating or cooling device on/off. Humidity controllers work identically, switching dehumidifiers or humidifiers. Combination temperature + humidity controllers simplify wiring.</p>
 <p><strong>CO₂ controller and regulator</strong>: A CO₂ controller uses an infrared CO₂ sensor to measure the ppm in the room and opens/closes a solenoid valve on the CO₂ supply line to maintain a target setpoint (typically 800–1,200 ppm). The solenoid is connected to the CO₂ regulator on the tank.</p>
 <p><strong>Ballast and lighting controller</strong>: HID ballasts (for HPS and MH fixtures) require a separate ballast unit that controls current to the lamp. Modern digital dimmable ballasts allow variable intensity. LED drivers provide constant-current regulation internally. Both types are typically connected to a timer or controller for photoperiod automation.</p>
@@ -1761,7 +1792,7 @@ Bloom Verb: Calculate — students calculate VPD from temperature and humidity a
 - Automated dosing pumps for pH and nutrient (Chapters 12–14)
 - Data logger or IoT sensor network for remote monitoring
 - Alert notifications via SMS, email, or app</p>
-<h2 id="air-filtration-fire-safety-and-safety-overview">Air Filtration, Fire Safety, and Safety Overview<a class="headerlink" href="#air-filtration-fire-safety-and-safety-overview" title="Permanent link">&para;</a></h2>
+<h2 id="air-filtration-fire-safety-and-safety-overview">Air Filtration, Fire Safety, and Safety Overview<a class="headerlink" href="#air-filtration-fire-safety-and-safety-overview" title="Permanent link">¶</a></h2>
 <p><strong>Air filtration carbon filter</strong>: Activated carbon filters (inline, connected in series with the exhaust fan) adsorb volatile organic compounds and odors. Essential for crops with strong scents (basil, cilantro) in shared or residential spaces. Carbon filters become saturated over time (typically 1–2 years) and require replacement.</p>
 <p><strong>Positive vs. negative pressure</strong> affects how easily odors escape and how cleanly air is managed — summarized in the fan sizing section above.</p>
 <p><strong>Fire safety in indoor grows</strong>: The combination of electrical equipment, water, and plant material creates fire risk if managed carelessly. Key precautions:
@@ -1771,7 +1802,7 @@ Bloom Verb: Calculate — students calculate VPD from temperature and humidity a
 - Never stack combustible materials (cardboard, peat bags) near lighting equipment
 - Install a smoke detector in the growing space
 - Know the location of the nearest fire extinguisher (Class C — electrical fires)</p>
-<h2 id="key-takeaways">Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link">&para;</a></h2>
+<h2 id="key-takeaways">Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link">¶</a></h2>
 <ul>
 <li><strong>Air temperature optimum</strong> for most crops is 20–26°C during the day, 15–20°C at night; night drop promotes compact growth.</li>
 <li><strong>Solution temperature 18–22°C</strong> is critical — warmer solution reduces dissolved oxygen and elevates <em>Pythium</em> risk.</li>
@@ -1812,7 +1843,7 @@ Temperature, humidity, VPD, CO₂, airflow, and fire safety — you now have the
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
   Back to top
 </button>
         
@@ -1822,13 +1853,13 @@ Temperature, humidity, VPD, CO₂, airflow, and fire safety — you now have the
   
     
       
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
           <a href="../10-lighting-science/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 10. Lighting Science">
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
             </div>
             <div class="md-footer__title">
               <span class="md-footer__direction">
@@ -1853,7 +1884,7 @@ Temperature, humidity, VPD, CO₂, airflow, and fire safety — you now have the
             </div>
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
             </div>
           </a>
         
@@ -1865,7 +1896,7 @@ Temperature, humidity, VPD, CO₂, airflow, and fire safety — you now have the
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+      Copyright © 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
     </div>
   
   
@@ -1887,5 +1918,7 @@ Temperature, humidity, VPD, CO₂, airflow, and fire safety — you now have the
       <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
     
-  </body>
-</html>
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

@@ -1,7 +1,4 @@
-
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
+<!DOCTYPE html><html lang="en" class="no-js"><head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -21,7 +18,7 @@
         <link rel="next" href="../11-environmental-control/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
     
     
@@ -47,7 +44,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -62,8 +59,44 @@
 
     
     
+      
+        <meta property="og:type" content="website">
+      
+        <meta property="og:title" content="Lighting Science - Hydroponics">
+      
+        <meta property="og:description" content="PAR, PPFD, DLI, photoperiod, LED vs HID vs fluorescent technology, light recipes, PPFD maps, inverse square law, and energy cost calculations for indoor growing.">
+      
+        <meta property="og:image" content="https://dmccreary.github.io/hydroponics/assets/images/social/chapters/10-lighting-science/index.png">
+      
+        <meta property="og:image:type" content="image/png">
+      
+        <meta property="og:image:width" content="1200">
+      
+        <meta property="og:image:height" content="630">
+      
+        <meta property="og:url" content="https://dmccreary.github.io/hydroponics/chapters/10-lighting-science/">
+      
+        <meta name="twitter:card" content="summary_large_image">
+      
+        <meta name="twitter:title" content="Lighting Science - Hydroponics">
+      
+        <meta name="twitter:description" content="PAR, PPFD, DLI, photoperiod, LED vs HID vs fluorescent technology, light recipes, PPFD maps, inverse square law, and energy cost calculations for indoor growing.">
+      
+        <meta name="twitter:image" content="https://dmccreary.github.io/hydroponics/assets/images/social/chapters/10-lighting-science/index.png">
+      
     
-  </head>
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
   
   
     
@@ -98,13 +131,12 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Hydroponics" class="md-header__button md-logo" aria-label="Hydroponics" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../../img/mascot/neutral.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -130,7 +162,7 @@
     
       <label class="md-header__button md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -139,20 +171,20 @@
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
           <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
             
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
           </a>
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
         </button>
       </nav>
       
@@ -177,7 +209,7 @@
         <a href="https://github.com/dmccreary/hydroponics" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
   </div>
   <div class="md-source__repository">
     GitHub Repo
@@ -201,7 +233,7 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -212,8 +244,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Hydroponics" class="md-nav__button md-logo" aria-label="Hydroponics" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../../img/mascot/neutral.png" alt="logo">
 
     </a>
     Hydroponics
@@ -223,7 +254,7 @@
       <a href="https://github.com/dmccreary/hydroponics" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
   </div>
   <div class="md-source__repository">
     GitHub Repo
@@ -485,7 +516,7 @@
         
   
   <span class="md-ellipsis">
-    3. Water & Plant Health
+    3. Water &amp; Plant Health
   </span>
   
 
@@ -506,7 +537,7 @@
         
   
   <span class="md-ellipsis">
-    4. Macro & Micro Nutrients
+    4. Macro &amp; Micro Nutrients
   </span>
   
 
@@ -590,7 +621,7 @@
         
   
   <span class="md-ellipsis">
-    8. DIY & School Projects
+    8. DIY &amp; School Projects
   </span>
   
 
@@ -611,7 +642,7 @@
         
   
   <span class="md-ellipsis">
-    9. Growing Media & Crops
+    9. Growing Media &amp; Crops
   </span>
   
 
@@ -939,7 +970,7 @@
         
   
   <span class="md-ellipsis">
-    14. Networking & IoT
+    14. Networking &amp; IoT
   </span>
   
 
@@ -960,7 +991,7 @@
         
   
   <span class="md-ellipsis">
-    15. Sensors & Electronics
+    15. Sensors &amp; Electronics
   </span>
   
 
@@ -1373,7 +1404,7 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -1591,16 +1622,16 @@
   
     <a href="https://github.com/dmccreary/hydroponics/blob/main/docs/chapters/10-lighting-science/index.md" title="Edit this page" class="md-content__button md-icon">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
     </a>
   
   
 
 
-<h1 id="lighting-science">Lighting Science<a class="headerlink" href="#lighting-science" title="Permanent link">&para;</a></h1>
-<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<h1 id="lighting-science">Lighting Science<a class="headerlink" href="#lighting-science" title="Permanent link">¶</a></h1>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
 <p>This chapter covers the physics and engineering of plant lighting from first principles: photosynthetically active radiation, photon flux density (PPFD), daily light integral (DLI), photoperiod control, and the comparative efficiency of LED versus HID versus fluorescent technologies. Students learn to read a PPFD map, calculate DLI for a target crop, design a light schedule, write a light recipe for vegetative and flowering stages, and calculate the energy cost per kilogram of yield — the key metric for evaluating any indoor growing operation.</p>
-<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">&para;</a></h2>
+<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">¶</a></h2>
 <p>This chapter covers the following 29 concepts from the learning graph:</p>
 <ol>
 <li>Light and Plant Growth</li>
@@ -1633,19 +1664,19 @@
 <li>Light Cost Per kWh</li>
 <li>Light Energy to Biomass</li>
 </ol>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">¶</a></h2>
 <p>This chapter builds on concepts from:</p>
 <ul>
 <li><a href="../01-introduction/">Chapter 1: Introduction to Hydroponics</a></li>
 <li><a href="../02-root-biology/">Chapter 2: Root Biology and Nutrient Absorption</a></li>
 </ul>
-<hr />
+<hr>
 <div class="admonition mascot-welcome">
 <p class="admonition-title">Cress shines a light on photosynthesis engineering</p>
 <p><img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Cress waves hello at chapter opening">
 Welcome to Chapter 10! Light is the energy source for every gram of biomass your plants produce. In a controlled indoor environment, you are paying for every photon — so understanding the physics of how plants use light, how to measure it correctly, and how to deliver it efficiently is not optional. This chapter gives you the vocabulary and calculation tools to evaluate any grow light and design a lighting system that maximizes yield per watt of electricity.</p>
 </div>
-<h2 id="light-and-plant-growth-the-basics">Light and Plant Growth: The Basics<a class="headerlink" href="#light-and-plant-growth-the-basics" title="Permanent link">&para;</a></h2>
+<h2 id="light-and-plant-growth-the-basics">Light and Plant Growth: The Basics<a class="headerlink" href="#light-and-plant-growth-the-basics" title="Permanent link">¶</a></h2>
 <p>Before introducing the measurement vocabulary, recall from Chapters 1 and 2 that photosynthesis converts light energy into chemical energy stored as glucose. The efficiency of this conversion, and therefore the growth rate of the plant, depends on three light parameters that the grower can control:</p>
 <ol>
 <li><strong>Intensity</strong> — how many photons reach the leaf surface per unit time (measured in PPFD)</li>
@@ -1653,7 +1684,7 @@ Welcome to Chapter 10! Light is the energy source for every gram of biomass your
 <li><strong>Duration</strong> — how many hours per day the plant receives light (the photoperiod)</li>
 </ol>
 <p>All three interact: a plant receiving the right spectrum but too few hours will be light-limited; a plant receiving many hours at the wrong spectrum will grow slowly; a plant receiving too much intensity can suffer photoinhibition (the photosynthetic machinery becomes overwhelmed and efficiency drops).</p>
-<h2 id="photosynthetically-active-radiation-par">Photosynthetically Active Radiation (PAR)<a class="headerlink" href="#photosynthetically-active-radiation-par" title="Permanent link">&para;</a></h2>
+<h2 id="photosynthetically-active-radiation-par">Photosynthetically Active Radiation (PAR)<a class="headerlink" href="#photosynthetically-active-radiation-par" title="Permanent link">¶</a></h2>
 <p><strong>Photosynthetically active radiation (PAR)</strong> is defined as the range of wavelengths from <strong>400 to 700 nanometers (nm)</strong> — the portion of the electromagnetic spectrum that plant pigments can absorb for photosynthesis. This range corresponds roughly to visible light (violet through red), though human eyes perceive some wavelengths in this range more or less brightly than plants use them.</p>
 <p><strong>PAR wavelength range details:</strong></p>
 <ul>
@@ -1667,7 +1698,7 @@ Welcome to Chapter 10! Light is the energy source for every gram of biomass your
 <p><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Cress taps chin thoughtfully">
 Lumens measure light output as perceived by the human eye — with green light weighted most heavily because human eyes are most sensitive to green. Plants, however, use red and blue most efficiently. A lamp can produce many lumens (bright to human eyes) while delivering few photosynthetically active photons. This is why lumen ratings on grow lights are nearly meaningless for plant science. Always evaluate grow lights in PPFD (µmol/m²/s) and efficacy (µmol/J), not lumens or lux.</p>
 </div>
-<h2 id="ppfd-photosynthetic-photon-flux-density">PPFD: Photosynthetic Photon Flux Density<a class="headerlink" href="#ppfd-photosynthetic-photon-flux-density" title="Permanent link">&para;</a></h2>
+<h2 id="ppfd-photosynthetic-photon-flux-density">PPFD: Photosynthetic Photon Flux Density<a class="headerlink" href="#ppfd-photosynthetic-photon-flux-density" title="Permanent link">¶</a></h2>
 <p><strong>PPFD</strong> (Photosynthetic Photon Flux Density) is the measure of how many photons in the PAR range (400–700 nm) fall on a given surface area per second. It is expressed in <strong>micromoles of photons per square meter per second (µmol·m⁻²·s⁻¹)</strong>.</p>
 <p>PPFD is the instantaneous intensity measurement — a snapshot at one moment. It varies across the canopy (higher directly beneath the light, lower at the edges) and changes with mounting height (inverse square law).</p>
 <p><strong>Typical PPFD ranges for common crops:</strong></p>
@@ -1706,7 +1737,7 @@ Lumens measure light output as perceived by the human eye — with green light w
 </tbody>
 </table>
 <p>Beyond approximately 800–1,000 µmol·m⁻²·s⁻¹, most crops saturate their photosynthetic capacity (the <strong>light saturation point</strong>) and additional light produces little additional growth while increasing electricity cost. This light saturation point can be raised by increasing CO₂ concentration (covered in Chapter 11).</p>
-<h2 id="daily-light-integral-dli">Daily Light Integral (DLI)<a class="headerlink" href="#daily-light-integral-dli" title="Permanent link">&para;</a></h2>
+<h2 id="daily-light-integral-dli">Daily Light Integral (DLI)<a class="headerlink" href="#daily-light-integral-dli" title="Permanent link">¶</a></h2>
 <p><strong>Daily light integral (DLI)</strong> is the total cumulative photon dose a plant receives over a full day — the sum of all PPFD measurements across the photoperiod. DLI is expressed in <strong>moles of photons per square meter per day (mol·m⁻²·d⁻¹)</strong>.</p>
 <p>DLI integrates both intensity and duration into a single number, making it the most useful metric for comparing different growing scenarios (e.g., 12h of 500 µmol·m⁻²·s⁻¹ vs. 18h of 350 µmol·m⁻²·s⁻¹).</p>
 <p><strong>DLI calculation:</strong></p>
@@ -1749,7 +1780,7 @@ Lumens measure light output as perceived by the human eye — with green light w
 </tr>
 </tbody>
 </table>
-<h2 id="photoperiod-requirements">Photoperiod Requirements<a class="headerlink" href="#photoperiod-requirements" title="Permanent link">&para;</a></h2>
+<h2 id="photoperiod-requirements">Photoperiod Requirements<a class="headerlink" href="#photoperiod-requirements" title="Permanent link">¶</a></h2>
 <p><strong>Photoperiod</strong> is the number of hours of light per day. Different crops respond differently to photoperiod:</p>
 <ul>
 <li><strong>Day-neutral plants</strong>: Growth rate and flowering are not controlled by day length. Lettuce varieties grown for leaf production, most herbs, and most vegetable crops used in hydroponic production are day-neutral. Photoperiod affects DLI (longer days → more total photons) but not flowering time.</li>
@@ -1764,8 +1795,8 @@ Lumens measure light output as perceived by the human eye — with green light w
 <li><strong>24h continuous light</strong>: Used experimentally and for some propagation stages; some crops tolerate it well (lettuce), others suffer (tomatoes need a dark period).</li>
 </ul>
 <p>A <strong>photoperiod control relay</strong> (a simple digital timer connected to the grow light circuit) automates on/off cycling. Solid-state relays rated for the light's amperage avoid the wear of mechanical timers.</p>
-<h2 id="grow-light-technologies">Grow Light Technologies<a class="headerlink" href="#grow-light-technologies" title="Permanent link">&para;</a></h2>
-<h3 id="led-grow-light-technology">LED Grow Light Technology<a class="headerlink" href="#led-grow-light-technology" title="Permanent link">&para;</a></h3>
+<h2 id="grow-light-technologies">Grow Light Technologies<a class="headerlink" href="#grow-light-technologies" title="Permanent link">¶</a></h2>
+<h3 id="led-grow-light-technology">LED Grow Light Technology<a class="headerlink" href="#led-grow-light-technology" title="Permanent link">¶</a></h3>
 <p><strong>LED (light-emitting diode) technology</strong> has transformed indoor growing economics over the past decade. LEDs produce light when current passes through a semiconductor junction; the emitted wavelength depends on the semiconductor materials used.</p>
 <p><strong>LED grow light advantages:</strong></p>
 <ul>
@@ -1775,19 +1806,19 @@ Lumens measure light output as perceived by the human eye — with green light w
 <li><strong>Spectrum tunability</strong>: Adjustable-spectrum LEDs allow the grower to shift the blue/red ratio for different growth stages</li>
 </ul>
 <p><strong>LED spectrum and efficacy</strong>: Modern commercial LEDs for plant growth use a mix of deep red (~660 nm), blue (~450 nm), and white phosphor-converted LEDs. The white phosphors provide a broad-spectrum fill that covers green and yellow wavelengths for canopy penetration.</p>
-<h3 id="hid-lighting-hps-and-mh">HID Lighting (HPS and MH)<a class="headerlink" href="#hid-lighting-hps-and-mh" title="Permanent link">&para;</a></h3>
+<h3 id="hid-lighting-hps-and-mh">HID Lighting (HPS and MH)<a class="headerlink" href="#hid-lighting-hps-and-mh" title="Permanent link">¶</a></h3>
 <p><strong>High-intensity discharge (HID)</strong> lights dominated commercial greenhouse and indoor growing before LED matured. Two types are relevant:</p>
 <ul>
 <li><strong>High-pressure sodium (HPS)</strong>: Produces a warm orange-yellow spectrum peaking around 590–620 nm. Highly efficient for vegetative and fruiting crops, with efficacy of 1.0–1.5 µmol/J. Still used in large commercial greenhouses for its proven track record and lower upfront cost.</li>
 <li><strong>Metal halide (MH)</strong>: Produces a broader, cooler blue-white spectrum. Better for vegetative stages; lower efficacy than HPS (0.8–1.2 µmol/J). Often used in combination with HPS (MH for veg, HPS for flower).</li>
 </ul>
 <p><strong>HID heat output</strong>: A 1,000W HPS fixture produces approximately 3,400 BTU/hr of heat directly into the growing space. This significantly increases HVAC load and requires maintaining greater mounting distances from the canopy (typically 45–90 cm) to avoid heat stress.</p>
-<h3 id="fluorescent-lighting-t5t8">Fluorescent Lighting (T5/T8)<a class="headerlink" href="#fluorescent-lighting-t5t8" title="Permanent link">&para;</a></h3>
+<h3 id="fluorescent-lighting-t5t8">Fluorescent Lighting (T5/T8)<a class="headerlink" href="#fluorescent-lighting-t5t8" title="Permanent link">¶</a></h3>
 <p><strong>T5 and T8 fluorescent tubes</strong> are low-intensity grow lights appropriate for seedling propagation, microgreens, and low-light crops. They produce relatively low PPFD (50–200 µmol·m⁻²·s⁻¹ at canopy level) and are not suitable for fruiting crops or high-yield leafy green production.</p>
 <p><strong>Advantages</strong>: Low cost, widely available, produce minimal heat, easy to mount very close to seedling trays (15–30 cm above canopy).</p>
 <p><strong>T5 HO (high-output)</strong> fixtures are the preferred fluorescent option for propagation — they deliver approximately 3× the output of standard T8 tubes at similar fixture cost.</p>
 <p>Modern fluorescent is being rapidly replaced by LED bars in propagation and microgreen applications due to LED's higher efficacy and longer lifespan.</p>
-<h3 id="led-vs-hid-comparison">LED vs. HID Comparison<a class="headerlink" href="#led-vs-hid-comparison" title="Permanent link">&para;</a></h3>
+<h3 id="led-vs-hid-comparison">LED vs. HID Comparison<a class="headerlink" href="#led-vs-hid-comparison" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -1842,7 +1873,7 @@ Lumens measure light output as perceived by the human eye — with green light w
 </tr>
 </tbody>
 </table>
-<h2 id="the-inverse-square-law-for-light">The Inverse Square Law for Light<a class="headerlink" href="#the-inverse-square-law-for-light" title="Permanent link">&para;</a></h2>
+<h2 id="the-inverse-square-law-for-light">The Inverse Square Law for Light<a class="headerlink" href="#the-inverse-square-law-for-light" title="Permanent link">¶</a></h2>
 <p>The <strong>inverse square law</strong> describes how light intensity decreases with distance from a point source:</p>
 <div class="arithmatex">\[ \text{Intensity} \propto \frac{1}{d^2} \]</div>
 <p>Doubling the distance between a light source and the canopy reduces intensity to one-quarter of its original value. Halving the distance quadruples intensity.</p>
@@ -1859,17 +1890,17 @@ Lumens measure light output as perceived by the human eye — with green light w
 <li>T5 fluorescent: 15–30 cm above canopy for seedlings</li>
 <li>HPS/MH 1000W: 60–100 cm above canopy (heat distance)</li>
 </ul>
-<h2 id="light-uniformity-and-the-ppfd-map">Light Uniformity and the PPFD Map<a class="headerlink" href="#light-uniformity-and-the-ppfd-map" title="Permanent link">&para;</a></h2>
+<h2 id="light-uniformity-and-the-ppfd-map">Light Uniformity and the PPFD Map<a class="headerlink" href="#light-uniformity-and-the-ppfd-map" title="Permanent link">¶</a></h2>
 <p>A <strong>PPFD map</strong> shows the spatial distribution of photon flux density across a canopy area, typically measured as a grid of point measurements at canopy height. Commercial grow lights are sold with PPFD maps at multiple mounting heights, showing the intensity distribution at each point on a grid.</p>
 <p><strong>Light uniformity</strong> is expressed as the ratio of minimum to average PPFD across the mapped area. A ratio above 0.75 is considered good uniformity; below 0.5 means significant areas of the canopy are seriously under-lit even if the center is well-supplied.</p>
 <p>In a well-designed NFT or DWC array, grow lights are arranged to provide overlapping coverage that minimizes hot spots and under-lit zones. Single-fixture setups often show a bell-shaped PPFD distribution (highest intensity center, declining edges) — acceptable in smaller systems but problematic at scale.</p>
-<h4 id="diagram-ppfd-and-dli-calculator">Diagram: PPFD and DLI Calculator<a class="headerlink" href="#diagram-ppfd-and-dli-calculator" title="Permanent link">&para;</a></h4>
+<h4 id="diagram-ppfd-and-dli-calculator">Diagram: PPFD and DLI Calculator<a class="headerlink" href="#diagram-ppfd-and-dli-calculator" title="Permanent link">¶</a></h4>
 <iframe src="../../sims/ppfd-dli-calculator/main.html" width="100%" height="702" scrolling="no"></iframe>
 <details>
 <summary>PPFD and DLI Interactive Calculator</summary>
 <p>Type: microsim
-<strong>sim-id:</strong> ppfd-dli-calculator<br/>
-<strong>Library:</strong> p5.js<br/>
+<strong>sim-id:</strong> ppfd-dli-calculator<br>
+<strong>Library:</strong> p5.js<br>
 <strong>Status:</strong> Specified</p>
 <p>Purpose: Allow students to interactively calculate DLI from PPFD and photoperiod, compare different lighting scenarios for energy cost, and understand how the inverse square law affects PPFD with mounting height change.</p>
 <p>Bloom Level: Apply (L3)
@@ -1897,7 +1928,7 @@ Bloom Verb: Calculate — students calculate DLI, energy cost, and mounting heig
 - Hover over any output: Tooltip shows the formula used and what each variable means</p>
 <p>Responsive: Stacks to vertical layout on narrow screens</p>
 </details>
-<h2 id="light-recipes-for-crop-stages">Light Recipes for Crop Stages<a class="headerlink" href="#light-recipes-for-crop-stages" title="Permanent link">&para;</a></h2>
+<h2 id="light-recipes-for-crop-stages">Light Recipes for Crop Stages<a class="headerlink" href="#light-recipes-for-crop-stages" title="Permanent link">¶</a></h2>
 <p>A <strong>light recipe</strong> specifies the spectrum, intensity, and photoperiod appropriate for each stage of crop development. Commercial controlled-environment agriculture operations have developed stage-specific recipes that optimize growth rate, quality, and yield.</p>
 <p><strong>Typical light recipe for lettuce:</strong>
 - Germination (days 1–5): 100–150 µmol·m⁻²·s⁻¹, 16h photoperiod, broad spectrum
@@ -1908,7 +1939,7 @@ Bloom Verb: Calculate — students calculate DLI, energy cost, and mounting heig
 - High blue (30–40% of total spectrum): Promotes compact growth, darker green leaves, higher anthocyanin in red varieties — preferred for fresh market quality
 - High red (90%+ of total spectrum): Promotes fast leaf expansion and high DW yield — preferred for maximum production efficiency
 - Far-red supplementation (5–10% of total): Accelerates stem elongation; used in final days before harvest to increase fresh weight by driving leaf expansion</p>
-<h2 id="heat-output-and-light-cost">Heat Output and Light Cost<a class="headerlink" href="#heat-output-and-light-cost" title="Permanent link">&para;</a></h2>
+<h2 id="heat-output-and-light-cost">Heat Output and Light Cost<a class="headerlink" href="#heat-output-and-light-cost" title="Permanent link">¶</a></h2>
 <p><strong>Heat output from lighting</strong> affects the HVAC requirements of the growing space. While LEDs are much more efficient than HPS, they still convert some input power to heat. A 600W LED fixture operating in a 10m² growing space adds significant heat load:</p>
 <p>Heat load = Wattage × (1 − efficacy as fraction of total input)</p>
 <p>For a grow light with 35% photon conversion efficiency: Heat = 600W × 0.65 = 390W of heat to be removed by HVAC.</p>
@@ -1918,7 +1949,7 @@ Bloom Verb: Calculate — students calculate DLI, energy cost, and mounting heig
 <li>This is why improving light efficacy (µmol/J) and choosing crops with high DLI efficiency is central to the economics of vertical farming (Chapter 21).</li>
 </ul>
 <p><strong>Light meter and quantum sensor</strong>: A quantum sensor (also called PAR meter) measures PPFD directly, using silicon photodiodes weighted to the 400–700 nm range. Consumer-grade quantum sensors (Apogee MQ-500, Li-Cor) provide accurate readings for research and commercial growing. Smartphone-based lux meters with conversion factors are less accurate but usable for educational purposes.</p>
-<h2 id="key-takeaways">Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link">&para;</a></h2>
+<h2 id="key-takeaways">Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link">¶</a></h2>
 <ul>
 <li><strong>PAR (400–700 nm)</strong> is the light range plants use for photosynthesis; lumens measure human perception and are useless for plant science.</li>
 <li><strong>PPFD (µmol·m⁻²·s⁻¹)</strong> is instantaneous intensity at the canopy; <strong>DLI (mol·m⁻²·d⁻¹)</strong> is the cumulative daily photon dose — the more useful planning metric.</li>
@@ -1964,7 +1995,7 @@ You can calculate DLI, evaluate grow lights by their efficacy in µmol/J, design
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
   Back to top
 </button>
         
@@ -1974,20 +2005,20 @@ You can calculate DLI, evaluate grow lights by their efficacy in µmol/J, design
   
     
       
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
           <a href="../09-growing-media-crops/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 9. Growing Media &amp; Crops">
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
             </div>
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Previous
               </span>
               <div class="md-ellipsis">
-                9. Growing Media & Crops
+                9. Growing Media &amp; Crops
               </div>
             </div>
           </a>
@@ -2005,7 +2036,7 @@ You can calculate DLI, evaluate grow lights by their efficacy in µmol/J, design
             </div>
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
             </div>
           </a>
         
@@ -2017,7 +2048,7 @@ You can calculate DLI, evaluate grow lights by their efficacy in µmol/J, design
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+      Copyright © 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
     </div>
   
   
@@ -2039,5 +2070,7 @@ You can calculate DLI, evaluate grow lights by their efficacy in µmol/J, design
       <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
     
-  </body>
-</html>
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

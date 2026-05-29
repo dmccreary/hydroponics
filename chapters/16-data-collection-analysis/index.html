@@ -1,7 +1,4 @@
-
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
+<!DOCTYPE html><html lang="en" class="no-js"><head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -21,7 +18,7 @@
         <link rel="next" href="../17-data-visualization/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
     
     
@@ -47,7 +44,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -62,8 +59,44 @@
 
     
     
+      
+        <meta property="og:type" content="website">
+      
+        <meta property="og:title" content="Data Collection and Analysis - Hydroponics">
+      
+        <meta property="og:description" content="From sensor logs to insight — CSV logging strategies, pandas DataFrames, time-series resampling, missing data handling, NumPy statistics, correlation, and linear regression for hydroponic crop analysis.">
+      
+        <meta property="og:image" content="https://dmccreary.github.io/hydroponics/assets/images/social/chapters/16-data-collection-analysis/index.png">
+      
+        <meta property="og:image:type" content="image/png">
+      
+        <meta property="og:image:width" content="1200">
+      
+        <meta property="og:image:height" content="630">
+      
+        <meta property="og:url" content="https://dmccreary.github.io/hydroponics/chapters/16-data-collection-analysis/">
+      
+        <meta name="twitter:card" content="summary_large_image">
+      
+        <meta name="twitter:title" content="Data Collection and Analysis - Hydroponics">
+      
+        <meta name="twitter:description" content="From sensor logs to insight — CSV logging strategies, pandas DataFrames, time-series resampling, missing data handling, NumPy statistics, correlation, and linear regression for hydroponic crop analysis.">
+      
+        <meta name="twitter:image" content="https://dmccreary.github.io/hydroponics/assets/images/social/chapters/16-data-collection-analysis/index.png">
+      
     
-  </head>
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
   
   
     
@@ -98,13 +131,12 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Hydroponics" class="md-header__button md-logo" aria-label="Hydroponics" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../../img/mascot/neutral.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -130,7 +162,7 @@
     
       <label class="md-header__button md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -139,20 +171,20 @@
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
           <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
             
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
           </a>
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
         </button>
       </nav>
       
@@ -177,7 +209,7 @@
         <a href="https://github.com/dmccreary/hydroponics" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
   </div>
   <div class="md-source__repository">
     GitHub Repo
@@ -201,7 +233,7 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -212,8 +244,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Hydroponics" class="md-nav__button md-logo" aria-label="Hydroponics" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../../img/mascot/neutral.png" alt="logo">
 
     </a>
     Hydroponics
@@ -223,7 +254,7 @@
       <a href="https://github.com/dmccreary/hydroponics" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
   </div>
   <div class="md-source__repository">
     GitHub Repo
@@ -485,7 +516,7 @@
         
   
   <span class="md-ellipsis">
-    3. Water & Plant Health
+    3. Water &amp; Plant Health
   </span>
   
 
@@ -506,7 +537,7 @@
         
   
   <span class="md-ellipsis">
-    4. Macro & Micro Nutrients
+    4. Macro &amp; Micro Nutrients
   </span>
   
 
@@ -590,7 +621,7 @@
         
   
   <span class="md-ellipsis">
-    8. DIY & School Projects
+    8. DIY &amp; School Projects
   </span>
   
 
@@ -611,7 +642,7 @@
         
   
   <span class="md-ellipsis">
-    9. Growing Media & Crops
+    9. Growing Media &amp; Crops
   </span>
   
 
@@ -716,7 +747,7 @@
         
   
   <span class="md-ellipsis">
-    14. Networking & IoT
+    14. Networking &amp; IoT
   </span>
   
 
@@ -737,7 +768,7 @@
         
   
   <span class="md-ellipsis">
-    15. Sensors & Electronics
+    15. Sensors &amp; Electronics
   </span>
   
 
@@ -1484,7 +1515,7 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -1813,16 +1844,16 @@
   
     <a href="https://github.com/dmccreary/hydroponics/blob/main/docs/chapters/16-data-collection-analysis/index.md" title="Edit this page" class="md-content__button md-icon">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
     </a>
   
   
 
 
-<h1 id="data-collection-and-analysis">Data Collection and Analysis<a class="headerlink" href="#data-collection-and-analysis" title="Permanent link">&para;</a></h1>
-<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<h1 id="data-collection-and-analysis">Data Collection and Analysis<a class="headerlink" href="#data-collection-and-analysis" title="Permanent link">¶</a></h1>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
 <p>This chapter teaches the data science pipeline from sensor to insight: designing a logging strategy, writing CSV data to SD cards and cloud services (Google Sheets), setting up a Python environment with Jupyter notebooks, and working with pandas DataFrames for time-series resampling, rolling window statistics, and missing data handling. The chapter closes with NumPy arrays, statistical functions, correlation analysis, and linear regression — building the analytical vocabulary students need before the visualization chapter.</p>
-<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">&para;</a></h2>
+<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">¶</a></h2>
 <p>This chapter covers the following 25 concepts from the learning graph:</p>
 <ol>
 <li>Data Collection Strategy</li>
@@ -1851,19 +1882,19 @@
 <li>Linear Regression</li>
 <li>Regression in NumPy (polyfit)</li>
 </ol>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">¶</a></h2>
 <p>This chapter builds on concepts from:</p>
 <ul>
 <li><a href="../13-hardware-interfaces/">Chapter 13: Hardware Interfaces and Sensor Programming</a></li>
 <li><a href="../15-sensors-electronics/">Chapter 15: Sensors and Electronics Hardware</a></li>
 </ul>
-<hr />
+<hr>
 <div class="admonition mascot-welcome">
 <p class="admonition-title">Cress opens the data notebook</p>
 <p><img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Cress waves hello at chapter opening">
 Welcome to Chapter 16, growers! Your sensors are reading, your data is logging — now let's make it useful. This chapter moves from the microcontroller to your laptop: we'll organize weeks of pH, EC, and temperature readings into pandas DataFrames, clean up the gaps, calculate rolling averages and correlations, and fit a regression line to understand trends across a crop cycle. By the end, you'll be able to answer the question every grower wants to ask: "What did my system actually do for the last 30 days?" Let's grow some insight!</p>
 </div>
-<h2 id="data-collection-strategy">Data Collection Strategy<a class="headerlink" href="#data-collection-strategy" title="Permanent link">&para;</a></h2>
+<h2 id="data-collection-strategy">Data Collection Strategy<a class="headerlink" href="#data-collection-strategy" title="Permanent link">¶</a></h2>
 <p>Before writing a single line of analysis code, good data collection requires decisions about <em>what</em> to measure, <em>how often</em>, and <em>where to store it</em>. A thoughtful collection strategy produces clean, analyzable data; a poorly designed strategy produces CSV files full of gaps, inconsistent units, and timestamps that don't align across sensors.</p>
 <p>Key decisions in a data collection strategy:</p>
 <p><strong>What to measure</strong>: At minimum, log pH, EC (or TDS), water temperature, and a timestamp. For comprehensive monitoring also log: air temperature, relative humidity, CO₂ ppm, reservoir level (cm), and the state of each actuator (pump on/off, lights on/off).</p>
@@ -1917,29 +1948,29 @@ Welcome to Chapter 16, growers! Your sensors are reading, your data is logging �
 </tbody>
 </table>
 <p><strong>Data volume estimate</strong>: A 6-column CSV row at 5-minute intervals generates approximately 864 rows per day. At ~50 bytes per row, that is 43 KB/day, or 1.5 MB per 35-day lettuce crop cycle — well within the capacity of even a modest SD card or cloud storage plan.</p>
-<h3 id="data-logging-to-sd-card">Data Logging to SD Card<a class="headerlink" href="#data-logging-to-sd-card" title="Permanent link">&para;</a></h3>
+<h3 id="data-logging-to-sd-card">Data Logging to SD Card<a class="headerlink" href="#data-logging-to-sd-card" title="Permanent link">¶</a></h3>
 <p>For long deployments where Wi-Fi is unavailable or unreliable, an SD card provides local persistent storage. The MicroPython <code>sdcard</code> driver and <code>uos</code> module allow mounting an SD card as a filesystem:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">machine</span><span class="o">,</span> <span class="nn">uos</span><span class="o">,</span> <span class="nn">sdcard</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">spi</span> <span class="o">=</span> <span class="n">machine</span><span class="o">.</span><span class="n">SPI</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">sck</span><span class="o">=</span><span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="n">mosi</span><span class="o">=</span><span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="mi">11</span><span class="p">),</span> <span class="n">miso</span><span class="o">=</span><span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="mi">12</span><span class="p">))</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">sd</span> <span class="o">=</span> <span class="n">sdcard</span><span class="o">.</span><span class="n">SDCard</span><span class="p">(</span><span class="n">spi</span><span class="p">,</span> <span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="mi">9</span><span class="p">))</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">uos</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="n">sd</span><span class="p">,</span> <span class="s2">&quot;/sd&quot;</span><span class="p">)</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">uos</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="n">sd</span><span class="p">,</span> <span class="s2">"/sd"</span><span class="p">)</span>
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">LOG_FILE</span> <span class="o">=</span> <span class="s2">&quot;/sd/hydro_log.csv&quot;</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">LOG_FILE</span> <span class="o">=</span> <span class="s2">"/sd/hydro_log.csv"</span>
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
 </span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="k">def</span> <span class="nf">log_reading</span><span class="p">(</span><span class="n">timestamp</span><span class="p">,</span> <span class="n">temp</span><span class="p">,</span> <span class="n">ph</span><span class="p">,</span> <span class="n">ec</span><span class="p">):</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">LOG_FILE</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">timestamp</span><span class="si">}</span><span class="s2">,</span><span class="si">{</span><span class="n">temp</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">,</span><span class="si">{</span><span class="n">ph</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">,</span><span class="si">{</span><span class="n">ec</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">LOG_FILE</span><span class="p">,</span> <span class="s2">"a"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">timestamp</span><span class="si">}</span><span class="s2">,</span><span class="si">{</span><span class="n">temp</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">,</span><span class="si">{</span><span class="n">ph</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">,</span><span class="si">{</span><span class="n">ec</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
 </span></code></pre></div>
 <p>Write a CSV header once at the start of each crop cycle:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">LOG_FILE</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;timestamp_unix,temperature_c,ph,ec_ms_cm</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">LOG_FILE</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">"timestamp_unix,temperature_c,ph,ec_ms_cm</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
 </span></code></pre></div>
-<h3 id="cloud-data-storage-google-sheets">Cloud Data Storage: Google Sheets<a class="headerlink" href="#cloud-data-storage-google-sheets" title="Permanent link">&para;</a></h3>
+<h3 id="cloud-data-storage-google-sheets">Cloud Data Storage: Google Sheets<a class="headerlink" href="#cloud-data-storage-google-sheets" title="Permanent link">¶</a></h3>
 <p>For systems with reliable Wi-Fi, <strong>Google Sheets</strong> is a surprisingly capable cloud logging destination for small-scale hydroponic operations. The Sheets API accepts HTTP POST requests; the MicroPython <code>urequests</code> library (Chapter 14) can send readings from the Pico W directly to a sheet.</p>
 <p>The workflow: create a Google Sheet → enable the Sheets API → generate an API key → use <code>urequests.post()</code> to append rows via the Sheets REST API. The spreadsheet then acts as a live database accessible from any browser, with built-in charting for quick visual inspection.</p>
 <p>For more robust storage at scale, dedicated IoT time-series databases (InfluxDB, TimescaleDB) provide better query performance than spreadsheets, but Google Sheets is adequate for classroom and home-scale projects.</p>
-<h2 id="python-environment-setup">Python Environment Setup<a class="headerlink" href="#python-environment-setup" title="Permanent link">&para;</a></h2>
+<h2 id="python-environment-setup">Python Environment Setup<a class="headerlink" href="#python-environment-setup" title="Permanent link">¶</a></h2>
 <p>Data analysis in this chapter is done in Python on your laptop — not on the microcontroller. Before we analyze data, we need a working Python environment.</p>
 <p><strong>Installation steps:</strong></p>
 <ol>
@@ -1948,7 +1979,7 @@ Welcome to Chapter 16, growers! Your sensors are reading, your data is logging �
 <li>Launch Jupyter: <code>jupyter notebook</code> opens a browser-based notebook interface</li>
 </ol>
 <p>Alternatively, <strong>Google Colab</strong> (colab.research.google.com) provides a free cloud Jupyter environment with all required packages pre-installed — no local installation needed.</p>
-<h2 id="jupyter-notebook-basics">Jupyter Notebook Basics<a class="headerlink" href="#jupyter-notebook-basics" title="Permanent link">&para;</a></h2>
+<h2 id="jupyter-notebook-basics">Jupyter Notebook Basics<a class="headerlink" href="#jupyter-notebook-basics" title="Permanent link">¶</a></h2>
 <p>A <strong>Jupyter notebook</strong> is an interactive document that mixes executable Python code blocks (cells) with Markdown text, equations, and output (tables, charts). Each code cell runs independently; variables from one cell are available in subsequent cells.</p>
 <p>The workflow for hydroponic data analysis:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Cell 1: Imports</span>
@@ -1957,7 +1988,7 @@ Welcome to Chapter 16, growers! Your sensors are reading, your data is logging �
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 </span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
 </span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="c1"># Cell 2: Load data</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;hydro_log.csv&quot;</span><span class="p">)</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"hydro_log.csv"</span><span class="p">)</span>
 </span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
 </span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="c1"># Cell 3: Inspect</span>
 </span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>       <span class="c1"># Show first 5 rows</span>
@@ -1965,47 +1996,47 @@ Welcome to Chapter 16, growers! Your sensors are reading, your data is logging �
 </span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>   <span class="c1"># Statistical summary</span>
 </span></code></pre></div>
 <p>Running cells in order, inspecting output at each step, and modifying code based on what you see is the iterative workflow of exploratory data analysis.</p>
-<h2 id="pandas-the-data-analysis-library">pandas: The Data Analysis Library<a class="headerlink" href="#pandas-the-data-analysis-library" title="Permanent link">&para;</a></h2>
+<h2 id="pandas-the-data-analysis-library">pandas: The Data Analysis Library<a class="headerlink" href="#pandas-the-data-analysis-library" title="Permanent link">¶</a></h2>
 <p><strong>pandas</strong> (Panel Data Analysis) is Python's premier data analysis library. Its core data structure is the <strong>DataFrame</strong> — a two-dimensional table with labeled rows (index) and columns, similar to a spreadsheet but with powerful programmatic manipulation.</p>
 <p>Before we look at specific operations, two key terms: the <strong>index</strong> is the row label (often a timestamp for sensor data), and <strong>columns</strong> are the variable labels (temperature, pH, EC). A <strong>Series</strong> is a single column of a DataFrame — a 1-dimensional labeled array.</p>
-<h3 id="dataframe-creation-and-structure">DataFrame Creation and Structure<a class="headerlink" href="#dataframe-creation-and-structure" title="Permanent link">&para;</a></h3>
+<h3 id="dataframe-creation-and-structure">DataFrame Creation and Structure<a class="headerlink" href="#dataframe-creation-and-structure" title="Permanent link">¶</a></h3>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="c1"># Create from a dictionary</span>
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="s2">&quot;timestamp&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1717000000</span><span class="p">,</span> <span class="mi">1717000300</span><span class="p">,</span> <span class="mi">1717000600</span><span class="p">],</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="s2">&quot;temperature&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">22.5</span><span class="p">,</span> <span class="mf">22.7</span><span class="p">,</span> <span class="mf">22.6</span><span class="p">],</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    <span class="s2">&quot;ph&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">6.42</span><span class="p">,</span> <span class="mf">6.38</span><span class="p">,</span> <span class="mf">6.40</span><span class="p">],</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    <span class="s2">&quot;ec&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">1.85</span><span class="p">,</span> <span class="mf">1.84</span><span class="p">,</span> <span class="mf">1.86</span><span class="p">]</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="s2">"timestamp"</span><span class="p">:</span> <span class="p">[</span><span class="mi">1717000000</span><span class="p">,</span> <span class="mi">1717000300</span><span class="p">,</span> <span class="mi">1717000600</span><span class="p">],</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="s2">"temperature"</span><span class="p">:</span> <span class="p">[</span><span class="mf">22.5</span><span class="p">,</span> <span class="mf">22.7</span><span class="p">,</span> <span class="mf">22.6</span><span class="p">],</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    <span class="s2">"ph"</span><span class="p">:</span> <span class="p">[</span><span class="mf">6.42</span><span class="p">,</span> <span class="mf">6.38</span><span class="p">,</span> <span class="mf">6.40</span><span class="p">],</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    <span class="s2">"ec"</span><span class="p">:</span> <span class="p">[</span><span class="mf">1.85</span><span class="p">,</span> <span class="mf">1.84</span><span class="p">,</span> <span class="mf">1.86</span><span class="p">]</span>
 </span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="p">}</span>
 </span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 </span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">dtypes</span><span class="p">)</span>
 </span></code></pre></div>
 <p>Output:
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>timestamp      int64
+</p><div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>timestamp      int64
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>temperature    float64
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>ph             float64
 </span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>ec             float64
-</span></code></pre></div></p>
-<h3 id="reading-csv-with-pandas">Reading CSV with pandas<a class="headerlink" href="#reading-csv-with-pandas" title="Permanent link">&para;</a></h3>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;hydro_log.csv&quot;</span><span class="p">)</span>
+</span></code></pre></div><p></p>
+<h3 id="reading-csv-with-pandas">Reading CSV with pandas<a class="headerlink" href="#reading-csv-with-pandas" title="Permanent link">¶</a></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"hydro_log.csv"</span><span class="p">)</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>   <span class="c1"># (rows, columns) — e.g., (8640, 4) for 30 days at 5-min intervals</span>
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
 </span></code></pre></div>
 <p><code>pd.read_csv()</code> is the entry point for most data analysis projects — it reads a CSV file from disk (or URL) into a DataFrame with type inference.</p>
-<h3 id="date-time-parsing-with-pandas">Date-Time Parsing with pandas<a class="headerlink" href="#date-time-parsing-with-pandas" title="Permanent link">&para;</a></h3>
+<h3 id="date-time-parsing-with-pandas">Date-Time Parsing with pandas<a class="headerlink" href="#date-time-parsing-with-pandas" title="Permanent link">¶</a></h3>
 <p>Unix timestamps (integers) are hard to work with directly — it's much easier to work with human-readable datetime objects. pandas provides <code>pd.to_datetime()</code> for conversion:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">df</span><span class="p">[</span><span class="s2">&quot;datetime&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;timestamp_unix&quot;</span><span class="p">],</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;s&quot;</span><span class="p">)</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;datetime&quot;</span><span class="p">)</span>   <span class="c1"># Use datetime as the row index</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">df</span><span class="p">[</span><span class="s2">"datetime"</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">"timestamp_unix"</span><span class="p">],</span> <span class="n">unit</span><span class="o">=</span><span class="s2">"s"</span><span class="p">)</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">"datetime"</span><span class="p">)</span>   <span class="c1"># Use datetime as the row index</span>
 </span></code></pre></div>
 <p>With a DatetimeIndex, pandas gains powerful time-aware capabilities: slicing by date range, resampling to hourly averages, and aligning multiple datasets by time.</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># Slice by date range</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">df_week1</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;2024-05-01&quot;</span><span class="p">:</span><span class="s2">&quot;2024-05-07&quot;</span><span class="p">]</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">df_week1</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">"2024-05-01"</span><span class="p">:</span><span class="s2">"2024-05-07"</span><span class="p">]</span>
 </span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
 </span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="c1"># Slice a specific day</span>
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="n">df_day1</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;2024-05-01&quot;</span><span class="p">]</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="n">df_day1</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">"2024-05-01"</span><span class="p">]</span>
 </span></code></pre></div>
-<h3 id="dataframe-indexing-and-slicing">DataFrame Indexing and Slicing<a class="headerlink" href="#dataframe-indexing-and-slicing" title="Permanent link">&para;</a></h3>
+<h3 id="dataframe-indexing-and-slicing">DataFrame Indexing and Slicing<a class="headerlink" href="#dataframe-indexing-and-slicing" title="Permanent link">¶</a></h3>
 <p>pandas provides two indexers for accessing DataFrame data:</p>
 <ul>
 <li><strong><code>.loc[]</code></strong> — label-based: <code>df.loc["2024-05-01", "ph"]</code> selects by row label (date) and column name</li>
@@ -2013,39 +2044,39 @@ Welcome to Chapter 16, growers! Your sensors are reading, your data is logging �
 <li><strong>Boolean indexing</strong>: <code>df[df["ph"] &lt; 5.5]</code> returns all rows where pH is below the target range</li>
 </ul>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># Get all pH readings below 5.5 (out-of-range events)</span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">low_ph_events</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;ph&quot;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mf">5.5</span><span class="p">]</span>
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Number of low-pH events: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">low_ph_events</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">low_ph_events</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">"ph"</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mf">5.5</span><span class="p">]</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Number of low-pH events: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">low_ph_events</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
 </span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="c1"># Get temperature readings during daytime (8am–8pm)</span>
-</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="n">daytime</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">between_time</span><span class="p">(</span><span class="s2">&quot;08:00&quot;</span><span class="p">,</span> <span class="s2">&quot;20:00&quot;</span><span class="p">)</span>
-</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="n">day_temps</span> <span class="o">=</span> <span class="n">daytime</span><span class="p">[</span><span class="s2">&quot;temperature&quot;</span><span class="p">]</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="n">daytime</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">between_time</span><span class="p">(</span><span class="s2">"08:00"</span><span class="p">,</span> <span class="s2">"20:00"</span><span class="p">)</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="n">day_temps</span> <span class="o">=</span> <span class="n">daytime</span><span class="p">[</span><span class="s2">"temperature"</span><span class="p">]</span>
 </span></code></pre></div>
-<h2 id="time-series-analysis">Time-Series Analysis<a class="headerlink" href="#time-series-analysis" title="Permanent link">&para;</a></h2>
-<h3 id="resampling-time-series-data">Resampling Time-Series Data<a class="headerlink" href="#resampling-time-series-data" title="Permanent link">&para;</a></h3>
+<h2 id="time-series-analysis">Time-Series Analysis<a class="headerlink" href="#time-series-analysis" title="Permanent link">¶</a></h2>
+<h3 id="resampling-time-series-data">Resampling Time-Series Data<a class="headerlink" href="#resampling-time-series-data" title="Permanent link">¶</a></h3>
 <p><strong>Resampling</strong> aggregates time-series data to a different time resolution. Upsampling increases frequency (5-minute to 1-minute, filling gaps); downsampling decreases frequency (5-minute to hourly averages). Downsampling is the most common operation for hydroponic analysis.</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># Resample 5-minute readings to hourly averages</span>
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">hourly</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s2">&quot;1H&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">hourly</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s2">"1H"</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 </span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
 </span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="c1"># Resample to daily statistics</span>
-</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="n">daily</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s2">&quot;1D&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span>
-</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>    <span class="s2">&quot;temperature&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;mean&quot;</span><span class="p">,</span> <span class="s2">&quot;min&quot;</span><span class="p">,</span> <span class="s2">&quot;max&quot;</span><span class="p">],</span>
-</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>    <span class="s2">&quot;ph&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;mean&quot;</span><span class="p">,</span> <span class="s2">&quot;min&quot;</span><span class="p">,</span> <span class="s2">&quot;max&quot;</span><span class="p">],</span>
-</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>    <span class="s2">&quot;ec&quot;</span><span class="p">:</span> <span class="s2">&quot;mean&quot;</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="n">daily</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s2">"1D"</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>    <span class="s2">"temperature"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"mean"</span><span class="p">,</span> <span class="s2">"min"</span><span class="p">,</span> <span class="s2">"max"</span><span class="p">],</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>    <span class="s2">"ph"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"mean"</span><span class="p">,</span> <span class="s2">"min"</span><span class="p">,</span> <span class="s2">"max"</span><span class="p">],</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>    <span class="s2">"ec"</span><span class="p">:</span> <span class="s2">"mean"</span>
 </span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="p">})</span>
 </span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>
 </span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="nb">print</span><span class="p">(</span><span class="n">daily</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">7</span><span class="p">))</span>   <span class="c1"># First week of daily stats</span>
 </span></code></pre></div>
 <p>Resampling to hourly or daily averages is essential for visualizing trends across a 35-day crop cycle — plotting every 5-minute reading produces unreadable charts.</p>
-<h3 id="rolling-window-statistics">Rolling Window Statistics<a class="headerlink" href="#rolling-window-statistics" title="Permanent link">&para;</a></h3>
+<h3 id="rolling-window-statistics">Rolling Window Statistics<a class="headerlink" href="#rolling-window-statistics" title="Permanent link">¶</a></h3>
 <p>A <strong>rolling window</strong> computes a statistic over a sliding time window. For sensor data, rolling averages smooth short-term noise; rolling standard deviations detect when readings become unusually variable (often an early sign of sensor fouling or system instability).</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1"># 1-hour rolling average (window=12 for 5-minute data)</span>
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="n">df</span><span class="p">[</span><span class="s2">&quot;ph_rolling_avg&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;ph&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">window</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="n">df</span><span class="p">[</span><span class="s2">"ph_rolling_avg"</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">"ph"</span><span class="p">]</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">window</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 </span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
 </span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="c1"># 4-hour rolling standard deviation</span>
-</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="n">df</span><span class="p">[</span><span class="s2">&quot;ph_rolling_std&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;ph&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">window</span><span class="o">=</span><span class="mi">48</span><span class="p">)</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="n">df</span><span class="p">[</span><span class="s2">"ph_rolling_std"</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">"ph"</span><span class="p">]</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">window</span><span class="o">=</span><span class="mi">48</span><span class="p">)</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
 </span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>
 </span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="c1"># Flag points where pH variation is high (potential alarm)</span>
-</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="n">df</span><span class="p">[</span><span class="s2">&quot;ph_unstable&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;ph_rolling_std&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">0.15</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="n">df</span><span class="p">[</span><span class="s2">"ph_unstable"</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">"ph_rolling_std"</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">0.15</span>
 </span></code></pre></div>
 <p>Rolling statistics are the foundation of <strong>Statistical Process Control</strong> (SPC), covered in Chapter 17.</p>
 <div class="admonition mascot-thinking">
@@ -2053,8 +2084,8 @@ Welcome to Chapter 16, growers! Your sensors are reading, your data is logging �
 <p><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Cress holds chin thoughtfully">
 Rolling averages and resampling both smooth data, but differently. Resampling produces a new Series at reduced frequency (e.g., one point per hour from 12 five-minute readings). Rolling averages keep the original frequency but replace each point with the mean of the surrounding window — useful for smoothing while preserving the original time resolution. Use resampling for trend visualization across many days; use rolling averages for real-time noise reduction.</p>
 </div>
-<h2 id="data-quality">Data Quality<a class="headerlink" href="#data-quality" title="Permanent link">&para;</a></h2>
-<h3 id="missing-data-handling">Missing Data Handling<a class="headerlink" href="#missing-data-handling" title="Permanent link">&para;</a></h3>
+<h2 id="data-quality">Data Quality<a class="headerlink" href="#data-quality" title="Permanent link">¶</a></h2>
+<h3 id="missing-data-handling">Missing Data Handling<a class="headerlink" href="#missing-data-handling" title="Permanent link">¶</a></h3>
 <p>Real sensor logs have gaps — the Wi-Fi drops, the battery drains, the sensor gives a bad reading. pandas represents missing values as <code>NaN</code> (Not a Number). Before analysis, you need a strategy for handling them.</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># Check for missing data</span>
 </span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
@@ -2064,34 +2095,34 @@ Rolling averages and resampling both smooth data, but differently. Resampling pr
 </span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="c1"># ec              5</span>
 </span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>
 </span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="c1"># Inspect where pH gaps occur</span>
-</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;ph&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()]</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">"ph"</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()]</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
 </span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>
 </span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="c1"># Option 1: Drop rows with any NaN</span>
 </span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="n">df_clean</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
 </span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>
 </span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="c1"># Option 2: Forward-fill (use last known value)</span>
-</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="n">df_filled</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s2">&quot;ffill&quot;</span><span class="p">)</span>
+</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="n">df_filled</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s2">"ffill"</span><span class="p">)</span>
 </span><span id="__span-11-16"><a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>
 </span><span id="__span-11-17"><a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="c1"># Option 3: Interpolate (linear interpolation between surrounding values)</span>
-</span><span id="__span-11-18"><a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a><span class="n">df_interp</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s2">&quot;time&quot;</span><span class="p">)</span>
+</span><span id="__span-11-18"><a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a><span class="n">df_interp</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s2">"time"</span><span class="p">)</span>
 </span></code></pre></div>
 <p>For hydroponic analysis, <strong>linear interpolation</strong> is usually appropriate for gaps under 1 hour — pH and EC change slowly enough that linear interpolation is close to the true values. For longer gaps, flag the interpolated period in your analysis to avoid drawing conclusions from reconstructed data.</p>
-<h3 id="data-cleaning-and-validation">Data Cleaning and Validation<a class="headerlink" href="#data-cleaning-and-validation" title="Permanent link">&para;</a></h3>
+<h3 id="data-cleaning-and-validation">Data Cleaning and Validation<a class="headerlink" href="#data-cleaning-and-validation" title="Permanent link">¶</a></h3>
 <p>Beyond missing data, sensor logs often contain <strong>outliers</strong> — readings that are clearly wrong (pH = 14.7, temperature = 99.9 °C from a sensor that momentarily disconnected). Before analysis, validate the data against physical limits:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">VALID_RANGES</span> <span class="o">=</span> <span class="p">{</span>
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>    <span class="s2">&quot;ph&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mf">3.0</span><span class="p">,</span> <span class="mf">11.0</span><span class="p">),</span>
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>    <span class="s2">&quot;ec&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">),</span>
-</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>    <span class="s2">&quot;temperature&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mf">5.0</span><span class="p">,</span> <span class="mf">45.0</span><span class="p">)</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>    <span class="s2">"ph"</span><span class="p">:</span> <span class="p">(</span><span class="mf">3.0</span><span class="p">,</span> <span class="mf">11.0</span><span class="p">),</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>    <span class="s2">"ec"</span><span class="p">:</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">),</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>    <span class="s2">"temperature"</span><span class="p">:</span> <span class="p">(</span><span class="mf">5.0</span><span class="p">,</span> <span class="mf">45.0</span><span class="p">)</span>
 </span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="p">}</span>
 </span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>
 </span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="k">def</span> <span class="nf">validate_range</span><span class="p">(</span><span class="n">series</span><span class="p">,</span> <span class="n">col_name</span><span class="p">):</span>
 </span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>    <span class="n">lo</span><span class="p">,</span> <span class="n">hi</span> <span class="o">=</span> <span class="n">VALID_RANGES</span><span class="p">[</span><span class="n">col_name</span><span class="p">]</span>
 </span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>    <span class="n">out_of_range</span> <span class="o">=</span> <span class="p">(</span><span class="n">series</span> <span class="o">&lt;</span> <span class="n">lo</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">series</span> <span class="o">&gt;</span> <span class="n">hi</span><span class="p">)</span>
-</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>    <span class="n">series</span><span class="p">[</span><span class="n">out_of_range</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s2">&quot;nan&quot;</span><span class="p">)</span>   <span class="c1"># Replace with NaN</span>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>    <span class="n">series</span><span class="p">[</span><span class="n">out_of_range</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s2">"nan"</span><span class="p">)</span>   <span class="c1"># Replace with NaN</span>
 </span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>    <span class="k">return</span> <span class="n">series</span>
 </span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>
-</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="n">df</span><span class="p">[</span><span class="s2">&quot;ph&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">validate_range</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;ph&quot;</span><span class="p">],</span> <span class="s2">&quot;ph&quot;</span><span class="p">)</span>
-</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="n">df</span><span class="p">[</span><span class="s2">&quot;temperature&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">validate_range</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;temperature&quot;</span><span class="p">],</span> <span class="s2">&quot;temperature&quot;</span><span class="p">)</span>
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="n">df</span><span class="p">[</span><span class="s2">"ph"</span><span class="p">]</span> <span class="o">=</span> <span class="n">validate_range</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">"ph"</span><span class="p">],</span> <span class="s2">"ph"</span><span class="p">)</span>
+</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="n">df</span><span class="p">[</span><span class="s2">"temperature"</span><span class="p">]</span> <span class="o">=</span> <span class="n">validate_range</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">"temperature"</span><span class="p">],</span> <span class="s2">"temperature"</span><span class="p">)</span>
 </span></code></pre></div>
 <p>After validation and interpolation, your DataFrame is ready for statistical analysis.</p>
 <div class="admonition mascot-warning">
@@ -2099,9 +2130,9 @@ Rolling averages and resampling both smooth data, but differently. Resampling pr
 <p><img src="../../img/mascot/warning.png" class="mascot-admonition-img" alt="Cress raises a cautionary hand">
 A single erroneous reading (pH = 14.7 from a disconnected sensor) will dramatically skew your mean, standard deviation, and correlation calculations. Always validate against physical limits and inspect for obvious outliers before analysis. The <code>df.describe()</code> output shows min and max — check those numbers first.</p>
 </div>
-<h2 id="numpy-numerical-computing">NumPy: Numerical Computing<a class="headerlink" href="#numpy-numerical-computing" title="Permanent link">&para;</a></h2>
+<h2 id="numpy-numerical-computing">NumPy: Numerical Computing<a class="headerlink" href="#numpy-numerical-computing" title="Permanent link">¶</a></h2>
 <p><strong>NumPy</strong> (Numerical Python) is the foundational library for numerical computation in Python. pandas is built on top of NumPy, and many scientific Python packages use NumPy arrays as their data format.</p>
-<h3 id="numpy-arrays">NumPy Arrays<a class="headerlink" href="#numpy-arrays" title="Permanent link">&para;</a></h3>
+<h3 id="numpy-arrays">NumPy Arrays<a class="headerlink" href="#numpy-arrays" title="Permanent link">¶</a></h3>
 <p>A <strong>NumPy array</strong> (<code>ndarray</code>) is a homogeneous, typed array — all elements have the same data type (e.g., all float64). NumPy arrays support element-wise operations, which are much faster than Python <code>for</code> loops because they use optimized C code under the hood.</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
@@ -2113,18 +2144,18 @@ A single erroneous reading (pH = 14.7 from a disconnected sensor) will dramatica
 </span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="n">temps_centered</span> <span class="o">=</span> <span class="n">temps</span> <span class="o">-</span> <span class="n">temps</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 </span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>
 </span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="c1"># Convert a pandas Series to NumPy array</span>
-</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="n">ph_array</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;ph&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="n">ph_array</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">"ph"</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
 </span></code></pre></div>
-<h3 id="array-operations-and-broadcasting">Array Operations and Broadcasting<a class="headerlink" href="#array-operations-and-broadcasting" title="Permanent link">&para;</a></h3>
+<h3 id="array-operations-and-broadcasting">Array Operations and Broadcasting<a class="headerlink" href="#array-operations-and-broadcasting" title="Permanent link">¶</a></h3>
 <p><strong>Broadcasting</strong> is NumPy's rule for performing operations between arrays of different shapes. The most common form: a scalar operation applied to an entire array (as shown in the Celsius-to-Fahrenheit conversion above — Python multiplies each element by 9/5 without an explicit loop).</p>
 <p>More complex broadcasting:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1"># Normalize each column to 0-1 range</span>
-</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="n">ec_array</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;ec&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="n">ec_array</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">"ec"</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
 </span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="n">ec_normalized</span> <span class="o">=</span> <span class="p">(</span><span class="n">ec_array</span> <span class="o">-</span> <span class="n">ec_array</span><span class="o">.</span><span class="n">min</span><span class="p">())</span> <span class="o">/</span> <span class="p">(</span><span class="n">ec_array</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">-</span> <span class="n">ec_array</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
 </span></code></pre></div>
-<h3 id="statistical-functions-in-numpy">Statistical Functions in NumPy<a class="headerlink" href="#statistical-functions-in-numpy" title="Permanent link">&para;</a></h3>
+<h3 id="statistical-functions-in-numpy">Statistical Functions in NumPy<a class="headerlink" href="#statistical-functions-in-numpy" title="Permanent link">¶</a></h3>
 <p>NumPy provides optimized implementations of statistical functions that work on arrays:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">ph</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;ph&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">ph</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">"ph"</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
 </span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>
 </span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="n">mean_ph</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">ph</span><span class="p">)</span>         <span class="c1"># Arithmetic mean</span>
 </span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="n">median_ph</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">ph</span><span class="p">)</span>     <span class="c1"># Median (50th percentile)</span>
@@ -2134,8 +2165,8 @@ A single erroneous reading (pH = 14.7 from a disconnected sensor) will dramatica
 </span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="n">max_ph</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">ph</span><span class="p">)</span>
 </span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="n">percentile_25</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">ph</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>   <span class="c1"># 25th percentile</span>
 </span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>
-</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;pH stats: mean=</span><span class="si">{</span><span class="n">mean_ph</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">, std=</span><span class="si">{</span><span class="n">std_ph</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">, &quot;</span>
-</span><span id="__span-15-12"><a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>      <span class="sa">f</span><span class="s2">&quot;min=</span><span class="si">{</span><span class="n">min_ph</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">, max=</span><span class="si">{</span><span class="n">max_ph</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"pH stats: mean=</span><span class="si">{</span><span class="n">mean_ph</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">, std=</span><span class="si">{</span><span class="n">std_ph</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">, "</span>
+</span><span id="__span-15-12"><a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>      <span class="sa">f</span><span class="s2">"min=</span><span class="si">{</span><span class="n">min_ph</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">, max=</span><span class="si">{</span><span class="n">max_ph</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </span></code></pre></div>
 <p><strong>Mean, median, and standard deviation</strong> are the three most important summary statistics for hydroponic analysis:</p>
 <ul>
@@ -2143,19 +2174,19 @@ A single erroneous reading (pH = 14.7 from a disconnected sensor) will dramatica
 <li><strong>Median</strong>: Less sensitive to outliers than mean — better for understanding typical conditions</li>
 <li><strong>Standard deviation</strong>: How much the value varied — low std = stable; high std = unstable system or sensor issues</li>
 </ul>
-<h2 id="correlation-and-regression">Correlation and Regression<a class="headerlink" href="#correlation-and-regression" title="Permanent link">&para;</a></h2>
-<h3 id="correlation-analysis">Correlation Analysis<a class="headerlink" href="#correlation-analysis" title="Permanent link">&para;</a></h3>
+<h2 id="correlation-and-regression">Correlation and Regression<a class="headerlink" href="#correlation-and-regression" title="Permanent link">¶</a></h2>
+<h3 id="correlation-analysis">Correlation Analysis<a class="headerlink" href="#correlation-analysis" title="Permanent link">¶</a></h3>
 <p><strong>Correlation</strong> measures the linear relationship between two variables. The <strong>Pearson correlation coefficient</strong> ranges from −1 (perfect negative correlation) to +1 (perfect positive correlation), with 0 indicating no linear relationship.</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c1"># Correlation between pH and EC (often negatively correlated — as plants</span>
 </span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="c1"># take up nutrients, EC drops and root exudates acidify the solution)</span>
 </span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="n">corr_ph_ec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">corrcoef</span><span class="p">(</span>
-</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;ph&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">(),</span>
-</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;ec&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>    <span class="n">df</span><span class="p">[</span><span class="s2">"ph"</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">(),</span>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>    <span class="n">df</span><span class="p">[</span><span class="s2">"ec"</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
 </span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="p">)[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
-</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Correlation between pH and EC: </span><span class="si">{</span><span class="n">corr_ph_ec</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Correlation between pH and EC: </span><span class="si">{</span><span class="n">corr_ph_ec</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>
 </span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="c1"># Full correlation matrix for all sensor columns</span>
-</span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="n">corr_matrix</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s2">&quot;temperature&quot;</span><span class="p">,</span> <span class="s2">&quot;ph&quot;</span><span class="p">,</span> <span class="s2">&quot;ec&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+</span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="n">corr_matrix</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s2">"temperature"</span><span class="p">,</span> <span class="s2">"ph"</span><span class="p">,</span> <span class="s2">"ec"</span><span class="p">]]</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
 </span><span id="__span-16-11"><a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="nb">print</span><span class="p">(</span><span class="n">corr_matrix</span><span class="p">)</span>
 </span></code></pre></div>
 <p>Useful correlations to investigate in hydroponic data:</p>
@@ -2164,7 +2195,7 @@ A single erroneous reading (pH = 14.7 from a disconnected sensor) will dramatica
 <li><strong>Temperature vs. DO</strong>: Strongly negative (warmer water holds less dissolved oxygen)</li>
 <li><strong>CO₂ vs. time of day</strong>: Tracks plant photosynthesis cycles (CO₂ drops during lights-on)</li>
 </ul>
-<h3 id="linear-regression">Linear Regression<a class="headerlink" href="#linear-regression" title="Permanent link">&para;</a></h3>
+<h3 id="linear-regression">Linear Regression<a class="headerlink" href="#linear-regression" title="Permanent link">¶</a></h3>
 <p><strong>Linear regression</strong> fits a straight line to data: <span class="arithmatex">\( y = mx + b \)</span>. In hydroponic analysis, regression reveals trends — is pH drifting upward over the crop cycle? Is EC decreasing faster in week 3 than week 1?</p>
 <p><strong><code>numpy.polyfit()</code></strong> fits a polynomial of specified degree. For linear regression (degree 1), it returns the slope <code>m</code> and intercept <code>b</code>:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="c1"># Days since start as x, pH as y</span>
@@ -2176,7 +2207,7 @@ A single erroneous reading (pH = 14.7 from a disconnected sensor) will dramatica
 </span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="n">slope</span> <span class="o">=</span> <span class="n">coefficients</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>     <span class="c1"># pH change per day</span>
 </span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="n">intercept</span> <span class="o">=</span> <span class="n">coefficients</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># pH at day 0</span>
 </span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>
-</span><span id="__span-17-10"><a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;pH trend: </span><span class="si">{</span><span class="n">slope</span><span class="si">:</span><span class="s2">+.4f</span><span class="si">}</span><span class="s2"> pH units/day&quot;</span><span class="p">)</span>
+</span><span id="__span-17-10"><a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"pH trend: </span><span class="si">{</span><span class="n">slope</span><span class="si">:</span><span class="s2">+.4f</span><span class="si">}</span><span class="s2"> pH units/day"</span><span class="p">)</span>
 </span><span id="__span-17-11"><a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a><span class="c1"># Positive: pH drifting up; negative: drifting down</span>
 </span><span id="__span-17-12"><a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>
 </span><span id="__span-17-13"><a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a><span class="c1"># Generate the fitted line for plotting</span>
@@ -2189,13 +2220,13 @@ A single erroneous reading (pH = 14.7 from a disconnected sensor) will dramatica
 <p><img src="../../img/mascot/encouraging.png" class="mascot-admonition-img" alt="Cress gives an encouraging nod">
 When you check pH daily, you see the current reading. When you fit a regression line to 30 days of pH data, you see the slope — whether the system is drifting, how fast, and whether that rate changed after you modified the nutrient formulation. This is the difference between reactive management and understanding your system. The math is simple; the insight is powerful.</p>
 </div>
-<h4 id="diagram-sensor-data-analysis-pipeline">Diagram: Sensor Data Analysis Pipeline<a class="headerlink" href="#diagram-sensor-data-analysis-pipeline" title="Permanent link">&para;</a></h4>
+<h4 id="diagram-sensor-data-analysis-pipeline">Diagram: Sensor Data Analysis Pipeline<a class="headerlink" href="#diagram-sensor-data-analysis-pipeline" title="Permanent link">¶</a></h4>
 <iframe src="../../sims/sensor-data-pipeline/main.html" width="100%" height="500px" scrolling="no"></iframe>
 <details>
 <summary>Hydroponic Sensor Data Analysis Pipeline Interactive Demo</summary>
 <p>Type: interactive-analysis
-<strong>sim-id:</strong> sensor-data-pipeline<br/>
-<strong>Library:</strong> p5.js<br/>
+<strong>sim-id:</strong> sensor-data-pipeline<br>
+<strong>Library:</strong> p5.js<br>
 <strong>Status:</strong> Specified</p>
 <p>Purpose: Simulate a 35-day crop cycle dataset (synthetic pH, EC, temperature readings at 5-minute intervals) and allow students to apply each analysis step — load, clean, resample, rolling average, correlation, regression — and observe the output update in real-time.</p>
 <p>Bloom Level: Apply (L3) and Analyze (L4)
@@ -2220,7 +2251,7 @@ Bloom Verb: Apply — students apply data analysis operations to a simulated dat
 <p>Below chart: stats panel showing real-time values: mean, median, std, min, max, trend slope (pH/day).</p>
 <p>Interactivity: All left-panel changes update the chart instantly. Hovering the chart shows a vertical cursor with the exact values at that timestamp. Toggle "View Mode" to switch between pH / EC / Temperature.</p>
 </details>
-<h2 id="key-takeaways">Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link">&para;</a></h2>
+<h2 id="key-takeaways">Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link">¶</a></h2>
 <ul>
 <li><strong>Data collection strategy</strong> decisions — what to measure, at what interval, and where to store it — determine whether the logged data can answer your crop performance questions.</li>
 <li><strong>CSV format</strong> with a header row and Unix timestamps is the simplest and most portable logging format; write a header once at cycle start, append rows during operation.</li>
@@ -2263,7 +2294,7 @@ You can now transform a raw CSV log from a 35-day lettuce crop into a clean, ana
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
   Back to top
 </button>
         
@@ -2273,20 +2304,20 @@ You can now transform a raw CSV log from a 35-day lettuce crop into a clean, ana
   
     
       
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
           <a href="../15-sensors-electronics/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 15. Sensors &amp; Electronics">
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
             </div>
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Previous
               </span>
               <div class="md-ellipsis">
-                15. Sensors & Electronics
+                15. Sensors &amp; Electronics
               </div>
             </div>
           </a>
@@ -2304,7 +2335,7 @@ You can now transform a raw CSV log from a 35-day lettuce crop into a clean, ana
             </div>
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
             </div>
           </a>
         
@@ -2316,7 +2347,7 @@ You can now transform a raw CSV log from a 35-day lettuce crop into a clean, ana
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+      Copyright © 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
     </div>
   
   
@@ -2338,5 +2369,7 @@ You can now transform a raw CSV log from a 35-day lettuce crop into a clean, ana
       <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
     
-  </body>
-</html>
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

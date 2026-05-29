@@ -1,7 +1,4 @@
-
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
+<!DOCTYPE html><html lang="en" class="no-js"><head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -21,7 +18,7 @@
         <link rel="next" href="../14-networking-iot/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
     
     
@@ -47,7 +44,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -62,8 +59,44 @@
 
     
     
+      
+        <meta property="og:type" content="website">
+      
+        <meta property="og:title" content="Hardware Interfaces and Sensor Programming - Hydroponics">
+      
+        <meta property="og:description" content="MicroPython's hardware interfaces — GPIO, ADC, PWM, I2C, SPI, UART, interrupts, timers, asyncio, and CSV/JSON file I/O for real hydroponic sensor systems.">
+      
+        <meta property="og:image" content="https://dmccreary.github.io/hydroponics/assets/images/social/chapters/13-hardware-interfaces/index.png">
+      
+        <meta property="og:image:type" content="image/png">
+      
+        <meta property="og:image:width" content="1200">
+      
+        <meta property="og:image:height" content="630">
+      
+        <meta property="og:url" content="https://dmccreary.github.io/hydroponics/chapters/13-hardware-interfaces/">
+      
+        <meta name="twitter:card" content="summary_large_image">
+      
+        <meta name="twitter:title" content="Hardware Interfaces and Sensor Programming - Hydroponics">
+      
+        <meta name="twitter:description" content="MicroPython's hardware interfaces — GPIO, ADC, PWM, I2C, SPI, UART, interrupts, timers, asyncio, and CSV/JSON file I/O for real hydroponic sensor systems.">
+      
+        <meta name="twitter:image" content="https://dmccreary.github.io/hydroponics/assets/images/social/chapters/13-hardware-interfaces/index.png">
+      
     
-  </head>
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
   
   
     
@@ -98,13 +131,12 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Hydroponics" class="md-header__button md-logo" aria-label="Hydroponics" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../../img/mascot/neutral.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -130,7 +162,7 @@
     
       <label class="md-header__button md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -139,20 +171,20 @@
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
           <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
             
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
           </a>
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
         </button>
       </nav>
       
@@ -177,7 +209,7 @@
         <a href="https://github.com/dmccreary/hydroponics" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
   </div>
   <div class="md-source__repository">
     GitHub Repo
@@ -201,7 +233,7 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -212,8 +244,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Hydroponics" class="md-nav__button md-logo" aria-label="Hydroponics" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../../img/mascot/neutral.png" alt="logo">
 
     </a>
     Hydroponics
@@ -223,7 +254,7 @@
       <a href="https://github.com/dmccreary/hydroponics" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
   </div>
   <div class="md-source__repository">
     GitHub Repo
@@ -485,7 +516,7 @@
         
   
   <span class="md-ellipsis">
-    3. Water & Plant Health
+    3. Water &amp; Plant Health
   </span>
   
 
@@ -506,7 +537,7 @@
         
   
   <span class="md-ellipsis">
-    4. Macro & Micro Nutrients
+    4. Macro &amp; Micro Nutrients
   </span>
   
 
@@ -590,7 +621,7 @@
         
   
   <span class="md-ellipsis">
-    8. DIY & School Projects
+    8. DIY &amp; School Projects
   </span>
   
 
@@ -611,7 +642,7 @@
         
   
   <span class="md-ellipsis">
-    9. Growing Media & Crops
+    9. Growing Media &amp; Crops
   </span>
   
 
@@ -1068,7 +1099,7 @@
         
   
   <span class="md-ellipsis">
-    14. Networking & IoT
+    14. Networking &amp; IoT
   </span>
   
 
@@ -1089,7 +1120,7 @@
         
   
   <span class="md-ellipsis">
-    15. Sensors & Electronics
+    15. Sensors &amp; Electronics
   </span>
   
 
@@ -1502,7 +1533,7 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -1849,16 +1880,16 @@
   
     <a href="https://github.com/dmccreary/hydroponics/blob/main/docs/chapters/13-hardware-interfaces/index.md" title="Edit this page" class="md-content__button md-icon">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
     </a>
   
   
 
 
-<h1 id="hardware-interfaces-and-sensor-programming">Hardware Interfaces and Sensor Programming<a class="headerlink" href="#hardware-interfaces-and-sensor-programming" title="Permanent link">&para;</a></h1>
-<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<h1 id="hardware-interfaces-and-sensor-programming">Hardware Interfaces and Sensor Programming<a class="headerlink" href="#hardware-interfaces-and-sensor-programming" title="Permanent link">¶</a></h1>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
 <p>This chapter bridges software and hardware by teaching MicroPython's full suite of communication protocols: I2C, SPI, UART, ADC, DAC, PWM, and GPIO. Students learn to read digital and analog sensors, write CSV data to files, work with JSON, configure pull-up and pull-down resistors, handle interrupts for real-time event detection, use hardware timers, and write non-blocking asynchronous code with asyncio — the foundation for all sensor projects in later chapters.</p>
-<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">&para;</a></h2>
+<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">¶</a></h2>
 <p>This chapter covers the following 25 concepts from the learning graph:</p>
 <ol>
 <li>Exception Handling Try/Except</li>
@@ -1887,30 +1918,30 @@
 <li>asyncio in MicroPython</li>
 <li>Wi-Fi Connection on ESP32</li>
 </ol>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">¶</a></h2>
 <p>This chapter builds on concepts from:</p>
 <ul>
 <li><a href="../12-micropython-fundamentals/">Chapter 12: MicroPython Fundamentals</a></li>
 </ul>
-<hr />
+<hr>
 <div class="admonition mascot-welcome">
 <p class="admonition-title">Cress gets hands-on with hardware</p>
 <p><img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Cress waves hello at chapter opening">
 Welcome to Chapter 13, hydro-explorers! Chapter 12 gave you the Python language. Now we plug in sensors. This chapter is the bridge between code and the physical world — every technique here directly applies to reading pH probes, controlling nutrient pumps, and logging temperature data to flash memory. Let's go from blinking an LED to running a full asynchronous sensor loop!</p>
 </div>
-<h2 id="exception-handling-tryexcept">Exception Handling: Try/Except<a class="headerlink" href="#exception-handling-tryexcept" title="Permanent link">&para;</a></h2>
+<h2 id="exception-handling-tryexcept">Exception Handling: Try/Except<a class="headerlink" href="#exception-handling-tryexcept" title="Permanent link">¶</a></h2>
 <p>In embedded systems, hardware fails silently. A sensor disconnects mid-read, an I2C device doesn't respond, a file can't be written because the flash is full. Without exception handling, these events crash your entire sensor program and leave your hydroponics system unmonitored.</p>
 <p>Python uses <strong>try/except</strong> blocks to catch and handle errors gracefully. The <code>try</code> block contains code that might raise an exception; the <code>except</code> block runs if a specific exception type occurs.</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">machine</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">try</span><span class="p">:</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">sensor_value</span> <span class="o">=</span> <span class="n">ph_sensor</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;pH: </span><span class="si">{</span><span class="n">sensor_value</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"pH: </span><span class="si">{</span><span class="n">sensor_value</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="k">except</span> <span class="ne">OSError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Sensor communication error: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Sensor communication error: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="n">sensor_value</span> <span class="o">=</span> <span class="kc">None</span>
 </span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Invalid sensor value: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Invalid sensor value: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="n">sensor_value</span> <span class="o">=</span> <span class="kc">None</span>
 </span></code></pre></div>
 <p>Key exception types in MicroPython hardware code:</p>
@@ -1949,47 +1980,47 @@ Welcome to Chapter 13, hydro-explorers! Chapter 12 gave you the Python language.
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="n">data</span> <span class="o">=</span> <span class="n">sensor</span><span class="o">.</span><span class="n">read_block</span><span class="p">()</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="n">write_to_file</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">except</span> <span class="ne">OSError</span><span class="p">:</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="n">log_error</span><span class="p">(</span><span class="s2">&quot;Read failed&quot;</span><span class="p">)</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="n">log_error</span><span class="p">(</span><span class="s2">"Read failed"</span><span class="p">)</span>
 </span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="k">finally</span><span class="p">:</span>
 </span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="n">sensor</span><span class="o">.</span><span class="n">release_bus</span><span class="p">()</span>   <span class="c1"># Always release I2C bus</span>
 </span></code></pre></div>
-<h2 id="file-io-in-micropython">File I/O in MicroPython<a class="headerlink" href="#file-io-in-micropython" title="Permanent link">&para;</a></h2>
+<h2 id="file-io-in-micropython">File I/O in MicroPython<a class="headerlink" href="#file-io-in-micropython" title="Permanent link">¶</a></h2>
 <p>MicroPython on the Pico and ESP32 provides a small flash filesystem — typically 1–2 MB of storage after the firmware — using the LittleFS format. This filesystem stores your <code>.py</code> scripts and can also be used to log sensor data.</p>
 <p>File operations use the same <code>open()</code>, <code>read()</code>, <code>write()</code>, and <code>close()</code> functions as desktop Python, but with one important difference: flash memory has a finite number of write cycles (typically 100,000+), so it's important not to write to the same file thousands of times per second.</p>
-<h3 id="reading-files">Reading Files<a class="headerlink" href="#reading-files" title="Permanent link">&para;</a></h3>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;calibration.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<h3 id="reading-files">Reading Files<a class="headerlink" href="#reading-files" title="Permanent link">¶</a></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"calibration.txt"</span><span class="p">,</span> <span class="s2">"r"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="n">content</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    <span class="n">lines</span> <span class="o">=</span> <span class="n">content</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;settings.json&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"settings.json"</span><span class="p">,</span> <span class="s2">"r"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
 </span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="n">line</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
 </span></code></pre></div>
 <p>The <code>with</code> statement ensures the file is automatically closed when the block exits, even if an exception occurs.</p>
-<h3 id="writing-and-appending-files">Writing and Appending Files<a class="headerlink" href="#writing-and-appending-files" title="Permanent link">&para;</a></h3>
+<h3 id="writing-and-appending-files">Writing and Appending Files<a class="headerlink" href="#writing-and-appending-files" title="Permanent link">¶</a></h3>
 <p>Mode <code>"w"</code> creates a new file (or overwrites an existing one). Mode <code>"a"</code> appends to an existing file without erasing it — the correct mode for sensor data logging.</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Write (overwrite) — use for configuration files</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;calibration.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ph_slope=</span><span class="si">{</span><span class="n">slope</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ph_offset=</span><span class="si">{</span><span class="n">offset</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"calibration.txt"</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">"ph_slope=</span><span class="si">{</span><span class="n">slope</span><span class="si">}</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">"ph_offset=</span><span class="si">{</span><span class="n">offset</span><span class="si">}</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
 </span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
 </span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="c1"># Append — use for sensor data logs</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;sensor_log.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">timestamp</span><span class="si">}</span><span class="s2">,</span><span class="si">{</span><span class="n">temperature</span><span class="si">}</span><span class="s2">,</span><span class="si">{</span><span class="n">ph</span><span class="si">}</span><span class="s2">,</span><span class="si">{</span><span class="n">ec</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"sensor_log.csv"</span><span class="p">,</span> <span class="s2">"a"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">timestamp</span><span class="si">}</span><span class="s2">,</span><span class="si">{</span><span class="n">temperature</span><span class="si">}</span><span class="s2">,</span><span class="si">{</span><span class="n">ph</span><span class="si">}</span><span class="s2">,</span><span class="si">{</span><span class="n">ec</span><span class="si">}</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
 </span></code></pre></div>
-<h3 id="csv-file-writing">CSV File Writing<a class="headerlink" href="#csv-file-writing" title="Permanent link">&para;</a></h3>
+<h3 id="csv-file-writing">CSV File Writing<a class="headerlink" href="#csv-file-writing" title="Permanent link">¶</a></h3>
 <p><strong>CSV</strong> (Comma-Separated Values) is the simplest and most widely supported format for tabular data. A CSV file has one row per reading, with values separated by commas. This format can be opened directly in spreadsheet software for analysis.</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">import</span> <span class="nn">utime</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">LOG_FILE</span> <span class="o">=</span> <span class="s2">&quot;hydro_log.csv&quot;</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">LOG_FILE</span> <span class="o">=</span> <span class="s2">"hydro_log.csv"</span>
 </span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
 </span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="k">def</span> <span class="nf">write_csv_header</span><span class="p">():</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">LOG_FILE</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;timestamp,temperature_c,ph,ec_ms_cm,do_mg_l</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">LOG_FILE</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">"timestamp,temperature_c,ph,ec_ms_cm,do_mg_l</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
 </span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
 </span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="k">def</span> <span class="nf">log_reading</span><span class="p">(</span><span class="n">temp</span><span class="p">,</span> <span class="n">ph</span><span class="p">,</span> <span class="n">ec</span><span class="p">,</span> <span class="n">do</span><span class="p">):</span>
 </span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    <span class="n">timestamp</span> <span class="o">=</span> <span class="n">utime</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">LOG_FILE</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">timestamp</span><span class="si">}</span><span class="s2">,</span><span class="si">{</span><span class="n">temp</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">,</span><span class="si">{</span><span class="n">ph</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">,</span><span class="si">{</span><span class="n">ec</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">,</span><span class="si">{</span><span class="n">do</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">LOG_FILE</span><span class="p">,</span> <span class="s2">"a"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">timestamp</span><span class="si">}</span><span class="s2">,</span><span class="si">{</span><span class="n">temp</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">,</span><span class="si">{</span><span class="n">ph</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">,</span><span class="si">{</span><span class="n">ec</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">,</span><span class="si">{</span><span class="n">do</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
 </span></code></pre></div>
 <p>For long deployments, the log file will eventually fill the flash. A rotation strategy prevents the filesystem from filling up:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">import</span> <span class="nn">uos</span>
@@ -1998,29 +2029,29 @@ Welcome to Chapter 13, hydro-explorers! Chapter 12 gave you the Python language.
 </span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    <span class="k">try</span><span class="p">:</span>
 </span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>        <span class="n">stat</span> <span class="o">=</span> <span class="n">uos</span><span class="o">.</span><span class="n">stat</span><span class="p">(</span><span class="n">LOG_FILE</span><span class="p">)</span>
 </span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>        <span class="k">if</span> <span class="n">stat</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">800_000</span><span class="p">:</span>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>            <span class="n">uos</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">LOG_FILE</span><span class="p">,</span> <span class="s2">&quot;log_old.csv&quot;</span><span class="p">)</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>            <span class="n">uos</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">LOG_FILE</span><span class="p">,</span> <span class="s2">"log_old.csv"</span><span class="p">)</span>
 </span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>            <span class="n">write_csv_header</span><span class="p">()</span>
 </span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>    <span class="k">except</span> <span class="ne">OSError</span><span class="p">:</span>
 </span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>        <span class="n">write_csv_header</span><span class="p">()</span>
 </span></code></pre></div>
-<h3 id="json-in-micropython">JSON in MicroPython<a class="headerlink" href="#json-in-micropython" title="Permanent link">&para;</a></h3>
+<h3 id="json-in-micropython">JSON in MicroPython<a class="headerlink" href="#json-in-micropython" title="Permanent link">¶</a></h3>
 <p><strong>JSON</strong> (JavaScript Object Notation) is the standard format for structured data exchange over networks. MicroPython provides the <code>ujson</code> module for encoding Python dictionaries to JSON strings and decoding JSON strings back to dictionaries.</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">import</span> <span class="nn">ujson</span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">reading</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;timestamp&quot;</span><span class="p">:</span> <span class="mi">1717000000</span><span class="p">,</span> <span class="s2">&quot;ph&quot;</span><span class="p">:</span> <span class="mf">6.42</span><span class="p">,</span> <span class="s2">&quot;ec&quot;</span><span class="p">:</span> <span class="mf">1.85</span><span class="p">,</span> <span class="s2">&quot;temp&quot;</span><span class="p">:</span> <span class="mf">22.7</span><span class="p">}</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">reading</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"timestamp"</span><span class="p">:</span> <span class="mi">1717000000</span><span class="p">,</span> <span class="s2">"ph"</span><span class="p">:</span> <span class="mf">6.42</span><span class="p">,</span> <span class="s2">"ec"</span><span class="p">:</span> <span class="mf">1.85</span><span class="p">,</span> <span class="s2">"temp"</span><span class="p">:</span> <span class="mf">22.7</span><span class="p">}</span>
 </span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="n">json_str</span> <span class="o">=</span> <span class="n">ujson</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">reading</span><span class="p">)</span>
 </span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
 </span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="n">parsed</span> <span class="o">=</span> <span class="n">ujson</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">json_str</span><span class="p">)</span>
-</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">parsed</span><span class="p">[</span><span class="s2">&quot;ph&quot;</span><span class="p">])</span>   <span class="c1"># 6.42</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">parsed</span><span class="p">[</span><span class="s2">"ph"</span><span class="p">])</span>   <span class="c1"># 6.42</span>
 </span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>
 </span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="c1"># Save JSON configuration to flash</span>
-</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;config.json&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>    <span class="n">ujson</span><span class="o">.</span><span class="n">dump</span><span class="p">({</span><span class="s2">&quot;ph_setpoint&quot;</span><span class="p">:</span> <span class="mf">6.5</span><span class="p">,</span> <span class="s2">&quot;ec_setpoint&quot;</span><span class="p">:</span> <span class="mf">2.0</span><span class="p">},</span> <span class="n">f</span><span class="p">)</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"config.json"</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>    <span class="n">ujson</span><span class="o">.</span><span class="n">dump</span><span class="p">({</span><span class="s2">"ph_setpoint"</span><span class="p">:</span> <span class="mf">6.5</span><span class="p">,</span> <span class="s2">"ec_setpoint"</span><span class="p">:</span> <span class="mf">2.0</span><span class="p">},</span> <span class="n">f</span><span class="p">)</span>
 </span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>
 </span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="c1"># Load JSON configuration from flash</span>
-</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;config.json&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"config.json"</span><span class="p">,</span> <span class="s2">"r"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
 </span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>    <span class="n">config</span> <span class="o">=</span> <span class="n">ujson</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="n">ph_target</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s2">&quot;ph_setpoint&quot;</span><span class="p">]</span>
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="n">ph_target</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s2">"ph_setpoint"</span><span class="p">]</span>
 </span></code></pre></div>
 <p>JSON is essential for MQTT and HTTP communication — all cloud IoT platforms accept sensor data in JSON format.</p>
 <div class="admonition mascot-tip">
@@ -2028,10 +2059,10 @@ Welcome to Chapter 13, hydro-explorers! Chapter 12 gave you the Python language.
 <p><img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Cress points upward with one finger">
 A useful pattern: store system configuration (setpoints, calibration constants, Wi-Fi credentials) in a <code>config.json</code> file that you load at startup. Store time-series sensor readings in a <code>sensor_log.csv</code> file that you append to on each cycle. Configuration is small and rarely changes; logs are large and grow continuously. Match the format to the access pattern.</p>
 </div>
-<h2 id="gpio-digital-pins">GPIO: Digital Pins<a class="headerlink" href="#gpio-digital-pins" title="Permanent link">&para;</a></h2>
+<h2 id="gpio-digital-pins">GPIO: Digital Pins<a class="headerlink" href="#gpio-digital-pins" title="Permanent link">¶</a></h2>
 <p><strong>GPIO</strong> stands for General-Purpose Input/Output. GPIO pins are the basic digital interface between a microcontroller and the physical world — they can be configured as inputs (to read a button or float switch) or outputs (to switch a relay or LED).</p>
 <p>Before we look at the code, three key terms: a pin configured as <strong>input</strong> reads the voltage on the pin (high = 3.3 V, low = 0 V). A pin configured as <strong>output</strong> drives the pin to either 3.3 V (high) or 0 V (low). The <code>machine.Pin</code> class is MicroPython's interface to GPIO pins.</p>
-<h3 id="gpio-pin-modes">GPIO Pin Modes<a class="headerlink" href="#gpio-pin-modes" title="Permanent link">&para;</a></h3>
+<h3 id="gpio-pin-modes">GPIO Pin Modes<a class="headerlink" href="#gpio-pin-modes" title="Permanent link">¶</a></h3>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">Pin</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
 </span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="c1"># Output pin — controls a relay or LED</span>
@@ -2044,7 +2075,7 @@ A useful pattern: store system configuration (setpoints, calibration constants, 
 </span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="n">float_switch</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">IN</span><span class="p">)</span>
 </span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="n">state</span> <span class="o">=</span> <span class="n">float_switch</span><span class="o">.</span><span class="n">value</span><span class="p">()</span>   <span class="c1"># Returns 0 or 1</span>
 </span></code></pre></div>
-<h3 id="pull-up-and-pull-down-resistors">Pull-Up and Pull-Down Resistors<a class="headerlink" href="#pull-up-and-pull-down-resistors" title="Permanent link">&para;</a></h3>
+<h3 id="pull-up-and-pull-down-resistors">Pull-Up and Pull-Down Resistors<a class="headerlink" href="#pull-up-and-pull-down-resistors" title="Permanent link">¶</a></h3>
 <p>When a GPIO input pin is connected to a switch that physically disconnects from the circuit when open, the pin is left "floating" — it receives no defined voltage, causing it to read unpredictably. A <strong>pull-up resistor</strong> connects the pin to 3.3 V through a high resistance (typically 10–100 kΩ), ensuring the pin reads <code>1</code> when the switch is open and <code>0</code> when the switch is closed (pulling it to ground). A <strong>pull-down resistor</strong> does the reverse.</p>
 <p>Most microcontrollers include internal pull-up and pull-down resistors that can be enabled in software:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># Internal pull-up: pin reads 1 when switch is open, 0 when closed</span>
@@ -2054,7 +2085,7 @@ A useful pattern: store system configuration (setpoints, calibration constants, 
 </span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="n">level_sensor</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="mi">17</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">IN</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">PULL_DOWN</span><span class="p">)</span>
 </span></code></pre></div>
 <p>For hydroponic float switches and reservoir level sensors, <code>Pin.PULL_UP</code> is the most common configuration — the switch connects the pin to ground when activated.</p>
-<h3 id="digital-read-and-write">Digital Read and Write<a class="headerlink" href="#digital-read-and-write" title="Permanent link">&para;</a></h3>
+<h3 id="digital-read-and-write">Digital Read and Write<a class="headerlink" href="#digital-read-and-write" title="Permanent link">¶</a></h3>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kn">import</span> <span class="nn">time</span>
 </span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
 </span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="n">pump_pin</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">OUT</span><span class="p">)</span>
@@ -2063,10 +2094,10 @@ A useful pattern: store system configuration (setpoints, calibration constants, 
 </span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
 </span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>    <span class="k">if</span> <span class="n">overflow_pin</span><span class="o">.</span><span class="n">value</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
 </span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>        <span class="n">pump_pin</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;OVERFLOW DETECTED — pump stopped&quot;</span><span class="p">)</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">"OVERFLOW DETECTED — pump stopped"</span><span class="p">)</span>
 </span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
 </span></code></pre></div>
-<h2 id="adc-reading-analog-sensors">ADC: Reading Analog Sensors<a class="headerlink" href="#adc-reading-analog-sensors" title="Permanent link">&para;</a></h2>
+<h2 id="adc-reading-analog-sensors">ADC: Reading Analog Sensors<a class="headerlink" href="#adc-reading-analog-sensors" title="Permanent link">¶</a></h2>
 <p>A <strong>digital signal</strong> is either on or off (0 V or 3.3 V). But most hydroponic sensors produce <strong>analog signals</strong> — a continuously varying voltage proportional to the measured quantity (pH, EC, dissolved oxygen). An <strong>Analog-to-Digital Converter (ADC)</strong> samples the analog voltage and converts it to a digital number.</p>
 <p>On the Raspberry Pi Pico, the RP2040 has a 12-bit ADC (values 0–4095) on three pins (GPIO 26, 27, 28). MicroPython exposes this through the <code>machine.ADC</code> class. The <code>read_u16()</code> method returns a 16-bit scaled value (0–65535):</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">ADC</span>
@@ -2080,10 +2111,10 @@ A useful pattern: store system configuration (setpoints, calibration constants, 
 </span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="n">offset</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.12</span>
 </span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="n">ph</span> <span class="o">=</span> <span class="n">slope</span> <span class="o">*</span> <span class="n">voltage</span> <span class="o">+</span> <span class="n">offset</span>
 </span></code></pre></div>
-<h3 id="digital-to-analog-converter">Digital-to-Analog Converter<a class="headerlink" href="#digital-to-analog-converter" title="Permanent link">&para;</a></h3>
+<h3 id="digital-to-analog-converter">Digital-to-Analog Converter<a class="headerlink" href="#digital-to-analog-converter" title="Permanent link">¶</a></h3>
 <p>A <strong>DAC</strong> (Digital-to-Analog Converter) converts a digital number back to a voltage. The ESP32 has two DAC channels; the Raspberry Pi Pico does not have a hardware DAC and uses PWM to approximate analog output instead.</p>
 <p>In hydroponic systems, a DAC is rarely needed — sensors produce analog outputs that you read with an ADC, while outputs to pumps and solenoids are digital (on/off). The exception is variable-speed pump controllers that accept a 0–10 V analog control signal.</p>
-<h2 id="pwm-controlling-pumps-and-led-intensity">PWM: Controlling Pumps and LED Intensity<a class="headerlink" href="#pwm-controlling-pumps-and-led-intensity" title="Permanent link">&para;</a></h2>
+<h2 id="pwm-controlling-pumps-and-led-intensity">PWM: Controlling Pumps and LED Intensity<a class="headerlink" href="#pwm-controlling-pumps-and-led-intensity" title="Permanent link">¶</a></h2>
 <p><strong>PWM</strong> (Pulse Width Modulation) approximates a variable voltage using a digital output pin. The pin rapidly switches between high (3.3 V) and low (0 V) at a fixed frequency. The <strong>duty cycle</strong> — the percentage of time the pin is high — determines the effective average voltage.</p>
 <p>Before we see the code, two parameters to understand: <strong>frequency</strong> (in Hz) is how many on/off cycles occur per second, and <strong>duty cycle</strong> (0–65535 in MicroPython's 16-bit API, where 65535 = 100%) is the fraction of each cycle spent at the high state.</p>
 <p>PWM applications in hydroponics include LED intensity control (1000–5000 Hz), variable-speed peristaltic pump drivers, servo motor control for valve positioning (50 Hz), and fan speed control.</p>
@@ -2101,8 +2132,8 @@ A useful pattern: store system configuration (setpoints, calibration constants, 
 </span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>
 </span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="n">set_pump_speed</span><span class="p">(</span><span class="n">pump_pin</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">percent</span><span class="o">=</span><span class="mi">75</span><span class="p">)</span>
 </span></code></pre></div>
-<h2 id="serial-communication-protocols">Serial Communication Protocols<a class="headerlink" href="#serial-communication-protocols" title="Permanent link">&para;</a></h2>
-<h3 id="i2c-protocol">I2C Protocol<a class="headerlink" href="#i2c-protocol" title="Permanent link">&para;</a></h3>
+<h2 id="serial-communication-protocols">Serial Communication Protocols<a class="headerlink" href="#serial-communication-protocols" title="Permanent link">¶</a></h2>
+<h3 id="i2c-protocol">I2C Protocol<a class="headerlink" href="#i2c-protocol" title="Permanent link">¶</a></h3>
 <p><strong>I2C</strong> (Inter-Integrated Circuit) is a two-wire serial bus for communicating with sensors and peripherals. Two wires are used: <strong>SDA</strong> (Serial Data) and <strong>SCL</strong> (Serial Clock). A single I2C bus can address up to 127 devices simultaneously — each device has a unique 7-bit address. This makes I2C ideal for systems with many sensors sharing the same two pins.</p>
 <p>Common hydroponic sensors that use I2C: temperature/humidity (SHT30, SHT31), CO₂ (SCD40), light (TSL2591 PAR sensor), OLED display drivers (SSD1306).</p>
 <p>The protocol works as follows: the microcontroller (master) initiates all communication by generating the clock signal. Devices (slaves) respond when addressed by their unique 7-bit address.</p>
@@ -2111,14 +2142,14 @@ A useful pattern: store system configuration (setpoints, calibration constants, 
 </span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="n">i2c</span> <span class="o">=</span> <span class="n">I2C</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">sda</span><span class="o">=</span><span class="n">Pin</span><span class="p">(</span><span class="mi">4</span><span class="p">),</span> <span class="n">scl</span><span class="o">=</span><span class="n">Pin</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span> <span class="n">freq</span><span class="o">=</span><span class="mi">400_000</span><span class="p">)</span>
 </span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>
 </span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="n">devices</span> <span class="o">=</span> <span class="n">i2c</span><span class="o">.</span><span class="n">scan</span><span class="p">()</span>
-</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;I2C devices found: </span><span class="si">{</span><span class="p">[</span><span class="nb">hex</span><span class="p">(</span><span class="n">d</span><span class="p">)</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">devices</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"I2C devices found: </span><span class="si">{</span><span class="p">[</span><span class="nb">hex</span><span class="p">(</span><span class="n">d</span><span class="p">)</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">devices</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>
 </span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="n">data</span> <span class="o">=</span> <span class="n">i2c</span><span class="o">.</span><span class="n">readfrom_mem</span><span class="p">(</span><span class="mh">0x44</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 </span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>
 </span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="n">i2c</span><span class="o">.</span><span class="n">writeto</span><span class="p">(</span><span class="mh">0x44</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">([</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x06</span><span class="p">]))</span>
 </span></code></pre></div>
 <p><code>i2c.scan()</code> is an indispensable debugging tool — run it in the REPL first to confirm your sensor is wired correctly and recognized at its expected address.</p>
-<h3 id="spi-protocol">SPI Protocol<a class="headerlink" href="#spi-protocol" title="Permanent link">&para;</a></h3>
+<h3 id="spi-protocol">SPI Protocol<a class="headerlink" href="#spi-protocol" title="Permanent link">¶</a></h3>
 <p><strong>SPI</strong> (Serial Peripheral Interface) is a four-wire synchronous protocol — faster than I2C but requiring more pins. The four wires are: <strong>MOSI</strong> (Master Out Slave In), <strong>MISO</strong> (Master In Slave Out), <strong>SCK</strong> (Serial Clock), and <strong>CS</strong> (Chip Select). Each SPI device requires its own CS pin.</p>
 <p>SPI devices in hydroponic systems include high-speed ADC chips for precision measurements, SD card modules for long-term data logging beyond flash capacity, and some displays.</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">SPI</span><span class="p">,</span> <span class="n">Pin</span>
@@ -2132,7 +2163,7 @@ A useful pattern: store system configuration (setpoints, calibration constants, 
 </span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="n">cs</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </span></code></pre></div>
 <p>SPI is faster than I2C (up to 80 MHz vs. 1 MHz for fast-mode I2C) and useful when reading sensors at high sample rates or writing to an SD card.</p>
-<h3 id="uart-serial-communication">UART Serial Communication<a class="headerlink" href="#uart-serial-communication" title="Permanent link">&para;</a></h3>
+<h3 id="uart-serial-communication">UART Serial Communication<a class="headerlink" href="#uart-serial-communication" title="Permanent link">¶</a></h3>
 <p><strong>UART</strong> (Universal Asynchronous Receiver/Transmitter) is the classic two-wire serial protocol. Two pins: <strong>TX</strong> (transmit) and <strong>RX</strong> (receive). Unlike I2C and SPI, UART does not use a clock wire — both devices must agree on the same <strong>baud rate</strong> (bits per second) in advance.</p>
 <p>Hydroponic sensors that use UART: Atlas Scientific pH and EC probes (in UART mode), CO₂ sensors (MH-Z19B, CM1106), and GPS modules.</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">UART</span>
@@ -2140,22 +2171,22 @@ A useful pattern: store system configuration (setpoints, calibration constants, 
 </span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>
 </span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="n">uart</span> <span class="o">=</span> <span class="n">UART</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">baudrate</span><span class="o">=</span><span class="mi">9600</span><span class="p">,</span> <span class="n">tx</span><span class="o">=</span><span class="n">Pin</span><span class="p">(</span><span class="mi">8</span><span class="p">),</span> <span class="n">rx</span><span class="o">=</span><span class="n">Pin</span><span class="p">(</span><span class="mi">9</span><span class="p">))</span>
 </span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>
-</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="n">uart</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;R</span><span class="se">\r</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="n">uart</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">b</span><span class="s2">"R</span><span class="se">\r</span><span class="s2">"</span><span class="p">)</span>
 </span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>
 </span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="n">utime</span><span class="o">.</span><span class="n">sleep_ms</span><span class="p">(</span><span class="mi">900</span><span class="p">)</span>
 </span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="k">if</span> <span class="n">uart</span><span class="o">.</span><span class="n">any</span><span class="p">():</span>
 </span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>    <span class="n">response</span> <span class="o">=</span> <span class="n">uart</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 </span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>    <span class="n">ph_str</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
 </span><span id="__span-14-12"><a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>    <span class="n">ph</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">ph_str</span><span class="p">)</span>
-</span><span id="__span-14-13"><a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;pH: </span><span class="si">{</span><span class="n">ph</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-14-13"><a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"pH: </span><span class="si">{</span><span class="n">ph</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </span></code></pre></div>
 <div class="admonition mascot-thinking">
 <p class="admonition-title">Choosing the right bus</p>
 <p><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Cress holds chin thoughtfully">
 I2C for multiple sensors on two wires. SPI for high-speed or precision sensors. UART for older sensors or those with pre-built ASCII command interfaces (like Atlas Scientific probes). If you're unsure, check the sensor's datasheet — it will specify which interface the sensor uses and what the required baud rate, address, or timing is.</p>
 </div>
-<h2 id="interrupts-and-timers">Interrupts and Timers<a class="headerlink" href="#interrupts-and-timers" title="Permanent link">&para;</a></h2>
-<h3 id="interrupts-and-irq">Interrupts and IRQ<a class="headerlink" href="#interrupts-and-irq" title="Permanent link">&para;</a></h3>
+<h2 id="interrupts-and-timers">Interrupts and Timers<a class="headerlink" href="#interrupts-and-timers" title="Permanent link">¶</a></h2>
+<h3 id="interrupts-and-irq">Interrupts and IRQ<a class="headerlink" href="#interrupts-and-irq" title="Permanent link">¶</a></h3>
 <p>An <strong>interrupt</strong> is a hardware signal that causes the microcontroller to immediately pause its current code and run a special handler function. Unlike polling, interrupts allow the processor to respond to events the moment they occur.</p>
 <p>In hydroponic systems, interrupts are useful for detecting a float switch activation instantly, catching a high-flow pulse from a water flow meter, and responding to alarm button presses without delay.</p>
 <p>The handler function (called an <strong>IRQ handler</strong>) must be short and fast — it should only set a flag variable, not do complex operations like file writes or print statements. Heavy work happens in the main loop when it checks the flag.</p>
@@ -2173,13 +2204,13 @@ I2C for multiple sensors on two wires. SPI for high-speed or precision sensors. 
 </span><span id="__span-15-12"><a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>
 </span><span id="__span-15-13"><a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
 </span><span id="__span-15-14"><a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a>    <span class="k">if</span> <span class="n">alarm_triggered</span><span class="p">:</span>
-</span><span id="__span-15-15"><a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;OVERFLOW DETECTED — stopping pumps&quot;</span><span class="p">)</span>
+</span><span id="__span-15-15"><a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">"OVERFLOW DETECTED — stopping pumps"</span><span class="p">)</span>
 </span><span id="__span-15-16"><a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a>        <span class="n">stop_all_pumps</span><span class="p">()</span>
 </span><span id="__span-15-17"><a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a>        <span class="n">alarm_triggered</span> <span class="o">=</span> <span class="kc">False</span>
 </span><span id="__span-15-18"><a id="__codelineno-15-18" name="__codelineno-15-18" href="#__codelineno-15-18"></a>    <span class="n">utime</span><span class="o">.</span><span class="n">sleep_ms</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
 </span></code></pre></div>
 <p><code>Pin.IRQ_FALLING</code> triggers when the pin transitions from high to low (float switch closes). <code>Pin.IRQ_RISING</code> triggers on low-to-high.</p>
-<h3 id="timer-and-machinetimer">Timer and machine.Timer<a class="headerlink" href="#timer-and-machinetimer" title="Permanent link">&para;</a></h3>
+<h3 id="timer-and-machinetimer">Timer and machine.Timer<a class="headerlink" href="#timer-and-machinetimer" title="Permanent link">¶</a></h3>
 <p>A <strong>hardware timer</strong> triggers a callback function at precise, regular intervals — independent of what the main program is doing. This is useful for periodic sensor sampling that must happen on a fixed schedule.</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">Timer</span>
 </span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>
@@ -2195,7 +2226,7 @@ I2C for multiple sensors on two wires. SPI for high-speed or precision sensors. 
 </span><span id="__span-16-12"><a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a><span class="n">timer</span> <span class="o">=</span> <span class="n">Timer</span><span class="p">()</span>
 </span><span id="__span-16-13"><a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a><span class="n">timer</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">period</span><span class="o">=</span><span class="mi">5000</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">Timer</span><span class="o">.</span><span class="n">PERIODIC</span><span class="p">,</span> <span class="n">callback</span><span class="o">=</span><span class="n">sample_sensors</span><span class="p">)</span>
 </span></code></pre></div>
-<h3 id="utime-module">utime Module<a class="headerlink" href="#utime-module" title="Permanent link">&para;</a></h3>
+<h3 id="utime-module">utime Module<a class="headerlink" href="#utime-module" title="Permanent link">¶</a></h3>
 <p>The <strong><code>utime</code></strong> module provides time functions for delays and timestamps:</p>
 <ul>
 <li><code>utime.sleep(seconds)</code> — pause for a floating-point number of seconds</li>
@@ -2208,27 +2239,27 @@ I2C for multiple sensors on two wires. SPI for high-speed or precision sensors. 
 <div class="language-python highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">start</span> <span class="o">=</span> <span class="n">utime</span><span class="o">.</span><span class="n">ticks_ms</span><span class="p">()</span>
 </span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="c1"># ... do something ...</span>
 </span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="n">elapsed</span> <span class="o">=</span> <span class="n">utime</span><span class="o">.</span><span class="n">ticks_diff</span><span class="p">(</span><span class="n">utime</span><span class="o">.</span><span class="n">ticks_ms</span><span class="p">(),</span> <span class="n">start</span><span class="p">)</span>
-</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Operation took </span><span class="si">{</span><span class="n">elapsed</span><span class="si">}</span><span class="s2"> ms&quot;</span><span class="p">)</span>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Operation took </span><span class="si">{</span><span class="n">elapsed</span><span class="si">}</span><span class="s2"> ms"</span><span class="p">)</span>
 </span></code></pre></div>
-<h2 id="asynchronous-programming">Asynchronous Programming<a class="headerlink" href="#asynchronous-programming" title="Permanent link">&para;</a></h2>
-<h3 id="asyncawait-concepts">Async/Await Concepts<a class="headerlink" href="#asyncawait-concepts" title="Permanent link">&para;</a></h3>
+<h2 id="asynchronous-programming">Asynchronous Programming<a class="headerlink" href="#asynchronous-programming" title="Permanent link">¶</a></h2>
+<h3 id="asyncawait-concepts">Async/Await Concepts<a class="headerlink" href="#asyncawait-concepts" title="Permanent link">¶</a></h3>
 <p>A standard Python program executes one operation at a time. When <code>time.sleep(60)</code> runs, the entire program is frozen for 60 seconds. For a hydroponic controller that must handle multiple independent tasks simultaneously — reading pH every 30 seconds, checking flow rate every 5 seconds, updating a display every second, listening for alarms continuously — this is a problem.</p>
 <p><strong>Async/await</strong> (cooperative multitasking or coroutines) solves this by allowing multiple tasks to appear to run simultaneously. A coroutine is a function defined with <code>async def</code>. It suspends its own execution at an <code>await</code> point, allowing other coroutines to run, then resumes when its awaited operation completes.</p>
 <p>The key concept: <code>await asyncio.sleep(60)</code> suspends <em>this</em> coroutine for 60 seconds but allows <em>other</em> coroutines to run during that time. <code>time.sleep(60)</code> blocks everything.</p>
-<h3 id="asyncio-in-micropython">asyncio in MicroPython<a class="headerlink" href="#asyncio-in-micropython" title="Permanent link">&para;</a></h3>
+<h3 id="asyncio-in-micropython">asyncio in MicroPython<a class="headerlink" href="#asyncio-in-micropython" title="Permanent link">¶</a></h3>
 <p>MicroPython includes <code>asyncio</code> for writing concurrent sensor loops:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kn">import</span> <span class="nn">asyncio</span>
 </span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>
 </span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">read_ph_loop</span><span class="p">():</span>
 </span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
 </span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>        <span class="n">ph</span> <span class="o">=</span> <span class="n">ph_sensor</span><span class="o">.</span><span class="n">read_ph</span><span class="p">()</span>
-</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;pH: </span><span class="si">{</span><span class="n">ph</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"pH: </span><span class="si">{</span><span class="n">ph</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>        <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
 </span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>
 </span><span id="__span-18-9"><a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">read_temp_loop</span><span class="p">():</span>
 </span><span id="__span-18-10"><a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a>    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
 </span><span id="__span-18-11"><a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a>        <span class="n">temp</span> <span class="o">=</span> <span class="n">temp_sensor</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-</span><span id="__span-18-12"><a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Temp: </span><span class="si">{</span><span class="n">temp</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">C&quot;</span><span class="p">)</span>
+</span><span id="__span-18-12"><a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Temp: </span><span class="si">{</span><span class="n">temp</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">C"</span><span class="p">)</span>
 </span><span id="__span-18-13"><a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a>        <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </span><span id="__span-18-14"><a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a>
 </span><span id="__span-18-15"><a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">update_display_loop</span><span class="p">():</span>
@@ -2251,7 +2282,7 @@ I2C for multiple sensors on two wires. SPI for high-speed or precision sensors. 
 <p><img src="../../img/mascot/encouraging.png" class="mascot-admonition-img" alt="Cress gives an encouraging nod">
 If asyncio feels complex, start by writing simple polling loops with <code>time.sleep()</code>. Once your individual sensor-reading functions work, wrap them in <code>async def</code> functions and combine with <code>asyncio.gather()</code>. The structure of each function barely changes — only the sleep calls need to become <code>await asyncio.sleep()</code>. Make it work first, then make it concurrent.</p>
 </div>
-<h2 id="wi-fi-connection-on-pico-w-and-esp32">Wi-Fi Connection on Pico W and ESP32<a class="headerlink" href="#wi-fi-connection-on-pico-w-and-esp32" title="Permanent link">&para;</a></h2>
+<h2 id="wi-fi-connection-on-pico-w-and-esp32">Wi-Fi Connection on Pico W and ESP32<a class="headerlink" href="#wi-fi-connection-on-pico-w-and-esp32" title="Permanent link">¶</a></h2>
 <p>The Pico W and ESP32 both support 2.4 GHz Wi-Fi for uploading sensor data to a server or MQTT broker. The MicroPython <code>network</code> module handles the connection.</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="kn">import</span> <span class="nn">network</span>
 </span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="kn">import</span> <span class="nn">utime</span>
@@ -2264,23 +2295,23 @@ If asyncio feels complex, start by writing simple polling loops with <code>time.
 </span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>    <span class="n">start</span> <span class="o">=</span> <span class="n">utime</span><span class="o">.</span><span class="n">ticks_ms</span><span class="p">()</span>
 </span><span id="__span-19-10"><a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a>    <span class="k">while</span> <span class="ow">not</span> <span class="n">wlan</span><span class="o">.</span><span class="n">isconnected</span><span class="p">():</span>
 </span><span id="__span-19-11"><a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a>        <span class="k">if</span> <span class="n">utime</span><span class="o">.</span><span class="n">ticks_diff</span><span class="p">(</span><span class="n">utime</span><span class="o">.</span><span class="n">ticks_ms</span><span class="p">(),</span> <span class="n">start</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">timeout</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">:</span>
-</span><span id="__span-19-12"><a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a>            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Wi-Fi connection timed out&quot;</span><span class="p">)</span>
+</span><span id="__span-19-12"><a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a>            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">"Wi-Fi connection timed out"</span><span class="p">)</span>
 </span><span id="__span-19-13"><a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a>        <span class="n">utime</span><span class="o">.</span><span class="n">sleep_ms</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
 </span><span id="__span-19-14"><a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a>
 </span><span id="__span-19-15"><a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a>    <span class="n">ip_info</span> <span class="o">=</span> <span class="n">wlan</span><span class="o">.</span><span class="n">ifconfig</span><span class="p">()</span>
-</span><span id="__span-19-16"><a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Connected. IP: </span><span class="si">{</span><span class="n">ip_info</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-19-16"><a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Connected. IP: </span><span class="si">{</span><span class="n">ip_info</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </span><span id="__span-19-17"><a id="__codelineno-19-17" name="__codelineno-19-17" href="#__codelineno-19-17"></a>    <span class="k">return</span> <span class="n">wlan</span>
 </span><span id="__span-19-18"><a id="__codelineno-19-18" name="__codelineno-19-18" href="#__codelineno-19-18"></a>
-</span><span id="__span-19-19"><a id="__codelineno-19-19" name="__codelineno-19-19" href="#__codelineno-19-19"></a><span class="n">wlan</span> <span class="o">=</span> <span class="n">connect_wifi</span><span class="p">(</span><span class="s2">&quot;MyHomeNetwork&quot;</span><span class="p">,</span> <span class="s2">&quot;password123&quot;</span><span class="p">)</span>
+</span><span id="__span-19-19"><a id="__codelineno-19-19" name="__codelineno-19-19" href="#__codelineno-19-19"></a><span class="n">wlan</span> <span class="o">=</span> <span class="n">connect_wifi</span><span class="p">(</span><span class="s2">"MyHomeNetwork"</span><span class="p">,</span> <span class="s2">"password123"</span><span class="p">)</span>
 </span></code></pre></div>
 <p>Once connected, the microcontroller can use <code>urequests</code> (for HTTP) or <code>umqtt.simple</code> (for MQTT) to transmit sensor data to a server or cloud platform. Chapter 14 covers both in detail, along with MQTT broker setup, watchdog timers, and over-the-air firmware updates.</p>
-<h4 id="diagram-hardware-interface-architecture">Diagram: Hardware Interface Architecture<a class="headerlink" href="#diagram-hardware-interface-architecture" title="Permanent link">&para;</a></h4>
+<h4 id="diagram-hardware-interface-architecture">Diagram: Hardware Interface Architecture<a class="headerlink" href="#diagram-hardware-interface-architecture" title="Permanent link">¶</a></h4>
 <iframe src="../../sims/hardware-interface-architecture/main.html" width="100%" height="540px" scrolling="no"></iframe>
 <details>
 <summary>MicroPython Hardware Interface Architecture Diagram</summary>
 <p>Type: architecture-diagram
-<strong>sim-id:</strong> hardware-interface-architecture<br/>
-<strong>Library:</strong> p5.js<br/>
+<strong>sim-id:</strong> hardware-interface-architecture<br>
+<strong>Library:</strong> p5.js<br>
 <strong>Status:</strong> Specified</p>
 <p>Purpose: Show the complete hardware communication architecture — how different protocols (GPIO, ADC, PWM, I2C, SPI, UART) connect a Pico W microcontroller to different classes of hydroponic sensors and actuators, with data flowing through asyncio tasks and out to Wi-Fi.</p>
 <p>Bloom Level: Understand (L2) and Analyze (L4)
@@ -2301,7 +2332,7 @@ Bloom Verb: Classify — students identify which protocol connects each sensor t
 - Clicking "Show Wiring" toggles an overlay labeling each GPIO pin number.</p>
 <p>Responsive: Scales to container width; protocol lanes rearrange from radial to top/bottom split on narrow screens.</p>
 </details>
-<h2 id="key-takeaways">Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link">&para;</a></h2>
+<h2 id="key-takeaways">Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link">¶</a></h2>
 <ul>
 <li><strong>Try/except</strong> wraps hardware communication calls to prevent crashes when sensors disconnect or return invalid data.</li>
 <li><strong>File I/O</strong> uses mode <code>"a"</code> for sensor logs (append) and mode <code>"w"</code> for configuration files (overwrite); always use <code>with</code> statements for automatic cleanup.</li>
@@ -2344,7 +2375,7 @@ You can now read every type of hydroponic sensor, control pumps and lights, log 
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
   Back to top
 </button>
         
@@ -2354,13 +2385,13 @@ You can now read every type of hydroponic sensor, control pumps and lights, log 
   
     
       
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
           <a href="../12-micropython-fundamentals/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 12. MicroPython Fundamentals">
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
             </div>
             <div class="md-footer__title">
               <span class="md-footer__direction">
@@ -2380,12 +2411,12 @@ You can now read every type of hydroponic sensor, control pumps and lights, log 
                 Next
               </span>
               <div class="md-ellipsis">
-                14. Networking & IoT
+                14. Networking &amp; IoT
               </div>
             </div>
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
             </div>
           </a>
         
@@ -2397,7 +2428,7 @@ You can now read every type of hydroponic sensor, control pumps and lights, log 
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+      Copyright © 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
     </div>
   
   
@@ -2419,5 +2450,7 @@ You can now read every type of hydroponic sensor, control pumps and lights, log 
       <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
     
-  </body>
-</html>
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

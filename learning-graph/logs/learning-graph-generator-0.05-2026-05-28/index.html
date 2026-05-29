@@ -1,0 +1,933 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An interactive intelligent textbook on hydroponics for advanced high-school and college students, featuring MicroSims that bring plant physiology, nutrient science, and system design to life.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/hydroponics/learning-graph/logs/learning-graph-generator-0.05-2026-05-28/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Learning Graph Generator Session Log - Hydroponics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#learning-graph-generator-session-log" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Hydroponics" class="md-header__button md-logo" aria-label="Hydroponics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Hydroponics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Learning Graph Generator Session Log
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/hydroponics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Hydroponics" class="md-nav__button md-logo" aria-label="Hydroponics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Hydroponics
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/hydroponics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../chapters/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#python-tools-used" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python Tools Used
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#session-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Session Summary
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Session Summary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-0-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 0 — Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-1-course-description-assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1 — Course Description Assessment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-concept-list-500-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2 — Concept List (500 concepts)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-dependency-graph-csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3 — Dependency Graph CSV
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-quality-analysis-analyze-graphpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4 — Quality Analysis (analyze-graph.py)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-concept-taxonomy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5 — Concept Taxonomy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5b-taxonomy-namesjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5b — taxonomy-names.json
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-6-taxonomyid-in-csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 6 — TaxonomyID in CSV
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-7-metadatajson" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 7 — metadata.json
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-8-color-configjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 8 — color-config.json
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-9-learning-graphjson-csv-to-jsonpy-v004" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 9 — learning-graph.json (csv-to-json.py v0.04)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-10-taxonomy-distribution-taxonomy-distributionpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 10 — Taxonomy Distribution (taxonomy-distribution.py)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-11-indexmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 11 — index.md
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-12-mkdocsyml-navigation-updated" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 12 — mkdocs.yml navigation updated
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build verification
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#files-created" class="md-nav__link">
+    <span class="md-ellipsis">
+      Files Created
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/hydroponics/blob/main/docs/learning-graph/logs/learning-graph-generator-0.05-2026-05-28.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="learning-graph-generator-session-log">Learning Graph Generator Session Log<a class="headerlink" href="#learning-graph-generator-session-log" title="Permanent link">&para;</a></h1>
+<ul>
+<li><strong>Skill version:</strong> learning-graph-generator v0.05</li>
+<li><strong>Date:</strong> 2026-05-28</li>
+<li><strong>Project:</strong> Hydroponics: From Mason Jar to Vertical Farm</li>
+<li><strong>Repo:</strong> dmccreary/hydroponics</li>
+</ul>
+<hr />
+<h2 id="python-tools-used">Python Tools Used<a class="headerlink" href="#python-tools-used" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Script</th>
+<th>Version</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>analyze-graph.py</td>
+<td>(from skill)</td>
+<td>DAG validation, quality metrics, indegree analysis</td>
+</tr>
+<tr>
+<td>csv-to-json.py</td>
+<td>v0.04</td>
+<td>CSV → vis-network JSON with metadata, groups, nodes, edges</td>
+</tr>
+<tr>
+<td>taxonomy-distribution.py</td>
+<td>(from skill)</td>
+<td>Taxonomy balance report</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="session-summary">Session Summary<a class="headerlink" href="#session-summary" title="Permanent link">&para;</a></h2>
+<h3 id="step-0-setup">Step 0 — Setup<a class="headerlink" href="#step-0-setup" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Copied Python tools from skill into <code>docs/learning-graph/</code></li>
+<li>Verified <code>mkdocs.yml</code> and <code>docs/</code> directory present</li>
+</ul>
+<h3 id="step-1-course-description-assessment">Step 1 — Course Description Assessment<a class="headerlink" href="#step-1-course-description-assessment" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Found <code>quality_score: 97</code> in <code>docs/course-description.md</code> frontmatter</li>
+<li>Score &gt; 85 → skipped re-assessment to save tokens</li>
+</ul>
+<h3 id="step-2-concept-list-500-concepts">Step 2 — Concept List (500 concepts)<a class="headerlink" href="#step-2-concept-list-500-concepts" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Generated 500 concepts across 15 taxonomy categories</li>
+<li>Emphasis areas per user request:</li>
+<li><strong>MicroPython Programming (UPYTH):</strong> 70 concepts — full language stack from variables to async/await, hardware interfaces (I2C, SPI, UART, ADC, PWM, GPIO), Wi-Fi, MQTT, OTA, sensor libraries (Atlas Scientific, DS18B20, DHT22, SSD1306, relay, peristaltic pump)</li>
+<li><strong>Data Analysis (DATA):</strong> 45 concepts — pandas, NumPy, Matplotlib, Plotly, Dash, SPC, anomaly detection, time-series, regression</li>
+<li><strong>Financial Modeling (FIN):</strong> 30 concepts — NPV, IRR, break-even, OpEx/CapEx, energy cost modeling, declining solar projections, Monte Carlo simulation, Plotly dashboards</li>
+<li><strong>Solar Energy (SOLAR):</strong> 30 concepts — PV effect, MPPT, battery storage (lead-acid + LiFePO₄), off-grid/grid-tie/hybrid, energy audit, solar ROI</li>
+<li>Saved to <code>concept-list.md</code></li>
+</ul>
+<h3 id="step-3-dependency-graph-csv">Step 3 — Dependency Graph CSV<a class="headerlink" href="#step-3-dependency-graph-csv" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Generated <code>learning-graph.csv</code> with columns: ConceptID, ConceptLabel, Dependencies (pipe-delimited), TaxonomyID</li>
+<li>Initial orphan found: concept 281 (UART Serial Communication) — fixed by adding dependency on 247 and making it a prerequisite for concept 340</li>
+<li>Final CSV: 500 rows, 861 dependency edges</li>
+</ul>
+<h3 id="step-4-quality-analysis-analyze-graphpy">Step 4 — Quality Analysis (analyze-graph.py)<a class="headerlink" href="#step-4-quality-analysis-analyze-graphpy" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Valid DAG ✅ | 0 cycles ✅ | 0 orphans ✅</li>
+<li>21 foundational concepts (no prerequisites)</li>
+<li>Maximum dependency chain: 19 steps</li>
+<li>Longest path: MicroPython vs CPython → ... → Real-Time Dashboard Updates</li>
+<li>Top indegree: Soilless Growing Systems (25), Functions and def Keyword (22), Vertical Farming Definition (22)</li>
+<li>Report saved to <code>quality-metrics.md</code></li>
+</ul>
+<h3 id="step-5-concept-taxonomy">Step 5 — Concept Taxonomy<a class="headerlink" href="#step-5-concept-taxonomy" title="Permanent link">&para;</a></h3>
+<ul>
+<li>15 categories; none exceeds 30% threshold</li>
+<li>Largest: UPYTH 14.0%, DATA 9.0%, NUTR 8.0%</li>
+<li>All categories in healthy range ✅</li>
+<li>Saved to <code>concept-taxonomy.md</code></li>
+</ul>
+<h3 id="step-5b-taxonomy-namesjson">Step 5b — taxonomy-names.json<a class="headerlink" href="#step-5b-taxonomy-namesjson" title="Permanent link">&para;</a></h3>
+<ul>
+<li>All 15 taxonomy IDs mapped to human-readable names</li>
+<li>Required by csv-to-json.py v0.04 for <code>classifierName</code> field</li>
+</ul>
+<h3 id="step-6-taxonomyid-in-csv">Step 6 — TaxonomyID in CSV<a class="headerlink" href="#step-6-taxonomyid-in-csv" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Embedded at generation time (not added separately)</li>
+</ul>
+<h3 id="step-7-metadatajson">Step 7 — metadata.json<a class="headerlink" href="#step-7-metadatajson" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Extracted from course-description.md</li>
+<li>Creator: Dan McCreary | Date: 2026-05-28 | License: CC BY-NC-SA 4.0</li>
+</ul>
+<h3 id="step-8-color-configjson">Step 8 — color-config.json<a class="headerlink" href="#step-8-color-configjson" title="Permanent link">&para;</a></h3>
+<ul>
+<li>15 colors chosen from the recommended 24-color palette</li>
+<li>Dark backgrounds: FOUND, PHYS, NUTR, SYST, ENVC, SENS, DATA, SAFE, VERT, FIN</li>
+<li>Light backgrounds: DIY, GROW, LITE, SOLAR</li>
+</ul>
+<h3 id="step-9-learning-graphjson-csv-to-jsonpy-v004">Step 9 — learning-graph.json (csv-to-json.py v0.04)<a class="headerlink" href="#step-9-learning-graphjson-csv-to-jsonpy-v004" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Command: <code>python csv-to-json.py learning-graph.csv learning-graph.json color-config.json metadata.json taxonomy-names.json</code></li>
+<li>Output: 500 nodes, 861 edges, 15 groups ✅</li>
+</ul>
+<h3 id="step-10-taxonomy-distribution-taxonomy-distributionpy">Step 10 — Taxonomy Distribution (taxonomy-distribution.py)<a class="headerlink" href="#step-10-taxonomy-distribution-taxonomy-distributionpy" title="Permanent link">&para;</a></h3>
+<ul>
+<li>All 15 categories balanced, no warnings ✅</li>
+<li>Saved to <code>taxonomy-distribution.md</code></li>
+</ul>
+<h3 id="step-11-indexmd">Step 11 — index.md<a class="headerlink" href="#step-11-indexmd" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Updated from template with hydroponics-specific content</li>
+</ul>
+<h3 id="step-12-mkdocsyml-navigation-updated">Step 12 — mkdocs.yml navigation updated<a class="headerlink" href="#step-12-mkdocsyml-navigation-updated" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Added: Concept Enumeration, Concept Taxonomy, Graph Quality Analysis, Taxonomy Distribution Report</li>
+</ul>
+<h3 id="build-verification">Build verification<a class="headerlink" href="#build-verification" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>mkdocs build --strict</code> passed ✅ (one info note about unlisted prompts/learning-graph.md, harmless)</li>
+</ul>
+<hr />
+<h2 id="files-created">Files Created<a class="headerlink" href="#files-created" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>concept-list.md</code></td>
+<td>500 numbered concepts in 15 groups</td>
+</tr>
+<tr>
+<td><code>learning-graph.csv</code></td>
+<td>Full dependency graph with TaxonomyID (500 rows, 861 edges)</td>
+</tr>
+<tr>
+<td><code>learning-graph.json</code></td>
+<td>vis-network JSON (metadata, groups, nodes, edges)</td>
+</tr>
+<tr>
+<td><code>concept-taxonomy.md</code></td>
+<td>15 category definitions with TaxonomyID abbreviations</td>
+</tr>
+<tr>
+<td><code>taxonomy-names.json</code></td>
+<td>ID → human-readable name mapping</td>
+</tr>
+<tr>
+<td><code>color-config.json</code></td>
+<td>TaxonomyID → CSS color mapping</td>
+</tr>
+<tr>
+<td><code>metadata.json</code></td>
+<td>Dublin Core metadata for learning graph</td>
+</tr>
+<tr>
+<td><code>quality-metrics.md</code></td>
+<td>DAG validation and indegree analysis report</td>
+</tr>
+<tr>
+<td><code>taxonomy-distribution.md</code></td>
+<td>Category balance report</td>
+</tr>
+<tr>
+<td><code>index.md</code></td>
+<td>Learning graph section landing page</td>
+</tr>
+<tr>
+<td><code>logs/learning-graph-generator-0.05-2026-05-28.md</code></td>
+<td>This session log</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.action.edit", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>

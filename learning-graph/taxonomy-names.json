@@ -1,0 +1,17 @@
+{
+  "FOUND": "Foundation Concepts",
+  "PHYS": "Plant Physiology",
+  "NUTR": "Nutrients and Chemistry",
+  "SYST": "Hydroponic System Types",
+  "DIY": "DIY and School Systems",
+  "GROW": "Growing Media and Crops",
+  "LITE": "Lighting Science",
+  "ENVC": "Environmental Control",
+  "UPYTH": "MicroPython Programming",
+  "SENS": "Sensors and Electronics",
+  "DATA": "Data Analysis",
+  "SAFE": "Food Safety and Sanitation",
+  "SOLAR": "Solar Energy and Power",
+  "VERT": "Vertical Farming",
+  "FIN": "Financial Modeling"
+}

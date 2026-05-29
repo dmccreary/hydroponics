@@ -1,0 +1,501 @@
+ConceptID,ConceptLabel,Dependencies,TaxonomyID
+1,Hydroponics Definition,,FOUND
+2,History of Hydroponics,1,FOUND
+3,William Frederick Gericke,2,FOUND
+4,Soilless Growing Systems,1,FOUND
+5,Soil vs Soilless Comparison,4,FOUND
+6,Water as Growth Medium,4,FOUND
+7,Controlled Environment Ag,1|4,FOUND
+8,Indoor Growing Basics,7,FOUND
+9,Plant Growth Fundamentals,,FOUND
+10,Cell Biology Basics,,FOUND
+11,Photosynthesis Overview,10|9,FOUND
+12,Cellular Respiration Overview,10|9,FOUND
+13,Plant Life Cycle,9,FOUND
+14,Seed Germination,13,FOUND
+15,Seedling Development,14,FOUND
+16,Vegetative Growth Stage,15,FOUND
+17,Flowering and Fruiting Stage,16,FOUND
+18,Harvest and Post-Harvest,17,FOUND
+19,Crop Rotation Planning,13|4,FOUND
+20,Grow Room Layout,8,FOUND
+21,Space Utilization,20,FOUND
+22,Year-Round Production,7|19,FOUND
+23,Food Security Context,1|22,FOUND
+24,Urban Agriculture Definition,7|23,FOUND
+25,Hydroponics vs Aquaponics,1,FOUND
+26,Root Anatomy,10,PHYS
+27,Root Hair Cells,26,PHYS
+28,Root Zone Oxygen Requirement,26,PHYS
+29,Nutrient Uptake Mechanisms,26|27,PHYS
+30,Passive Diffusion,29,PHYS
+31,Active Transport,29|10,PHYS
+32,Osmosis and Water Potential,10|6,PHYS
+33,Transpiration,32|26,PHYS
+34,Xylem Transport,26|33,PHYS
+35,Phloem Transport,26|11,PHYS
+36,Stomata Function,33|11,PHYS
+37,Leaf Structure,10,PHYS
+38,Chloroplast Function,10|11,PHYS
+39,Photosynthesis Light Reactions,38|11,PHYS
+40,Calvin Cycle,39,PHYS
+41,Chlorophyll and Pigments,38,PHYS
+42,Root Exudates,26|29,PHYS
+43,Rhizosphere Chemistry,42,PHYS
+44,Cation Exchange at Root Surface,29|30|31,PHYS
+45,Ion Concentration Gradients,30|31,PHYS
+46,Root Adaptation to Hydroponics,26|4,PHYS
+47,Dissolved Oxygen in Root Zone,28|6,PHYS
+48,Root Rot Physiology,26|28,PHYS
+49,Plant Stress Responses,9|10,PHYS
+50,Ethylene as Stress Hormone,49,PHYS
+51,Nutrient Deficiency Physiology,29|45,PHYS
+52,Nutrient Toxicity Effects,29|45,PHYS
+53,Tip Burn in Lettuce,51,PHYS
+54,Blossom End Rot,51,PHYS
+55,Interveinal Chlorosis,51,PHYS
+56,Purple Stem Syndrome,51,PHYS
+57,Necrosis Patterns,51|52,PHYS
+58,Growth Rate Measurement,16|9,PHYS
+59,Biomass Accumulation,58,PHYS
+60,Fresh Weight vs Dry Weight,59,PHYS
+61,Essential Plant Nutrients,29,NUTR
+62,Macronutrient Definition,61,NUTR
+63,Nitrogen Functions in Plants,62,NUTR
+64,Phosphorus Functions in Plants,62,NUTR
+65,Potassium Functions in Plants,62,NUTR
+66,Calcium Functions in Plants,62,NUTR
+67,Magnesium Functions in Plants,62,NUTR
+68,Sulfur Functions in Plants,62,NUTR
+69,Micronutrient Definition,61,NUTR
+70,Iron in Plant Nutrition,69,NUTR
+71,Manganese in Plant Nutrition,69,NUTR
+72,Zinc in Plant Nutrition,69,NUTR
+73,Copper in Plant Nutrition,69,NUTR
+74,Boron in Plant Nutrition,69,NUTR
+75,Molybdenum in Plant Nutrition,69,NUTR
+76,Chlorine in Plant Nutrition,69,NUTR
+77,Nickel in Plant Nutrition,69,NUTR
+78,pH Scale Definition,,NUTR
+79,pH and Nutrient Availability,78|61,NUTR
+80,Mulder's Chart,79,NUTR
+81,Electrical Conductivity (EC),,NUTR
+82,EC as TDS Proxy,81,NUTR
+83,Parts Per Million (ppm),,NUTR
+84,Nutrient Solution Concentration,83|81|62,NUTR
+85,Two-Part Nutrient Systems,84,NUTR
+86,Three-Part Nutrient Systems,84|85,NUTR
+87,Calcium Nitrate,63|66|84,NUTR
+88,Magnesium Sulfate (Epsom Salt),67|68|84,NUTR
+89,Potassium Nitrate,63|65|84,NUTR
+90,Potassium Phosphate,64|65|84,NUTR
+91,Chelated Iron (EDTA/DTPA),70|84,NUTR
+92,pH-Up and pH-Down,78|79,NUTR
+93,pH Buffer Solutions,78|92,NUTR
+94,Water Hardness,6|81,NUTR
+95,Bicarbonate Buffering,93|94,NUTR
+96,Cation-Anion Balance,62|69|84,NUTR
+97,Nutrient Solution Mixing Order,84|85|86,NUTR
+98,Stock Solution Concentrates,84|97,NUTR
+99,Nutrient Solution Temperature,84,NUTR
+100,Nutrient Solution Oxygen,84|47,NUTR
+101,Passive vs Active Systems,4|6,SYST
+102,Kratky Method,101,SYST
+103,Kratky Air Gap Principle,102|47,SYST
+104,Deep Water Culture (DWC),101,SYST
+105,DWC Air Pump and Air Stone,104|47,SYST
+106,Single-Bucket DWC,104|105,SYST
+107,Multi-Bucket DWC,106,SYST
+108,Recirculating DWC (RDWC),107,SYST
+109,Nutrient Film Technique (NFT),101,SYST
+110,NFT Channel Design,109,SYST
+111,NFT Flow Rate,109|110,SYST
+112,NFT Pump Failure Risk,109|111,SYST
+113,Ebb-and-Flow System,101,SYST
+114,Ebb-and-Flow Timer Programming,113,SYST
+115,Flood Table Design,113|114,SYST
+116,Aeroponics Definition,101|47,SYST
+117,High-Pressure Aeroponics,116,SYST
+118,Low-Pressure Aeroponics,116,SYST
+119,Fogponics (Ultrasonic),116,SYST
+120,Drip Irrigation Hydroponics,101,SYST
+121,Wick System,101,SYST
+122,System Selection Criteria,101|102|104|109|113,SYST
+123,Pump Selection and Sizing,104|109|113,SYST
+124,Reservoir Design,6|84,SYST
+125,Net Pots and Baskets,4,SYST
+126,Tubing and Fittings,4,SYST
+127,System Failure Modes,101|112,SYST
+128,Redundancy in System Design,127,SYST
+129,Root Zone Volume,26|124,SYST
+130,Plant Spacing,21|13,SYST
+131,System Scalability,101|122,SYST
+132,Water Recirculation,101|6,SYST
+133,Run-to-Waste Systems,101,SYST
+134,Hybrid System Designs,104|109|116,SYST
+135,System Cleaning Between Cycles,101,SYST
+136,Mason Jar Kratky Setup,102|103,DIY
+137,5-Gallon Bucket DWC Build,104|105|106,DIY
+138,Storage Tote DWC Build,104|105,DIY
+139,PVC Pipe NFT Build,109|110,DIY
+140,Recycled Container Builds,101|4,DIY
+141,Hardware Store Materials List,4,DIY
+142,Net Pot Sizing Guide,125,DIY
+143,Airline Tubing and Air Stones,105,DIY
+144,Aquarium Air Pump Selection,105|123,DIY
+145,Float Valve for Auto-Refill,124,DIY
+146,Light-Proofing Reservoir,124,DIY
+147,DIY pH Calibration,78|92|93,DIY
+148,DIY EC Calibration,81|82,DIY
+149,Beginner Crop Selection,13|122,DIY
+150,Lettuce Varieties,149,DIY
+151,Herb Selection for Beginners,149,DIY
+152,Microgreens Production,14|4,DIY
+153,Seeding and Germination Trays,14|15,DIY
+154,Seedling Transfer Timing,15|153,DIY
+155,School Garden Safety Rules,4,DIY
+156,Student Data Protocols,4,DIY
+157,Science Fair Project Design,4|156,DIY
+158,Classroom Grow System Layout,20|136|137,DIY
+159,System Cost Tiers,101|122,DIY
+160,Upgrade Pathways for Beginners,159|131,DIY
+161,Rockwool Properties,4,GROW
+162,Rockwool pH Preparation,161|78|92,GROW
+163,Expanded Clay (Hydroton),4,GROW
+164,Coconut Coir Properties,4,GROW
+165,Perlite in Hydroponics,4,GROW
+166,Vermiculite Properties,4,GROW
+167,Pumice as Growing Media,4,GROW
+168,Gravel and Sand Media,4,GROW
+169,Reusable vs Single-Use Media,161|163|164|165,GROW
+170,Media Sterilization Methods,169,GROW
+171,Media Air Porosity,161|163|164,GROW
+172,Media Water Retention,161|164|166,GROW
+173,Crop Selection by System Type,122|149,GROW
+174,Lettuce and Leafy Greens,150|173,GROW
+175,Basil and Culinary Herbs,151|173,GROW
+176,Tomatoes in Hydroponics,173|16|17,GROW
+177,Cucumbers in Hydroponics,173|16|17,GROW
+178,Strawberries in Hydroponics,173|16,GROW
+179,Microgreens and Sprouts,152|173,GROW
+180,Flowering Plants (Peppers),173|17,GROW
+181,Plant Density and Spacing,130|173,GROW
+182,Succession Planting,19|173,GROW
+183,Transplanting Techniques,154|161|163,GROW
+184,Harvest Timing Indicators,58|173,GROW
+185,Post-Harvest Handling,184,GROW
+186,Light and Plant Growth,11|39,LITE
+187,Photosynthetic Active Radiation,186,LITE
+188,PAR Wavelength Range,187,LITE
+189,Red Light Effects on Plants,188,LITE
+190,Blue Light Effects on Plants,188,LITE
+191,Far-Red Light Effects,188,LITE
+192,PPFD: Photon Flux Density,187,LITE
+193,Daily Light Integral (DLI),192,LITE
+194,DLI Calculation,193,LITE
+195,Photoperiod Requirements,13|186,LITE
+196,Long-Day vs Short-Day Plants,195,LITE
+197,LED Grow Light Technology,186,LITE
+198,LED Spectrum and Efficiency,197|188|189|190,LITE
+199,HID Lighting (HPS and MH),186,LITE
+200,Fluorescent Lighting (T5/T8),186,LITE
+201,LED vs HID Comparison,197|199|200,LITE
+202,Light Intensity and Canopy,192,LITE
+203,Inverse Square Law for Light,202,LITE
+204,Grow Light Mounting Height,203,LITE
+205,Light Uniformity and PPFD Map,192|204,LITE
+206,Heat Output From Lighting,199|197,LITE
+207,Light Schedules and Photoperiod,195|196,LITE
+208,Light Recipes for Crop Stages,207|189|190|191,LITE
+209,Lumens vs PPFD Distinction,187|192,LITE
+210,Light Efficacy µmol/J,192|197,LITE
+211,Light Meter and Quantum Sensor,192,LITE
+212,Photoperiod Control Relay,207,LITE
+213,Light Cost Per kWh,193|201,LITE
+214,Light Energy to Biomass,186|59,LITE
+215,CO2 Benefit Under High Light,186|224,LITE
+216,Temperature and Plant Growth,9|11,ENVC
+217,Air Temperature Management,216,ENVC
+218,Solution Temperature Control,99|216,ENVC
+219,Root Zone Temperature Optimum,218|26,ENVC
+220,Relative Humidity Definition,,ENVC
+221,Humidity and Transpiration,220|33,ENVC
+222,High Humidity and Disease Risk,221,ENVC
+223,Low Humidity and Tip Burn,221|53,ENVC
+224,CO2 Concentration Effects,11|39,ENVC
+225,CO2 Enrichment Methods,224,ENVC
+226,Vapor Pressure Deficit (VPD),220|216,ENVC
+227,VPD Calculation,226,ENVC
+228,VPD Optimal Ranges by Stage,227|16|17,ENVC
+229,HVAC Basics for Grow Rooms,8|217|221,ENVC
+230,Exhaust and Intake Fan Sizing,229,ENVC
+231,Air Circulation and Fans,8|217,ENVC
+232,Grow Tent Setup,8|20,ENVC
+233,Grow Room Insulation,8|229,ENVC
+234,Data Logger Basics,,ENVC
+235,Environmental Alarm Setpoints,234|226|216|220,ENVC
+236,Thermostat and Humidity Ctrl,235|217|221,ENVC
+237,CO2 Controller and Regulator,225|235,ENVC
+238,Ballast and Lighting Controller,212|235,ENVC
+239,Grow Room Automation Overview,236|237|238,ENVC
+240,Heating and Cooling Trade-offs,229|217,ENVC
+241,Dehumidifier Selection,221|229,ENVC
+242,Humidifier Selection,221|229,ENVC
+243,Air Filtration Carbon Filter,229,ENVC
+244,Positive vs Negative Pressure,229|230,ENVC
+245,Fire Safety in Indoor Grows,8,ENVC
+246,MicroPython vs CPython,,UPYTH
+247,Raspberry Pi Pico Overview,,UPYTH
+248,Raspberry Pi Pico W (Wi-Fi),247,UPYTH
+249,ESP32 Microcontroller Overview,,UPYTH
+250,MicroPython Installation,246|247,UPYTH
+251,Thonny IDE Setup,250,UPYTH
+252,REPL (Read-Eval-Print Loop),251,UPYTH
+253,Variables and Data Types,252,UPYTH
+254,Integer and Float Types,253,UPYTH
+255,String Operations,253,UPYTH
+256,Boolean Logic,253,UPYTH
+257,None Type and Null Checks,253|256,UPYTH
+258,Lists in MicroPython,253,UPYTH
+259,Tuples in MicroPython,253,UPYTH
+260,Dictionaries in MicroPython,253,UPYTH
+261,If-Else Statements,256,UPYTH
+262,For Loops,258|261,UPYTH
+263,While Loops,261,UPYTH
+264,Loop Control (Break/Continue),262|263,UPYTH
+265,Functions and def Keyword,253|262,UPYTH
+266,Function Parameters and Returns,265,UPYTH
+267,Default Parameters,266,UPYTH
+268,Lambda Functions,265,UPYTH
+269,Classes and Objects (OOP),265|266,UPYTH
+270,Inheritance in MicroPython,269,UPYTH
+271,Exception Handling Try/Except,261|265,UPYTH
+272,File I/O in MicroPython,265|271,UPYTH
+273,Reading Files,272,UPYTH
+274,Writing and Appending Files,272,UPYTH
+275,CSV File Writing in MicroPython,274|258,UPYTH
+276,JSON in MicroPython,260|274,UPYTH
+277,I2C Protocol Basics,,UPYTH
+278,I2C in MicroPython,277|250|265,UPYTH
+279,SPI Protocol Basics,,UPYTH
+280,SPI in MicroPython,279|250|265,UPYTH
+281,UART Serial Communication,247,UPYTH
+282,Analog-to-Digital Converter,,UPYTH
+283,ADC in MicroPython,282|250|265,UPYTH
+284,Digital-to-Analog Converter,282,UPYTH
+285,PWM: Pulse Width Modulation,,UPYTH
+286,PWM in MicroPython,285|250|265,UPYTH
+287,GPIO Pin Modes,247|249|250,UPYTH
+288,Digital Read and Write,287|265,UPYTH
+289,Pull-Up and Pull-Down Resistors,287,UPYTH
+290,Interrupts and IRQ,287|265,UPYTH
+291,Timer and machine.Timer,250|265,UPYTH
+292,utime Module,250,UPYTH
+293,Async/Await in MicroPython,265|263,UPYTH
+294,asyncio in MicroPython,293|250,UPYTH
+295,Wi-Fi Connection on ESP32,248|249|250,UPYTH
+296,Socket Programming,295|265,UPYTH
+297,MQTT Protocol Basics,,UPYTH
+298,MicroPython MQTT Client,297|295|265,UPYTH
+299,HTTP Requests From MicroPython,295|265,UPYTH
+300,Memory Management in MicroPython,246|253,UPYTH
+301,Garbage Collection,300,UPYTH
+302,Watchdog Timer,291|250,UPYTH
+303,Boot.py and Main.py Execution,250|272,UPYTH
+304,OTA Over-the-Air Updates,295|303,UPYTH
+305,MicroPython Libraries,250,UPYTH
+306,DS18B20 Temperature Library,305|278,UPYTH
+307,DHT11/DHT22 Library,305|287,UPYTH
+308,SSD1306 OLED Display Library,305|278,UPYTH
+309,Atlas Scientific pH Library,305|278,UPYTH
+310,Atlas Scientific EC Library,305|278,UPYTH
+311,MCP3208 ADC SPI Library,305|280|282,UPYTH
+312,Relay Module Control Code,288|265,UPYTH
+313,Peristaltic Pump Relay Logic,312|265,UPYTH
+314,NeoPixel WS2812 Control,286|305,UPYTH
+315,LCD 16x2 I2C Library,278|305,UPYTH
+316,pH Electrode (Glass Electrode),78|79,SENS
+317,pH Probe Calibration,316|93|147,SENS
+318,pH Calibration Buffers,93|316,SENS
+319,EC Probe Design,81,SENS
+320,EC Probe Calibration,319|148,SENS
+321,DS18B20 Temperature Probe,234,SENS
+322,DHT11 vs DHT22 Comparison,220|234,SENS
+323,CO2 NDIR Sensor Technology,224|234,SENS
+324,Water Level Sensor,124|234,SENS
+325,Ultrasonic Distance Sensor,234|282,SENS
+326,Float Switch,324,SENS
+327,Relay Module,287|288,SENS
+328,Dosing Pump (Peristaltic),123|327,SENS
+329,Solenoid Valve,327,SENS
+330,Flow Sensor,123|234,SENS
+331,Power Supply Selection,247|249,SENS
+332,Breadboard Prototyping,247,SENS
+333,PCB Design Basics,332,SENS
+334,Voltage Divider Circuit,282|289,SENS
+335,Op-Amp Circuits,282|334,SENS
+336,Sensor Noise and Filtering,282|234,SENS
+337,Moving Average Filter,336|265,SENS
+338,Analog Signal Conditioning,335|336,SENS
+339,Sensor Drift and Recalibration,316|319|336,SENS
+340,Wireless Sensor Node Design,295|298|321|316|281,SENS
+341,Battery-Powered Sensor Nodes,331|340,SENS
+342,Sensor Data Timestamping,292|234|275,SENS
+343,Multiplexed Sensor Reading,278|280|282|265,SENS
+344,Atlas Scientific EZO Circuits,309|310|316|319,SENS
+345,Sensor Enclosure Waterproofing,333|340,SENS
+346,Data Collection Strategy,234|342,DATA
+347,Sensor Reading Frequency,291|346,DATA
+348,CSV File Format and Structure,275,DATA
+349,Data Logging to SD Card,272|275|342,DATA
+350,Cloud Data Storage Options,298|299,DATA
+351,Google Sheets as Data Logger,299|348,DATA
+352,Python Environment Setup,,DATA
+353,Jupyter Notebook Basics,352,DATA
+354,pandas Library Introduction,352|258|260,DATA
+355,DataFrame Creation and Structure,354,DATA
+356,Reading CSV With pandas,354|348,DATA
+357,DataFrame Indexing and Slicing,355,DATA
+358,Date-Time Parsing With pandas,355|342,DATA
+359,Resampling Time-Series Data,358|347,DATA
+360,Rolling Window Statistics,359|266,DATA
+361,Missing Data Handling,355|271,DATA
+362,Data Cleaning and Validation,361|355,DATA
+363,NumPy Library Introduction,352,DATA
+364,NumPy Arrays,363,DATA
+365,Array Operations Broadcasting,364,DATA
+366,Statistical Functions in NumPy,364|265,DATA
+367,Mean Median Standard Deviation,366,DATA
+368,Correlation Analysis,367|355,DATA
+369,Linear Regression,,DATA
+370,Regression in NumPy (polyfit),363|369|366,DATA
+371,scikit-learn Linear Regression,369|354,DATA
+372,Matplotlib Basics,352,DATA
+373,Line Charts for Sensor Data,372|356,DATA
+374,Scatter Plots,372,DATA
+375,Histogram and Distribution,372|367,DATA
+376,Subplots and Figure Layout,372|373|374,DATA
+377,Plotly Introduction,352,DATA
+378,Plotly Express Line Chart,377|356,DATA
+379,Plotly Interactive Dashboard,377|378,DATA
+380,Dash Framework (Plotly Dash),377|379,DATA
+381,Real-Time Dashboard Updates,380|298,DATA
+382,Time-Series Visualization,358|373|378,DATA
+383,Statistical Process Control,367|346,DATA
+384,Control Charts (X-bar R-chart),383|367,DATA
+385,Control Limits Calculation,384|367,DATA
+386,Anomaly Detection Methods,367|346,DATA
+387,Z-Score Anomaly Detection,386|367,DATA
+388,IQR Outlier Detection,386|367,DATA
+389,Moving Average Anomaly Detection,386|360,DATA
+390,Trend Detection in Sensor Data,370|359|386,DATA
+391,Food Safety in Controlled Envs,1|7,SAFE
+392,Biofilm Definition and Formation,391,SAFE
+393,Biofilm in Recirculating Systems,392|132,SAFE
+394,Human Pathogens in Hydroponics,391|393,SAFE
+395,Listeria Monocytogenes Risk,394,SAFE
+396,Salmonella in Hydroponic Lettuce,394,SAFE
+397,Shiga Toxin E Coli (STEC) Risk,394,SAFE
+398,HACCP Principles,391,SAFE
+399,Hazard Analysis in Hydroponics,398|394,SAFE
+400,Critical Control Points,398|399,SAFE
+401,Corrective Actions (HACCP),400,SAFE
+402,Water Source Selection,6|391,SAFE
+403,Municipal Water Safety,402,SAFE
+404,Well Water Testing,402,SAFE
+405,Rainwater Risks for Leafy Greens,402|396,SAFE
+406,Bleach Sanitization Protocol,135|391,SAFE
+407,Hydrogen Peroxide Sanitization,135|391,SAFE
+408,UV Sterilization for Water,402|391,SAFE
+409,Ozone Treatment,402|391,SAFE
+410,Sanitization Schedule,406|407|135,SAFE
+411,Food-Grade Materials,4|391,SAFE
+412,Worker Hygiene Protocols,391,SAFE
+413,Pest and Disease Management,1|4,SAFE
+414,Root Rot (Pythium) Management,413|48|47,SAFE
+415,Algae Bloom Prevention,413|146,SAFE
+416,Solar Energy Basics,,SOLAR
+417,Photovoltaic (PV) Effect,416,SOLAR
+418,Solar Cell Types,417,SOLAR
+419,Solar Panel Efficiency,418|417,SOLAR
+420,Solar Panel Watt-Peak (Wp),419,SOLAR
+421,Solar Irradiance W/m2,416,SOLAR
+422,Peak Sun Hours,421,SOLAR
+423,Solar Panel Output Calculation,420|421|422,SOLAR
+424,Solar Panel Cost Trends,416|419,SOLAR
+425,Levelized Cost of Energy (LCOE),423|424,SOLAR
+426,MPPT Max Power Point Tracking,417|419,SOLAR
+427,Charge Controller PWM vs MPPT,426,SOLAR
+428,Battery Storage Basics,,SOLAR
+429,Lead-Acid Battery,428,SOLAR
+430,Lithium Iron Phosphate LiFePO4,428,SOLAR
+431,Battery State of Charge,428,SOLAR
+432,Battery Sizing for Grow Room,428|423|193,SOLAR
+433,Inverter Selection Off-Grid,428|427,SOLAR
+434,Grid-Tie Solar System,416|423,SOLAR
+435,Net Metering,434,SOLAR
+436,Off-Grid Solar System Design,427|433|432,SOLAR
+437,Hybrid Grid and Battery System,434|436,SOLAR
+438,Solar for Grow Lights,416|197|213,SOLAR
+439,Solar for Pumps and Sensors,416|123|341,SOLAR
+440,Power Monitoring With INA219,278|283|265,SOLAR
+441,Energy Audit for Grow Room,193|213|229,SOLAR
+442,Energy Dashboard With Plotly,379|441,SOLAR
+443,Solar ROI Calculation,425|471|475,SOLAR
+444,Carbon Footprint Indoor Growing,416|441|7,SOLAR
+445,Microinverter Technology,433|434,SOLAR
+446,Vertical Farming Definition,1|7|21,VERT
+447,Multi-Tier Growing Racks,446|20,VERT
+448,Tower Garden Systems,446|116,VERT
+449,Commercial NFT at Scale,109|446,VERT
+450,Commercial DWC (Raft Culture),104|446,VERT
+451,AeroFarms Technology,117|446,VERT
+452,Bowery Farming Overview,446,VERT
+453,Gotham Greens Model,446|434,VERT
+454,Container Farm Design,446|8,VERT
+455,Rooftop Farm Design,446|454,VERT
+456,Building-Integrated Agriculture,446|455,VERT
+457,Commercial Crop Selection,173|446,VERT
+458,Yield Per Square Meter,59|447|181,VERT
+459,Light Uniformity Multi-Tier,205|447,VERT
+460,HVAC for Large Facilities,229|446,VERT
+461,Commercial Water Treatment,408|409|446,VERT
+462,Automation in Commercial Farms,239|446,VERT
+463,Robotic Harvesting Systems,462|446,VERT
+464,AI Crop Management,462|386|379,VERT
+465,Food Miles and Distribution,446,VERT
+466,Proximity to Consumers,465|446,VERT
+467,Cold Chain Logistics,185|465,VERT
+468,Organic Certification,446|398,VERT
+469,Good Agricultural Practices,398|446,VERT
+470,Commercial Scale Challenges,446|460|462|441,VERT
+471,Capital Budgeting Basics,,FIN
+472,Net Present Value (NPV),471,FIN
+473,Internal Rate of Return (IRR),471|472,FIN
+474,Break-Even Analysis,471,FIN
+475,Return on Investment (ROI),471,FIN
+476,Payback Period Calculation,475|472,FIN
+477,Fixed vs Variable Costs,471,FIN
+478,Operating Expense (OpEx),477|446|4,FIN
+479,Capital Expense (CapEx),477|446,FIN
+480,Energy Cost Modeling,213|441|477,FIN
+481,Water Cost Modeling,6|477,FIN
+482,Labor Cost Estimation,477,FIN
+483,Nutrient Cost Per Cycle,84|477,FIN
+484,Revenue Modeling,458|477,FIN
+485,Wholesale vs Retail Pricing,484,FIN
+486,Farmers Market Revenue,485,FIN
+487,Restaurant Direct Sales,485,FIN
+488,CSA Community Supported Ag,485|22,FIN
+489,Grant Writing School Gardens,4|471,FIN
+490,USDA Urban Agriculture Grants,489|24,FIN
+491,Crowdfunding for Farm Startups,471,FIN
+492,Business Plan Structure,471|484,FIN
+493,Market Research Local Produce,484|485,FIN
+494,Sensitivity Analysis,472|475|477,FIN
+495,Monte Carlo Farm Risk Simulation,494|366|477,FIN
+496,Solar Energy ROI in Hydroponics,443|480,FIN
+497,Energy Projections With Solar,424|480|496,FIN
+498,Financial Dashboard in Plotly,379|484|480,FIN
+499,Cash Flow Forecasting,477|484|472,FIN
+500,Scale-Up Financial Modeling,499|494|458|447,FIN

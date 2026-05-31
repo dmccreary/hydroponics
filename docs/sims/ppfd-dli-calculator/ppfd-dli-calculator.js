@@ -87,9 +87,9 @@ function setup() {
 
     // Section 1 controls
     ppfdSlider = createSlider(50, 1500, 400, 10);
-    ppfdSlider.style('width', '200px');
+    ppfdSlider.style('width', '180px');
     photoperiodSlider = createSlider(8, 24, 16, 1);
-    photoperiodSlider.style('width', '200px');
+    photoperiodSlider.style('width', '180px');
 
     // Section 2 controls
     wattageInput = createInput('200', 'number');
@@ -102,9 +102,9 @@ function setup() {
     refPpfdInput = createInput('800', 'number');
     refPpfdInput.style('width', '70px');
     refHeightSlider = createSlider(10, 200, 30, 1);
-    refHeightSlider.style('width', '180px');
+    refHeightSlider.style('width', '70px');
     newHeightSlider = createSlider(10, 200, 60, 1);
-    newHeightSlider.style('width', '180px');
+    newHeightSlider.style('width', '70px');
 
     // Compare button
     compareBtn = createButton('Capture as Scenario A');
@@ -130,11 +130,11 @@ function positionControls() {
     wattageInput.position(leftX + 120, s2y + 28);
     kwhInput.position(leftX + 120, s2y + 56);
 
-    // Section 3
-    const s3y = stackVertical ? (leftY + 340) : (leftY + 340);
-    refPpfdInput.position(leftX + 160, s3y + 28);
-    refHeightSlider.position(leftX + 160, s3y + 60);
-    newHeightSlider.position(leftX + 160, s3y + 92);
+    // Section 3 (card top is at leftY + 280)
+    const s3y = leftY + 280;
+    refPpfdInput.position(leftX + 110, s3y + 28);
+    refHeightSlider.position(leftX + 12, s3y + 80);
+    newHeightSlider.position(leftX + 12, s3y + 110);
 
     // Compare buttons - in control area
     compareBtn.position(leftX + 12, drawHeight + 12);
@@ -216,29 +216,29 @@ function drawSection1(ppfd, photoperiod, dli) {
     const x = leftX, y = leftY, w = leftW, h = 150;
     drawSectionCard(x, y, w, h, 'Section 1 — DLI Calculator');
 
-    // Slider labels
+    // Slider labels (to the right of sliders)
     push();
     noStroke();
     fill(DARK);
     textSize(11);
     textAlign(LEFT, TOP);
-    text(`PPFD: ${ppfd} µmol·m⁻²·s⁻¹`, x + 220, y + 30);
-    text(`Photoperiod: ${photoperiod} hours`, x + 220, y + 68);
+    text(`PPFD: ${ppfd} µmol·m⁻²·s⁻¹`, x + 200, y + 30);
+    text(`Photoperiod: ${photoperiod} h`, x + 200, y + 68);
     pop();
 
-    // DLI big value
+    // DLI big value (right side, below labels)
     push();
     fill(GREEN);
     noStroke();
     textStyle(BOLD);
-    textSize(17);
+    textSize(15);
     textAlign(LEFT, TOP);
     const dliText = `DLI = ${dli.toFixed(1)} mol·m⁻²·day⁻¹`;
-    text(dliText, x + 12, y + 95);
+    text(dliText, x + 200, y + 95);
     // Hover region for DLI tooltip
     const tw = textWidth(dliText);
     hoverRegions.push({
-        x: x + 12, y: y + 95, w: tw, h: 18,
+        x: x + 200, y: y + 95, w: tw, h: 18,
         formula: 'DLI = PPFD × hours × 0.0036',
         detail: `${ppfd} × ${photoperiod} × 0.0036 = ${dli.toFixed(1)} mol·m⁻²·day⁻¹`
     });
@@ -246,9 +246,9 @@ function drawSection1(ppfd, photoperiod, dli) {
 
     // Horizontal bar 0-50
     const barX = x + 12;
-    const barY = y + 122;
+    const barY = y + 128;
     const barW = w - 24;
-    const barH = 16;
+    const barH = 14;
 
     // Zones
     const scale = barW / 50;
@@ -352,8 +352,8 @@ function drawSection3(refPpfd, refH, newH, distRatio, intRatio, newPpfd) {
     textSize(11);
     textAlign(LEFT, TOP);
     text('Reference PPFD:', x + 12, y + 32);
-    text(`Reference height: ${refH} cm`, x + 12, y + 64);
-    text(`New height: ${newH} cm`, x + 12, y + 96);
+    text(`Ref height: ${refH} cm`, x + 12, y + 68);
+    text(`New height: ${newH} cm`, x + 12, y + 98);
     pop();
 
     // Outputs
@@ -364,10 +364,10 @@ function drawSection3(refPpfd, refH, newH, distRatio, intRatio, newPpfd) {
     fill(GREEN);
     textAlign(LEFT, TOP);
     const newText = `PPFD at new height: ${newPpfd.toFixed(0)} µmol·m⁻²·s⁻¹`;
-    text(newText, x + 12, y + 130);
+    text(newText, x + 12, y + 148);
     const tw = textWidth(newText);
     hoverRegions.push({
-        x: x + 12, y: y + 130, w: tw, h: 18,
+        x: x + 12, y: y + 148, w: tw, h: 18,
         formula: 'PPFD_new = PPFD_ref × (h_ref / h_new)²',
         detail: `${refPpfd} × (${refH}/${newH})² = ${refPpfd} × ${intRatio.toFixed(3)} = ${newPpfd.toFixed(0)}`
     });
@@ -376,7 +376,7 @@ function drawSection3(refPpfd, refH, newH, distRatio, intRatio, newPpfd) {
     textSize(11);
     fill(MUTED);
     text(`(Distance ratio: ${distRatio.toFixed(2)}, Intensity ratio: ${intRatio.toFixed(2)}×)`,
-        x + 12, y + 154);
+        x + 12, y + 172);
     pop();
 
     // Warning
@@ -387,7 +387,7 @@ function drawSection3(refPpfd, refH, newH, distRatio, intRatio, newPpfd) {
         textStyle(BOLD);
         textSize(12);
         textAlign(LEFT, TOP);
-        text('⚠ Light stress risk — PPFD exceeds 1200 µmol·m⁻²·s⁻¹', x + 12, y + 178);
+        text('⚠ Light stress risk — PPFD exceeds 1200 µmol·m⁻²·s⁻¹', x + 12, y + 194);
         pop();
     }
 

@@ -84,7 +84,7 @@ function setup() {
 
     // Build controls in left panel
     const labelX = 12;
-    let y = 38;
+    let y = 50;
     const ctlX = 12;
     const dy = 50;
 
@@ -126,9 +126,9 @@ function setup() {
     y += 30;
 
     rollingSlider = createSlider(1, 48, 12, 1);
-    positionCtl(rollingSlider, ctlX, y + 14, leftPanelW - 24);
+    positionCtl(rollingSlider, ctlX, y + 28, leftPanelW - 24);
     rollingSlider.input(() => dirty = true);
-    y += dy;
+    y += dy + 14;
 
     regressionCb = createCheckbox(' Show regression line', true);
     regressionCb.position(ctlX, y);
@@ -413,12 +413,12 @@ function drawLeftPanel() {
     textStyle(BOLD);
     textAlign(LEFT, BOTTOM);
 
-    text(`Noise level: ${noiseSlider.value()}%`, 12, 38);
-    text(`Missing data: ${missingSlider.value()}%`, 12, 88);
+    text(`Noise level: ${noiseSlider.value()}%`, 12, 48);
+    text(`Missing data: ${missingSlider.value()}%`, 12, 98);
     // validation cb has its own label at 138
     text('Fill missing:', 12, 200);
     text('Resample to:', 12, 230);
-    text(`Rolling window: ${rollingSlider.value()} samples`, 12, 262);
+    text(`Rolling window: ${rollingSlider.value()} samples`, 12, 258);
     // 3 checkboxes after slider
     text('View Mode:', 12, 432);
     pop();

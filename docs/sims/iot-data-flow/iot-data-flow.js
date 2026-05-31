@@ -226,6 +226,13 @@ function draw() {
     drawSimpleNode(nodes.telegram, sx, sy);
     drawSimpleNode(nodes.ota, sx, sy);
 
+    // Re-draw topic labels ON TOP of nodes so they aren't covered
+    drawArrowLabel(nodes.sensor, nodes.wifi, sx, sy, 'farm/zone1/sensors/raw', 'every 60 s');
+    drawArrowLabel(nodes.broker, nodes.dashboard, sx, sy, 'farm/zone1/sensors/#', 'subscribe');
+    drawArrowLabel(nodes.broker, nodes.influx, sx, sy, 'farm/+/sensors/+', '');
+    drawArrowLabel(nodes.broker, nodes.telegram, sx, sy, 'farm/+/alarms/#', '');
+    drawArrowLabel(nodes.ota, nodes.broker, sx, sy, 'farm/zone1/ota/firmware', '');
+
     // Protocol labels
     if (showProtocols) {
         drawProtocolLabels(sx, sy);
@@ -435,6 +442,33 @@ function drawArrow(fromNode, toNode, sx, sy, topic, sublabel, isReverse) {
         }
         pop();
     }
+}
+
+function drawArrowLabel(fromNode, toNode, sx, sy, topic, sublabel) {
+    if (!topic) return;
+    const e = endpoints(fromNode, toNode);
+    const x1 = e.x1 * sx, y1 = e.y1 * sy;
+    const x2 = e.x2 * sx, y2 = e.y2 * sy;
+    const mx = (x1 + x2) / 2;
+    const my = (y1 + y2) / 2;
+    push();
+    noStroke();
+    textSize(10);
+    const tw = textWidth(topic);
+    fill(255, 255, 255, 235);
+    rect(mx - tw / 2 - 4, my - 18, tw + 8, 14, 3);
+    fill(46, 125, 50);
+    textAlign(CENTER, CENTER);
+    text(topic, mx, my - 11);
+    if (sublabel) {
+        fill(255, 255, 255, 235);
+        const sw = textWidth(sublabel);
+        textSize(9);
+        rect(mx - sw / 2 - 4, my + 2, sw + 8, 12, 3);
+        fill(108, 117, 125);
+        text(sublabel, mx, my + 8);
+    }
+    pop();
 }
 
 function drawProtocolLabels(sx, sy) {

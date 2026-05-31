@@ -228,9 +228,9 @@ function drawLongitudinal(sx, sy) {
 
 function drawCrossSection(sx, sy) {
     // Right 40% panel
-    const cx = 560 * sx;
+    const cx = 540 * sx;
     const cy = 220 * sy;
-    const baseR = Math.min(width * 0.18, drawHeight * 0.35);
+    const baseR = Math.min(width * 0.16, drawHeight * 0.32);
 
     push();
     // Title
@@ -292,16 +292,16 @@ function drawCrossSection(sx, sy) {
     }
     pop();
 
-    // Root hair extending from epidermis
+    // Root hair extending from epidermis (down and right to keep within canvas)
     push();
     stroke(0, 121, 107);
     strokeWeight(2);
-    line(cx + baseR, cy, cx + baseR * 1.7, cy - baseR * 0.3);
+    line(cx + baseR * 0.7, cy + baseR * 0.7, cx + baseR * 1.2, cy + baseR * 1.15);
     fill(0, 121, 107);
     noStroke();
     textSize(9);
-    textAlign(LEFT, BOTTOM);
-    text('root hair', cx + baseR * 1.7, cy - baseR * 0.32);
+    textAlign(LEFT, TOP);
+    text('root hair', cx + baseR * 1.2 + 2, cy + baseR * 1.1);
     pop();
 
     // Labels with leader lines
@@ -316,7 +316,7 @@ function drawCrossSection(sx, sy) {
     text('cortex', cx + baseR + 10, cy + baseR * 0.55);
     fill(191, 102, 0);
     textStyle(BOLD);
-    text('endodermis (Casparian)', cx + baseR + 10, cy + baseR * 0.25);
+    text('endodermis', cx + baseR + 10, cy + baseR * 0.25);
     textStyle(NORMAL);
     fill(33);
     text('pericycle', cx - baseR * 1.5, cy + baseR * 0.3);

@@ -27,27 +27,69 @@ nav:
 
   - Chapters:
       - List of Chapters: chapters/index.md
-      - 1. Introduction: chapters/01-introduction/index.md
-      - 2. Root Biology: chapters/02-root-biology/index.md
-      - 3. Water & Plant Health: chapters/03-water-transport/index.md
-      - 4. Macro & Micro Nutrients: chapters/04-macro-micro-nutrients/index.md
-      - 5. Nutrient Chemistry: chapters/05-nutrient-solution-chemistry/index.md
-      - 6. Basic Systems: chapters/06-passive-basic-active-systems/index.md
-      - 7. Advanced Systems: chapters/07-advanced-systems/index.md
-      - 8. DIY & School Projects: chapters/08-diy-school-projects/index.md
-      - 9. Growing Media & Crops: chapters/09-growing-media-crops/index.md
-      - 10. Lighting Science: chapters/10-lighting-science/index.md
-      - 11. Environmental Control: chapters/11-environmental-control/index.md
-      - 12. MicroPython Fundamentals: chapters/12-micropython-fundamentals/index.md
-      - 13. Hardware Interfaces: chapters/13-hardware-interfaces/index.md
-      - 14. Networking & IoT: chapters/14-networking-iot/index.md
-      - 15. Sensors & Electronics: chapters/15-sensors-electronics/index.md
-      - 16. Data Collection: chapters/16-data-collection-analysis/index.md
-      - 17. Data Visualization: chapters/17-data-visualization/index.md
-      - 18. Food Safety: chapters/18-food-safety/index.md
-      - 19. Solar Energy: chapters/19-solar-energy/index.md
-      - 20. Vertical Farming: chapters/20-vertical-farming/index.md
-      - 21. Financial Modeling: chapters/21-financial-modeling/index.md
+      - 1. Introduction:
+          - Content: chapters/01-introduction/index.md
+          - Quiz: chapters/01-introduction/quiz.md
+      - 2. Root Biology:
+          - Content: chapters/02-root-biology/index.md
+          - Quiz: chapters/02-root-biology/quiz.md
+      - 3. Water & Plant Health:
+          - Content: chapters/03-water-transport/index.md
+          - Quiz: chapters/03-water-transport/quiz.md
+      - 4. Macro & Micro Nutrients:
+          - Content: chapters/04-macro-micro-nutrients/index.md
+          - Quiz: chapters/04-macro-micro-nutrients/quiz.md
+      - 5. Nutrient Chemistry:
+          - Content: chapters/05-nutrient-solution-chemistry/index.md
+          - Quiz: chapters/05-nutrient-solution-chemistry/quiz.md
+      - 6. Basic Systems:
+          - Content: chapters/06-passive-basic-active-systems/index.md
+          - Quiz: chapters/06-passive-basic-active-systems/quiz.md
+      - 7. Advanced Systems:
+          - Content: chapters/07-advanced-systems/index.md
+          - Quiz: chapters/07-advanced-systems/quiz.md
+      - 8. DIY & School Projects:
+          - Content: chapters/08-diy-school-projects/index.md
+          - Quiz: chapters/08-diy-school-projects/quiz.md
+      - 9. Growing Media & Crops:
+          - Content: chapters/09-growing-media-crops/index.md
+          - Quiz: chapters/09-growing-media-crops/quiz.md
+      - 10. Lighting Science:
+          - Content: chapters/10-lighting-science/index.md
+          - Quiz: chapters/10-lighting-science/quiz.md
+      - 11. Environmental Control:
+          - Content: chapters/11-environmental-control/index.md
+          - Quiz: chapters/11-environmental-control/quiz.md
+      - 12. MicroPython Fundamentals:
+          - Content: chapters/12-micropython-fundamentals/index.md
+          - Quiz: chapters/12-micropython-fundamentals/quiz.md
+      - 13. Hardware Interfaces:
+          - Content: chapters/13-hardware-interfaces/index.md
+          - Quiz: chapters/13-hardware-interfaces/quiz.md
+      - 14. Networking & IoT:
+          - Content: chapters/14-networking-iot/index.md
+          - Quiz: chapters/14-networking-iot/quiz.md
+      - 15. Sensors & Electronics:
+          - Content: chapters/15-sensors-electronics/index.md
+          - Quiz: chapters/15-sensors-electronics/quiz.md
+      - 16. Data Collection:
+          - Content: chapters/16-data-collection-analysis/index.md
+          - Quiz: chapters/16-data-collection-analysis/quiz.md
+      - 17. Data Visualization:
+          - Content: chapters/17-data-visualization/index.md
+          - Quiz: chapters/17-data-visualization/quiz.md
+      - 18. Food Safety:
+          - Content: chapters/18-food-safety/index.md
+          - Quiz: chapters/18-food-safety/quiz.md
+      - 19. Solar Energy:
+          - Content: chapters/19-solar-energy/index.md
+          - Quiz: chapters/19-solar-energy/quiz.md
+      - 20. Vertical Farming:
+          - Content: chapters/20-vertical-farming/index.md
+          - Quiz: chapters/20-vertical-farming/quiz.md
+      - 21. Financial Modeling:
+          - Content: chapters/21-financial-modeling/index.md
+          - Quiz: chapters/21-financial-modeling/quiz.md
 
   - Learning Graph:
       - Introduction: learning-graph/index.md
@@ -57,6 +99,7 @@ nav:
       - Graph Quality Analysis: learning-graph/quality-metrics.md
       - Taxonomy Distribution Report: learning-graph/taxonomy-distribution.md
       - Mascot Style Guide: learning-graph/mascot-test.md
+      - Quiz Generation Report: learning-graph/quiz-generation-report.md
       # - Concept Enumeration: learning-graph/concept-list.md
       # - Concept Taxonomy: learning-graph/concept-taxonomy.md
       # - Graph Quality Analysis: learning-graph/quality-metrics.md
@@ -98,6 +141,7 @@ nav:
 
 
 
+  - Glossary: glossary.md
   - License: license.md
   - Contact: contact.md
 

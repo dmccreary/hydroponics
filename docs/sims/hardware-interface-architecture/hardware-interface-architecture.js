@@ -183,25 +183,35 @@ function computeLayout() {
     };
 
     // Lane endpoints: radial from Pico center, but constrained inside canvas
-    const radius = Math.min(width, drawHeight) * 0.32;
-    const compW = 110, compH = 40, compGap = 6;
+    const radius = Math.min(width, drawHeight) * 0.28;
+    const compW = 100, compH = 30, compGap = 4;
+    // For diagonal lanes, stack components vertically (not perpendicular) so
+    // they don't visually collide with neighboring diagonal lanes.
+    const VERTICAL_STACK = { ADC: true, PWM: true, I2C: true, UART: true, SPI: true };
 
     layout.lanes = {};
     for (const [name, p] of Object.entries(PROTOCOLS)) {
         const a = radians(p.angle);
         const ex = layout.cx + Math.cos(a) * radius;
         const ey = layout.cy + Math.sin(a) * radius;
-        // Place comps as a vertical or horizontal stack perpendicular to angle.
-        // We'll lay them out along a perpendicular axis past the label.
-        const perp = a + Math.PI / 2;
+        // Place comps as a vertical or horizontal stack past the label.
+        const useVertical = VERTICAL_STACK[name];
         const n = p.components.length;
-        const totalH = n * compH + (n - 1) * compGap;
         const comps = [];
         for (let i = 0; i < n; i++) {
             const offset = (i - (n - 1) / 2) * (compH + compGap);
-            // box anchor past label, offset along perpendicular
-            const bx0 = ex + Math.cos(a) * 60 + Math.cos(perp) * offset;
-            const by0 = ey + Math.sin(a) * 60 + Math.sin(perp) * offset;
+            // box anchor past label
+            let bx0, by0;
+            if (useVertical) {
+                // stack vertically; push laterally past label in direction of angle
+                const dirX = Math.sign(Math.cos(a)) || 1;
+                bx0 = ex + dirX * 80;
+                by0 = ey + offset;
+            } else {
+                // GPIO (180°) only — stack vertically too on the left
+                bx0 = ex - 80;
+                by0 = ey + offset;
+            }
             comps.push({
                 x: bx0 - compW / 2, y: by0 - compH / 2,
                 w: compW, h: compH,
@@ -246,7 +256,7 @@ function drawTitle() {
     textSize(14);
     textStyle(BOLD);
     textAlign(LEFT, TOP);
-    text('Hardware Interface Architecture — Pico W Protocols', 12, 6);
+    text('Hardware Interface Architecture', 12, 6);
     pop();
 }
 
@@ -336,20 +346,22 @@ function drawLanes() {
         strokeWeight(10);
         line(sx, sy, lane.ex, lane.ey);
 
-        // Label box near endpoint
+        // Label box midway along lane band (between Pico and endpoint)
+        const lblX = (sx + lane.ex) / 2;
+        const lblY = (sy + lane.ey) / 2;
         noStroke();
         fill(p.color[0], p.color[1], p.color[2], a);
         const lw = textWidth(name) + 16;
         rectMode(CENTER);
-        rect(lane.ex, lane.ey, lw, 22, 4);
+        rect(lblX, lblY, lw, 22, 4);
         rectMode(CORNER);
         fill(255, a);
         textAlign(CENTER, CENTER);
         textStyle(BOLD);
         textSize(12);
-        text(name, lane.ex, lane.ey);
+        text(name, lblX, lblY);
 
-        // Thin connector from label to each component box
+        // Thin connector from endpoint to each component box
         stroke(p.color[0], p.color[1], p.color[2], a);
         strokeWeight(1.5);
         for (const c of lane.comps) {

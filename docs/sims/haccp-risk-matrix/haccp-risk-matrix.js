@@ -438,7 +438,8 @@ function drawHazardCard(x, y, w, h, scoreObj) {
     textSize(11);
     textStyle(BOLD);
     textAlign(LEFT, TOP);
-    text(scoreObj.hazard.name, x + 6, y + 5, w - 12);
+    // Reserve right margin so the HIGH/MED/LOW badge doesn't overlap the title
+    text(scoreObj.hazard.name, x + 6, y + 5, w - 36);
     pop();
 
     // Mini 3x3 matrix
@@ -572,7 +573,7 @@ function drawRightPanel(x, y, w, h) {
         textSize(11);
         textStyle(BOLD);
         textAlign(LEFT, TOP);
-        text(s.hazard.ccp, x + 38, cy + 6, innerW - 38);
+        text(s.hazard.ccp, x + 38, cy + 6, innerW - 76);
         pop();
 
         push();

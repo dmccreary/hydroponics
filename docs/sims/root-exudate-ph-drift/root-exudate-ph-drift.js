@@ -31,18 +31,18 @@ function setup() {
     textFont('Segoe UI');
 
     nitrateSlider = createSlider(0, 100, nitratePct, 5);
-    nitrateSlider.position(width * 0.55, 60);
-    nitrateSlider.style('width', '160px');
+    nitrateSlider.position(width * 0.55 + 8, 80);
+    nitrateSlider.style('width', '150px');
     nitrateSlider.input(() => { nitratePct = nitrateSlider.value(); runSim(); });
 
     biomassSlider = createSlider(50, 500, plantMass, 25);
-    biomassSlider.position(width * 0.55, 130);
-    biomassSlider.style('width', '160px');
+    biomassSlider.position(width * 0.55 + 8, 150);
+    biomassSlider.style('width', '150px');
     biomassSlider.input(() => { plantMass = biomassSlider.value(); runSim(); });
 
     volumeSlider = createSlider(2, 20, reservoirVol, 1);
-    volumeSlider.position(width * 0.55, 200);
-    volumeSlider.style('width', '160px');
+    volumeSlider.position(width * 0.55 + 8, 220);
+    volumeSlider.style('width', '150px');
     volumeSlider.input(() => { reservoirVol = volumeSlider.value(); runSim(); });
 
     simulateBtn = createButton('Re-simulate 14 Days');
@@ -250,7 +250,7 @@ function drawControlPanel() {
     text('Reservoir volume: ' + reservoirVol + ' L', px0 + 8, py0 + 170);
 
     // Summary box
-    const summaryY = py0 + 230;
+    const summaryY = py0 + 250;
     fill(241, 243, 245);
     rect(px0 + 8, summaryY, pw - 16, drawHeight - summaryY - 20, 4);
 
@@ -302,7 +302,7 @@ function drawFooter() {
 function windowResized() {
     updateCanvasSize();
     resizeCanvas(containerWidth, canvasHeight);
-    nitrateSlider.position(width * 0.55, 60);
-    biomassSlider.position(width * 0.55, 130);
-    volumeSlider.position(width * 0.55, 200);
+    nitrateSlider.position(width * 0.55 + 8, 80);
+    biomassSlider.position(width * 0.55 + 8, 150);
+    volumeSlider.position(width * 0.55 + 8, 220);
 }

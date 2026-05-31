@@ -169,8 +169,8 @@ function layoutInputs() {
     placeInput('rev_yield', col3, y); y += rowH;
     placeInput('rev_cycles', col3, y); y += rowH;
     placeInput('rev_price', col3, y); y += rowH;
-    marketSelect.position(col3 + 110, y);
-    marketSelect.size(120);
+    marketSelect.position(col3 + 100, y + 26);
+    marketSelect.size(60);
     y += rowH;
 
     // Buttons below results column (col4)
@@ -182,7 +182,8 @@ function layoutInputs() {
 }
 
 function placeInput(name, x, y) {
-    inp[name].position(x + 150, y + 26);
+    inp[name].size(55, 18);
+    inp[name].position(x + 100, y + 26);
 }
 
 function getVal(name) {

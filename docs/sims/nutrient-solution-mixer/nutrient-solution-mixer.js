@@ -6,8 +6,8 @@ let containerWidth;
 let containerHeight = canvasHeight;
 
 // Layout
-let topBarH = 50;
-let panelTop = 70;
+let topBarH = 70;
+let panelTop = 90;
 let panelBottom = 590;
 let footerH = 50;
 
@@ -114,7 +114,7 @@ function setup() {
 
     // Preset dropdown
     presetSelect = createSelect();
-    presetSelect.position(110, 15);
+    presetSelect.position(110, 40);
     presetSelect.size(220);
     presetSelect.option('-- Select Preset --');
     for (const k of Object.keys(PRESETS)) presetSelect.option(k);
@@ -122,12 +122,12 @@ function setup() {
 
     // Mixing order button (top-right region)
     mixOrderBtn = createButton('Show Mixing Order');
-    mixOrderBtn.position(360, 15);
+    mixOrderBtn.position(360, 40);
     mixOrderBtn.mousePressed(() => { showMixingOrder = true; selectedSalt = null; });
 
     // Back button (hidden initially)
     backBtn = createButton('Back to Summary');
-    backBtn.position(360, 15);
+    backBtn.position(360, 40);
     backBtn.mousePressed(() => { showMixingOrder = false; });
     backBtn.hide();
 
@@ -252,10 +252,12 @@ function draw() {
     textSize(16);
     textStyle(BOLD);
     textAlign(LEFT, CENTER);
-    text('Nutrient Solution Mixing Calculator', 12, topBarH / 2 - 9);
+    textAlign(LEFT, TOP);
+    text('Nutrient Solution Mixing Calculator', 12, 8);
     textStyle(NORMAL);
     textSize(11);
-    text('Preset:', 60, topBarH / 2 + 12);
+    textAlign(LEFT, CENTER);
+    text('Preset:', 60, 50);
     pop();
 
     // Toggle button visibility based on mode

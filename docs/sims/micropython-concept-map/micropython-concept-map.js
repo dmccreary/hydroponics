@@ -137,6 +137,14 @@ function setupLayout() {
     const tierCount = TIERS.length;
     const tierSlotH = drawHeight / tierCount;
 
+    // Compute per-tier node width: max nodes in any tier determines minimum spacing
+    let maxNodes = 1;
+    for (let t = 0; t < tierCount; t++) {
+        if (TIERS[t].nodes.length > maxNodes) maxNodes = TIERS[t].nodes.length;
+    }
+    // Each node gets at most (usableW / maxNodes - 8) wide, capped at NODE_W
+    const dynamicNodeW = Math.min(NODE_W, Math.floor(usableW / maxNodes) - 8);
+
     for (let t = 0; t < tierCount; t++) {
         const tier = TIERS[t];
         // bottom tier (t=0) sits at largest y; top tier (t=last) at smallest y
@@ -153,9 +161,9 @@ function setupLayout() {
                 snippet: node.snippet,
                 tierIdx: t,
                 color: tier.color,
-                x: cx - NODE_W / 2,
+                x: cx - dynamicNodeW / 2,
                 y: rowCenterY - NODE_H / 2,
-                w: NODE_W,
+                w: dynamicNodeW,
                 h: NODE_H,
                 cx: cx,
                 cy: rowCenterY
@@ -349,7 +357,13 @@ function drawNode(n, isSel, inHighlight, dim) {
     }
     textAlign(CENTER, CENTER);
     textStyle(BOLD);
-    textSize(11);
+    // Pick the largest size from {11,10,9} that fits inside the node width
+    let ts = 11;
+    textSize(ts);
+    while (textWidth(n.label) > n.w - 8 && ts > 8) {
+        ts -= 1;
+        textSize(ts);
+    }
     text(n.label, n.x + n.w / 2, n.y + n.h / 2);
     pop();
 }

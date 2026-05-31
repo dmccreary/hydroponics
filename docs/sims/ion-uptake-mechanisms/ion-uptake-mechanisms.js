@@ -209,22 +209,22 @@ function drawPanel(x, y, w, h, title, state, ionColor, ionLabel, isActive) {
     fill(33);
     if (outConc > inConc) {
         // inward arrow
-        line(midX - 50, proteinY, midX + 50, proteinY);
-        triangle(midX + 50, proteinY, midX + 42, proteinY - 5, midX + 42, proteinY + 5);
+        line(midX - 60, proteinY + 40, midX + 60, proteinY + 40);
+        triangle(midX + 60, proteinY + 40, midX + 52, proteinY + 35, midX + 52, proteinY + 45);
         noStroke();
         textSize(10);
         textAlign(CENTER, BOTTOM);
-        text('gradient → inward', midX, proteinY - 6);
+        text('gradient → inward', midX, proteinY + 38);
     } else if (inConc > outConc) {
         // outward arrow (gradient favors outward but transport may go inward)
         stroke(244, 67, 54);
         fill(244, 67, 54);
-        line(midX + 50, proteinY, midX - 50, proteinY);
-        triangle(midX - 50, proteinY, midX - 42, proteinY - 5, midX - 42, proteinY + 5);
+        line(midX + 60, proteinY + 40, midX - 60, proteinY + 40);
+        triangle(midX - 60, proteinY + 40, midX - 52, proteinY + 35, midX - 52, proteinY + 45);
         noStroke();
         textSize(10);
         textAlign(CENTER, BOTTOM);
-        text('gradient → outward (uphill)', midX, proteinY - 6);
+        text('gradient → outward (uphill)', midX, proteinY + 38);
     }
     pop();
 

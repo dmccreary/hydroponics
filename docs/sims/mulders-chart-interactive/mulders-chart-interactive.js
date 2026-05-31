@@ -173,7 +173,7 @@ function draw() {
 // =================================================================
 function drawAvailabilityView() {
     const top = 36;
-    const left = 90;
+    const left = 130;
     const right = (selectedNutrient ? Math.floor(width * 0.62) : width - 20);
     const barAreaTop = top + 24;
     const barAreaBottom = drawHeight - 30;
@@ -699,7 +699,7 @@ function mousePressed() {
 
 function handlePhClick() {
     const top = 36;
-    const left = 90;
+    const left = 130;
     const right = (selectedNutrient ? Math.floor(width * 0.62) : width - 20);
     const barAreaTop = top + 24;
     const barAreaBottom = drawHeight - 30;

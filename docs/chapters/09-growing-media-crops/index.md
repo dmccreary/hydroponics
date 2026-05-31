@@ -284,3 +284,5 @@ Proper post-harvest handling can extend hydroponic lettuce shelf life from 3–5
 !!! mascot-celebration "Chapter 9 complete — from medium to harvest!"
     <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Cress leaps with arms raised">
     You now understand everything that touches the plant — the medium it grows in, the crops suited to each system type, how to transplant and space plants, and how to handle the harvest for maximum shelf life. Chapter 10 covers the other side of the energy equation: light. Photosynthetically active radiation, PPFD, daily light integral, and the LED revolution that made indoor farming economically viable. Let there be light!
+
+[See Annotated References](./references.md)

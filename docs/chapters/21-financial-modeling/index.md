@@ -637,3 +637,5 @@ Responsive: Scales to container width; on narrow screens, columns stack vertical
 !!! mascot-celebration "Course complete — you're a hydroponics engineer!"
     <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Cress leaps with arms raised">
     You've done it, growers! From the chemistry of root ion uptake to the IRR of a commercial vertical farm — you now command the full stack of modern controlled-environment agriculture. You can design a system, wire the sensors, write the firmware, analyze the data, ensure the food safety, evaluate the solar economics, and build the financial model that proves whether the whole enterprise makes sense. This is hydroponics from mason jar to vertical farm — and you can grow *anything* with this foundation. Now go grow something amazing! 🌱
+
+[See Annotated References](./references.md)

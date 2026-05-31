@@ -648,3 +648,5 @@ Responsive: Scales to fit container width.
 !!! mascot-celebration "Chapter 12 complete — you speak MicroPython!"
     <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Cress leaps with arms raised">
     You've gone from zero to object-oriented MicroPython! The language fundamentals in this chapter are all you need to write real hydroponic sensor code. Chapter 13 puts this to work: GPIO pins, I2C and SPI buses, ADC readings, PWM for pump control, and the interrupt-driven patterns that make a microcontroller feel alive. Bring your Pico — it's time to wire something up!
+
+[See Annotated References](./references.md)

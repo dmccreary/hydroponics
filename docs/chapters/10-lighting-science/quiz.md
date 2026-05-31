@@ -126,7 +126,7 @@ Test your understanding of PAR, PPFD, DLI, light spectrum, LED versus HID techno
 </div>
 
 ??? question "Show Answer"
-    The correct answer is **B**. LED marketing frequently overstates output — a "400W equivalent" LED may draw only 200W but also deliver only 60% of the PPFD claimed. The only reliable comparison is third-party photometric test data showing: (1) actual power draw under operating conditions, (2) total PAR output in µmol/s, (3) PPFD maps at specified hanging heights. Fixtures should be compared using PPE (photosynthetic photon efficacy) in µmol/J calculated from measured data, not claimed specifications. This is a significant footgun in the LED grow light market.
+    The correct answer is **B**. LED marketing frequently overstates output — a "400W equivalent" LED may draw only 200W but also deliver only 60% of the PPFD claimed. The only reliable comparison is third-party photometric test data showing: (1) actual power draw under operating conditions, (2) total PAR output in µmol/s, (3) PPFD maps at specified hanging heights. Fixtures should be compared using PPE (photosynthetic photon efficacy) in µmol/J calculated from measured data, not claimed specifications. This is a significant pitfall in the LED grow light market.
 
     **Concept Tested:** LED Efficacy Claims
 

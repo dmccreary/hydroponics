@@ -474,3 +474,5 @@ Responsive: Scales to container; on narrow screens, anomaly table moves below th
 !!! mascot-celebration "Chapter 17 complete — you can see the whole story!"
     <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Cress leaps with arms raised">
     You've built a complete visualization and monitoring stack — from raw CSV logs to live dashboards and automated anomaly alarms. Chapter 18 shifts from the digital to the practical: food safety, pathogen prevention, HACCP planning, and integrated pest management for edible crops grown in recirculating systems. The most important question about hydroponic produce isn't "how did it grow?" — it's "is it safe to eat?" Let's find out!
+
+[See Annotated References](./references.md)

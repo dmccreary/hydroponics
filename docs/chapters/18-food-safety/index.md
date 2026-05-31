@@ -371,3 +371,5 @@ Responsive: Scales to container width; on narrow screens, panels stack verticall
 !!! mascot-celebration "Chapter 18 complete — you grow safe food!"
     <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Cress leaps with arms raised">
     Food safety isn't the most exciting topic, but it's the most important one when real people eat what you grow. You now understand the pathogen risks specific to recirculating systems, the HACCP framework for systematic prevention, and the sanitization tools that keep biofilm at bay. Chapter 19 shifts to energy — specifically solar energy: how photovoltaic systems power off-grid hydroponic operations, how to size a battery bank, and how to model the economics of solar vs. grid electricity for your grow room. Let's harvest some sunlight!
+
+[See Annotated References](./references.md)

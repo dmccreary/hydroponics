@@ -327,3 +327,5 @@ Visual style: Green shaded band for pH optimal, blue band for EC optimal; red li
 !!! mascot-celebration "Chapter 5 complete — you can mix professional-quality nutrient solution!"
     <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Cress leaps with arms raised">
     You now understand EC and ppm, why nutrient formulas come in two or three parts, how to mix from raw salts, and why bicarbonate is the enemy of stable pH. Chapter 6 moves from chemistry to engineering — surveying all six major hydroponic system types so you can choose the right one for your crop, budget, and experience level. Let's build something!
+
+[See Annotated References](./references.md)

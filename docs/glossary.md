@@ -879,7 +879,7 @@ EC meters are generally more stable than pH electrodes but still drift over time
 
 The process of calibrating a pH meter using purchased or prepared buffer solutions of known pH (pH 4.0 and pH 7.0 are the standard two-point calibration references) before each use or at least daily, ensuring accurate pH readings throughout the growing cycle.
 
-pH meter calibration is a footgun when neglected: the electrode drift is gradual and invisible, so an uncalibrated meter produces plausible-looking but wrong readings that lead to systematic under- or over-correction of pH for weeks before crop symptoms appear.
+pH meter calibration is a silent trap when neglected: the electrode drift is gradual and invisible, so an uncalibrated meter produces plausible-looking but wrong readings that lead to systematic under- or over-correction of pH for weeks before crop symptoms appear.
 
 **Example:** A student who calibrates their pH meter weekly records a systematic 0.3 pH unit drift between calibrations — meaning that without weekly calibration, their target of pH 6.0 would actually be pH 5.7 by end of week, requiring more pH-Up than expected and distorting their experiment results.
 

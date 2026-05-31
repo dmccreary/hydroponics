@@ -94,7 +94,7 @@ Test your understanding of I2C, SPI, UART, GPIO, ADC, PWM, interrupts, and async
 </div>
 
 ??? question "Show Answer"
-    The correct answer is **B**. This is a significant footgun in file I/O. Opening a file with `open("data.csv", "w")` creates the file if it does not exist, but if the file already contains data, it immediately truncates (deletes) all existing content before writing. If a hydroponics controller logs data hourly and opens in write mode at each write, every new log entry destroys all previous data, leaving only the most recent record. Append mode (`"a"`) moves the file pointer to the end and adds new content without touching existing data, correctly building a cumulative time-series log.
+    The correct answer is **B**. This is a significant trap in file I/O. Opening a file with `open("data.csv", "w")` creates the file if it does not exist, but if the file already contains data, it immediately truncates (deletes) all existing content before writing. If a hydroponics controller logs data hourly and opens in write mode at each write, every new log entry destroys all previous data, leaving only the most recent record. Append mode (`"a"`) moves the file pointer to the end and adds new content without touching existing data, correctly building a cumulative time-series log.
 
     **Concept Tested:** CSV Data Logging
 
@@ -110,7 +110,7 @@ Test your understanding of I2C, SPI, UART, GPIO, ADC, PWM, interrupts, and async
 </div>
 
 ??? question "Show Answer"
-    The correct answer is **B**. Active-low relay modules activate when the IN pin is pulled to 0V (logic LOW) and deactivate when the IN pin is at 3.3V (logic HIGH). This inverts expected behavior: `relay_pin.value(0)` turns the pump ON; `relay_pin.value(1)` turns it OFF. This is a subtle footgun — code written with intuitive logic (`1 = on, 0 = off`) will control the pump in reverse. Additionally, if the Pico resets or the control pin floats to HIGH, the relay deactivates (safe default). Always check relay module documentation for active-high vs. active-low before writing control code.
+    The correct answer is **B**. Active-low relay modules activate when the IN pin is pulled to 0V (logic LOW) and deactivate when the IN pin is at 3.3V (logic HIGH). This inverts expected behavior: `relay_pin.value(0)` turns the pump ON; `relay_pin.value(1)` turns it OFF. This is a subtle trap — code written with intuitive logic (`1 = on, 0 = off`) will control the pump in reverse. Additionally, if the Pico resets or the control pin floats to HIGH, the relay deactivates (safe default). Always check relay module documentation for active-high vs. active-low before writing control code.
 
     **Concept Tested:** Relay Control
 

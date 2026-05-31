@@ -30,7 +30,7 @@ Test your understanding of MicroPython networking, MQTT, REST APIs, boot sequenc
 </div>
 
 ??? question "Show Answer"
-    The correct answer is **B**. In MQTT, a broker (like Mosquitto) sits centrally and manages message routing. Sensors publish readings to named topics (e.g., `hydroponics/tank1/ph`). Any number of subscribers (dashboard, alert service, data logger, phone app) can independently subscribe to those topics and receive every update. This decoupling means: adding a new consumer requires no changes to the sensor code; a sensor can publish while its consumers are offline (messages queue); and one sensor reading can simultaneously update a dashboard, trigger an alarm, and log to a database. HTTP requires direct request/response connections between specific endpoints.
+    The correct answer is **B**. In MQTT, a broker (like Mosquito) sits centrally and manages message routing. Sensors publish readings to named topics (e.g., `hydroponics/tank1/ph`). Any number of subscribers (dashboard, alert service, data logger, phone app) can independently subscribe to those topics and receive every update. This decoupling means: adding a new consumer requires no changes to the sensor code; a sensor can publish while its consumers are offline (messages queue); and one sensor reading can simultaneously update a dashboard, trigger an alarm, and log to a database. HTTP requires direct request/response connections between specific endpoints.
 
     **Concept Tested:** MQTT Publish/Subscribe
 
@@ -46,7 +46,7 @@ Test your understanding of MicroPython networking, MQTT, REST APIs, boot sequenc
 </div>
 
 ??? question "Show Answer"
-    The correct answer is **B**. This is a footgun specific to MicroPython's `urequests` library. Each `urequests.get()` call opens a TCP socket and allocates a response buffer. Unlike CPython where the garbage collector can reclaim these automatically, MicroPython on the Pico W has limited RAM and the socket does not automatically close when the response object goes out of scope. Without explicit `response.close()`, each API call leaks a socket and its memory buffer. After dozens of calls in a long-running monitoring loop, the Pico runs out of memory and crashes. Always call `response.close()` immediately after reading the response data.
+    The correct answer is **B**. This is a common pitfall specific to MicroPython's `urequests` library. Each `urequests.get()` call opens a TCP socket and allocates a response buffer. Unlike CPython where the garbage collector can reclaim these automatically, MicroPython on the Pico W has limited RAM and the socket does not automatically close when the response object goes out of scope. Without explicit `response.close()`, each API call leaks a socket and its memory buffer. After dozens of calls in a long-running monitoring loop, the Pico runs out of memory and crashes. Always call `response.close()` immediately after reading the response data.
 
     **Concept Tested:** Memory Management
 
@@ -78,7 +78,7 @@ Test your understanding of MicroPython networking, MQTT, REST APIs, boot sequenc
 </div>
 
 ??? question "Show Answer"
-    The correct answer is **B**. Directly overwriting `main.py` during download is a dangerous footgun: if the network connection drops mid-download, the file is partially written — the device then boots with corrupted firmware and may become unrecoverable remotely. The safe pattern is: (1) download new code to a temp file (`main.py.new`); (2) verify the file is complete and valid (check file size, or compute a hash); (3) atomically rename `main.py.new` to `main.py`. This ensures the device always has either the old valid firmware or the new valid firmware, never a corrupt partial file.
+    The correct answer is **B**. Directly overwriting `main.py` during download is a dangerous mistake: if the network connection drops mid-download, the file is partially written — the device then boots with corrupted firmware and may become unrecoverable remotely. The safe pattern is: (1) download new code to a temp file (`main.py.new`); (2) verify the file is complete and valid (check file size, or compute a hash); (3) atomically rename `main.py.new` to `main.py`. This ensures the device always has either the old valid firmware or the new valid firmware, never a corrupt partial file.
 
     **Concept Tested:** OTA Updates
 

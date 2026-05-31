@@ -505,3 +505,5 @@ Responsive: Scales to container width; on narrow screens, stacks left/center/rig
 !!! mascot-celebration "Chapter 14 complete — your grow room is online!"
     <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Cress leaps with arms raised">
     Your sensor node streams data to an MQTT broker, recovers from crashes with the watchdog timer, and updates its own firmware over Wi-Fi. Chapter 15 steps back to the physical side: the electronics and sensors themselves — how pH electrodes work at the chemistry level, how to wire and calibrate EC probes, how relay circuits are designed, and how to enclosure your build for a wet environment. It's time to get hands-on with the hardware!
+
+[See Annotated References](./references.md)

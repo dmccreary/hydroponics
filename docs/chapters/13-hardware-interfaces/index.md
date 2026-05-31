@@ -567,3 +567,5 @@ Responsive: Scales to container width; protocol lanes rearrange from radial to t
 !!! mascot-celebration "Chapter 13 complete — your sensors are live!"
     <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Cress leaps with arms raised">
     You can now read every type of hydroponic sensor, control pumps and lights, log data to flash, and run concurrent sensor tasks — all on a $6 microcontroller. Chapter 14 takes the data off-device: MQTT for real-time streaming, HTTP for web dashboards, watchdog timers for crash recovery, and OTA updates so you can push firmware changes without touching the hardware. The cloud awaits, growers!
+
+[See Annotated References](./references.md)

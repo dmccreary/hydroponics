@@ -46,7 +46,7 @@ Test your understanding of MicroPython hardware constraints, data types, control
 </div>
 
 ??? question "Show Answer"
-    The correct answer is **B**. This is a classic Python footgun. The `not` operator uses truthiness evaluation: `not 0` is `True`, `not 0.0` is `True`, `not ""` is `True`. If a sensor returns a valid reading of 0 (e.g., a dissolved oxygen sensor reading 0 mg/L in an anaerobic environment, or a temperature sensor at 0°C), `if not reading` would incorrectly branch to the error handling path. `if reading is None` only triggers when the value is explicitly `None`, correctly distinguishing "sensor failed and returned nothing" from "sensor successfully measured zero."
+    The correct answer is **B**. This is a classic Python pitfall. The `not` operator uses truthiness evaluation: `not 0` is `True`, `not 0.0` is `True`, `not ""` is `True`. If a sensor returns a valid reading of 0 (e.g., a dissolved oxygen sensor reading 0 mg/L in an anaerobic environment, or a temperature sensor at 0°C), `if not reading` would incorrectly branch to the error handling path. `if reading is None` only triggers when the value is explicitly `None`, correctly distinguishing "sensor failed and returned nothing" from "sensor successfully measured zero."
 
     **Concept Tested:** None Checks
 
@@ -158,7 +158,7 @@ Test your understanding of MicroPython hardware constraints, data types, control
 </div>
 
 ??? question "Show Answer"
-    The correct answer is **B**. A pump valve opened without a hardware-enforced maximum timeout is a dangerous footgun: if the software controlling the valve fails (exception, logic error, program crash) while the valve is open, the valve stays open indefinitely, flooding the grow space or depleting the nutrient reservoir. The correct defensive pattern is a hardware watchdog or a maximum duration guard that closes the valve and raises an alarm if the expected completion signal does not arrive within the calculated time plus a safety margin. Comments and logging are valuable but do not prevent the hardware failure mode.
+    The correct answer is **B**. A pump valve opened without a hardware-enforced maximum timeout is a dangerous design flaw: if the software controlling the valve fails (exception, logic error, program crash) while the valve is open, the valve stays open indefinitely, flooding the grow space or depleting the nutrient reservoir. The correct defensive pattern is a hardware watchdog or a maximum duration guard that closes the valve and raises an alarm if the expected completion signal does not arrive within the calculated time plus a safety margin. Comments and logging are valuable but do not prevent the hardware failure mode.
 
     **Concept Tested:** Safe Hardware Control Patterns
 

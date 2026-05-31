@@ -453,3 +453,5 @@ The following 25 concepts from this chapter form the foundation for everything t
 !!! mascot-celebration "Chapter 1 complete — you're already thinking like a grower!"
     <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Cress leaps with both arms raised">
     You just covered 2,000 years of growing history, the cell biology of a plant root, the biochemistry of photosynthesis and respiration, and the full arc from mason jar to vertical farm in one chapter. That's nutrient-level cool! In Chapter 2, we go underwater — into the root zone itself — to understand exactly how a plant root absorbs the nutrients you will be mixing in the chapters that follow. Root for it!
+
+[See Annotated References](./references.md)

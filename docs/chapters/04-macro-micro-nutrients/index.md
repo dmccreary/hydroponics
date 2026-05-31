@@ -241,3 +241,5 @@ Understanding Mulder's Chart also explains why simply "adding more of the defici
 !!! mascot-celebration "Chapter 4 complete — you now know what every element does!"
     <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Cress leaps with arms raised">
     That was the most nutrition-dense chapter in the book. You now know the biochemical job of every essential nutrient, why they become unavailable outside the pH optimum, and how they interfere with each other according to Mulder's Chart. Chapter 5 takes this knowledge one step further: actually mixing nutrient solutions from raw mineral salts, measuring EC and pH, and keeping the solution balanced over the life of a crop. Time to get your hands wet!
+
+[See Annotated References](./references.md)

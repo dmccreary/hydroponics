@@ -490,3 +490,5 @@ Interactivity: All left-panel changes update the chart instantly. Hovering the c
 !!! mascot-celebration "Chapter 16 complete — you're a hydro data scientist!"
     <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Cress leaps with arms raised">
     You can now transform a raw CSV log from a 35-day lettuce crop into a clean, analyzed dataset with trend lines, correlation matrices, and statistical summaries. Chapter 17 takes these numbers and makes them visible: Matplotlib and Plotly charts, real-time streaming dashboards, Statistical Process Control charts, and anomaly detection. The data story becomes a data picture — let's draw it!
+
+[See Annotated References](./references.md)

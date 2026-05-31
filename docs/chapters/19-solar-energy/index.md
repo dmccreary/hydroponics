@@ -453,3 +453,5 @@ Interactivity: All inputs update the right column results and chart in real-time
 !!! mascot-celebration "Chapter 19 complete — your grow room runs on sunshine!"
     <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Cress leaps with arms raised">
     You've designed, sized, and costed a solar power system for a real hydroponic operation — and built the energy dashboard to monitor it live. Chapter 20 scales everything up: multi-tier vertical farms, robotics, AI crop management, container farms, food mile calculations, and the commercial operations that are reshaping urban food supply chains. The future of food is vertical — let's build it!
+
+[See Annotated References](./references.md)

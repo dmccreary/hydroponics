@@ -494,3 +494,5 @@ Responsive: Scales to container width; on narrow screens, stack the four layers 
 !!! mascot-celebration "Chapter 15 complete — you can build the hardware!"
     <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Cress leaps with arms raised">
     You now understand every layer of the hydroponic electronics stack — from glass electrodes and peristaltic pumps to op-amp conditioning and waterproof enclosures. Chapter 16 shifts to what happens to sensor data after it's collected: pandas DataFrames, time-series analysis, rolling statistics, and correlation analysis that turn raw pH and EC logs into actionable insights about your crop's health. Let's crunch some numbers!
+
+[See Annotated References](./references.md)

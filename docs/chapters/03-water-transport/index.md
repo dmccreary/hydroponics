@@ -314,3 +314,5 @@ Visual style: Green data line, teal trend line, gray grid; controls in clean rig
 !!! mascot-celebration "Chapter 3 complete — you can read what your plants are telling you!"
     <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Cress leaps with arms raised">
     You now have the diagnostic vocabulary that experienced growers build over years of trial and error. You know why roots turn brown, what tip burn actually means, why interveinal chlorosis on old leaves differs from new leaves, and how to measure growth properly. Chapter 4 dives into the nutrients themselves — all 17 essential elements — and the pH chemistry that controls whether they are available to your plants. The nutrient chapters are where the science gets really practical!
+
+[See Annotated References](./references.md)

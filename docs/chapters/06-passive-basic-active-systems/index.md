@@ -274,3 +274,5 @@ Visual style: Green for confirmed paths, gray for unexplored branches, teal for 
 !!! mascot-celebration "Chapter 6 complete — you know all six system architectures!"
     <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Cress leaps with arms raised">
     You can now look at any hydroponic system and identify its type, understand how it delivers oxygen and nutrients, and assess its failure risk. Chapter 7 dives deeper into the engineering details that determine whether a system runs reliably for a full crop cycle: pump sizing, reservoir design, failure modes, redundancy, and the cleaning protocols between cycles. The devil is in the details!
+
+[See Annotated References](./references.md)

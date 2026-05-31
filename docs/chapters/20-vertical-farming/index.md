@@ -339,3 +339,5 @@ Interactivity:
 !!! mascot-celebration "Chapter 20 complete — you can see the whole farm!"
     <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Cress leaps with arms raised">
     From mason jar to vertical farm — you've traveled the full arc of modern hydroponics. Chapter 21 is the capstone: the financial model that determines whether all this technology, engineering, and food-safety rigor actually makes economic sense. NPV, IRR, break-even analysis, Monte Carlo simulation of risk scenarios, and grant writing — the business case for your hydroponic operation. Numbers that tell the whole story. Let's count the harvest!
+
+[See Annotated References](./references.md)

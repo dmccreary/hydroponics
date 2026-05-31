@@ -30,66 +30,87 @@ nav:
       - 1. Introduction:
           - Content: chapters/01-introduction/index.md
           - Quiz: chapters/01-introduction/quiz.md
+          - Annotated References: chapters/01-introduction/references.md
       - 2. Root Biology:
           - Content: chapters/02-root-biology/index.md
           - Quiz: chapters/02-root-biology/quiz.md
+          - Annotated References: chapters/02-root-biology/references.md
       - 3. Water & Plant Health:
           - Content: chapters/03-water-transport/index.md
           - Quiz: chapters/03-water-transport/quiz.md
+          - Annotated References: chapters/03-water-transport/references.md
       - 4. Macro & Micro Nutrients:
           - Content: chapters/04-macro-micro-nutrients/index.md
           - Quiz: chapters/04-macro-micro-nutrients/quiz.md
+          - Annotated References: chapters/04-macro-micro-nutrients/references.md
       - 5. Nutrient Chemistry:
           - Content: chapters/05-nutrient-solution-chemistry/index.md
           - Quiz: chapters/05-nutrient-solution-chemistry/quiz.md
+          - Annotated References: chapters/05-nutrient-solution-chemistry/references.md
       - 6. Basic Systems:
           - Content: chapters/06-passive-basic-active-systems/index.md
           - Quiz: chapters/06-passive-basic-active-systems/quiz.md
+          - Annotated References: chapters/06-passive-basic-active-systems/references.md
       - 7. Advanced Systems:
           - Content: chapters/07-advanced-systems/index.md
           - Quiz: chapters/07-advanced-systems/quiz.md
+          - Annotated References: chapters/07-advanced-systems/references.md
       - 8. DIY & School Projects:
           - Content: chapters/08-diy-school-projects/index.md
           - Quiz: chapters/08-diy-school-projects/quiz.md
+          - Annotated References: chapters/08-diy-school-projects/references.md
       - 9. Growing Media & Crops:
           - Content: chapters/09-growing-media-crops/index.md
           - Quiz: chapters/09-growing-media-crops/quiz.md
+          - Annotated References: chapters/09-growing-media-crops/references.md
       - 10. Lighting Science:
           - Content: chapters/10-lighting-science/index.md
           - Quiz: chapters/10-lighting-science/quiz.md
+          - Annotated References: chapters/10-lighting-science/references.md
       - 11. Environmental Control:
           - Content: chapters/11-environmental-control/index.md
           - Quiz: chapters/11-environmental-control/quiz.md
+          - Annotated References: chapters/11-environmental-control/references.md
       - 12. MicroPython Fundamentals:
           - Content: chapters/12-micropython-fundamentals/index.md
           - Quiz: chapters/12-micropython-fundamentals/quiz.md
+          - Annotated References: chapters/12-micropython-fundamentals/references.md
       - 13. Hardware Interfaces:
           - Content: chapters/13-hardware-interfaces/index.md
           - Quiz: chapters/13-hardware-interfaces/quiz.md
+          - Annotated References: chapters/13-hardware-interfaces/references.md
       - 14. Networking & IoT:
           - Content: chapters/14-networking-iot/index.md
           - Quiz: chapters/14-networking-iot/quiz.md
+          - Annotated References: chapters/14-networking-iot/references.md
       - 15. Sensors & Electronics:
           - Content: chapters/15-sensors-electronics/index.md
           - Quiz: chapters/15-sensors-electronics/quiz.md
+          - Annotated References: chapters/15-sensors-electronics/references.md
       - 16. Data Collection:
           - Content: chapters/16-data-collection-analysis/index.md
           - Quiz: chapters/16-data-collection-analysis/quiz.md
+          - Annotated References: chapters/16-data-collection-analysis/references.md
       - 17. Data Visualization:
           - Content: chapters/17-data-visualization/index.md
           - Quiz: chapters/17-data-visualization/quiz.md
+          - Annotated References: chapters/17-data-visualization/references.md
       - 18. Food Safety:
           - Content: chapters/18-food-safety/index.md
           - Quiz: chapters/18-food-safety/quiz.md
+          - Annotated References: chapters/18-food-safety/references.md
       - 19. Solar Energy:
           - Content: chapters/19-solar-energy/index.md
           - Quiz: chapters/19-solar-energy/quiz.md
+          - Annotated References: chapters/19-solar-energy/references.md
       - 20. Vertical Farming:
           - Content: chapters/20-vertical-farming/index.md
           - Quiz: chapters/20-vertical-farming/quiz.md
+          - Annotated References: chapters/20-vertical-farming/references.md
       - 21. Financial Modeling:
           - Content: chapters/21-financial-modeling/index.md
           - Quiz: chapters/21-financial-modeling/quiz.md
+          - Annotated References: chapters/21-financial-modeling/references.md
 
   - Learning Graph:
       - Introduction: learning-graph/index.md

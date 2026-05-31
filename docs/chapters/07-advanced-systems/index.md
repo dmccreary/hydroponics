@@ -234,3 +234,5 @@ A complete cleaning protocol between cycles:
 !!! mascot-celebration "Chapter 7 complete — you engineer systems that last!"
     <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Cress leaps with arms raised">
     You now think about hydroponic systems as an engineer: failure modes, redundancy, maintenance protocols, and scalability paths. Chapter 8 gets practical — build instructions for the three most common beginner and school systems, with materials lists, step-by-step assembly, and a school-safe approach to getting students growing within a single class period. Let's build!
+
+[See Annotated References](./references.md)

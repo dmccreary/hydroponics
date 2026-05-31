@@ -310,3 +310,5 @@ For a grow light with 35% photon conversion efficiency: Heat = 600W × 0.65 = 39
 !!! mascot-celebration "Chapter 10 complete — you can now engineer light for plant growth!"
     <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Cress leaps with arms raised">
     You can calculate DLI, evaluate grow lights by their efficacy in µmol/J, design photoperiod schedules, and estimate energy cost per kilogram of yield. Chapter 11 covers the other half of the aerial environment — temperature, humidity, CO₂, and vapor pressure deficit — the variables that interact with light to determine ultimate plant performance. Let's control the whole environment!
+
+[See Annotated References](./references.md)

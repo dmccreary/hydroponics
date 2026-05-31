@@ -304,3 +304,5 @@ Each upgrade adds both capability and complexity. Master one level before adding
 !!! mascot-celebration "Chapter 8 complete — you can now build, plant, and grow!"
     <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Cress leaps with arms raised">
     You just completed the most hands-on chapter in the book. You can now build a working hydroponic system from hardware-store materials, select the right first crop, keep a proper data log, and design a real experiment. Chapter 9 shifts focus to what goes around the roots — growing media — and to crop management practices that maximize yield quality from seedling to harvest. Keep growing!
+
+[See Annotated References](./references.md)

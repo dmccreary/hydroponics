@@ -350,3 +350,5 @@ Hydroponic system designs that maintain high root zone oxygen include:
 !!! mascot-celebration "Chapter 2 complete — you understand roots at the molecular level!"
     <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Cress leaps with arms raised">
     You just worked through root anatomy, two ion uptake mechanisms, osmosis, transpiration, the photosynthesis machinery in chloroplasts, and the chemistry that roots do to their surroundings. That's a lot of biology — and every piece of it connects directly to decisions you will make as a grower. Chapter 3 takes the next step: what goes wrong when conditions aren't optimal, and how to read the plant's visual warning signs before they become permanent damage. Let's grow!
+
+[See Annotated References](./references.md)

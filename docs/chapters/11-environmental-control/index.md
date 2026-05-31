@@ -274,3 +274,5 @@ Exceeding any alarm threshold should trigger a notification — at minimum an au
 !!! mascot-celebration "Chapter 11 complete — you control the whole aerial environment!"
     <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Cress leaps with arms raised">
     Temperature, humidity, VPD, CO₂, airflow, and fire safety — you now have the complete picture of the aerial grow environment. The next five chapters shift to the digital and electronic layer: MicroPython programming, sensor wiring, networking, and data visualization. If chemistry is the science of hydroponics, automation is where it becomes engineering. Let's code!
+
+[See Annotated References](./references.md)

@@ -158,7 +158,7 @@ Test your understanding of pH probe electrochemistry, EC measurement, temperatur
 </div>
 
 ??? question "Show Answer"
-    The correct answer is **B**. This is a footgun: a simple resistive voltage divider (two resistors) is a passive one-directional circuit — it reduces 5V to 3.3V for signals going from the sensor to the Pico, but it cannot safely translate 3.3V Pico outputs to 5V for signals going the other direction. For bidirectional I2C, dedicated level-shifter modules using N-channel MOSFETs (such as the BSS138-based TXB0102 or MOSFET-based 4-channel modules) allow both the 3.3V Pico and 5V sensor to drive the bus lines at their respective logic levels. Using a simple voltage divider on a bidirectional I2C bus can damage the Pico or cause unreliable communication.
+    The correct answer is **B**. This is a subtle trap: a simple resistive voltage divider (two resistors) is a passive one-directional circuit — it reduces 5V to 3.3V for signals going from the sensor to the Pico, but it cannot safely translate 3.3V Pico outputs to 5V for signals going the other direction. For bidirectional I2C, dedicated level-shifter modules using N-channel MOSFETs (such as the BSS138-based TXB0102 or MOSFET-based 4-channel modules) allow both the 3.3V Pico and 5V sensor to drive the bus lines at their respective logic levels. Using a simple voltage divider on a bidirectional I2C bus can damage the Pico or cause unreliable communication.
 
     **Concept Tested:** Bidirectional Level Shifting
 

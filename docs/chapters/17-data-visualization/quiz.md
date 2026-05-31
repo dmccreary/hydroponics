@@ -158,7 +158,7 @@ Test your understanding of Matplotlib, Plotly, real-time dashboards, statistical
 </div>
 
 ??? question "Show Answer"
-    The correct answer is **B**. A common dashboard footgun: the first version works well because there is only one day of data. After 6 months, the CSV or database has 260,000+ rows. If the callback loads the entire file and filters it, each 1-minute update reads a growing dataset — update latency increases from milliseconds to seconds. The correct approach is to bound the query at the database or file level: `SELECT * FROM readings WHERE timestamp >= NOW() - INTERVAL '24 hours'` retrieves a constant volume of ~1,440 rows (at 1/minute) regardless of total history size. This keeps dashboard update latency constant across the entire multi-year facility operation.
+    The correct answer is **B**. A common dashboard pitfall: the first version works well because there is only one day of data. After 6 months, the CSV or database has 260,000+ rows. If the callback loads the entire file and filters it, each 1-minute update reads a growing dataset — update latency increases from milliseconds to seconds. The correct approach is to bound the query at the database or file level: `SELECT * FROM readings WHERE timestamp >= NOW() - INTERVAL '24 hours'` retrieves a constant volume of ~1,440 rows (at 1/minute) regardless of total history size. This keeps dashboard update latency constant across the entire multi-year facility operation.
 
     **Concept Tested:** Dashboard Performance
 

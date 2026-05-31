@@ -140,8 +140,8 @@ function updateCanvasSize() {
     rightPanelW = Math.floor(canvasWidth * 0.23);
     centerW = canvasWidth - leftPanelW - rightPanelW;
     radarCx = leftPanelW + centerW / 2;
-    radarCy = drawHeight / 2 + 10;
-    radarR = Math.min(centerW * 0.42, drawHeight * 0.38);
+    radarCy = drawHeight / 2 - 8;
+    radarR = Math.min(centerW * 0.32, drawHeight * 0.32);
 }
 
 function setup() {
@@ -464,8 +464,8 @@ function drawTooltip(hv) {
 }
 
 function drawLegendRow() {
-    // Below the radar, above the controls
-    const y = drawHeight - 36;
+    // Below the radar, above the controls (reserve room for wrapped 2nd row)
+    const y = drawHeight - 60;
     const x0 = leftPanelW + 8;
     const w = centerW - 16;
 

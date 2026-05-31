@@ -1,0 +1,2286 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An interactive intelligent textbook on hydroponics for advanced high-school and college students, featuring MicroSims that bring plant physiology, nutrient science, and system design to life.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/hydroponics/chapters/11-environmental-control/quiz/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../../12-micropython-fundamentals/">
+      
+      
+      <link rel="icon" href="../../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Quiz - Hydroponics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../../css/mascot.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta property="og:type" content="website">
+      
+        <meta property="og:title" content="Quiz - Hydroponics">
+      
+        <meta property="og:description" content="An interactive intelligent textbook on hydroponics for advanced high-school and college students, featuring MicroSims that bring plant physiology, nutrient science, and system design to life.">
+      
+        <meta property="og:image" content="https://dmccreary.github.io/hydroponics/assets/images/social/chapters/11-environmental-control/quiz.png">
+      
+        <meta property="og:image:type" content="image/png">
+      
+        <meta property="og:image:width" content="1200">
+      
+        <meta property="og:image:height" content="630">
+      
+        <meta property="og:url" content="https://dmccreary.github.io/hydroponics/chapters/11-environmental-control/quiz/">
+      
+        <meta name="twitter:card" content="summary_large_image">
+      
+        <meta name="twitter:title" content="Quiz - Hydroponics">
+      
+        <meta name="twitter:description" content="An interactive intelligent textbook on hydroponics for advanced high-school and college students, featuring MicroSims that bring plant physiology, nutrient science, and system design to life.">
+      
+        <meta name="twitter:image" content="https://dmccreary.github.io/hydroponics/assets/images/social/chapters/11-environmental-control/quiz.png">
+      
+    
+    
+  <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#quiz-environmental-control" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Hydroponics" class="md-header__button md-logo" aria-label="Hydroponics" data-md-component="logo">
+      
+  <img src="../../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Hydroponics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Quiz
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/hydroponics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Hydroponics" class="md-nav__button md-logo" aria-label="Hydroponics" data-md-component="logo">
+      
+  <img src="../../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    Hydroponics
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/hydroponics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../01-introduction/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    1. Introduction
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../02-root-biology/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    2. Root Biology
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../03-water-transport/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    3. Water &amp; Plant Health
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../04-macro-micro-nutrients/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    4. Macro &amp; Micro Nutrients
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../05-nutrient-solution-chemistry/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    5. Nutrient Chemistry
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../06-passive-basic-active-systems/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    6. Basic Systems
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../07-advanced-systems/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    7. Advanced Systems
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../08-diy-school-projects/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    8. DIY &amp; School Projects
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../09-growing-media-crops/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    9. Growing Media &amp; Crops
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../10-lighting-science/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    10. Lighting Science
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_12" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    11. Environmental Control
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_12" id="__nav_4_12_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_12_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_12">
+            <span class="md-nav__icon md-icon"></span>
+            11. Environmental Control
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Quiz
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-what-does-vapor-pressure-deficit-vpd-measure-and-why-is-it-more-useful-than-relative-humidity-alone-for-managing-plant-transpiration" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. What does Vapor Pressure Deficit (VPD) measure, and why is it more useful than relative humidity alone for managing plant transpiration?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-a-grower-measures-air-temperature-of-24c-and-relative-humidity-of-65-in-their-grow-room-using-the-vpd-formula-vpd-svp-1-rh100-and-svp-at-24c-298-kpa-what-is-the-approximate-vpd" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. A grower measures air temperature of 24°C and relative humidity of 65% in their grow room. Using the VPD formula (VPD = SVP × (1 − RH/100)) and SVP at 24°C ≈ 2.98 kPa, what is the approximate VPD?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-co2-enrichment-to-12001500-ppm-theoretically-increases-photosynthesis-but-this-benefit-only-materializes-under-what-condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. CO₂ enrichment to 1,200–1,500 ppm theoretically increases photosynthesis, but this benefit only materializes under what condition?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-what-is-the-correct-method-for-calculating-the-minimum-ventilation-fan-cfm-required-to-achieve-one-air-exchange-per-three-minutes-in-a-10-ft-12-ft-8-ft-grow-room" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. What is the correct method for calculating the minimum ventilation fan CFM required to achieve one air exchange per three minutes in a 10 ft × 12 ft × 8 ft grow room?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-why-is-negative-pressure-preferred-over-positive-pressure-in-an-indoor-grow-room-ventilation-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Why is negative pressure preferred over positive pressure in an indoor grow room ventilation design?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-what-is-the-primary-function-of-oscillating-circulation-fans-as-distinct-from-the-exhaust-fan-in-a-grow-room" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. What is the primary function of oscillating circulation fans (as distinct from the exhaust fan) in a grow room?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-a-grower-notices-their-lettuce-has-widespread-tip-burn-despite-maintaining-ec-ph-and-temperature-in-optimal-ranges-humidity-is-consistently-85-what-is-the-most-likely-cause-and-solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. A grower notices their lettuce has widespread tip burn despite maintaining EC, pH, and temperature in optimal ranges. Humidity is consistently 85%. What is the most likely cause and solution?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-what-alarm-setpoints-should-be-programmed-into-an-environmental-monitoring-system-for-an-unattended-indoor-lettuce-farm" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. What alarm setpoints should be programmed into an environmental monitoring system for an unattended indoor lettuce farm?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-during-the-fruiting-phase-of-tomatoes-versus-the-vegetative-phase-of-lettuce-how-should-the-target-vpd-differ-and-why" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. During the fruiting phase of tomatoes versus the vegetative phase of lettuce, how should the target VPD differ, and why?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-what-is-the-purpose-of-a-daynight-temperature-differential-dif-strategy-in-commercial-greenhouse-tomato-production" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. What is the purpose of a "day/night temperature differential" (DIF) strategy in commercial greenhouse tomato production?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../12-micropython-fundamentals/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    12. MicroPython Fundamentals
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../13-hardware-interfaces/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    13. Hardware Interfaces
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../14-networking-iot/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    14. Networking &amp; IoT
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../15-sensors-electronics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    15. Sensors &amp; Electronics
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../16-data-collection-analysis/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    16. Data Collection
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../17-data-visualization/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    17. Data Visualization
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../18-food-safety/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    18. Food Safety
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../19-solar-energy/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    19. Solar Energy
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../20-vertical-farming/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    20. Vertical Farming
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../21-financial-modeling/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    21. Financial Modeling
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-what-does-vapor-pressure-deficit-vpd-measure-and-why-is-it-more-useful-than-relative-humidity-alone-for-managing-plant-transpiration" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. What does Vapor Pressure Deficit (VPD) measure, and why is it more useful than relative humidity alone for managing plant transpiration?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-a-grower-measures-air-temperature-of-24c-and-relative-humidity-of-65-in-their-grow-room-using-the-vpd-formula-vpd-svp-1-rh100-and-svp-at-24c-298-kpa-what-is-the-approximate-vpd" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. A grower measures air temperature of 24°C and relative humidity of 65% in their grow room. Using the VPD formula (VPD = SVP × (1 − RH/100)) and SVP at 24°C ≈ 2.98 kPa, what is the approximate VPD?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-co2-enrichment-to-12001500-ppm-theoretically-increases-photosynthesis-but-this-benefit-only-materializes-under-what-condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. CO₂ enrichment to 1,200–1,500 ppm theoretically increases photosynthesis, but this benefit only materializes under what condition?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-what-is-the-correct-method-for-calculating-the-minimum-ventilation-fan-cfm-required-to-achieve-one-air-exchange-per-three-minutes-in-a-10-ft-12-ft-8-ft-grow-room" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. What is the correct method for calculating the minimum ventilation fan CFM required to achieve one air exchange per three minutes in a 10 ft × 12 ft × 8 ft grow room?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-why-is-negative-pressure-preferred-over-positive-pressure-in-an-indoor-grow-room-ventilation-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Why is negative pressure preferred over positive pressure in an indoor grow room ventilation design?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-what-is-the-primary-function-of-oscillating-circulation-fans-as-distinct-from-the-exhaust-fan-in-a-grow-room" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. What is the primary function of oscillating circulation fans (as distinct from the exhaust fan) in a grow room?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-a-grower-notices-their-lettuce-has-widespread-tip-burn-despite-maintaining-ec-ph-and-temperature-in-optimal-ranges-humidity-is-consistently-85-what-is-the-most-likely-cause-and-solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. A grower notices their lettuce has widespread tip burn despite maintaining EC, pH, and temperature in optimal ranges. Humidity is consistently 85%. What is the most likely cause and solution?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-what-alarm-setpoints-should-be-programmed-into-an-environmental-monitoring-system-for-an-unattended-indoor-lettuce-farm" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. What alarm setpoints should be programmed into an environmental monitoring system for an unattended indoor lettuce farm?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-during-the-fruiting-phase-of-tomatoes-versus-the-vegetative-phase-of-lettuce-how-should-the-target-vpd-differ-and-why" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. During the fruiting phase of tomatoes versus the vegetative phase of lettuce, how should the target VPD differ, and why?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-what-is-the-purpose-of-a-daynight-temperature-differential-dif-strategy-in-commercial-greenhouse-tomato-production" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. What is the purpose of a "day/night temperature differential" (DIF) strategy in commercial greenhouse tomato production?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/hydroponics/blob/main/docs/chapters/11-environmental-control/quiz.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
+    </a>
+  
+  
+
+
+<h1 id="quiz-environmental-control">Quiz: Environmental Control<a class="headerlink" href="#quiz-environmental-control" title="Permanent link">¶</a></h1>
+<p>Test your understanding of VPD, CO₂ enrichment, temperature management, air circulation, and integrated environmental control systems with these questions.</p>
+<hr>
+<h4 id="1-what-does-vapor-pressure-deficit-vpd-measure-and-why-is-it-more-useful-than-relative-humidity-alone-for-managing-plant-transpiration">1. What does Vapor Pressure Deficit (VPD) measure, and why is it more useful than relative humidity alone for managing plant transpiration?<a class="headerlink" href="#1-what-does-vapor-pressure-deficit-vpd-measure-and-why-is-it-more-useful-than-relative-humidity-alone-for-managing-plant-transpiration" title="Permanent link">¶</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>VPD measures the absolute water vapor content of the air; RH only measures temperature</li>
+<li>VPD measures the driving force for evaporation from plant leaves — the pressure difference between the water vapor inside the leaf and the air outside</li>
+<li>VPD measures CO₂ concentration relative to water vapor; RH cannot predict stomata behavior</li>
+<li>VPD is only relevant for outdoor growing; RH is adequate for controlled environments</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. VPD (vapor pressure deficit) is the difference between the saturation vapor pressure (the maximum water vapor air can hold at current temperature) and the actual vapor pressure (the water vapor currently in the air). This difference is the "pull" that drives water evaporation from plant leaf surfaces through stomata. At high VPD (dry air), plants transpire rapidly and may close stomata to prevent water stress. At low VPD (humid air), transpiration slows and calcium delivery (which is driven by transpiration) can fail. RH alone is misleading because the same 70% RH has very different evaporative pull at 20°C versus 30°C.</p>
+<p><strong>Concept Tested:</strong> VPD Concept</p>
+</details>
+<hr>
+<h4 id="2-a-grower-measures-air-temperature-of-24c-and-relative-humidity-of-65-in-their-grow-room-using-the-vpd-formula-vpd-svp-1-rh100-and-svp-at-24c-298-kpa-what-is-the-approximate-vpd">2. A grower measures air temperature of 24°C and relative humidity of 65% in their grow room. Using the VPD formula (VPD = SVP × (1 − RH/100)) and SVP at 24°C ≈ 2.98 kPa, what is the approximate VPD?<a class="headerlink" href="#2-a-grower-measures-air-temperature-of-24c-and-relative-humidity-of-65-in-their-grow-room-using-the-vpd-formula-vpd-svp-1-rh100-and-svp-at-24c-298-kpa-what-is-the-approximate-vpd" title="Permanent link">¶</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>0.65 kPa</li>
+<li>1.04 kPa</li>
+<li>1.94 kPa</li>
+<li>2.98 kPa</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. VPD = SVP × (1 − RH/100) = 2.98 kPa × (1 − 65/100) = 2.98 × 0.35 = 1.043 kPa ≈ 1.04 kPa. This falls within the optimal vegetative VPD range of 0.8–1.2 kPa. At this VPD, stomata remain open for gas exchange while transpiration rates support adequate calcium delivery to developing leaves. VPD below 0.4 kPa creates disease-favorable humid conditions; above 1.6 kPa causes stress closure of stomata and growth slowdown.</p>
+<p><strong>Concept Tested:</strong> VPD Calculation</p>
+</details>
+<hr>
+<h4 id="3-co2-enrichment-to-12001500-ppm-theoretically-increases-photosynthesis-but-this-benefit-only-materializes-under-what-condition">3. CO₂ enrichment to 1,200–1,500 ppm theoretically increases photosynthesis, but this benefit only materializes under what condition?<a class="headerlink" href="#3-co2-enrichment-to-12001500-ppm-theoretically-increases-photosynthesis-but-this-benefit-only-materializes-under-what-condition" title="Permanent link">¶</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>CO₂ enrichment only works when nutrient solution EC is above 2.5 mS/cm</li>
+<li>CO₂ enrichment only increases photosynthesis when light intensity is already above the light saturation threshold (approximately 600 µmol/m²/s PPFD or higher)</li>
+<li>CO₂ enrichment requires temperatures above 28°C to activate the carbon fixation enzymes</li>
+<li>CO₂ enrichment is always beneficial regardless of other environmental conditions</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. CO₂ enrichment accelerates the Calvin cycle (dark reactions), but the Calvin cycle rate is only the limiting factor when light-dependent reactions are running at maximum speed. Below the light saturation point (approximately 600 µmol/m²/s for most crops), the light-dependent reactions are the bottleneck — adding more CO₂ does nothing because the system cannot process more carbon regardless. CO₂ enrichment is therefore only worth the cost in high-light intensity systems (1,000+ µmol/m²/s for fruiting crops), where light is no longer limiting.</p>
+<p><strong>Concept Tested:</strong> CO₂ Enrichment Benefits</p>
+</details>
+<hr>
+<h4 id="4-what-is-the-correct-method-for-calculating-the-minimum-ventilation-fan-cfm-required-to-achieve-one-air-exchange-per-three-minutes-in-a-10-ft-12-ft-8-ft-grow-room">4. What is the correct method for calculating the minimum ventilation fan CFM required to achieve one air exchange per three minutes in a 10 ft × 12 ft × 8 ft grow room?<a class="headerlink" href="#4-what-is-the-correct-method-for-calculating-the-minimum-ventilation-fan-cfm-required-to-achieve-one-air-exchange-per-three-minutes-in-a-10-ft-12-ft-8-ft-grow-room" title="Permanent link">¶</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>Volume (960 cu ft) ÷ 3 minutes = 320 CFM minimum</li>
+<li>Volume (960 cu ft) × 3 = 2,880 CFM minimum</li>
+<li>Area (120 sq ft) ÷ 3 = 40 CFM minimum</li>
+<li>Volume (960 cu ft) ÷ 60 = 16 CFM minimum</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>A</strong>. The ventilation fan sizing rule is: CFM = Room Volume (cubic feet) ÷ target exchange time in minutes. For one air exchange every 3 minutes: 960 cu ft ÷ 3 = 320 CFM minimum. This rate removes excess heat, humidity, and CO₂ (in non-enriched systems) and refreshes oxygen. The rule of thumb is one air exchange every 1–3 minutes for active grow rooms. Fan ratings should be checked at actual static pressure (with ducting and carbon filters), not zero-resistance ratings, which are always higher.</p>
+<p><strong>Concept Tested:</strong> Ventilation Fan Sizing</p>
+</details>
+<hr>
+<h4 id="5-why-is-negative-pressure-preferred-over-positive-pressure-in-an-indoor-grow-room-ventilation-design">5. Why is negative pressure preferred over positive pressure in an indoor grow room ventilation design?<a class="headerlink" href="#5-why-is-negative-pressure-preferred-over-positive-pressure-in-an-indoor-grow-room-ventilation-design" title="Permanent link">¶</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>Negative pressure reduces electricity consumption because exhaust fans use less power than intake fans</li>
+<li>Negative pressure ensures all outgoing air passes through carbon filters, controlling odors and preventing unfiltered air from escaping through cracks and gaps</li>
+<li>Negative pressure reduces plant transpiration by lowering the vapor pressure inside the room</li>
+<li>Positive pressure is actually preferred; negative pressure is only used for CO₂ enrichment systems</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. Negative pressure (exhaust fan capacity slightly exceeding passive intake area) means air inside the room is at slightly below ambient pressure. Any air leakage through cracks, gaps, or door seams flows inward rather than outward. This forces all outgoing air through the exhaust path — typically through a carbon filter — preventing unfiltered odors or humidity from escaping through uncontrolled pathways. Positive pressure would push grow room air (with humidity, odors, or pathogens) outward through every gap.</p>
+<p><strong>Concept Tested:</strong> Negative Pressure Ventilation</p>
+</details>
+<hr>
+<h4 id="6-what-is-the-primary-function-of-oscillating-circulation-fans-as-distinct-from-the-exhaust-fan-in-a-grow-room">6. What is the primary function of oscillating circulation fans (as distinct from the exhaust fan) in a grow room?<a class="headerlink" href="#6-what-is-the-primary-function-of-oscillating-circulation-fans-as-distinct-from-the-exhaust-fan-in-a-grow-room" title="Permanent link">¶</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>Circulation fans remove heat from LED fixtures by directing airflow across the heatsinks</li>
+<li>Oscillating circulation fans create gentle stem movement that strengthens cell walls, prevent stagnant humid boundary layers on leaves, and ensure even CO₂ distribution throughout the canopy</li>
+<li>Circulation fans provide the primary air exchange function; exhaust fans are only needed for odor control</li>
+<li>Circulation fans reduce transpiration by blowing dry air over leaf surfaces, lowering VPD</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. Oscillating circulation fans serve multiple functions simultaneously: (1) the gentle mechanical stimulation (thigmomorphogenesis) causes plants to strengthen stem cell walls, producing more compact and sturdy plants; (2) air movement disrupts stagnant humid boundary layers on leaf surfaces that would otherwise create favorable conditions for powdery mildew and botrytis; (3) air circulation ensures CO₂ is evenly distributed throughout the canopy rather than depleted at leaf surfaces. Circulation fans do not primarily remove heat — that is the exhaust fan's role.</p>
+<p><strong>Concept Tested:</strong> Air Circulation and CO₂</p>
+</details>
+<hr>
+<h4 id="7-a-grower-notices-their-lettuce-has-widespread-tip-burn-despite-maintaining-ec-ph-and-temperature-in-optimal-ranges-humidity-is-consistently-85-what-is-the-most-likely-cause-and-solution">7. A grower notices their lettuce has widespread tip burn despite maintaining EC, pH, and temperature in optimal ranges. Humidity is consistently 85%. What is the most likely cause and solution?<a class="headerlink" href="#7-a-grower-notices-their-lettuce-has-widespread-tip-burn-despite-maintaining-ec-ph-and-temperature-in-optimal-ranges-humidity-is-consistently-85-what-is-the-most-likely-cause-and-solution" title="Permanent link">¶</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>Over-fertilization is the cause; reduce EC by 50% immediately</li>
+<li>High humidity reduces transpiration, limiting calcium transport to rapidly growing leaf margins; reduce humidity to 60–70% and increase air circulation</li>
+<li>The light intensity is too low for the crop; increase PPFD to above 400 µmol/m²/s</li>
+<li>Tip burn in hydroponic lettuce always indicates pH is above 6.5; lower pH to 5.8</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. Calcium is a largely immobile nutrient transported almost entirely through the xylem via the transpiration stream. At 85% humidity, VPD is very low, stomata partially close, and transpiration — and therefore calcium delivery to the fastest-growing tissue (leaf margins and inner leaves) — slows dramatically. The result is calcium deficiency specifically at leaf tips and margins despite adequate calcium in the solution. The fix is to lower humidity to 60–70% and increase air circulation to restore transpiration rates and calcium delivery to developing tissue.</p>
+<p><strong>Concept Tested:</strong> Humidity Control</p>
+</details>
+<hr>
+<h4 id="8-what-alarm-setpoints-should-be-programmed-into-an-environmental-monitoring-system-for-an-unattended-indoor-lettuce-farm">8. What alarm setpoints should be programmed into an environmental monitoring system for an unattended indoor lettuce farm?<a class="headerlink" href="#8-what-alarm-setpoints-should-be-programmed-into-an-environmental-monitoring-system-for-an-unattended-indoor-lettuce-farm" title="Permanent link">¶</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>Only temperature alarms are needed; other parameters are self-correcting</li>
+<li>Temperature (above 30°C and below 15°C), RH (above 80%), CO₂ (below 350 ppm if enriching), and power failure notification</li>
+<li>Only CO₂ and power failure alarms are needed; temperature and humidity fluctuations are never crop-threatening</li>
+<li>Alarms should only trigger after 24 hours of out-of-range conditions to prevent false positives</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. A complete alarm setpoint system for unattended operation should monitor: high temperature (above 30°C causes rapid bolt risk and heat stress), low temperature (below 15°C slows growth and can damage warm-season crops), high humidity (above 80% triggers disease conditions), CO₂ depletion (if enriching, below 350 ppm means enrichment system failure), and power failure (cuts pumps, lighting, and climate control simultaneously). Single-sensor monitoring misses critical failure modes. Immediate notification allows response before crop loss occurs.</p>
+<p><strong>Concept Tested:</strong> Environmental Alarm Setpoints</p>
+</details>
+<hr>
+<h4 id="9-during-the-fruiting-phase-of-tomatoes-versus-the-vegetative-phase-of-lettuce-how-should-the-target-vpd-differ-and-why">9. During the fruiting phase of tomatoes versus the vegetative phase of lettuce, how should the target VPD differ, and why?<a class="headerlink" href="#9-during-the-fruiting-phase-of-tomatoes-versus-the-vegetative-phase-of-lettuce-how-should-the-target-vpd-differ-and-why" title="Permanent link">¶</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>VPD should be identical for all crops — 0.8–1.0 kPa is universally optimal</li>
+<li>Tomatoes in fruiting phase benefit from higher VPD (1.2–1.6 kPa) to drive transpiration and calcium delivery for blossom end rot prevention; lettuce targets 0.8–1.0 kPa to minimize tip burn</li>
+<li>Lettuce requires higher VPD than tomatoes because leafy greens have higher water demand per gram of biomass</li>
+<li>VPD management only matters during vegetative growth; fruiting phase plants self-regulate transpiration</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. Fruiting tomatoes have much higher transpiration demand and require strong calcium delivery to developing fruits (inadequate calcium causes blossom end rot). Higher VPD (1.2–1.6 kPa) maintains open stomata and active transpiration that drives this calcium transport. Lettuce, with its tender expanding leaf margins, is more sensitive to calcium deficiency at leaf tips — maintaining lower VPD (0.8–1.0 kPa) prevents excessive transpiration stress while still maintaining adequate calcium flow. Crop-specific VPD targets are a key component of professional environmental management.</p>
+<p><strong>Concept Tested:</strong> VPD for Different Crops</p>
+</details>
+<hr>
+<h4 id="10-what-is-the-purpose-of-a-daynight-temperature-differential-dif-strategy-in-commercial-greenhouse-tomato-production">10. What is the purpose of a "day/night temperature differential" (DIF) strategy in commercial greenhouse tomato production?<a class="headerlink" href="#10-what-is-the-purpose-of-a-daynight-temperature-differential-dif-strategy-in-commercial-greenhouse-tomato-production" title="Permanent link">¶</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>DIF reduces energy costs by allowing nighttime temperatures to drop without affecting plant growth</li>
+<li>Positive DIF (day temperature higher than night) produces compact internodes; negative DIF (cooler days than nights) elongates internodes — used to control plant height and stem strength</li>
+<li>DIF is used to synchronize flowering across all plants in a multi-row system</li>
+<li>DIF only applies to cannabis cultivation; tomatoes require constant temperature for even fruit set</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. DIF (Differential) management exploits the fact that internode elongation (the stretch between leaf nodes) is driven by the temperature difference between day and night. Positive DIF (day warmer than night) produces compact, sturdy plants with short internodes — desirable for most crops. Negative DIF (cool days, warmer nights) elongates internodes — historically used for ornamental crops. Commercial greenhouse tomato growers use mild positive DIF (day at 22°C, night at 18°C) to manage plant height and stem structure in long-season high-wire systems.</p>
+<p><strong>Concept Tested:</strong> Temperature Management Strategies</p>
+</details>
+<hr>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Content">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Content
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../12-micropython-fundamentals/" class="md-footer__link md-footer__link--next" aria-label="Next: Content">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Content
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.action.edit", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

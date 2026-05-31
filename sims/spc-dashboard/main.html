@@ -3,122 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SPC Dashboard for Hydroponics</title>
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>SPC Dashboard</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f8f9fa;
-            color: #212529;
-        }
-        #container {
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background: white;
-        }
-        h1 {
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: #1a3a6c;
-        }
-        .placeholder {
-            border: 2px dashed #adb5bd;
-            border-radius: 8px;
-            padding: 40px 20px;
-            text-align: center;
-            color: #6c757d;
-            margin: 20px 0;
-            min-height: 400px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .placeholder .badge {
-            display: inline-block;
-            background: #ffc107;
-            color: #212529;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-        .placeholder h2 {
-            font-size: 18px;
-            color: #495057;
-            margin-bottom: 8px;
-        }
-        .placeholder p {
-            font-size: 14px;
-            max-width: 480px;
-        }
-        .meta {
-            margin-top: 20px;
-            font-size: 13px;
-            color: #6c757d;
-            border-top: 1px solid #dee2e6;
-            padding-top: 12px;
-        }
-        .meta strong { color: #495057; }
+        body { margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, sans-serif; background: #f8f9fa; }
+        main { display: block; }
     </style>
 </head>
 <body>
-    <div id="container">
-        <h1>SPC Dashboard for Hydroponics</h1>
-        <div class="placeholder">
-            <span class="badge">SCAFFOLD</span>
-            <h2>MicroSim Not Yet Implemented</h2>
-            <p>This MicroSim has been scaffolded from its specification but the
-            interactive content has not been built yet. See the chapter source
-            and the <code>index.md</code> in this directory for the full spec.</p>
-        </div>
-        <div class="meta">
-            <p><strong>Sim ID:</strong> spc-dashboard</p>
-            <p><strong>Library:</strong> p5.js</p>
-            <p><strong>Bloom Level:</strong> Analyze (L4) and Evaluate (L5)</p>
-            <p><strong>Learning Objective:</strong> TBD</p>
-        </div>
-    </div>
-
-    <!--
-    SPECIFICATION (from chapter index.md):
-
-    Type: interactive-dashboard
-    **sim-id:** spc-dashboard<br/>
-    **Library:** p5.js<br/>
-    **Status:** Specified
-    
-    Purpose: Demonstrate a complete SPC dashboard for a 35-day hydroponic crop cycle, allowing students to interactively explore control charts, anomaly detection, and trend analysis for pH, EC, and temperature.
-    
-    Bloom Level: Analyze (L4) and Evaluate (L5)
-    Bloom Verb: Evaluate — students assess the system's performance by interpreting control chart patterns, anomaly flags, and trend slopes.
-    
-    Layout: Canvas 900×540. Three sections:
-    
-    Top section: Sensor selector tabs (pH | EC | Temperature) + time range slider (1 day to 35 days).
-    
-    Middle section: Main control chart (60% of height)
-    - Line plot of selected sensor over selected time range
-    - Center line (green), UCL/LCL (red dashed), UWL/LWL (orange dotted)
-    - Rolling mean overlay (blue, thick)
-    - Out-of-control points shown as red circles
-    - Trend anomaly periods shaded in light red
-    
-    Bottom section: three panels side by side:
-    - Stats panel: mean, std, UCL, LCL, % in-control, trend slope
-    - Anomaly table: timestamp, value, z-score, anomaly type (Z-score / IQR / Trend)
-    - Distribution histogram with CL and control limit lines overlaid
-    
-    Interactivity:
-    - Clicking a point on the chart highlights it in the anomaly table
-    - Clicking a table row highlights the point on the chart
-    - Toggle "Show All Methods": adds IQR fences and moving-average bands to the chart
-    - Toggle "Simulate Dosing Event": injects a simulated pH spike at day 18 and shows how the anomaly detection methods respond differently
-    
-    Responsive: Scales to container; on narrow screens, anomaly table moves below the chart.
-    -->
+    <main></main>
+    <script src="spc-dashboard.js"></script>
 </body>
 </html>

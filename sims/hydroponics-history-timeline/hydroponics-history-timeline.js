@@ -82,9 +82,25 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     ];
 
+    // Short labels prevent overflow past the timeline's right edge
+    const shortLabels = {
+        1: 'Chinampas',
+        2: "Van Helmont's willow",
+        3: 'de Saussure',
+        4: 'Sachs nutrient recipe',
+        5: "Knop's solution",
+        6: 'Gericke at UC Berkeley',
+        7: 'Coins "hydroponics"',
+        8: 'WWII Wake Island',
+        9: 'NFT invented',
+        10: 'EPCOT "The Land"',
+        11: 'LED revolution',
+        12: 'Vertical farm VC',
+        13: 'Market > $20B'
+    };
     const items = events.map(e => ({
         id: e.id,
-        content: e.title,
+        content: shortLabels[e.id] || e.title,
         start: e.year,
         title: e.summary,
         className: 'era-' + e.era,
@@ -95,9 +111,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const dataset = new vis.DataSet(items);
     const options = {
         min: '1180-01-01',
-        max: '2040-01-01',
+        max: '2080-01-01',
         start: '1180-01-01',
-        end: '2040-01-01',
+        end: '2080-01-01',
         zoomMin: 1000 * 60 * 60 * 24 * 365 * 5,
         zoomMax: 1000 * 60 * 60 * 24 * 365 * 1000,
         height: '380px',

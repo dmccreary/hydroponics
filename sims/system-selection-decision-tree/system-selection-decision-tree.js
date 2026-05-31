@@ -162,7 +162,7 @@ let activePathIds = ['root'];
 // Layout values (logical 900 x 520 frame)
 const LOGICAL_W = 900;
 const LOGICAL_H = 520;
-const NODE_W = 110;
+const NODE_W = 95;
 const NODE_H = 50;
 
 function updateCanvasSize() {
@@ -425,9 +425,14 @@ function drawDiamond(cx, cy, w, h, label, state) {
 
     noStroke();
     fill(textColor);
-    textSize(11);
     textStyle(BOLD);
     textAlign(CENTER, CENTER);
+    let ts = 11;
+    textSize(ts);
+    while (textWidth(label) > w - 6 && ts > 7) {
+        ts -= 1;
+        textSize(ts);
+    }
     text(label, cx, cy);
     pop();
 }
@@ -466,9 +471,15 @@ function drawTerminal(cx, cy, w, h, systemKey, state) {
 
     noStroke();
     fill(textColor);
-    textSize(11);
     textStyle(BOLD);
     textAlign(CENTER, CENTER);
+    // Auto-shrink text to fit inside the box
+    let ts = 11;
+    textSize(ts);
+    while (textWidth(sys.name) > w - 6 && ts > 7) {
+        ts -= 1;
+        textSize(ts);
+    }
     text(sys.name, cx, cy);
     pop();
 }

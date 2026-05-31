@@ -1,0 +1,2286 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An interactive intelligent textbook on hydroponics for advanced high-school and college students, featuring MicroSims that bring plant physiology, nutrient science, and system design to life.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/hydroponics/chapters/15-sensors-electronics/quiz/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../../16-data-collection-analysis/">
+      
+      
+      <link rel="icon" href="../../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Quiz - Hydroponics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../../css/mascot.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta property="og:type" content="website">
+      
+        <meta property="og:title" content="Quiz - Hydroponics">
+      
+        <meta property="og:description" content="An interactive intelligent textbook on hydroponics for advanced high-school and college students, featuring MicroSims that bring plant physiology, nutrient science, and system design to life.">
+      
+        <meta property="og:image" content="https://dmccreary.github.io/hydroponics/assets/images/social/chapters/15-sensors-electronics/quiz.png">
+      
+        <meta property="og:image:type" content="image/png">
+      
+        <meta property="og:image:width" content="1200">
+      
+        <meta property="og:image:height" content="630">
+      
+        <meta property="og:url" content="https://dmccreary.github.io/hydroponics/chapters/15-sensors-electronics/quiz/">
+      
+        <meta name="twitter:card" content="summary_large_image">
+      
+        <meta name="twitter:title" content="Quiz - Hydroponics">
+      
+        <meta name="twitter:description" content="An interactive intelligent textbook on hydroponics for advanced high-school and college students, featuring MicroSims that bring plant physiology, nutrient science, and system design to life.">
+      
+        <meta name="twitter:image" content="https://dmccreary.github.io/hydroponics/assets/images/social/chapters/15-sensors-electronics/quiz.png">
+      
+    
+    
+  <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#quiz-sensors-and-electronics" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Hydroponics" class="md-header__button md-logo" aria-label="Hydroponics" data-md-component="logo">
+      
+  <img src="../../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Hydroponics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Quiz
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/hydroponics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Hydroponics" class="md-nav__button md-logo" aria-label="Hydroponics" data-md-component="logo">
+      
+  <img src="../../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    Hydroponics
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/hydroponics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../01-introduction/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    1. Introduction
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../02-root-biology/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    2. Root Biology
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../03-water-transport/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    3. Water &amp; Plant Health
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../04-macro-micro-nutrients/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    4. Macro &amp; Micro Nutrients
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../05-nutrient-solution-chemistry/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    5. Nutrient Chemistry
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../06-passive-basic-active-systems/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    6. Basic Systems
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../07-advanced-systems/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    7. Advanced Systems
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../08-diy-school-projects/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    8. DIY &amp; School Projects
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../09-growing-media-crops/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    9. Growing Media &amp; Crops
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../10-lighting-science/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    10. Lighting Science
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../11-environmental-control/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    11. Environmental Control
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../12-micropython-fundamentals/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    12. MicroPython Fundamentals
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../13-hardware-interfaces/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    13. Hardware Interfaces
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../14-networking-iot/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    14. Networking &amp; IoT
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_16" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    15. Sensors &amp; Electronics
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_16" id="__nav_4_16_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_16_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_16">
+            <span class="md-nav__icon md-icon"></span>
+            15. Sensors &amp; Electronics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Quiz
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-a-ph-glass-electrode-produces-a-voltage-that-changes-according-to-the-nernst-equation-at-25c-what-is-the-voltage-change-per-ph-unit-and-what-does-this-mean-for-calibration" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. A pH glass electrode produces a voltage that changes according to the Nernst equation. At 25°C, what is the voltage change per pH unit, and what does this mean for calibration?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-why-do-ec-electrical-conductivity-meters-use-alternating-current-ac-rather-than-direct-current-dc-to-measure-conductivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Why do EC (electrical conductivity) meters use alternating current (AC) rather than direct current (DC) to measure conductivity?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-a-dht22-sensor-is-connected-to-a-micropython-controller-to-measure-grow-room-temperature-and-humidity-for-vpd-calculation-why-is-a-dht22-required-rather-than-the-less-expensive-dht11" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. A DHT22 sensor is connected to a MicroPython controller to measure grow room temperature and humidity for VPD calculation. Why is a DHT22 required rather than the less expensive DHT11?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-a-solenoid-valve-controlling-water-flow-into-a-hydroponic-system-is-specified-as-normally-closed-nc-what-is-the-safe-failure-advantage-of-a-normally-closed-valve-over-a-normally-open-valve" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. A solenoid valve controlling water flow into a hydroponic system is specified as "normally closed (NC)." What is the safe-failure advantage of a normally-closed valve over a normally-open valve?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-after-performing-a-two-point-ph-calibration-with-ph-40-and-70-buffer-solutions-a-growers-ph-meter-reads-62-in-a-nutrient-solution-that-actually-is-at-ph-62-three-weeks-later-the-meter-reads-65-for-the-same-solution-without-any-changes-being-made-what-maintenance-step-is-most-likely-needed" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. After performing a two-point pH calibration with pH 4.0 and 7.0 buffer solutions, a grower's pH meter reads 6.2 in a nutrient solution that actually is at pH 6.2. Three weeks later, the meter reads 6.5 for the same solution without any changes being made. What maintenance step is most likely needed?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-a-micropython-controller-reads-a-ph-sensor-every-second-raw-readings-fluctuate-between-61-and-65-due-to-electrical-noise-though-the-actual-solution-ph-is-stable-at-63-what-signal-processing-technique-most-effectively-reduces-this-noise" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. A MicroPython controller reads a pH sensor every second. Raw readings fluctuate between 6.1 and 6.5 due to electrical noise, though the actual solution pH is stable at 6.3. What signal processing technique most effectively reduces this noise?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-a-grower-uses-a-hall-effect-flow-sensor-to-measure-nutrient-solution-flow-rate-through-an-nft-system-the-sensor-outputs-450-pulses-per-liter-in-one-minute-the-controller-counts-4500-pulses-what-is-the-flow-rate-in-liters-per-minute-lmin" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. A grower uses a hall-effect flow sensor to measure nutrient solution flow rate through an NFT system. The sensor outputs 450 pulses per liter. In one minute, the controller counts 4,500 pulses. What is the flow rate in liters per minute (L/min)?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-what-is-the-correct-procedure-for-storing-a-ph-probe-between-uses-to-maintain-its-calibration-and-extend-its-service-life" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. What is the correct procedure for storing a pH probe between uses to maintain its calibration and extend its service life?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-a-carbon-dioxide-co2-sensor-based-on-ndir-non-dispersive-infrared-technology-drifts-upward-by-approximately-50-ppm-per-month-how-should-this-sensor-be-used-in-a-long-term-grow-facility-monitoring-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. A carbon dioxide (CO₂) sensor based on NDIR (non-dispersive infrared) technology drifts upward by approximately 50 ppm per month. How should this sensor be used in a long-term grow facility monitoring system?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-a-sensor-module-that-runs-on-5v-logic-is-to-be-connected-to-a-raspberry-pi-pico-that-operates-at-33v-beyond-the-voltage-divider-for-the-sensors-output-signal-what-additional-concern-must-be-addressed-for-bidirectional-i2c-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. A sensor module that runs on 5V logic is to be connected to a Raspberry Pi Pico that operates at 3.3V. Beyond the voltage divider for the sensor's output signal, what additional concern must be addressed for bidirectional I2C communication?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../16-data-collection-analysis/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    16. Data Collection
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../17-data-visualization/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    17. Data Visualization
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../18-food-safety/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    18. Food Safety
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../19-solar-energy/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    19. Solar Energy
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../20-vertical-farming/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    20. Vertical Farming
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../21-financial-modeling/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    21. Financial Modeling
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-a-ph-glass-electrode-produces-a-voltage-that-changes-according-to-the-nernst-equation-at-25c-what-is-the-voltage-change-per-ph-unit-and-what-does-this-mean-for-calibration" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. A pH glass electrode produces a voltage that changes according to the Nernst equation. At 25°C, what is the voltage change per pH unit, and what does this mean for calibration?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-why-do-ec-electrical-conductivity-meters-use-alternating-current-ac-rather-than-direct-current-dc-to-measure-conductivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Why do EC (electrical conductivity) meters use alternating current (AC) rather than direct current (DC) to measure conductivity?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-a-dht22-sensor-is-connected-to-a-micropython-controller-to-measure-grow-room-temperature-and-humidity-for-vpd-calculation-why-is-a-dht22-required-rather-than-the-less-expensive-dht11" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. A DHT22 sensor is connected to a MicroPython controller to measure grow room temperature and humidity for VPD calculation. Why is a DHT22 required rather than the less expensive DHT11?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-a-solenoid-valve-controlling-water-flow-into-a-hydroponic-system-is-specified-as-normally-closed-nc-what-is-the-safe-failure-advantage-of-a-normally-closed-valve-over-a-normally-open-valve" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. A solenoid valve controlling water flow into a hydroponic system is specified as "normally closed (NC)." What is the safe-failure advantage of a normally-closed valve over a normally-open valve?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-after-performing-a-two-point-ph-calibration-with-ph-40-and-70-buffer-solutions-a-growers-ph-meter-reads-62-in-a-nutrient-solution-that-actually-is-at-ph-62-three-weeks-later-the-meter-reads-65-for-the-same-solution-without-any-changes-being-made-what-maintenance-step-is-most-likely-needed" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. After performing a two-point pH calibration with pH 4.0 and 7.0 buffer solutions, a grower's pH meter reads 6.2 in a nutrient solution that actually is at pH 6.2. Three weeks later, the meter reads 6.5 for the same solution without any changes being made. What maintenance step is most likely needed?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-a-micropython-controller-reads-a-ph-sensor-every-second-raw-readings-fluctuate-between-61-and-65-due-to-electrical-noise-though-the-actual-solution-ph-is-stable-at-63-what-signal-processing-technique-most-effectively-reduces-this-noise" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. A MicroPython controller reads a pH sensor every second. Raw readings fluctuate between 6.1 and 6.5 due to electrical noise, though the actual solution pH is stable at 6.3. What signal processing technique most effectively reduces this noise?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-a-grower-uses-a-hall-effect-flow-sensor-to-measure-nutrient-solution-flow-rate-through-an-nft-system-the-sensor-outputs-450-pulses-per-liter-in-one-minute-the-controller-counts-4500-pulses-what-is-the-flow-rate-in-liters-per-minute-lmin" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. A grower uses a hall-effect flow sensor to measure nutrient solution flow rate through an NFT system. The sensor outputs 450 pulses per liter. In one minute, the controller counts 4,500 pulses. What is the flow rate in liters per minute (L/min)?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-what-is-the-correct-procedure-for-storing-a-ph-probe-between-uses-to-maintain-its-calibration-and-extend-its-service-life" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. What is the correct procedure for storing a pH probe between uses to maintain its calibration and extend its service life?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-a-carbon-dioxide-co2-sensor-based-on-ndir-non-dispersive-infrared-technology-drifts-upward-by-approximately-50-ppm-per-month-how-should-this-sensor-be-used-in-a-long-term-grow-facility-monitoring-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. A carbon dioxide (CO₂) sensor based on NDIR (non-dispersive infrared) technology drifts upward by approximately 50 ppm per month. How should this sensor be used in a long-term grow facility monitoring system?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-a-sensor-module-that-runs-on-5v-logic-is-to-be-connected-to-a-raspberry-pi-pico-that-operates-at-33v-beyond-the-voltage-divider-for-the-sensors-output-signal-what-additional-concern-must-be-addressed-for-bidirectional-i2c-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. A sensor module that runs on 5V logic is to be connected to a Raspberry Pi Pico that operates at 3.3V. Beyond the voltage divider for the sensor's output signal, what additional concern must be addressed for bidirectional I2C communication?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/hydroponics/blob/main/docs/chapters/15-sensors-electronics/quiz.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
+    </a>
+  
+  
+
+
+<h1 id="quiz-sensors-and-electronics">Quiz: Sensors and Electronics<a class="headerlink" href="#quiz-sensors-and-electronics" title="Permanent link">¶</a></h1>
+<p>Test your understanding of pH probe electrochemistry, EC measurement, temperature and humidity sensors, flow sensors, solenoid valves, sensor signal conditioning, and enclosure design for hydroponic environments with these questions.</p>
+<hr>
+<h4 id="1-a-ph-glass-electrode-produces-a-voltage-that-changes-according-to-the-nernst-equation-at-25c-what-is-the-voltage-change-per-ph-unit-and-what-does-this-mean-for-calibration">1. A pH glass electrode produces a voltage that changes according to the Nernst equation. At 25°C, what is the voltage change per pH unit, and what does this mean for calibration?<a class="headerlink" href="#1-a-ph-glass-electrode-produces-a-voltage-that-changes-according-to-the-nernst-equation-at-25c-what-is-the-voltage-change-per-ph-unit-and-what-does-this-mean-for-calibration" title="Permanent link">¶</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>100 mV per pH unit; two-point calibration at pH 4 and pH 10 spans 600 mV</li>
+<li>59.16 mV per pH unit; the full pH 0–14 range spans approximately 828 mV, requiring precise millivolt measurement</li>
+<li>10 mV per pH unit; making pH 7 differ from pH 6 by only 10 mV</li>
+<li>200 mV per pH unit; one-point calibration at pH 7 is sufficient for all hydroponic applications</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. The Nernst equation predicts 59.16 mV per pH unit at 25°C (this changes with temperature — another source of drift). A pH electrode at pH 7.0 produces 0 mV (the isopotential point); at pH 6.0 it produces +59.16 mV; at pH 8.0 it produces −59.16 mV. The full 0–14 range spans ±414 mV. This requires the measurement circuit (pH interface chip like Atlas Scientific EZO-pH) to accurately resolve millivolt-level signals from a high-impedance glass electrode. Two-point calibration with buffer solutions establishes the electrode's actual slope and offset, correcting for manufacturing variation and aging.</p>
+<p><strong>Concept Tested:</strong> pH Glass Electrode</p>
+</details>
+<hr>
+<h4 id="2-why-do-ec-electrical-conductivity-meters-use-alternating-current-ac-rather-than-direct-current-dc-to-measure-conductivity">2. Why do EC (electrical conductivity) meters use alternating current (AC) rather than direct current (DC) to measure conductivity?<a class="headerlink" href="#2-why-do-ec-electrical-conductivity-meters-use-alternating-current-ac-rather-than-direct-current-dc-to-measure-conductivity" title="Permanent link">¶</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>AC is safer than DC for measurements made near water and living plants</li>
+<li>DC current causes electrolysis — gas bubble formation and electrode plating — at the probe surfaces, which alters the measurement and damages the electrodes; AC reverses direction fast enough to prevent electrolytic buildup</li>
+<li>AC allows the meter to measure both positive and negative ions simultaneously, improving accuracy</li>
+<li>DC is too slow to measure the rapidly changing ion concentrations in a recirculating nutrient solution</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. When DC current flows through an ionic solution between two electrodes, electrolysis occurs: positive ions migrate to the negative electrode and deposit there (plating), while negative ions migrate to the positive electrode and gas evolves. This changes the electrode surface chemistry, shifts the apparent resistance, and damages the probe over time. AC (typically 1–10 kHz square wave) reverses the current direction thousands of times per second, averaging out ion migration and preventing net accumulation at either electrode. This keeps the probe clean and the measurement accurate over time.</p>
+<p><strong>Concept Tested:</strong> EC Probe AC Measurement</p>
+</details>
+<hr>
+<h4 id="3-a-dht22-sensor-is-connected-to-a-micropython-controller-to-measure-grow-room-temperature-and-humidity-for-vpd-calculation-why-is-a-dht22-required-rather-than-the-less-expensive-dht11">3. A DHT22 sensor is connected to a MicroPython controller to measure grow room temperature and humidity for VPD calculation. Why is a DHT22 required rather than the less expensive DHT11?<a class="headerlink" href="#3-a-dht22-sensor-is-connected-to-a-micropython-controller-to-measure-grow-room-temperature-and-humidity-for-vpd-calculation-why-is-a-dht22-required-rather-than-the-less-expensive-dht11" title="Permanent link">¶</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>DHT22 supports I2C communication; DHT11 only supports analog voltage output</li>
+<li>DHT22 measures humidity with 0.1% RH resolution and ±2% accuracy, while DHT11 has only 1% resolution and ±5% accuracy — the precision is required for accurate VPD calculation used in crop management</li>
+<li>DHT22 is waterproof and can be submerged; DHT11 cannot be used in humid environments</li>
+<li>DHT11 is discontinued and no longer available; DHT22 is the current replacement</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. VPD calculation requires accurate humidity measurement: a ±5% RH error in the DHT11 translates to VPD errors of 0.1–0.2 kPa depending on temperature — enough to misclassify a 0.8 kPa optimal condition as a 0.9+ kPa stress condition or vice versa. The DHT22's ±2% RH accuracy and 0.1% resolution provide the precision needed for reliable VPD management. The DHT11 is adequate for simple "too humid / not humid enough" alerts but not for precision VPD-based crop management decisions.</p>
+<p><strong>Concept Tested:</strong> DHT22 vs DHT11</p>
+</details>
+<hr>
+<h4 id="4-a-solenoid-valve-controlling-water-flow-into-a-hydroponic-system-is-specified-as-normally-closed-nc-what-is-the-safe-failure-advantage-of-a-normally-closed-valve-over-a-normally-open-valve">4. A solenoid valve controlling water flow into a hydroponic system is specified as "normally closed (NC)." What is the safe-failure advantage of a normally-closed valve over a normally-open valve?<a class="headerlink" href="#4-a-solenoid-valve-controlling-water-flow-into-a-hydroponic-system-is-specified-as-normally-closed-nc-what-is-the-safe-failure-advantage-of-a-normally-closed-valve-over-a-normally-open-valve" title="Permanent link">¶</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>Normally-closed valves use less electricity because power is only needed to open them, not to hold them closed</li>
+<li>If power is lost or the controller fails, a normally-closed valve fails in the closed (safe) position — preventing flooding; a normally-open valve would allow uncontrolled water flow during a power failure</li>
+<li>Normally-closed valves are more accurate for precise flow control because the spring force provides consistent calibration</li>
+<li>Normally-closed valves work with both AC and DC solenoids; normally-open valves require DC only</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. Fail-safe design principle: solenoid valves should fail in the safest possible state. For water inlet to a hydroponics system, the dangerous failure mode is uncontrolled flooding — the tank or grow bed overflows. A normally-closed (NC) valve requires power to open. When power fails (controller crash, power outage, wiring fault), the spring returns the valve to the closed position, stopping water flow. A normally-open (NO) valve would flood uncontrollably during any power failure. Always specify NC valves for fill/supply lines in automated hydroponics systems.</p>
+<p><strong>Concept Tested:</strong> Solenoid Valve Types</p>
+</details>
+<hr>
+<h4 id="5-after-performing-a-two-point-ph-calibration-with-ph-40-and-70-buffer-solutions-a-growers-ph-meter-reads-62-in-a-nutrient-solution-that-actually-is-at-ph-62-three-weeks-later-the-meter-reads-65-for-the-same-solution-without-any-changes-being-made-what-maintenance-step-is-most-likely-needed">5. After performing a two-point pH calibration with pH 4.0 and 7.0 buffer solutions, a grower's pH meter reads 6.2 in a nutrient solution that actually is at pH 6.2. Three weeks later, the meter reads 6.5 for the same solution without any changes being made. What maintenance step is most likely needed?<a class="headerlink" href="#5-after-performing-a-two-point-ph-calibration-with-ph-40-and-70-buffer-solutions-a-growers-ph-meter-reads-62-in-a-nutrient-solution-that-actually-is-at-ph-62-three-weeks-later-the-meter-reads-65-for-the-same-solution-without-any-changes-being-made-what-maintenance-step-is-most-likely-needed" title="Permanent link">¶</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>Replace the nutrient solution — pH drift of this magnitude indicates complete formula breakdown</li>
+<li>Recalibrate the pH meter — glass electrodes drift over time due to reference junction contamination and membrane aging, requiring periodic two-point recalibration</li>
+<li>Add pH-Down to bring the solution to the meter's reading — trust the current meter value</li>
+<li>Replace the probe's storage solution — evaporation of the storage solution causes pH to read high</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. pH glass electrodes drift for several reasons: the reference junction (usually KCl solution) can become contaminated with nutrient ions; the glass membrane's hydration layer changes with use and storage conditions; and the electrode's slope (mV/pH) changes as the glass ages. The 0.3 pH unit shift in this scenario is consistent with electrode drift, not solution change. Recalibration with fresh buffer solutions corrects for the current electrode state. Electrode replacement is needed when the slope drops below approximately 95% of theoretical (56+ mV/pH unit), typically after 6–18 months depending on use.</p>
+<p><strong>Concept Tested:</strong> pH Probe Maintenance</p>
+</details>
+<hr>
+<h4 id="6-a-micropython-controller-reads-a-ph-sensor-every-second-raw-readings-fluctuate-between-61-and-65-due-to-electrical-noise-though-the-actual-solution-ph-is-stable-at-63-what-signal-processing-technique-most-effectively-reduces-this-noise">6. A MicroPython controller reads a pH sensor every second. Raw readings fluctuate between 6.1 and 6.5 due to electrical noise, though the actual solution pH is stable at 6.3. What signal processing technique most effectively reduces this noise?<a class="headerlink" href="#6-a-micropython-controller-reads-a-ph-sensor-every-second-raw-readings-fluctuate-between-61-and-65-due-to-electrical-noise-though-the-actual-solution-ph-is-stable-at-63-what-signal-processing-technique-most-effectively-reduces-this-noise" title="Permanent link">¶</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>Read the sensor only once per hour — less frequent readings eliminate noise by sampling during quiet periods</li>
+<li>Apply a moving average filter over the last 3–5 readings to smooth high-frequency electrical noise while still detecting real pH changes within a few seconds</li>
+<li>Round all readings to one decimal place — the 0.1 resolution eliminates sub-unit noise automatically</li>
+<li>Use a lower-quality ADC with less sensitivity — higher-precision ADCs amplify noise</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. A moving average filter maintains a rolling buffer of the N most recent readings and returns their average. For pH: store the last 5 readings [6.1, 6.3, 6.5, 6.2, 6.4]; average = 6.3. The next second, drop the oldest and add the new reading, recalculate. This smooths high-frequency noise (electrical interference, pump vibration) while a real sustained pH change (e.g., acid injection) will shift the average within 3–5 readings. Window sizes of 3–5 samples balance noise rejection against response speed adequately for hydroponics, where pH changes of concern take minutes to develop.</p>
+<p><strong>Concept Tested:</strong> Moving Average Filter</p>
+</details>
+<hr>
+<h4 id="7-a-grower-uses-a-hall-effect-flow-sensor-to-measure-nutrient-solution-flow-rate-through-an-nft-system-the-sensor-outputs-450-pulses-per-liter-in-one-minute-the-controller-counts-4500-pulses-what-is-the-flow-rate-in-liters-per-minute-lmin">7. A grower uses a hall-effect flow sensor to measure nutrient solution flow rate through an NFT system. The sensor outputs 450 pulses per liter. In one minute, the controller counts 4,500 pulses. What is the flow rate in liters per minute (L/min)?<a class="headerlink" href="#7-a-grower-uses-a-hall-effect-flow-sensor-to-measure-nutrient-solution-flow-rate-through-an-nft-system-the-sensor-outputs-450-pulses-per-liter-in-one-minute-the-controller-counts-4500-pulses-what-is-the-flow-rate-in-liters-per-minute-lmin" title="Permanent link">¶</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>4.5 L/min</li>
+<li>10 L/min</li>
+<li>0.1 L/min</li>
+<li>450 L/min</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. Flow rate = pulse count ÷ pulses per liter = 4,500 pulses ÷ 450 pulses/liter = 10 liters. Since this occurred over 1 minute, the flow rate is 10 L/min. Flow sensors are valuable for detecting pump degradation in NFT systems (where low flow causes crop loss) — if the expected 10 L/min drops to 6 L/min over several weeks, the pump impeller is wearing or a partial clog is developing, triggering a maintenance alert before complete failure.</p>
+<p><strong>Concept Tested:</strong> Flow Sensors</p>
+</details>
+<hr>
+<h4 id="8-what-is-the-correct-procedure-for-storing-a-ph-probe-between-uses-to-maintain-its-calibration-and-extend-its-service-life">8. What is the correct procedure for storing a pH probe between uses to maintain its calibration and extend its service life?<a class="headerlink" href="#8-what-is-the-correct-procedure-for-storing-a-ph-probe-between-uses-to-maintain-its-calibration-and-extend-its-service-life" title="Permanent link">¶</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>Store the probe in distilled water to keep the glass membrane hydrated</li>
+<li>Store the probe in pH 4.0 buffer solution or dedicated electrode storage solution, keeping the glass membrane and reference junction moist</li>
+<li>Allow the probe to air-dry completely between uses to prevent bacterial growth on the glass surface</li>
+<li>Store the probe in the nutrient solution from the last measurement — this maintains the electrode in a similar environment</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. pH glass electrodes must be stored moist — the glass membrane requires a hydration layer to function properly and loses calibration accuracy when dried out. However, distilled or RO water is incorrect: it is hypotonic and can draw KCl out of the reference junction, degrading it. The correct storage solution is either pH 4.0 buffer solution (slightly acidic, similar to the electrode's typical use environment) or the manufacturer's dedicated electrode storage solution (usually ~3M KCl). Never store in nutrient solution — mineral deposits can block the reference junction.</p>
+<p><strong>Concept Tested:</strong> pH Probe Maintenance</p>
+</details>
+<hr>
+<h4 id="9-a-carbon-dioxide-co2-sensor-based-on-ndir-non-dispersive-infrared-technology-drifts-upward-by-approximately-50-ppm-per-month-how-should-this-sensor-be-used-in-a-long-term-grow-facility-monitoring-system">9. A carbon dioxide (CO₂) sensor based on NDIR (non-dispersive infrared) technology drifts upward by approximately 50 ppm per month. How should this sensor be used in a long-term grow facility monitoring system?<a class="headerlink" href="#9-a-carbon-dioxide-co2-sensor-based-on-ndir-non-dispersive-infrared-technology-drifts-upward-by-approximately-50-ppm-per-month-how-should-this-sensor-be-used-in-a-long-term-grow-facility-monitoring-system" title="Permanent link">¶</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>Replace the sensor every month — NDIR sensors have a 30-day service life by design</li>
+<li>Perform automatic baseline correction (ABC) by exposing the sensor to fresh outdoor air (approximately 420 ppm CO₂) at regular intervals, or manual recalibration against a known reference concentration</li>
+<li>Add 50 ppm to all readings each month to compensate for the drift mathematically</li>
+<li>NDIR CO₂ sensors do not drift — if readings increase 50 ppm, actual CO₂ levels have increased</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. NDIR CO₂ sensors drift due to aging of the optical components and changes in the light source intensity. Many industrial sensors include an Automatic Baseline Correction (ABC) algorithm that assumes the lowest readings over 7–14 days represent fresh outdoor air (~420 ppm) and calibrates accordingly — this works if the sensor is periodically exposed to outdoor air levels. For sealed grow rooms with continuous CO₂ enrichment, ABC may misfire; manual zero-point calibration against a reference gas or known outdoor air (with the enrichment system off) should be performed every 3–6 months.</p>
+<p><strong>Concept Tested:</strong> CO₂ Sensor Calibration</p>
+</details>
+<hr>
+<h4 id="10-a-sensor-module-that-runs-on-5v-logic-is-to-be-connected-to-a-raspberry-pi-pico-that-operates-at-33v-beyond-the-voltage-divider-for-the-sensors-output-signal-what-additional-concern-must-be-addressed-for-bidirectional-i2c-communication">10. A sensor module that runs on 5V logic is to be connected to a Raspberry Pi Pico that operates at 3.3V. Beyond the voltage divider for the sensor's output signal, what additional concern must be addressed for bidirectional I2C communication?<a class="headerlink" href="#10-a-sensor-module-that-runs-on-5v-logic-is-to-be-connected-to-a-raspberry-pi-pico-that-operates-at-33v-beyond-the-voltage-divider-for-the-sensors-output-signal-what-additional-concern-must-be-addressed-for-bidirectional-i2c-communication" title="Permanent link">¶</a></h4>
+<div class="upper-alpha">
+<ol>
+<li>No additional concern — voltage dividers work for all I2C signals in both directions</li>
+<li>I2C is bidirectional — simple resistive voltage dividers only work in one direction; a dedicated bidirectional level shifter IC (like BSS138-based modules) is required so both the Pico and sensor can drive the bus lines safely</li>
+<li>I2C signals do not require level shifting — the I2C protocol automatically adjusts to the lowest voltage in the system</li>
+<li>Bidirectional I2C requires two separate buses at different voltages — level shifting between buses is not possible</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. This is a footgun: a simple resistive voltage divider (two resistors) is a passive one-directional circuit — it reduces 5V to 3.3V for signals going from the sensor to the Pico, but it cannot safely translate 3.3V Pico outputs to 5V for signals going the other direction. For bidirectional I2C, dedicated level-shifter modules using N-channel MOSFETs (such as the BSS138-based TXB0102 or MOSFET-based 4-channel modules) allow both the 3.3V Pico and 5V sensor to drive the bus lines at their respective logic levels. Using a simple voltage divider on a bidirectional I2C bus can damage the Pico or cause unreliable communication.</p>
+<p><strong>Concept Tested:</strong> Bidirectional Level Shifting</p>
+</details>
+<hr>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Content">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Content
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../16-data-collection-analysis/" class="md-footer__link md-footer__link--next" aria-label="Next: Content">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Content
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.action.edit", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

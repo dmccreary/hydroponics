@@ -3,122 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sensor Data Analysis Pipeline</title>
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>Sensor Data Pipeline</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f8f9fa;
-            color: #212529;
-        }
-        #container {
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background: white;
-        }
-        h1 {
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: #1a3a6c;
-        }
-        .placeholder {
-            border: 2px dashed #adb5bd;
-            border-radius: 8px;
-            padding: 40px 20px;
-            text-align: center;
-            color: #6c757d;
-            margin: 20px 0;
-            min-height: 400px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .placeholder .badge {
-            display: inline-block;
-            background: #ffc107;
-            color: #212529;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-        .placeholder h2 {
-            font-size: 18px;
-            color: #495057;
-            margin-bottom: 8px;
-        }
-        .placeholder p {
-            font-size: 14px;
-            max-width: 480px;
-        }
-        .meta {
-            margin-top: 20px;
-            font-size: 13px;
-            color: #6c757d;
-            border-top: 1px solid #dee2e6;
-            padding-top: 12px;
-        }
-        .meta strong { color: #495057; }
+        body { margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, sans-serif; background: #f8f9fa; }
+        main { display: block; }
     </style>
 </head>
 <body>
-    <div id="container">
-        <h1>Sensor Data Analysis Pipeline</h1>
-        <div class="placeholder">
-            <span class="badge">SCAFFOLD</span>
-            <h2>MicroSim Not Yet Implemented</h2>
-            <p>This MicroSim has been scaffolded from its specification but the
-            interactive content has not been built yet. See the chapter source
-            and the <code>index.md</code> in this directory for the full spec.</p>
-        </div>
-        <div class="meta">
-            <p><strong>Sim ID:</strong> sensor-data-pipeline</p>
-            <p><strong>Library:</strong> p5.js</p>
-            <p><strong>Bloom Level:</strong> Apply (L3) and Analyze (L4)</p>
-            <p><strong>Learning Objective:</strong> TBD</p>
-        </div>
-    </div>
-
-    <!--
-    SPECIFICATION (from chapter index.md):
-
-    Type: interactive-analysis
-    **sim-id:** sensor-data-pipeline<br/>
-    **Library:** p5.js<br/>
-    **Status:** Specified
-    
-    Purpose: Simulate a 35-day crop cycle dataset (synthetic pH, EC, temperature readings at 5-minute intervals) and allow students to apply each analysis step — load, clean, resample, rolling average, correlation, regression — and observe the output update in real-time.
-    
-    Bloom Level: Apply (L3) and Analyze (L4)
-    Bloom Verb: Apply — students apply data analysis operations to a simulated dataset and observe how each step transforms the data.
-    
-    Layout: Canvas 900×500. Split into left panel (analysis controls) and right panel (data visualization).
-    
-    Left panel — analysis steps (checkboxes and sliders):
-    1. "Add simulated noise" slider (0–100%) — adds random noise to the synthetic dataset
-    2. "Add missing data gaps" slider (0–20%) — randomly NaN-ifies readings
-    3. "Apply validation" checkbox — remove out-of-range values
-    4. "Fill missing data" dropdown — None / Forward Fill / Interpolate
-    5. "Resample to" dropdown — 5 min / 15 min / 1 hour / 1 day
-    6. "Rolling window" slider (1–48 readings)
-    7. "Show regression line" checkbox
-    8. "Show ±1 std band" checkbox
-    
-    Right panel — time series chart showing:
-    - Raw data (gray points, can be toggled)
-    - Cleaned/interpolated data (blue line)
-    - Resampled data (orange line)
-    - Rolling average (green line)
-    - Regression trend line (red dashed)
-    - ±1 std band (shaded green)
-    
-    Below chart: stats panel showing real-time values: mean, median, std, min, max, trend slope (pH/day).
-    
-    Interactivity: All left-panel changes update the chart instantly. Hovering the chart shows a vertical cursor with the exact values at that timestamp. Toggle "View Mode" to switch between pH / EC / Temperature.
-    -->
+    <main></main>
+    <script src="sensor-data-pipeline.js"></script>
 </body>
 </html>

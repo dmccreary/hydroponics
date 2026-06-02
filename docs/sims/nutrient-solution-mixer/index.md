@@ -1,6 +1,6 @@
 ---
 title: Nutrient Solution Mixing Calculator
-description: Nutrient Solution Mixing Calculator
+description: Enter target element concentrations in ppm to calculate the salt quantities needed with EC estimation, N:P:K ratio, and co-precipitation warnings.
 status: scaffold
 library: p5.js
 bloom_level: Apply (L3)

@@ -1,6 +1,6 @@
 ---
 title: IoT Data Flow Architecture
-description: IoT Data Flow Architecture
+description: Architecture diagram tracing sensor data from a Pico W through Wi-Fi to an MQTT broker and out to dashboards, databases, alert bots, and OTA update server.
 status: scaffold
 library: p5.js
 bloom_level: Understand (L2) and Analyze (L4)

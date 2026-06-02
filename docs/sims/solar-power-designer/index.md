@@ -1,6 +1,6 @@
 ---
 title: Solar Power System Designer
-description: Solar Power System Designer
+description: Design a solar power system by entering energy loads and location to calculate panel count, battery size, total cost, and levelized cost of energy (LCOE).
 status: scaffold
 library: p5.js
 bloom_level: Apply (L3) and Evaluate (L5)

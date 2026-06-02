@@ -1,6 +1,6 @@
 ---
 title: EC and pH Monitor Over a Crop Cycle
-description: EC and pH Monitor Over a Crop Cycle
+description: Dual-axis chart showing how EC and pH evolve over a 35-day crop cycle with interactive management actions like topping up water and adding pH adjusters.
 status: scaffold
 library: Chart.js
 bloom_level: Analyze (L4)

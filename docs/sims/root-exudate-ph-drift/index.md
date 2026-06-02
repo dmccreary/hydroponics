@@ -1,6 +1,6 @@
 ---
 title: Root Exudate pH Drift Simulator
-description: Root Exudate pH Drift Simulator
+description: Simulate reservoir pH drift over 14 days by adjusting the nitrate-to-ammonium ratio to see how nitrogen source affects pH direction and rate of change.
 status: implemented
 library: p5.js
 bloom_level: Apply (L3)

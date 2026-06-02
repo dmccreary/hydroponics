@@ -1,6 +1,6 @@
 ---
 title: SPC Dashboard for Hydroponics
-description: SPC Dashboard for Hydroponics
+description: Statistical Process Control dashboard for a 35-day crop cycle with control charts, anomaly flags, and trend analysis for pH, EC, and temperature.
 status: scaffold
 library: p5.js
 bloom_level: Analyze (L4) and Evaluate (L5)

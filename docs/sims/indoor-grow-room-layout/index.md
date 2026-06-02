@@ -1,6 +1,6 @@
 ---
 title: Indoor Grow Room Layout
-description: Indoor Grow Room Layout
+description: Bird's-eye view of a grow room with clickable zones identifying each component and linking to the chapters that cover it in depth.
 status: implemented
 library: p5.js
 bloom_level: Remember (L1)

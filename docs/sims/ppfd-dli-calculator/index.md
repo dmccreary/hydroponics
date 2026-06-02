@@ -1,6 +1,6 @@
 ---
 title: PPFD and DLI Calculator
-description: PPFD and DLI Calculator
+description: Calculate DLI from PPFD and photoperiod, compare lighting energy costs at your electricity rate, and see how fixture mounting height affects PPFD.
 status: scaffold
 library: p5.js
 bloom_level: Apply (L3)

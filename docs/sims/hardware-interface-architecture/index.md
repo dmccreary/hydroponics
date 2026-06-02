@@ -1,6 +1,6 @@
 ---
 title: Hardware Interface Architecture
-description: Hardware Interface Architecture
+description: Architecture diagram showing how GPIO, ADC, PWM, I2C, SPI, and UART protocols connect a Raspberry Pi Pico W to hydroponic sensors and actuators.
 status: scaffold
 library: p5.js
 bloom_level: Understand (L2) and Analyze (L4)

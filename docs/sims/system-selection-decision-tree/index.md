@@ -1,6 +1,6 @@
 ---
 title: System Selection Decision Tree
-description: System Selection Decision Tree
+description: Clickable decision flowchart guiding students through crop type, budget, and electricity availability to recommend the most suitable hydroponic system.
 status: scaffold
 library: p5.js
 bloom_level: Evaluate (L5)

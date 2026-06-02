@@ -1,6 +1,6 @@
 ---
 title: DIY Build Cost and Complexity Selector
-description: DIY Build Cost and Complexity Selector
+description: Filter four DIY hydroponic builds by budget and experience level to find the best starting project, with component lists and safety ratings for each.
 status: scaffold
 library: p5.js
 bloom_level: Evaluate (L5)

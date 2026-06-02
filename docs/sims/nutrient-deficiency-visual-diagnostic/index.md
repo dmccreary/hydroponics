@@ -1,6 +1,6 @@
 ---
 title: Nutrient Deficiency Visual Diagnostic Tool
-description: Nutrient Deficiency Visual Diagnostic Tool
+description: Select leaf symptoms (yellowing, browning, distortion) to identify nutrient deficiencies with a leaf illustration that updates based on mobility rules.
 status: implemented
 library: p5.js
 bloom_level: Analyze (L4)

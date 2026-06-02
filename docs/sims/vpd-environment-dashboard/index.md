@@ -1,6 +1,6 @@
 ---
 title: VPD and Environmental Parameter Dashboard
-description: VPD and Environmental Parameter Dashboard
+description: Set temperature and humidity sliders to calculate Vapor Pressure Deficit in real time with color-coded feedback for propagation, vegetative, and fruiting stages.
 status: scaffold
 library: p5.js
 bloom_level: Apply (L3)

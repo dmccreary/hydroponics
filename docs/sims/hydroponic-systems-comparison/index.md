@@ -1,6 +1,6 @@
 ---
 title: Hydroponic Systems Side-by-Side Comparison
-description: Hydroponic Systems Side-by-Side Comparison
+description: Clickable gallery of six hydroponic system cross-sections (Kratky, DWC, NFT, Ebb-and-Flow, Aeroponics, Drip) with trade-off comparisons on five dimensions.
 status: scaffold
 library: p5.js
 bloom_level: Analyze (L4) and Evaluate (L5)

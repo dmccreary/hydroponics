@@ -1,6 +1,6 @@
 ---
 title: Sensor Data Analysis Pipeline
-description: Sensor Data Analysis Pipeline
+description: Apply data analysis steps (noise, validation, fill, resample, rolling average) to a simulated 35-day crop cycle dataset and observe real-time transformations.
 status: scaffold
 library: p5.js
 bloom_level: Apply (L3) and Analyze (L4)

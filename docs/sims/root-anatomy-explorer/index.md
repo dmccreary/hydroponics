@@ -1,6 +1,6 @@
 ---
 title: Root Cross-Section and Absorption Zones
-description: Root Cross-Section and Absorption Zones
+description: Clickable longitudinal root cross-section showing five zones from root cap to mature tissue with a lateral cross-section revealing vascular structure.
 status: implemented
 library: p5.js
 bloom_level: Remember (L1) and Understand (L2)

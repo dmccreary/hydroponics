@@ -1,6 +1,6 @@
 ---
 title: Photosynthesis and Respiration Cycle
-description: Photosynthesis and Respiration Cycle
+description: Step-through visualization of photosynthesis and cellular respiration showing inputs, outputs, molecule counts, and energy flow between chloroplast and mitochondrion.
 status: implemented
 library: p5.js
 bloom_level: Understand (L2)

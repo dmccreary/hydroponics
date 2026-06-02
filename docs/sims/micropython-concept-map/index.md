@@ -1,6 +1,6 @@
 ---
 title: MicroPython Concept Map
-description: MicroPython Concept Map
+description: Four-tier dependency map showing how 25 MicroPython concepts build from hardware setup through language fundamentals to object-oriented programming.
 status: scaffold
 library: p5.js
 bloom_level: Understand (L2) and Remember (L1)

@@ -1,6 +1,6 @@
 ---
 title: Ion Uptake Mechanisms Comparison
-description: Ion Uptake Mechanisms Comparison
+description: Step-through side-by-side comparison of passive diffusion and active transport with concrete concentration values and ATP consumption at each stage.
 status: implemented
 library: p5.js
 bloom_level: Understand (L2)

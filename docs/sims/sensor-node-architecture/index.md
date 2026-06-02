@@ -1,6 +1,6 @@
 ---
 title: Sensor Node Architecture
-description: Sensor Node Architecture
+description: Four-layer hardware diagram showing sensors, signal conditioning, Pico W microcontroller, and network output with power supply rails (3.3V, 5V, 12V, GND).
 status: scaffold
 library: p5.js
 bloom_level: Analyze (L4) and Apply (L3)

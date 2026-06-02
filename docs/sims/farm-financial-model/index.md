@@ -1,6 +1,6 @@
 ---
 title: Hydroponic Farm Financial Model Builder
-description: Hydroponic Farm Financial Model Builder
+description: Enter CapEx, OpEx, and revenue inputs to calculate break-even, NPV, IRR, payback period, and a 5-year cash flow chart for a hydroponic operation.
 status: scaffold
 library: p5.js
 bloom_level: Apply (L3) and Evaluate (L5)

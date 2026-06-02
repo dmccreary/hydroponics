@@ -235,9 +235,9 @@ extra_css:
   - css/extra.css
   - css/mascot.css
 
-# Custom JavaScript — uncomment once a corresponding file exists
-# extra_javascript:
-#   - js/extra.js
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 # Exclude prompt scratch files and TODOs from build/search/sitemap
 exclude_docs: |

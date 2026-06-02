@@ -1,6 +1,6 @@
 ---
 title: Biomass Growth Tracker
-description: Biomass Growth Tracker
+description: Enter plant growth measurements to plot growth curves and calculate relative growth rate and fresh-to-dry weight ratio over a simulated crop cycle.
 status: implemented
 library: Chart.js
 bloom_level: Apply (L3)

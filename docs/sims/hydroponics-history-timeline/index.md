@@ -1,6 +1,6 @@
 ---
 title: History of Hydroponics Timeline
-description: History of Hydroponics Timeline
+description: Scrollable timeline from 1200 CE to today with clickable milestones tracing the history of soilless growing from Aztec chinampas to modern hydroponics.
 status: implemented
 library: vis-timeline
 bloom_level: Understand (L2)

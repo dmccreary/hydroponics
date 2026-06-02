@@ -219,6 +219,15 @@ In practice, well-formulated commercial two-part and three-part systems are desi
 
 \[ \text{mEq/L} = \frac{\text{ppm}}{(\text{atomic mass} / \text{charge})} \]
 
+**Where:**
+
+| Symbol | Unit | Definition |
+|--------|------|------------|
+| \(\text{mEq/L}\) | milliequivalents per liter | Ionic charge concentration of the ion in solution; allows direct charge comparison between cations and anions regardless of valence |
+| \(\text{ppm}\) | mg/L | Measured ion concentration in the nutrient solution; numerically equal to milligrams per liter in dilute aqueous solutions |
+| atomic mass | g/mol | Standard atomic weight of the element from the periodic table; e.g., K = 39, Ca = 40, Mg = 24, N = 14, S = 32 |
+| charge | dimensionless (integer) | Absolute value of the ionic valence; 1 for monovalent ions (K⁺, Na⁺, NO₃⁻, H₂PO₄⁻), 2 for divalent ions (Ca²⁺, Mg²⁺, SO₄²⁻) |
+
 For example, potassium (K⁺, atomic mass 39, charge 1): 150 ppm K⁺ = 150/39 = 3.85 mEq/L cationic charge.
 
 ## Nutrient Solution Mixing Order

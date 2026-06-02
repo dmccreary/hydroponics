@@ -1,6 +1,6 @@
 ---
 title: Growing Media Properties Comparison
-description: Growing Media Properties Comparison
+description: Radar chart comparing seven growing media across water retention, air porosity, reusability, and pH neutrality with filters by system type and crop.
 status: scaffold
 library: p5.js
 bloom_level: Analyze (L4)

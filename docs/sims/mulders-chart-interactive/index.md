@@ -1,6 +1,6 @@
 ---
 title: Interactive Mulder's Chart — pH and Nutrient Availability
-description: Interactive Mulder's Chart — pH and Nutrient Availability
+description: Drag a pH slider to see how each of 14 mineral nutrients changes in availability and visualize Mulder antagonism relationships between nutrients.
 status: scaffold
 library: p5.js
 bloom_level: Analyze (L4)

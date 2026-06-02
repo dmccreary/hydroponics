@@ -1,6 +1,6 @@
 ---
 title: Failure Mode Analysis Decision Tree
-description: Failure Mode Analysis Decision Tree
+description: Color-coded failure mode matrix for six hydroponic system types, showing time-to-crop-loss, detection method, and recommended mitigation for each failure.
 status: scaffold
 library: p5.js
 bloom_level: Analyze (L4) and Evaluate (L5)

@@ -1,6 +1,6 @@
 ---
 title: Plant Life Cycle Stages Explorer
-description: Plant Life Cycle Stages Explorer
+description: Circular diagram of six plant life stages with clickable nodes revealing nutrient, light, temperature, and timing requirements for each stage.
 status: implemented
 library: p5.js
 bloom_level: Remember (L1) and Understand (L2)

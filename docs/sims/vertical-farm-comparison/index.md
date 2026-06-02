@@ -1,6 +1,6 @@
 ---
 title: Commercial Vertical Farm Comparison
-description: Commercial Vertical Farm Comparison
+description: Radar chart comparing five vertical farming models across 10 dimensions including energy efficiency, yield per floor area, CapEx, and location flexibility.
 status: scaffold
 library: p5.js
 bloom_level: Analyze (L4) and Evaluate (L5)

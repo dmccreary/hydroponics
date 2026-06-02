@@ -1,6 +1,6 @@
 ---
 title: HACCP Food Safety Risk Matrix
-description: HACCP Food Safety Risk Matrix
+description: Identify Critical Control Points and corrective actions for your hydroponic setup by selecting crop type, water source, scale, and consumer group.
 status: scaffold
 library: p5.js
 bloom_level: Analyze (L4) and Evaluate (L5)

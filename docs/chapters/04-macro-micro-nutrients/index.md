@@ -151,6 +151,14 @@ Boron is absorbed as uncharged boric acid (H₃BO₃) by passive diffusion — m
 
 \[ \text{pH} = -\log_{10}[\text{H}^+] \]
 
+**Where:**
+
+| Symbol | Unit | Definition |
+|--------|------|------------|
+| pH | dimensionless | Logarithmic measure of hydrogen ion activity; ranges 0–14; optimal for hydroponics is 5.5–6.5 |
+| log₁₀ | — | Base-10 logarithm; each whole-number pH change represents a 10× change in H⁺ concentration |
+| [H⁺] | mol/L | Molar concentration of hydrogen ions (protons) in solution; higher [H⁺] means lower pH and greater acidity |
+
 pH is a **logarithmic** scale: a solution at pH 5.0 has ten times more H⁺ ions than pH 6.0, and 100 times more than pH 7.0. The practical consequence: moving from pH 7.0 to pH 6.0 represents a 10× increase in acidity — a seemingly small number change with a large chemical effect.
 
 **Why does pH affect nutrient availability?**

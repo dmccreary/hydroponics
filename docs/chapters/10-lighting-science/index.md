@@ -113,6 +113,16 @@ DLI integrates both intensity and duration into a single number, making it the m
 
 \[ \text{DLI} = \text{PPFD} \times \text{photoperiod (hours)} \times 3600 \div 1{,}000{,}000 \]
 
+**Where:**
+
+| Symbol | Unit | Definition |
+|--------|------|------------|
+| DLI | mol·m⁻²·d⁻¹ | Daily Light Integral; total moles of PAR photons delivered to the canopy surface per day |
+| PPFD | µmol·m⁻²·s⁻¹ | Photosynthetic Photon Flux Density; instantaneous PAR photon delivery rate measured with a quantum sensor |
+| photoperiod | hours | Number of hours per day the lights are on |
+| 3600 | s/hr | Conversion factor from hours to seconds |
+| 1,000,000 | µmol/mol | Conversion factor from micromoles to moles |
+
 The 3600 converts hours to seconds; dividing by 1,000,000 converts micromoles to moles.
 
 Example: PPFD = 400 µmol·m⁻²·s⁻¹ for 16 hours:
@@ -198,6 +208,14 @@ Modern fluorescent is being rapidly replaced by LED bars in propagation and micr
 The **inverse square law** describes how light intensity decreases with distance from a point source:
 
 \[ \text{Intensity} \propto \frac{1}{d^2} \]
+
+**Where:**
+
+| Symbol | Unit | Definition |
+|--------|------|------------|
+| Intensity | µmol·m⁻²·s⁻¹ (PPFD) | Light intensity at the canopy surface; decreases as the square of distance from the source |
+| ∝ | — | "Is proportional to"; a scaling relationship, not an equality — the constant of proportionality depends on source power and geometry |
+| d | m (meters) | Distance from the light source to the measurement point (e.g., canopy surface) |
 
 Doubling the distance between a light source and the canopy reduces intensity to one-quarter of its original value. Halving the distance quadruples intensity.
 

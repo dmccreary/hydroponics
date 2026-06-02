@@ -182,6 +182,14 @@ Microgreens generate the highest revenue per square meter but require intensive 
 \text{Yield}_{floor} = \text{Yield}_{tier} \times \text{Tiers}
 \]
 
+**Where:**
+
+| Symbol | Unit | Definition |
+|--------|------|------------|
+| Yield_floor | kg·m⁻²·year⁻¹ | Yield per floor area; total annual harvest per square meter of building footprint, summed across all tiers |
+| Yield_tier | kg·m⁻²·cycle⁻¹ | Harvest mass per growing tier per crop cycle; measured at the individual rack level |
+| Tiers | dimensionless (integer) | Number of vertically stacked growing levels in the system |
+
 A 4-tier system growing baby lettuce yielding 3 kg/m²/cycle with 10 cycles/year per tier:
 
 \[

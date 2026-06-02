@@ -74,6 +74,15 @@ The voltage across the membrane follows the Nernst equation. Before we state it,
 E = E_0 - 59.16 \times \text{pH}
 \]
 
+**Where:**
+
+| Symbol | Unit | Definition |
+|--------|------|------------|
+| E | mV (millivolts) | Electrode potential; the voltage measured between the glass pH electrode and the reference electrode immersed in solution |
+| E₀ | mV | Electrode offset; the voltage at pH 0 for this specific probe; varies between probes and is determined during calibration |
+| 59.16 | mV/pH unit | Nernst slope at 25 °C; the voltage change per pH unit; a healthy probe reads 55–62 mV/pH unit |
+| pH | dimensionless | The hydrogen ion activity of the solution being measured |
+
 This means a 59.16 mV change in electrode voltage corresponds to exactly one pH unit change at 25 °C. The electrode voltage is measured against a **reference electrode** (usually a silver/silver-chloride junction filled with KCl gel) packed into the same probe body. The output to the microcontroller is typically a millivolt signal in the range of −300 mV (very basic solution) to +300 mV (very acidic solution), with 0 V corresponding approximately to pH 7.
 
 ### pH Probe Calibration
@@ -117,6 +126,14 @@ The probe works by applying a small AC voltage between the electrodes and measur
 \[
 \text{EC} = G \times K_{cell}
 \]
+
+**Where:**
+
+| Symbol | Unit | Definition |
+|--------|------|------------|
+| EC | µS/cm or mS/cm | Electrical conductivity of the solution; a proxy for total dissolved ion concentration |
+| G | S (siemens) | Electrical conductance measured between probe electrodes; G = I/V (current ÷ applied voltage) |
+| K_cell | cm⁻¹ | Cell constant of the probe; determined by electrode geometry (spacing and surface area); calibrated using a reference solution of known conductivity |
 
 The cell constant (in cm⁻¹) depends on the electrode geometry — the distance between the electrodes and their surface area. Atlas Scientific EZO-EC circuits have a built-in calibration procedure that determines K_cell from a reference solution.
 
@@ -302,6 +319,15 @@ A **voltage divider** is a two-resistor circuit that produces an output voltage 
 V_{out} = V_{in} \times \frac{R_2}{R_1 + R_2}
 \]
 
+**Where:**
+
+| Symbol | Unit | Definition |
+|--------|------|------------|
+| V_out | V (volts) | Output voltage; measured between the midpoint of the divider and ground |
+| V_in | V | Input (supply) voltage applied across the full divider; e.g., 5 V sensor output |
+| R₁ | Ω (ohms) | Top resistor; connected between V_in and the output node |
+| R₂ | Ω | Bottom resistor; connected between the output node and ground |
+
 In hydroponic electronics, voltage dividers appear in two contexts:
 
 1. **Level shifting**: Sensors that output 0–5 V (like some pH circuits) must be scaled to 0–3.3 V before connecting to a 3.3 V ADC. A divider with R₁ = 10 kΩ and R₂ = 20 kΩ produces V_out = V_in × 0.667, scaling 5 V to 3.33 V.
@@ -327,6 +353,16 @@ An **operational amplifier** (op-amp) solves this with two common configurations
 \[
 V_{out} = -\frac{R_f}{R_{in}} \times V_{in}
 \]
+
+**Where:**
+
+| Symbol | Unit | Definition |
+|--------|------|------------|
+| V_out | V (volts) | Amplifier output voltage; inverted (sign-reversed) and scaled relative to V_in |
+| R_f | Ω (ohms) | Feedback resistor; connected between op-amp output and inverting input (−); controls gain magnitude |
+| R_in | Ω | Input resistor; connected between the signal source and the inverting input (−); sets input impedance |
+| V_in | V | Input signal voltage; e.g., the millivolt signal from a pH electrode or other low-level sensor |
+| −R_f/R_in | dimensionless | Closed-loop gain; negative sign indicates phase inversion; magnitude > 1 amplifies, < 1 attenuates |
 
 The Atlas Scientific EZO circuits include built-in op-amp signal conditioning. For DIY pH circuits (using a pH electrode and a separate analog-front-end circuit), the INA826 or MCP6002 op-amp are commonly used.
 

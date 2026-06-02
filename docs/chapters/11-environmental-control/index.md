@@ -130,9 +130,29 @@ First, calculate saturated vapor pressure (SVP) at the given air temperature:
 
 \[ \text{SVP} = 0.6108 \times e^{\frac{17.27 \times T}{T + 237.3}} \text{ (kPa)} \]
 
-where T is temperature in °C. Then:
+**Where:**
+
+| Symbol | Unit | Definition |
+|--------|------|------------|
+| SVP | kPa | Saturated vapor pressure; the maximum water vapor pressure air can hold at temperature T before condensation |
+| 0.6108 | kPa | Empirical coefficient; the SVP of water at 0 °C (from the Magnus approximation) |
+| e | — | Euler's number (≈ 2.718); base of the natural logarithm |
+| 17.27 | dimensionless | Empirical constant in the Magnus formula |
+| T | °C | Air (or leaf) temperature in degrees Celsius |
+| 237.3 | °C | Empirical constant in the Magnus formula |
+
+Then:
 
 \[ \text{VPD} = \text{SVP} \times \left(1 - \frac{\text{RH}}{100}\right) \]
+
+**Where:**
+
+| Symbol | Unit | Definition |
+|--------|------|------------|
+| VPD | kPa | Vapor pressure deficit; the difference between maximum possible and actual moisture in the air; the primary driver of plant transpiration rate |
+| SVP | kPa | Saturated vapor pressure at the current air temperature (from the formula above) |
+| RH | % | Relative humidity; the percentage of maximum water vapor currently present in the air |
+| 100 | — | Normalizes RH from a percentage to a decimal fraction |
 
 **Example**: At 25°C (SVP = 3.17 kPa) and 70% RH: VPD = 3.17 × (1 − 0.70) = 3.17 × 0.30 = 0.95 kPa
 

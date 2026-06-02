@@ -252,7 +252,18 @@ Quantifying plant growth is important for comparing system designs, tracking the
 
 \[ \text{RGR} = \frac{\ln(W_2) - \ln(W_1)}{t_2 - t_1} \]
 
-Where W₁ and W₂ are dry weights at two time points separated by (t₂ − t₁) days. The natural log accounts for the exponential nature of plant growth, where a larger plant grows absolutely faster than a smaller plant even at the same relative rate.
+**Where:**
+
+| Symbol | Unit | Definition |
+|--------|------|------------|
+| RGR | g·g⁻¹·d⁻¹ | Relative growth rate; the fractional increase in dry biomass per unit time, normalized to current plant size |
+| W₁ | g (dry weight) | Dry mass of the plant at the first measurement time point |
+| W₂ | g (dry weight) | Dry mass of the plant at the second measurement time point; must be > W₁ for positive growth |
+| t₁ | days | First measurement time point |
+| t₂ | days | Second measurement time point |
+| ln | — | Natural logarithm (base e); accounts for the exponential nature of plant growth |
+
+The natural log accounts for the exponential nature of plant growth, where a larger plant grows absolutely faster than a smaller plant even at the same relative rate.
 
 For school and hobbyist applications, tracking fresh weight at weekly intervals and comparing harvest dates against a baseline is sufficient to evaluate system performance without a laboratory.
 

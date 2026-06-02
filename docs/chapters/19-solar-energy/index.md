@@ -102,7 +102,14 @@ To estimate daily energy production, the key concept is **peak sun hours (PSH)**
 E_{daily} \text{(Wh)} = P_{panel} \text{(Wp)} \times PSH \times \eta_{system}
 \]
 
-Where \( \eta_{system} \) is total system efficiency (typically 0.75–0.85, accounting for inverter, battery, and wire losses).
+**Where:**
+
+| Symbol | Unit | Definition |
+|--------|------|------------|
+| E_daily | Wh (watt-hours) | Estimated daily electrical energy produced by the solar panel array |
+| P_panel | Wp (watts-peak) | Panel rated peak power at standard test conditions (1000 W/m², 25 °C) |
+| PSH | hours | Peak sun hours; daily solar irradiance expressed as equivalent hours at 1000 W/m²; varies by location and season |
+| η_system | dimensionless (0–1) | Total system efficiency; accounts for inverter, battery, and wiring losses; typically 0.75–0.85 |
 
 **Example**: A 400 Wp panel in Minneapolis (4.2 PSH annual average) with 80% system efficiency:
 
@@ -179,12 +186,16 @@ Battery sizing formula:
 C_{battery} = \frac{E_{daily} \times D_{autonomy}}{DoD \times V_{system} \times \eta_{battery}}
 \]
 
-Where:
-- \( E_{daily} \) = daily energy consumption (Wh)
-- \( D_{autonomy} \) = desired days of autonomy (typically 1–3 days for a grow room)
-- \( DoD \) = maximum depth of discharge (0.5 for lead-acid, 0.9 for LiFePO4)
-- \( V_{system} \) = system voltage (12, 24, or 48 V)
-- \( \eta_{battery} \) = battery round-trip efficiency (~0.85 for LiFePO4, ~0.80 for lead-acid)
+**Where:**
+
+| Symbol | Unit | Definition |
+|--------|------|------------|
+| C_battery | Ah (ampere-hours) | Required battery bank capacity at the system voltage |
+| E_daily | Wh | Daily energy consumption of all loads (pumps, lights, sensors, climate) |
+| D_autonomy | days | Desired days of operation without solar input; typically 1–3 days for a grow room |
+| DoD | dimensionless (0–1) | Maximum depth of discharge; 0.5 for lead-acid (50%), 0.9 for LiFePO4 (90%) |
+| V_system | V (volts) | System bus voltage; typically 12, 24, or 48 V |
+| η_battery | dimensionless (0–1) | Battery round-trip efficiency; ~0.85 for LiFePO4, ~0.80 for lead-acid |
 
 **Example**: A grow room consuming 1,500 Wh/day, with 2 days autonomy, LiFePO4 at 24 V:
 
@@ -328,11 +339,33 @@ Before the formula, key terms: **CapEx** (capital expenditure) is the upfront sy
 LCOE = \frac{CapEx + \sum_{t=1}^{n} \frac{OpEx_t}{(1+r)^t}}{\sum_{t=1}^{n} \frac{E_t}{(1+r)^t}}
 \]
 
+**Where:**
+
+| Symbol | Unit | Definition |
+|--------|------|------------|
+| LCOE | $/kWh | Levelized Cost of Energy; lifetime cost per kilowatt-hour of electricity produced |
+| CapEx | $ | Capital expenditure; total upfront cost of the solar system (panels, inverter, mounting, wiring) |
+| OpEx_t | $/year | Operating expenditure in year t; annual maintenance, insurance, and replacement costs |
+| E_t | kWh/year | Actual energy production in year t |
+| r | dimensionless (decimal) | Discount rate; the opportunity cost of capital; e.g., 0.06 for 6% per year |
+| n | years | System lifetime; typically 25–30 years for photovoltaic systems |
+| t | years | Year index in the summation (1 to n) |
+
 For a simplified estimate (ignoring discount rate):
 
 \[
 LCOE \approx \frac{CapEx + OpEx \times n}{E_{annual} \times n}
 \]
+
+**Where:**
+
+| Symbol | Unit | Definition |
+|--------|------|------------|
+| LCOE | $/kWh | Approximate levelized cost of energy (ignores time value of money) |
+| CapEx | $ | Total upfront system cost |
+| OpEx | $/year | Annual operating and maintenance cost (assumed constant across all years) |
+| n | years | System lifetime |
+| E_annual | kWh/year | Average annual energy production |
 
 **Example**: A 3 kWp solar system for a grow room:
 - CapEx: $3,000 (panels) + $1,000 (inverter/controller/battery) = $4,000

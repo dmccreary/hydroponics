@@ -112,6 +112,17 @@ The NPV formula for a project generating cash flow \( C_t \) in each year \( t \
 NPV = -I_0 + \sum_{t=1}^{n} \frac{C_t}{(1 + r)^t}
 \]
 
+**Where:**
+
+| Symbol | Unit | Definition |
+|--------|------|------------|
+| NPV | $ (dollars) | Net present value; total value created by the investment in today's dollars; positive NPV means the investment exceeds the cost of capital |
+| I₀ | $ | Initial investment (capital outlay) at time zero; entered as negative |
+| C_t | $/year | Net cash flow in year t (annual revenue minus all operating costs) |
+| r | dimensionless (decimal) | Discount rate; minimum acceptable annual return (hurdle rate); e.g., 0.08 for 8% |
+| n | years | Investment horizon (project lifetime) |
+| t | years | Year index in the summation (1 to n) |
+
 In Python:
 
 ```python
@@ -158,6 +169,16 @@ Break-even formula:
 Q_{BE} = \frac{\text{Fixed Costs}}{\text{Price per unit} - \text{Variable Cost per unit}}
 \]
 
+**Where:**
+
+| Symbol | Unit | Definition |
+|--------|------|------------|
+| Q_BE | kg/month (or units/month) | Break-even quantity; the minimum production volume at which total revenue equals total costs |
+| Fixed Costs | $/month | Costs that do not vary with production volume; rent, loan payments, insurance, base utilities |
+| Price per unit | $/kg | Average selling price per unit of product |
+| Variable Cost per unit | $/kg | Cost that scales directly with each unit produced; nutrients, labor, packaging, electricity per kg |
+| Price − Variable Cost | $/kg | Contribution margin; revenue each unit contributes toward covering fixed costs |
+
 ```python
 fixed_costs_monthly = 800    # Rent + insurance + loan payment
 variable_cost_per_kg = 4.50  # Nutrients + labor + packaging per kg
@@ -176,11 +197,27 @@ print(f"Break-even: {breakeven_kg:.0f} kg/month ({breakeven_kg/0.15:.0f} heads)"
 ROI = \frac{\text{Net Profit}}{\text{Total Investment}} \times 100\%
 \]
 
+**Where:**
+
+| Symbol | Unit | Definition |
+|--------|------|------------|
+| ROI | % | Return on investment; the percentage gain on the original capital over the measurement period |
+| Net Profit | $ | Total revenue minus all costs (operating costs and initial investment) over the period |
+| Total Investment | $ | The full upfront capital required to establish the operation (equipment, setup, working capital) |
+
 **Payback period** is the simpler metric — how many years until cumulative cash flows equal the initial investment:
 
 \[
 \text{Payback} = \frac{\text{Initial Investment}}{\text{Annual Net Cash Flow}}
 \]
+
+**Where:**
+
+| Symbol | Unit | Definition |
+|--------|------|------------|
+| Payback | years | Number of years until cumulative net cash flows recover the full initial investment |
+| Initial Investment | $ | Upfront capital required to establish the system |
+| Annual Net Cash Flow | $/year | Average annual revenue minus annual operating costs; assumed constant in this simplified formula |
 
 ```python
 initial_investment = 10000

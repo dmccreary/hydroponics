@@ -15,7 +15,7 @@
         <link rel="prev" href="../">
       
       
-        <link rel="next" href="../../14-networking-iot/">
+        <link rel="next" href="../references/">
       
       
       <link rel="icon" href="../../../img/favicon.ico">
@@ -436,6 +436,8 @@
       
         
       
+        
+      
     
     
     
@@ -480,6 +482,8 @@
       
         
           
+        
+      
         
       
         
@@ -532,6 +536,8 @@
       
         
       
+        
+      
     
     
     
@@ -576,6 +582,8 @@
       
         
           
+        
+      
         
       
         
@@ -628,6 +636,8 @@
       
         
       
+        
+      
     
     
     
@@ -672,6 +682,8 @@
       
         
           
+        
+      
         
       
         
@@ -724,6 +736,8 @@
       
         
       
+        
+      
     
     
     
@@ -768,6 +782,8 @@
       
         
           
+        
+      
         
       
         
@@ -820,6 +836,8 @@
       
         
       
+        
+      
     
     
     
@@ -864,6 +882,8 @@
       
         
           
+        
+      
         
       
         
@@ -916,6 +936,8 @@
       
         
       
+        
+      
     
     
     
@@ -960,6 +982,8 @@
       
         
           
+        
+      
         
       
         
@@ -1010,6 +1034,8 @@
       
         
           
+        
+      
         
       
         
@@ -1205,6 +1231,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Annotated References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1224,6 +1271,8 @@
       
         
           
+        
+      
         
       
         
@@ -1276,6 +1325,8 @@
       
         
       
+        
+      
     
     
     
@@ -1320,6 +1371,8 @@
       
         
           
+        
+      
         
       
         
@@ -1372,6 +1425,8 @@
       
         
       
+        
+      
     
     
     
@@ -1416,6 +1471,8 @@
       
         
           
+        
+      
         
       
         
@@ -1468,6 +1525,8 @@
       
         
       
+        
+      
     
     
     
@@ -1516,6 +1575,8 @@
       
         
       
+        
+      
     
     
     
@@ -1560,6 +1621,8 @@
       
         
           
+        
+      
         
       
         
@@ -2116,7 +2179,7 @@
 </div>
 <details class="question">
 <summary>Show Answer</summary>
-<p>The correct answer is <strong>B</strong>. This is a significant footgun in file I/O. Opening a file with <code>open("data.csv", "w")</code> creates the file if it does not exist, but if the file already contains data, it immediately truncates (deletes) all existing content before writing. If a hydroponics controller logs data hourly and opens in write mode at each write, every new log entry destroys all previous data, leaving only the most recent record. Append mode (<code>"a"</code>) moves the file pointer to the end and adds new content without touching existing data, correctly building a cumulative time-series log.</p>
+<p>The correct answer is <strong>B</strong>. This is a significant trap in file I/O. Opening a file with <code>open("data.csv", "w")</code> creates the file if it does not exist, but if the file already contains data, it immediately truncates (deletes) all existing content before writing. If a hydroponics controller logs data hourly and opens in write mode at each write, every new log entry destroys all previous data, leaving only the most recent record. Append mode (<code>"a"</code>) moves the file pointer to the end and adds new content without touching existing data, correctly building a cumulative time-series log.</p>
 <p><strong>Concept Tested:</strong> CSV Data Logging</p>
 </details>
 <hr>
@@ -2131,7 +2194,7 @@
 </div>
 <details class="question">
 <summary>Show Answer</summary>
-<p>The correct answer is <strong>B</strong>. Active-low relay modules activate when the IN pin is pulled to 0V (logic LOW) and deactivate when the IN pin is at 3.3V (logic HIGH). This inverts expected behavior: <code>relay_pin.value(0)</code> turns the pump ON; <code>relay_pin.value(1)</code> turns it OFF. This is a subtle footgun — code written with intuitive logic (<code>1 = on, 0 = off</code>) will control the pump in reverse. Additionally, if the Pico resets or the control pin floats to HIGH, the relay deactivates (safe default). Always check relay module documentation for active-high vs. active-low before writing control code.</p>
+<p>The correct answer is <strong>B</strong>. Active-low relay modules activate when the IN pin is pulled to 0V (logic LOW) and deactivate when the IN pin is at 3.3V (logic HIGH). This inverts expected behavior: <code>relay_pin.value(0)</code> turns the pump ON; <code>relay_pin.value(1)</code> turns it OFF. This is a subtle trap — code written with intuitive logic (<code>1 = on, 0 = off</code>) will control the pump in reverse. Additionally, if the Pico resets or the control pin floats to HIGH, the relay deactivates (safe default). Always check relay module documentation for active-high vs. active-low before writing control code.</p>
 <p><strong>Concept Tested:</strong> Relay Control</p>
 </details>
 <hr>
@@ -2235,13 +2298,13 @@
         
         
           
-          <a href="../../14-networking-iot/" class="md-footer__link md-footer__link--next" aria-label="Next: Content">
+          <a href="../references/" class="md-footer__link md-footer__link--next" aria-label="Next: Annotated References">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Content
+                Annotated References
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -2278,6 +2341,10 @@
     
     
       <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   

@@ -15,7 +15,7 @@
         <link rel="prev" href="../">
       
       
-        <link rel="next" href="../../15-sensors-electronics/">
+        <link rel="next" href="../references/">
       
       
       <link rel="icon" href="../../../img/favicon.ico">
@@ -436,6 +436,8 @@
       
         
       
+        
+      
     
     
     
@@ -480,6 +482,8 @@
       
         
           
+        
+      
         
       
         
@@ -532,6 +536,8 @@
       
         
       
+        
+      
     
     
     
@@ -576,6 +582,8 @@
       
         
           
+        
+      
         
       
         
@@ -628,6 +636,8 @@
       
         
       
+        
+      
     
     
     
@@ -672,6 +682,8 @@
       
         
           
+        
+      
         
       
         
@@ -724,6 +736,8 @@
       
         
       
+        
+      
     
     
     
@@ -768,6 +782,8 @@
       
         
           
+        
+      
         
       
         
@@ -820,6 +836,8 @@
       
         
       
+        
+      
     
     
     
@@ -864,6 +882,8 @@
       
         
           
+        
+      
         
       
         
@@ -916,6 +936,8 @@
       
         
       
+        
+      
     
     
     
@@ -960,6 +982,8 @@
       
         
           
+        
+      
         
       
         
@@ -1012,6 +1036,8 @@
       
         
       
+        
+      
     
     
     
@@ -1058,6 +1084,8 @@
       
         
           
+        
+      
         
       
         
@@ -1253,6 +1281,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Annotated References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1272,6 +1321,8 @@
       
         
           
+        
+      
         
       
         
@@ -1324,6 +1375,8 @@
       
         
       
+        
+      
     
     
     
@@ -1368,6 +1421,8 @@
       
         
           
+        
+      
         
       
         
@@ -1420,6 +1475,8 @@
       
         
       
+        
+      
     
     
     
@@ -1464,6 +1521,8 @@
       
         
           
+        
+      
         
       
         
@@ -1516,6 +1575,8 @@
       
         
       
+        
+      
     
     
     
@@ -1560,6 +1621,8 @@
       
         
           
+        
+      
         
       
         
@@ -2056,7 +2119,7 @@
 </div>
 <details class="question">
 <summary>Show Answer</summary>
-<p>The correct answer is <strong>B</strong>. In MQTT, a broker (like Mosquitto) sits centrally and manages message routing. Sensors publish readings to named topics (e.g., <code>hydroponics/tank1/ph</code>). Any number of subscribers (dashboard, alert service, data logger, phone app) can independently subscribe to those topics and receive every update. This decoupling means: adding a new consumer requires no changes to the sensor code; a sensor can publish while its consumers are offline (messages queue); and one sensor reading can simultaneously update a dashboard, trigger an alarm, and log to a database. HTTP requires direct request/response connections between specific endpoints.</p>
+<p>The correct answer is <strong>B</strong>. In MQTT, a broker (like Mosquito) sits centrally and manages message routing. Sensors publish readings to named topics (e.g., <code>hydroponics/tank1/ph</code>). Any number of subscribers (dashboard, alert service, data logger, phone app) can independently subscribe to those topics and receive every update. This decoupling means: adding a new consumer requires no changes to the sensor code; a sensor can publish while its consumers are offline (messages queue); and one sensor reading can simultaneously update a dashboard, trigger an alarm, and log to a database. HTTP requires direct request/response connections between specific endpoints.</p>
 <p><strong>Concept Tested:</strong> MQTT Publish/Subscribe</p>
 </details>
 <hr>
@@ -2071,7 +2134,7 @@
 </div>
 <details class="question">
 <summary>Show Answer</summary>
-<p>The correct answer is <strong>B</strong>. This is a footgun specific to MicroPython's <code>urequests</code> library. Each <code>urequests.get()</code> call opens a TCP socket and allocates a response buffer. Unlike CPython where the garbage collector can reclaim these automatically, MicroPython on the Pico W has limited RAM and the socket does not automatically close when the response object goes out of scope. Without explicit <code>response.close()</code>, each API call leaks a socket and its memory buffer. After dozens of calls in a long-running monitoring loop, the Pico runs out of memory and crashes. Always call <code>response.close()</code> immediately after reading the response data.</p>
+<p>The correct answer is <strong>B</strong>. This is a common pitfall specific to MicroPython's <code>urequests</code> library. Each <code>urequests.get()</code> call opens a TCP socket and allocates a response buffer. Unlike CPython where the garbage collector can reclaim these automatically, MicroPython on the Pico W has limited RAM and the socket does not automatically close when the response object goes out of scope. Without explicit <code>response.close()</code>, each API call leaks a socket and its memory buffer. After dozens of calls in a long-running monitoring loop, the Pico runs out of memory and crashes. Always call <code>response.close()</code> immediately after reading the response data.</p>
 <p><strong>Concept Tested:</strong> Memory Management</p>
 </details>
 <hr>
@@ -2101,7 +2164,7 @@
 </div>
 <details class="question">
 <summary>Show Answer</summary>
-<p>The correct answer is <strong>B</strong>. Directly overwriting <code>main.py</code> during download is a dangerous footgun: if the network connection drops mid-download, the file is partially written — the device then boots with corrupted firmware and may become unrecoverable remotely. The safe pattern is: (1) download new code to a temp file (<code>main.py.new</code>); (2) verify the file is complete and valid (check file size, or compute a hash); (3) atomically rename <code>main.py.new</code> to <code>main.py</code>. This ensures the device always has either the old valid firmware or the new valid firmware, never a corrupt partial file.</p>
+<p>The correct answer is <strong>B</strong>. Directly overwriting <code>main.py</code> during download is a dangerous mistake: if the network connection drops mid-download, the file is partially written — the device then boots with corrupted firmware and may become unrecoverable remotely. The safe pattern is: (1) download new code to a temp file (<code>main.py.new</code>); (2) verify the file is complete and valid (check file size, or compute a hash); (3) atomically rename <code>main.py.new</code> to <code>main.py</code>. This ensures the device always has either the old valid firmware or the new valid firmware, never a corrupt partial file.</p>
 <p><strong>Concept Tested:</strong> OTA Updates</p>
 </details>
 <hr>
@@ -2235,13 +2298,13 @@
         
         
           
-          <a href="../../15-sensors-electronics/" class="md-footer__link md-footer__link--next" aria-label="Next: Content">
+          <a href="../references/" class="md-footer__link md-footer__link--next" aria-label="Next: Annotated References">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Content
+                Annotated References
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -2278,6 +2341,10 @@
     
     
       <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   

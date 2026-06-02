@@ -15,7 +15,7 @@
         <link rel="prev" href="../">
       
       
-        <link rel="next" href="../../13-hardware-interfaces/">
+        <link rel="next" href="../references/">
       
       
       <link rel="icon" href="../../../img/favicon.ico">
@@ -436,6 +436,8 @@
       
         
       
+        
+      
     
     
     
@@ -480,6 +482,8 @@
       
         
           
+        
+      
         
       
         
@@ -532,6 +536,8 @@
       
         
       
+        
+      
     
     
     
@@ -576,6 +582,8 @@
       
         
           
+        
+      
         
       
         
@@ -628,6 +636,8 @@
       
         
       
+        
+      
     
     
     
@@ -672,6 +682,8 @@
       
         
           
+        
+      
         
       
         
@@ -724,6 +736,8 @@
       
         
       
+        
+      
     
     
     
@@ -768,6 +782,8 @@
       
         
           
+        
+      
         
       
         
@@ -820,6 +836,8 @@
       
         
       
+        
+      
     
     
     
@@ -864,6 +882,8 @@
       
         
           
+        
+      
         
       
         
@@ -916,6 +936,8 @@
       
         
       
+        
+      
     
     
     
@@ -962,6 +984,8 @@
       
         
           
+        
+      
         
       
         
@@ -1157,6 +1181,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Annotated References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1176,6 +1221,8 @@
       
         
           
+        
+      
         
       
         
@@ -1228,6 +1275,8 @@
       
         
       
+        
+      
     
     
     
@@ -1272,6 +1321,8 @@
       
         
           
+        
+      
         
       
         
@@ -1324,6 +1375,8 @@
       
         
       
+        
+      
     
     
     
@@ -1368,6 +1421,8 @@
       
         
           
+        
+      
         
       
         
@@ -1420,6 +1475,8 @@
       
         
       
+        
+      
     
     
     
@@ -1464,6 +1521,8 @@
       
         
           
+        
+      
         
       
         
@@ -1516,6 +1575,8 @@
       
         
       
+        
+      
     
     
     
@@ -1560,6 +1621,8 @@
       
         
           
+        
+      
         
       
         
@@ -2071,7 +2134,7 @@
 </div>
 <details class="question">
 <summary>Show Answer</summary>
-<p>The correct answer is <strong>B</strong>. This is a classic Python footgun. The <code>not</code> operator uses truthiness evaluation: <code>not 0</code> is <code>True</code>, <code>not 0.0</code> is <code>True</code>, <code>not ""</code> is <code>True</code>. If a sensor returns a valid reading of 0 (e.g., a dissolved oxygen sensor reading 0 mg/L in an anaerobic environment, or a temperature sensor at 0°C), <code>if not reading</code> would incorrectly branch to the error handling path. <code>if reading is None</code> only triggers when the value is explicitly <code>None</code>, correctly distinguishing "sensor failed and returned nothing" from "sensor successfully measured zero."</p>
+<p>The correct answer is <strong>B</strong>. This is a classic Python pitfall. The <code>not</code> operator uses truthiness evaluation: <code>not 0</code> is <code>True</code>, <code>not 0.0</code> is <code>True</code>, <code>not ""</code> is <code>True</code>. If a sensor returns a valid reading of 0 (e.g., a dissolved oxygen sensor reading 0 mg/L in an anaerobic environment, or a temperature sensor at 0°C), <code>if not reading</code> would incorrectly branch to the error handling path. <code>if reading is None</code> only triggers when the value is explicitly <code>None</code>, correctly distinguishing "sensor failed and returned nothing" from "sensor successfully measured zero."</p>
 <p><strong>Concept Tested:</strong> None Checks</p>
 </details>
 <hr>
@@ -2176,7 +2239,7 @@
 </div>
 <details class="question">
 <summary>Show Answer</summary>
-<p>The correct answer is <strong>B</strong>. A pump valve opened without a hardware-enforced maximum timeout is a dangerous footgun: if the software controlling the valve fails (exception, logic error, program crash) while the valve is open, the valve stays open indefinitely, flooding the grow space or depleting the nutrient reservoir. The correct defensive pattern is a hardware watchdog or a maximum duration guard that closes the valve and raises an alarm if the expected completion signal does not arrive within the calculated time plus a safety margin. Comments and logging are valuable but do not prevent the hardware failure mode.</p>
+<p>The correct answer is <strong>B</strong>. A pump valve opened without a hardware-enforced maximum timeout is a dangerous design flaw: if the software controlling the valve fails (exception, logic error, program crash) while the valve is open, the valve stays open indefinitely, flooding the grow space or depleting the nutrient reservoir. The correct defensive pattern is a hardware watchdog or a maximum duration guard that closes the valve and raises an alarm if the expected completion signal does not arrive within the calculated time plus a safety margin. Comments and logging are valuable but do not prevent the hardware failure mode.</p>
 <p><strong>Concept Tested:</strong> Safe Hardware Control Patterns</p>
 </details>
 <hr>
@@ -2235,13 +2298,13 @@
         
         
           
-          <a href="../../13-hardware-interfaces/" class="md-footer__link md-footer__link--next" aria-label="Next: Content">
+          <a href="../references/" class="md-footer__link md-footer__link--next" aria-label="Next: Annotated References">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Content
+                Annotated References
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -2278,6 +2341,10 @@
     
     
       <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   

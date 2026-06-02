@@ -15,7 +15,7 @@
         <link rel="prev" href="../">
       
       
-        <link rel="next" href="../../18-food-safety/">
+        <link rel="next" href="../references/">
       
       
       <link rel="icon" href="../../../img/favicon.ico">
@@ -436,6 +436,8 @@
       
         
       
+        
+      
     
     
     
@@ -480,6 +482,8 @@
       
         
           
+        
+      
         
       
         
@@ -532,6 +536,8 @@
       
         
       
+        
+      
     
     
     
@@ -576,6 +582,8 @@
       
         
           
+        
+      
         
       
         
@@ -628,6 +636,8 @@
       
         
       
+        
+      
     
     
     
@@ -672,6 +682,8 @@
       
         
           
+        
+      
         
       
         
@@ -724,6 +736,8 @@
       
         
       
+        
+      
     
     
     
@@ -768,6 +782,8 @@
       
         
           
+        
+      
         
       
         
@@ -820,6 +836,8 @@
       
         
       
+        
+      
     
     
     
@@ -864,6 +882,8 @@
       
         
           
+        
+      
         
       
         
@@ -916,6 +936,8 @@
       
         
       
+        
+      
     
     
     
@@ -960,6 +982,8 @@
       
         
           
+        
+      
         
       
         
@@ -1012,6 +1036,8 @@
       
         
       
+        
+      
     
     
     
@@ -1056,6 +1082,8 @@
       
         
           
+        
+      
         
       
         
@@ -1108,6 +1136,8 @@
       
         
       
+        
+      
     
     
     
@@ -1152,6 +1182,8 @@
       
         
           
+        
+      
         
       
         
@@ -1202,6 +1234,8 @@
       
         
           
+        
+      
         
       
         
@@ -1397,6 +1431,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Annotated References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1416,6 +1471,8 @@
       
         
           
+        
+      
         
       
         
@@ -1468,6 +1525,8 @@
       
         
       
+        
+      
     
     
     
@@ -1516,6 +1575,8 @@
       
         
       
+        
+      
     
     
     
@@ -1560,6 +1621,8 @@
       
         
           
+        
+      
         
       
         
@@ -2176,7 +2239,7 @@
 </div>
 <details class="question">
 <summary>Show Answer</summary>
-<p>The correct answer is <strong>B</strong>. A common dashboard footgun: the first version works well because there is only one day of data. After 6 months, the CSV or database has 260,000+ rows. If the callback loads the entire file and filters it, each 1-minute update reads a growing dataset — update latency increases from milliseconds to seconds. The correct approach is to bound the query at the database or file level: <code>SELECT * FROM readings WHERE timestamp &gt;= NOW() - INTERVAL '24 hours'</code> retrieves a constant volume of ~1,440 rows (at 1/minute) regardless of total history size. This keeps dashboard update latency constant across the entire multi-year facility operation.</p>
+<p>The correct answer is <strong>B</strong>. A common dashboard pitfall: the first version works well because there is only one day of data. After 6 months, the CSV or database has 260,000+ rows. If the callback loads the entire file and filters it, each 1-minute update reads a growing dataset — update latency increases from milliseconds to seconds. The correct approach is to bound the query at the database or file level: <code>SELECT * FROM readings WHERE timestamp &gt;= NOW() - INTERVAL '24 hours'</code> retrieves a constant volume of ~1,440 rows (at 1/minute) regardless of total history size. This keeps dashboard update latency constant across the entire multi-year facility operation.</p>
 <p><strong>Concept Tested:</strong> Dashboard Performance</p>
 </details>
 <hr>
@@ -2235,13 +2298,13 @@
         
         
           
-          <a href="../../18-food-safety/" class="md-footer__link md-footer__link--next" aria-label="Next: Content">
+          <a href="../references/" class="md-footer__link md-footer__link--next" aria-label="Next: Annotated References">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Content
+                Annotated References
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -2278,6 +2341,10 @@
     
     
       <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   

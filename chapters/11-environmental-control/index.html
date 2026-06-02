@@ -2126,8 +2126,82 @@ Welcome to Chapter 11! Chapter 10 taught you to engineer light for plant growth.
 <p><strong>VPD calculation:</strong></p>
 <p>First, calculate saturated vapor pressure (SVP) at the given air temperature:</p>
 <div class="arithmatex">\[ \text{SVP} = 0.6108 \times e^{\frac{17.27 \times T}{T + 237.3}} \text{ (kPa)} \]</div>
-<p>where T is temperature in °C. Then:</p>
+<p><strong>Where:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Unit</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SVP</td>
+<td>kPa</td>
+<td>Saturated vapor pressure; the maximum water vapor pressure air can hold at temperature T before condensation</td>
+</tr>
+<tr>
+<td>0.6108</td>
+<td>kPa</td>
+<td>Empirical coefficient; the SVP of water at 0 °C (from the Magnus approximation)</td>
+</tr>
+<tr>
+<td>e</td>
+<td>—</td>
+<td>Euler's number (≈ 2.718); base of the natural logarithm</td>
+</tr>
+<tr>
+<td>17.27</td>
+<td>dimensionless</td>
+<td>Empirical constant in the Magnus formula</td>
+</tr>
+<tr>
+<td>T</td>
+<td>°C</td>
+<td>Air (or leaf) temperature in degrees Celsius</td>
+</tr>
+<tr>
+<td>237.3</td>
+<td>°C</td>
+<td>Empirical constant in the Magnus formula</td>
+</tr>
+</tbody>
+</table>
+<p>Then:</p>
 <div class="arithmatex">\[ \text{VPD} = \text{SVP} \times \left(1 - \frac{\text{RH}}{100}\right) \]</div>
+<p><strong>Where:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Unit</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VPD</td>
+<td>kPa</td>
+<td>Vapor pressure deficit; the difference between maximum possible and actual moisture in the air; the primary driver of plant transpiration rate</td>
+</tr>
+<tr>
+<td>SVP</td>
+<td>kPa</td>
+<td>Saturated vapor pressure at the current air temperature (from the formula above)</td>
+</tr>
+<tr>
+<td>RH</td>
+<td>%</td>
+<td>Relative humidity; the percentage of maximum water vapor currently present in the air</td>
+</tr>
+<tr>
+<td>100</td>
+<td>—</td>
+<td>Normalizes RH from a percentage to a decimal fraction</td>
+</tr>
+</tbody>
+</table>
 <p><strong>Example</strong>: At 25°C (SVP = 3.17 kPa) and 70% RH: VPD = 3.17 × (1 − 0.70) = 3.17 × 0.30 = 0.95 kPa</p>
 <p><strong>VPD optimal ranges by stage:</strong></p>
 <table>

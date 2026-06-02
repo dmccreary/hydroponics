@@ -2167,6 +2167,43 @@ Lumens measure light output as perceived by the human eye — with green light w
 <p>DLI integrates both intensity and duration into a single number, making it the most useful metric for comparing different growing scenarios (e.g., 12h of 500 µmol·m⁻²·s⁻¹ vs. 18h of 350 µmol·m⁻²·s⁻¹).</p>
 <p><strong>DLI calculation:</strong></p>
 <div class="arithmatex">\[ \text{DLI} = \text{PPFD} \times \text{photoperiod (hours)} \times 3600 \div 1{,}000{,}000 \]</div>
+<p><strong>Where:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Unit</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DLI</td>
+<td>mol·m⁻²·d⁻¹</td>
+<td>Daily Light Integral; total moles of PAR photons delivered to the canopy surface per day</td>
+</tr>
+<tr>
+<td>PPFD</td>
+<td>µmol·m⁻²·s⁻¹</td>
+<td>Photosynthetic Photon Flux Density; instantaneous PAR photon delivery rate measured with a quantum sensor</td>
+</tr>
+<tr>
+<td>photoperiod</td>
+<td>hours</td>
+<td>Number of hours per day the lights are on</td>
+</tr>
+<tr>
+<td>3600</td>
+<td>s/hr</td>
+<td>Conversion factor from hours to seconds</td>
+</tr>
+<tr>
+<td>1,000,000</td>
+<td>µmol/mol</td>
+<td>Conversion factor from micromoles to moles</td>
+</tr>
+</tbody>
+</table>
 <p>The 3600 converts hours to seconds; dividing by 1,000,000 converts micromoles to moles.</p>
 <p>Example: PPFD = 400 µmol·m⁻²·s⁻¹ for 16 hours:</p>
 <div class="arithmatex">\[ \text{DLI} = 400 \times 16 \times 3600 \div 1{,}000{,}000 = 23.0 \text{ mol·m⁻²·d⁻¹} \]</div>
@@ -2301,6 +2338,33 @@ Lumens measure light output as perceived by the human eye — with green light w
 <h2 id="the-inverse-square-law-for-light">The Inverse Square Law for Light<a class="headerlink" href="#the-inverse-square-law-for-light" title="Permanent link">¶</a></h2>
 <p>The <strong>inverse square law</strong> describes how light intensity decreases with distance from a point source:</p>
 <div class="arithmatex">\[ \text{Intensity} \propto \frac{1}{d^2} \]</div>
+<p><strong>Where:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Unit</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Intensity</td>
+<td>µmol·m⁻²·s⁻¹ (PPFD)</td>
+<td>Light intensity at the canopy surface; decreases as the square of distance from the source</td>
+</tr>
+<tr>
+<td>∝</td>
+<td>—</td>
+<td>"Is proportional to"; a scaling relationship, not an equality — the constant of proportionality depends on source power and geometry</td>
+</tr>
+<tr>
+<td>d</td>
+<td>m (meters)</td>
+<td>Distance from the light source to the measurement point (e.g., canopy surface)</td>
+</tr>
+</tbody>
+</table>
 <p>Doubling the distance between a light source and the canopy reduces intensity to one-quarter of its original value. Halving the distance quadruples intensity.</p>
 <p><strong>Practical consequences for grow light mounting height:</strong></p>
 <ul>

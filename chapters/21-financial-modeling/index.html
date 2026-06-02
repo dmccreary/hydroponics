@@ -2370,6 +2370,48 @@ Welcome to the capstone chapter, growers! You now know the biology, the chemistr
 <div class="arithmatex">\[
 NPV = -I_0 + \sum_{t=1}^{n} \frac{C_t}{(1 + r)^t}
 \]</div>
+<p><strong>Where:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Unit</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NPV</td>
+<td>$ (dollars)</td>
+<td>Net present value; total value created by the investment in today's dollars; positive NPV means the investment exceeds the cost of capital</td>
+</tr>
+<tr>
+<td>I₀</td>
+<td>$</td>
+<td>Initial investment (capital outlay) at time zero; entered as negative</td>
+</tr>
+<tr>
+<td>C_t</td>
+<td>$/year</td>
+<td>Net cash flow in year t (annual revenue minus all operating costs)</td>
+</tr>
+<tr>
+<td>r</td>
+<td>dimensionless (decimal)</td>
+<td>Discount rate; minimum acceptable annual return (hurdle rate); e.g., 0.08 for 8%</td>
+</tr>
+<tr>
+<td>n</td>
+<td>years</td>
+<td>Investment horizon (project lifetime)</td>
+</tr>
+<tr>
+<td>t</td>
+<td>years</td>
+<td>Year index in the summation (1 to n)</td>
+</tr>
+</tbody>
+</table>
 <p>In Python:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
@@ -2403,6 +2445,43 @@ NPV = -I_0 + \sum_{t=1}^{n} \frac{C_t}{(1 + r)^t}
 <div class="arithmatex">\[
 Q_{BE} = \frac{\text{Fixed Costs}}{\text{Price per unit} - \text{Variable Cost per unit}}
 \]</div>
+<p><strong>Where:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Unit</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q_BE</td>
+<td>kg/month (or units/month)</td>
+<td>Break-even quantity; the minimum production volume at which total revenue equals total costs</td>
+</tr>
+<tr>
+<td>Fixed Costs</td>
+<td>$/month</td>
+<td>Costs that do not vary with production volume; rent, loan payments, insurance, base utilities</td>
+</tr>
+<tr>
+<td>Price per unit</td>
+<td>$/kg</td>
+<td>Average selling price per unit of product</td>
+</tr>
+<tr>
+<td>Variable Cost per unit</td>
+<td>$/kg</td>
+<td>Cost that scales directly with each unit produced; nutrients, labor, packaging, electricity per kg</td>
+</tr>
+<tr>
+<td>Price − Variable Cost</td>
+<td>$/kg</td>
+<td>Contribution margin; revenue each unit contributes toward covering fixed costs</td>
+</tr>
+</tbody>
+</table>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">fixed_costs_monthly</span> <span class="o">=</span> <span class="mi">800</span>    <span class="c1"># Rent + insurance + loan payment</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">variable_cost_per_kg</span> <span class="o">=</span> <span class="mf">4.50</span>  <span class="c1"># Nutrients + labor + packaging per kg</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">selling_price_per_kg</span> <span class="o">=</span> <span class="mf">8.00</span>  <span class="c1"># Retail price per kg of lettuce</span>
@@ -2416,10 +2495,64 @@ Q_{BE} = \frac{\text{Fixed Costs}}{\text{Price per unit} - \text{Variable Cost p
 <div class="arithmatex">\[
 ROI = \frac{\text{Net Profit}}{\text{Total Investment}} \times 100\%
 \]</div>
+<p><strong>Where:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Unit</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ROI</td>
+<td>%</td>
+<td>Return on investment; the percentage gain on the original capital over the measurement period</td>
+</tr>
+<tr>
+<td>Net Profit</td>
+<td>$</td>
+<td>Total revenue minus all costs (operating costs and initial investment) over the period</td>
+</tr>
+<tr>
+<td>Total Investment</td>
+<td>$</td>
+<td>The full upfront capital required to establish the operation (equipment, setup, working capital)</td>
+</tr>
+</tbody>
+</table>
 <p><strong>Payback period</strong> is the simpler metric — how many years until cumulative cash flows equal the initial investment:</p>
 <div class="arithmatex">\[
 \text{Payback} = \frac{\text{Initial Investment}}{\text{Annual Net Cash Flow}}
 \]</div>
+<p><strong>Where:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Unit</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Payback</td>
+<td>years</td>
+<td>Number of years until cumulative net cash flows recover the full initial investment</td>
+</tr>
+<tr>
+<td>Initial Investment</td>
+<td>$</td>
+<td>Upfront capital required to establish the system</td>
+</tr>
+<tr>
+<td>Annual Net Cash Flow</td>
+<td>$/year</td>
+<td>Average annual revenue minus annual operating costs; assumed constant in this simplified formula</td>
+</tr>
+</tbody>
+</table>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">initial_investment</span> <span class="o">=</span> <span class="mi">10000</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">annual_net_cashflow</span> <span class="o">=</span> <span class="mi">3000</span>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">payback_years</span> <span class="o">=</span> <span class="n">initial_investment</span> <span class="o">/</span> <span class="n">annual_net_cashflow</span>

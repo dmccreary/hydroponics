@@ -2315,6 +2315,38 @@ Welcome to Chapter 15, growers! Chapters 12–14 covered the software stack. Now
 <div class="arithmatex">\[
 E = E_0 - 59.16 \times \text{pH}
 \]</div>
+<p><strong>Where:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Unit</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E</td>
+<td>mV (millivolts)</td>
+<td>Electrode potential; the voltage measured between the glass pH electrode and the reference electrode immersed in solution</td>
+</tr>
+<tr>
+<td>E₀</td>
+<td>mV</td>
+<td>Electrode offset; the voltage at pH 0 for this specific probe; varies between probes and is determined during calibration</td>
+</tr>
+<tr>
+<td>59.16</td>
+<td>mV/pH unit</td>
+<td>Nernst slope at 25 °C; the voltage change per pH unit; a healthy probe reads 55–62 mV/pH unit</td>
+</tr>
+<tr>
+<td>pH</td>
+<td>dimensionless</td>
+<td>The hydrogen ion activity of the solution being measured</td>
+</tr>
+</tbody>
+</table>
 <p>This means a 59.16 mV change in electrode voltage corresponds to exactly one pH unit change at 25 °C. The electrode voltage is measured against a <strong>reference electrode</strong> (usually a silver/silver-chloride junction filled with KCl gel) packed into the same probe body. The output to the microcontroller is typically a millivolt signal in the range of −300 mV (very basic solution) to +300 mV (very acidic solution), with 0 V corresponding approximately to pH 7.</p>
 <h3 id="ph-probe-calibration">pH Probe Calibration<a class="headerlink" href="#ph-probe-calibration" title="Permanent link">¶</a></h3>
 <p>Because the exact relationship between voltage and pH varies slightly between probes (and changes as probes age), calibration is required. <strong>Two-point calibration</strong> is standard:</p>
@@ -2349,6 +2381,33 @@ A glass pH electrode must be kept moist. When not in use, store it in the plasti
 <div class="arithmatex">\[
 \text{EC} = G \times K_{cell}
 \]</div>
+<p><strong>Where:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Unit</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EC</td>
+<td>µS/cm or mS/cm</td>
+<td>Electrical conductivity of the solution; a proxy for total dissolved ion concentration</td>
+</tr>
+<tr>
+<td>G</td>
+<td>S (siemens)</td>
+<td>Electrical conductance measured between probe electrodes; G = I/V (current ÷ applied voltage)</td>
+</tr>
+<tr>
+<td>K_cell</td>
+<td>cm⁻¹</td>
+<td>Cell constant of the probe; determined by electrode geometry (spacing and surface area); calibrated using a reference solution of known conductivity</td>
+</tr>
+</tbody>
+</table>
 <p>The cell constant (in cm⁻¹) depends on the electrode geometry — the distance between the electrodes and their surface area. Atlas Scientific EZO-EC circuits have a built-in calibration procedure that determines K_cell from a reference solution.</p>
 <h3 id="ec-probe-calibration">EC Probe Calibration<a class="headerlink" href="#ec-probe-calibration" title="Permanent link">¶</a></h3>
 <p>EC calibration uses a <strong>calibration solution</strong> with a precisely known conductivity value (commonly 1413 μS/cm, which corresponds approximately to 700 ppm TDS). The calibration procedure:</p>
@@ -2544,6 +2603,38 @@ When a microcontroller loses power, all GPIO pins go to their default state (low
 <div class="arithmatex">\[
 V_{out} = V_{in} \times \frac{R_2}{R_1 + R_2}
 \]</div>
+<p><strong>Where:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Unit</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>V_out</td>
+<td>V (volts)</td>
+<td>Output voltage; measured between the midpoint of the divider and ground</td>
+</tr>
+<tr>
+<td>V_in</td>
+<td>V</td>
+<td>Input (supply) voltage applied across the full divider; e.g., 5 V sensor output</td>
+</tr>
+<tr>
+<td>R₁</td>
+<td>Ω (ohms)</td>
+<td>Top resistor; connected between V_in and the output node</td>
+</tr>
+<tr>
+<td>R₂</td>
+<td>Ω</td>
+<td>Bottom resistor; connected between the output node and ground</td>
+</tr>
+</tbody>
+</table>
 <p>In hydroponic electronics, voltage dividers appear in two contexts:</p>
 <ol>
 <li>
@@ -2565,6 +2656,43 @@ V_{out} = V_{in} \times \frac{R_2}{R_1 + R_2}
 <div class="arithmatex">\[
 V_{out} = -\frac{R_f}{R_{in}} \times V_{in}
 \]</div>
+<p><strong>Where:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Unit</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>V_out</td>
+<td>V (volts)</td>
+<td>Amplifier output voltage; inverted (sign-reversed) and scaled relative to V_in</td>
+</tr>
+<tr>
+<td>R_f</td>
+<td>Ω (ohms)</td>
+<td>Feedback resistor; connected between op-amp output and inverting input (−); controls gain magnitude</td>
+</tr>
+<tr>
+<td>R_in</td>
+<td>Ω</td>
+<td>Input resistor; connected between the signal source and the inverting input (−); sets input impedance</td>
+</tr>
+<tr>
+<td>V_in</td>
+<td>V</td>
+<td>Input signal voltage; e.g., the millivolt signal from a pH electrode or other low-level sensor</td>
+</tr>
+<tr>
+<td>−R_f/R_in</td>
+<td>dimensionless</td>
+<td>Closed-loop gain; negative sign indicates phase inversion; magnitude &gt; 1 amplifies, &lt; 1 attenuates</td>
+</tr>
+</tbody>
+</table>
 <p>The Atlas Scientific EZO circuits include built-in op-amp signal conditioning. For DIY pH circuits (using a pH electrode and a separate analog-front-end circuit), the INA826 or MCP6002 op-amp are commonly used.</p>
 <h2 id="signal-quality">Signal Quality<a class="headerlink" href="#signal-quality" title="Permanent link">¶</a></h2>
 <h3 id="sensor-noise-and-filtering">Sensor Noise and Filtering<a class="headerlink" href="#sensor-noise-and-filtering" title="Permanent link">¶</a></h3>

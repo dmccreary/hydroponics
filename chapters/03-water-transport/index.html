@@ -2375,7 +2375,49 @@ Left panel (30%): Symptom selector
 </ul>
 <p><strong>Relative growth rate (RGR)</strong> provides a normalized measure of how fast a plant accumulates dry biomass:</p>
 <div class="arithmatex">\[ \text{RGR} = \frac{\ln(W_2) - \ln(W_1)}{t_2 - t_1} \]</div>
-<p>Where W₁ and W₂ are dry weights at two time points separated by (t₂ − t₁) days. The natural log accounts for the exponential nature of plant growth, where a larger plant grows absolutely faster than a smaller plant even at the same relative rate.</p>
+<p><strong>Where:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Unit</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RGR</td>
+<td>g·g⁻¹·d⁻¹</td>
+<td>Relative growth rate; the fractional increase in dry biomass per unit time, normalized to current plant size</td>
+</tr>
+<tr>
+<td>W₁</td>
+<td>g (dry weight)</td>
+<td>Dry mass of the plant at the first measurement time point</td>
+</tr>
+<tr>
+<td>W₂</td>
+<td>g (dry weight)</td>
+<td>Dry mass of the plant at the second measurement time point; must be &gt; W₁ for positive growth</td>
+</tr>
+<tr>
+<td>t₁</td>
+<td>days</td>
+<td>First measurement time point</td>
+</tr>
+<tr>
+<td>t₂</td>
+<td>days</td>
+<td>Second measurement time point</td>
+</tr>
+<tr>
+<td>ln</td>
+<td>—</td>
+<td>Natural logarithm (base e); accounts for the exponential nature of plant growth</td>
+</tr>
+</tbody>
+</table>
+<p>The natural log accounts for the exponential nature of plant growth, where a larger plant grows absolutely faster than a smaller plant even at the same relative rate.</p>
 <p>For school and hobbyist applications, tracking fresh weight at weekly intervals and comparing harvest dates against a baseline is sufficient to evaluate system performance without a laboratory.</p>
 <h4 id="diagram-biomass-growth-tracker">Diagram: Biomass Growth Tracker<a class="headerlink" href="#diagram-biomass-growth-tracker" title="Permanent link">¶</a></h4>
 <iframe src="../../sims/biomass-growth-tracker/main.html" width="100%" height="722" scrolling="no"></iframe>

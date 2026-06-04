@@ -171,7 +171,6 @@ function setup() {
     updateCanvasSize();
     const canvas = createCanvas(containerWidth, containerHeight);
     canvas.parent(document.querySelector('main'));
-    textFont('Segoe UI');
 
     // Budget slider
     budgetSlider = createSlider(0, 400, 100, 10);

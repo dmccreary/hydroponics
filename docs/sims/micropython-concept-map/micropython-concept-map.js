@@ -116,7 +116,6 @@ function setup() {
     updateCanvasSize();
     const canvas = createCanvas(containerWidth, containerHeight);
     canvas.parent(document.querySelector('main'));
-    textFont('Segoe UI');
 
     codeCheckbox = createCheckbox(' Show code examples', false);
     codeCheckbox.position(10, drawHeight + 12);

@@ -62,7 +62,6 @@ function setup() {
     updateCanvasSize();
     const canvas = createCanvas(containerWidth, canvasHeight);
     canvas.parent(document.querySelector('#leafCanvasHost main'));
-    textFont('Segoe UI');
     wireControls();
     rebuildDiagnosis();
 }

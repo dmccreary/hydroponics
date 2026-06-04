@@ -141,7 +141,6 @@ function setup() {
     updateCanvasSize();
     const canvas = createCanvas(canvasWidth, canvasHeight);
     canvas.parent(document.querySelector('main'));
-    textFont('Segoe UI');
 
     for (const m of MODELS) enabled[m.id] = true;
 
@@ -628,7 +627,6 @@ function drawTooltip(hv) {
         'Score: ' + hv.model.scores[ax.key] + '/5'
     ];
     push();
-    textFont('Segoe UI');
     textSize(11);
     let maxW = 0;
     for (const l of lines) maxW = Math.max(maxW, textWidth(l));

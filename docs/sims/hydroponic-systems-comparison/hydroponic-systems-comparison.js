@@ -94,7 +94,6 @@ function setup() {
     updateCanvasSize();
     const canvas = createCanvas(containerWidth, containerHeight);
     canvas.parent(document.querySelector('main'));
-    textFont('Segoe UI');
 
     backBtn = createButton('← Back to Gallery');
     backBtn.mousePressed(() => {

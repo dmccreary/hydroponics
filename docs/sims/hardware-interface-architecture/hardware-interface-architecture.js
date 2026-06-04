@@ -143,7 +143,6 @@ function setup() {
     updateCanvasSize();
     const canvas = createCanvas(containerWidth, containerHeight);
     canvas.parent(document.querySelector('main'));
-    textFont('Segoe UI');
 
     pinToggle = createCheckbox(' Show GPIO pin numbers', false);
     pinToggle.position(12, drawHeight + 8);
@@ -601,7 +600,6 @@ function drawDetailPanel() {
     textSize(10);
     textAlign(LEFT, TOP);
     text(snippet, codeX + 6, py + 36, codeW - 12);
-    textFont('Segoe UI');
     pop();
 }
 

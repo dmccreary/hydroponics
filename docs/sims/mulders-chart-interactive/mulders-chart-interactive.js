@@ -91,7 +91,6 @@ function setup() {
     updateCanvasSize();
     const canvas = createCanvas(containerWidth, containerHeight);
     canvas.parent(document.querySelector('main'));
-    textFont('Segoe UI');
 
     // Tab buttons
     tabPhBtn = createButton("pH Availability");

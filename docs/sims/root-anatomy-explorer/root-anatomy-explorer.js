@@ -91,7 +91,6 @@ function setup() {
     updateCanvasSize();
     const canvas = createCanvas(containerWidth, canvasHeight);
     canvas.parent(document.querySelector('main'));
-    textFont('Segoe UI');
 
     pathwayBtn = createButton('Show Ion Pathway');
     pathwayBtn.position(10, drawHeight + 10);

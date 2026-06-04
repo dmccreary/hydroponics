@@ -83,7 +83,6 @@ function setup() {
     computeLayout();
     const canvas = createCanvas(containerWidth, containerHeight);
     canvas.parent(document.querySelector('main'));
-    textFont('Segoe UI');
 
     // Section 1 controls
     ppfdSlider = createSlider(50, 1500, 400, 10);

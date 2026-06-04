@@ -28,7 +28,6 @@ function setup() {
     updateCanvasSize();
     const canvas = createCanvas(containerWidth, canvasHeight);
     canvas.parent(document.querySelector('main'));
-    textFont('Segoe UI');
 
     nitrateSlider = createSlider(0, 100, nitratePct, 5);
     nitrateSlider.position(width * 0.55 + 8, 80);

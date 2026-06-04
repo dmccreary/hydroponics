@@ -45,7 +45,6 @@ function setup() {
     updateCanvasSize();
     const canvas = createCanvas(containerWidth, containerHeight);
     canvas.parent(document.querySelector('main'));
-    textFont('Segoe UI');
 
     protocolsBtn = createButton('Show Protocols');
     protocolsBtn.position(10, drawHeight + 10);

@@ -75,7 +75,6 @@ function setup() {
     updateCanvasSize();
     const canvas = createCanvas(containerWidth, canvasHeight);
     canvas.parent(document.querySelector('main'));
-    textFont('Segoe UI');
     computeNodePositions();
 
     const resetBtn = createButton('Clear Selection');

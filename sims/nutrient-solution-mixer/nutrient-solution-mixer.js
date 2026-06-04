@@ -107,7 +107,6 @@ function setup() {
     updateCanvasSize();
     const canvas = createCanvas(containerWidth, containerHeight);
     canvas.parent(document.querySelector('main'));
-    textFont('Segoe UI');
 
     // Initialize targets from default
     for (const e of ELEMENTS) targets[e.id] = e.def;

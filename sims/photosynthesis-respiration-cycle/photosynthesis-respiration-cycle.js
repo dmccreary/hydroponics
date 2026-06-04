@@ -51,7 +51,6 @@ function setup() {
     updateCanvasSize();
     const canvas = createCanvas(containerWidth, canvasHeight);
     canvas.parent(document.querySelector('main'));
-    textFont('Segoe UI');
 
     prevBtn = createButton('◀ Previous');
     prevBtn.position(10, drawHeight + 10);

@@ -41,7 +41,6 @@ function setup() {
     updateCanvasSize();
     const canvas = createCanvas(containerWidth, containerHeight);
     canvas.parent(document.querySelector('main'));
-    textFont('Segoe UI');
 
     // Left panel controls — sliders & selects
     tempSlider = createSlider(15, 35, 24, 0.5);

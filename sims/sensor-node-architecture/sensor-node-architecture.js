@@ -35,7 +35,6 @@ function setup() {
     updateCanvasSize();
     const canvas = createCanvas(containerWidth, containerHeight);
     canvas.parent(document.querySelector('main'));
-    textFont('Segoe UI');
 
     railsCheckbox = createCheckbox(' Show Power Rails', false);
     railsCheckbox.position(10, drawHeight + 8);
@@ -416,7 +415,6 @@ function drawDetailPanel() {
         textFont('Menlo');
         textSize(10);
         text(c.snippet, sx + 8, py + 8, width - sx - 24, controlHeight - 64);
-        textFont('Segoe UI');
     } else {
         noStroke();
         fill(108, 117, 125);

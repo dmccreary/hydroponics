@@ -148,7 +148,6 @@ function setup() {
     updateCanvasSize();
     const canvas = createCanvas(canvasWidth, canvasHeight);
     canvas.parent(document.querySelector('main'));
-    textFont('Segoe UI');
 
     // Default: enable all media
     for (const m of MEDIA) enabled[m.id] = true;
@@ -436,7 +435,6 @@ function drawTooltip(hv) {
     ];
     push();
     textSize(11);
-    textFont('Segoe UI');
     let maxW = 0;
     for (const l of lines) maxW = Math.max(maxW, textWidth(l));
     const padX = 8, padY = 6;

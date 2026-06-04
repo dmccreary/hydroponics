@@ -24,7 +24,6 @@ function setup() {
     updateCanvasSize();
     const canvas = createCanvas(containerWidth, containerHeight);
     canvas.parent(document.querySelector('main'));
-    textFont('Segoe UI');
 
     flowToggleBtn = createButton('Show Nutrient Flow');
     flowToggleBtn.position(10, drawHeight + 10);

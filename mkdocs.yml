@@ -286,7 +286,7 @@ extra:
   textbook_name: 'Hydroponics'
   textbook_version: '0.1'
 
-  # Google Analytics — uncomment once a property ID exists:
-  # analytics:
-  #   provider: google
-  #   property: G-XXXXXXXXXX
+  # Google Analytics
+  analytics:
+    provider: google
+    property: G-ZQ0W3C3WD2
